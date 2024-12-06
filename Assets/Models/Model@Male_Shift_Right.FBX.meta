@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: ae4dda828cad07248bfdc3ff9da26ef8
+timeCreated: 1436970756
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bone_Male_Arm_Bot_L
+    100002: Bone_Male_Arm_Bot_R
+    100004: Bone_Male_Arm_Top_L
+    100006: Bone_Male_Arm_Top_R
+    100008: Bone_Male_Foot_L
+    100010: Bone_Male_Foot_R
+    100012: Bone_Male_Hand_L
+    100014: Bone_Male_Hand_R
+    100016: Bone_Male_Head
+    100018: Bone_Male_Leg_Bot_L
+    100020: Bone_Male_Leg_Bot_R
+    100022: Bone_Male_Leg_L_Nub
+    100024: Bone_Male_Leg_R_Nub
+    100026: Bone_Male_Leg_Top_L
+    100028: Bone_Male_Leg_Top_R
+    100030: Bone_Male_Main
+    100032: Bone_Male_Neck
+    100034: Bone_Male_Pelvis
+    100036: Bone_Male_Torso
+    100038: Dummy_Male_Arm_Bot_L
+    100040: Dummy_Male_Arm_Bot_R
+    100042: Dummy_Male_Arm_Top_L
+    100044: Dummy_Male_Arm_Top_R
+    100046: Dummy_Male_Leg_L_Control
+    100048: Dummy_Male_Leg_R_Control
+    100050: Dummy_Male_Main
+    100052: Dummy_Male_Neck
+    100054: Dummy_Male_Pelvis
+    100056: Dummy_Male_Torso
+    100058: IKChain_Male_Leg_L
+    100060: IKChain_Male_Leg_R
+    100062: //RootNode
+    100064: Bone_Arm_Bot_L
+    100066: Bone_Arm_Bot_R
+    100068: Bone_Arm_Top_L
+    100070: Bone_Arm_Top_R
+    100072: Bone_Foot_L
+    100074: Bone_Foot_R
+    100076: Bone_Hand_L
+    100078: Bone_Hand_R
+    100080: Bone_Head
+    100082: Bone_Leg_Bot_L
+    100084: Bone_Leg_Bot_R
+    100086: Bone_Leg_L_Nub
+    100088: Bone_Leg_R_Nub
+    100090: Bone_Leg_Top_L
+    100092: Bone_Leg_Top_R
+    100094: Bone_Main
+    100096: Bone_Neck
+    100098: Bone_Pelvis
+    100100: Bone_Skirt
+    100102: Bone_Torso
+    100104: Dummy_Arm_Bot_L
+    100106: Dummy_Arm_Bot_R
+    100108: Dummy_Arm_Top_L
+    100110: Dummy_Arm_Top_R
+    100112: Dummy_Leg_L_Control
+    100114: Dummy_Leg_R_Control
+    100116: Dummy_Main
+    100118: Dummy_Neck
+    100120: Dummy_Pelvis
+    100122: Dummy_Torso
+    400000: Bone_Male_Arm_Bot_L
+    400002: Bone_Male_Arm_Bot_R
+    400004: Bone_Male_Arm_Top_L
+    400006: Bone_Male_Arm_Top_R
+    400008: Bone_Male_Foot_L
+    400010: Bone_Male_Foot_R
+    400012: Bone_Male_Hand_L
+    400014: Bone_Male_Hand_R
+    400016: Bone_Male_Head
+    400018: Bone_Male_Leg_Bot_L
+    400020: Bone_Male_Leg_Bot_R
+    400022: Bone_Male_Leg_L_Nub
+    400024: Bone_Male_Leg_R_Nub
+    400026: Bone_Male_Leg_Top_L
+    400028: Bone_Male_Leg_Top_R
+    400030: Bone_Male_Main
+    400032: Bone_Male_Neck
+    400034: Bone_Male_Pelvis
+    400036: Bone_Male_Torso
+    400038: Dummy_Male_Arm_Bot_L
+    400040: Dummy_Male_Arm_Bot_R
+    400042: Dummy_Male_Arm_Top_L
+    400044: Dummy_Male_Arm_Top_R
+    400046: Dummy_Male_Leg_L_Control
+    400048: Dummy_Male_Leg_R_Control
+    400050: Dummy_Male_Main
+    400052: Dummy_Male_Neck
+    400054: Dummy_Male_Pelvis
+    400056: Dummy_Male_Torso
+    400058: IKChain_Male_Leg_L
+    400060: IKChain_Male_Leg_R
+    400062: //RootNode
+    400064: Bone_Arm_Bot_L
+    400066: Bone_Arm_Bot_R
+    400068: Bone_Arm_Top_L
+    400070: Bone_Arm_Top_R
+    400072: Bone_Foot_L
+    400074: Bone_Foot_R
+    400076: Bone_Hand_L
+    400078: Bone_Hand_R
+    400080: Bone_Head
+    400082: Bone_Leg_Bot_L
+    400084: Bone_Leg_Bot_R
+    400086: Bone_Leg_L_Nub
+    400088: Bone_Leg_R_Nub
+    400090: Bone_Leg_Top_L
+    400092: Bone_Leg_Top_R
+    400094: Bone_Main
+    400096: Bone_Neck
+    400098: Bone_Pelvis
+    400100: Bone_Skirt
+    400102: Bone_Torso
+    400104: Dummy_Arm_Bot_L
+    400106: Dummy_Arm_Bot_R
+    400108: Dummy_Arm_Top_L
+    400110: Dummy_Arm_Top_R
+    400112: Dummy_Leg_L_Control
+    400114: Dummy_Leg_R_Control
+    400116: Dummy_Main
+    400118: Dummy_Neck
+    400120: Dummy_Pelvis
+    400122: Dummy_Torso
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,7 @@
+Event Name	Parameters	Comments To Include	Other Notes
+			
+Header 1			
+StartLevel	company : string, position : string	Game was started with selected company and position.	
+FinishedLevel	face score : int, top score : int, bottom score : int, shoes score : int, other score : int, total score : int 		
+RankChange	new rank : string		
+ResetLevel	event : string	

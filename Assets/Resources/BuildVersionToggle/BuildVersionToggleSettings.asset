@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ae7938711567f44b31e7cf325e8bfe, type: 3}
+  m_Name: BuildVersionToggleSettings
+  m_EditorClassIdentifier: 
+  bundleID_Consumer: com.simcoachgames.getdressed
+  bundleID_Enterprise: com.simcoachgames.getdressedenterprise
+  productName_Consumer: Get Dressed!
+  productName_Enterprise: Get Dressed! Enterprise
+  menuScene_Consumer: {fileID: 102900000, guid: 4f4cbd30eeff7dc4495cbd5d0f9204b7,
+    type: 3}
+  menuScene_Enterprise: {fileID: 0}

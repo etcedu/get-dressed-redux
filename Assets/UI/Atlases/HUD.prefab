@@ -1,0 +1,702 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &156258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402280}
+  - component: {fileID: 11402698}
+  m_Layer: 0
+  m_Name: HUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156258}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11402698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: ae37a3baa1fe27249856523f18d1f1a8, type: 2}
+  mSprites:
+  - name: Button
+    x: 725
+    y: 58
+    width: 38
+    height: 38
+    borderLeft: 16
+    borderRight: 16
+    borderTop: 16
+    borderBottom: 16
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Icon_Alarm
+    x: 1202
+    y: 43
+    width: 119
+    height: 121
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 28
+    paddingRight: 28
+    paddingTop: 27
+    paddingBottom: 27
+  - name: Button_Icon_Basketball
+    x: 908
+    y: 359
+    width: 136
+    height: 136
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 19
+    paddingTop: 19
+    paddingBottom: 20
+  - name: Button_Icon_Bathroom
+    x: 908
+    y: 634
+    width: 144
+    height: 134
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 16
+    paddingRight: 15
+    paddingTop: 21
+    paddingBottom: 20
+  - name: Button_Icon_Bedroom
+    x: 1590
+    y: 795
+    width: 114
+    height: 77
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 31
+    paddingRight: 30
+    paddingTop: 50
+    paddingBottom: 48
+  - name: Button_Icon_Book
+    x: 1202
+    y: 297
+    width: 153
+    height: 111
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 11
+    paddingTop: 32
+    paddingBottom: 32
+  - name: Button_Icon_Brush Teeth
+    x: 1053
+    y: 204
+    width: 113
+    height: 140
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 27
+    paddingRight: 35
+    paddingTop: 18
+    paddingBottom: 17
+  - name: Button_Icon_Checklist
+    x: 1435
+    y: 880
+    width: 154
+    height: 144
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 10
+    paddingTop: 15
+    paddingBottom: 16
+  - name: Button_Icon_Clothing
+    x: 1202
+    y: 656
+    width: 165
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 5
+    paddingTop: 38
+    paddingBottom: 25
+  - name: Button_Icon_Coffee
+    x: 1053
+    y: 49
+    width: 100
+    height: 154
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 38
+    paddingRight: 37
+    paddingTop: 11
+    paddingBottom: 10
+  - name: Button_Icon_Game
+    x: 512
+    y: 37
+    width: 151
+    height: 59
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 12
+    paddingTop: 58
+    paddingBottom: 58
+  - name: Button_Icon_Groom
+    x: 1053
+    y: 490
+    width: 119
+    height: 147
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 30
+    paddingRight: 26
+    paddingTop: 15
+    paddingBottom: 13
+  - name: Button_Icon_Home_Printer
+    x: 1590
+    y: 873
+    width: 139
+    height: 151
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 18
+    paddingTop: 12
+    paddingBottom: 12
+  - name: Button_Icon_Inspect
+    x: 1865
+    y: 872
+    width: 134
+    height: 152
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 23
+    paddingRight: 18
+    paddingTop: 16
+    paddingBottom: 7
+  - name: Button_Icon_Internet
+    x: 908
+    y: 496
+    width: 137
+    height: 137
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 19
+    paddingRight: 19
+    paddingTop: 19
+    paddingBottom: 19
+  - name: Button_Icon_Jog
+    x: 1053
+    y: 345
+    width: 113
+    height: 144
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 31
+    paddingRight: 31
+    paddingTop: 15
+    paddingBottom: 16
+  - name: Button_Icon_Kitchen
+    x: 768
+    y: 624
+    width: 139
+    height: 144
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 17
+    paddingRight: 19
+    paddingTop: 16
+    paddingBottom: 15
+  - name: Button_Icon_Knock
+    x: 512
+    y: 350
+    width: 164
+    height: 162
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 13
+  - name: Button_Icon_Laptop
+    x: 1053
+    y: 638
+    width: 148
+    height: 130
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 14
+    paddingRight: 13
+    paddingTop: 23
+    paddingBottom: 22
+  - name: Button_Icon_Library_Printer
+    x: 1280
+    y: 879
+    width: 154
+    height: 145
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 10
+    paddingTop: 18
+    paddingBottom: 12
+  - name: Button_Icon_Living_Room
+    x: 1368
+    y: 653
+    width: 106
+    height: 115
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 35
+    paddingRight: 34
+    paddingTop: 31
+    paddingBottom: 29
+  - name: Button_Icon_Magnifying Glass
+    x: 1730
+    y: 872
+    width: 134
+    height: 152
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 23
+    paddingRight: 18
+    paddingTop: 16
+    paddingBottom: 7
+  - name: Button_Icon_Map
+    x: 908
+    y: 83
+    width: 126
+    height: 144
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 27
+    paddingRight: 22
+    paddingTop: 17
+    paddingBottom: 14
+  - name: Button_Icon_Menu_Small
+    x: 668
+    y: 270
+    width: 93
+    height: 79
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 12
+    paddingTop: 20
+    paddingBottom: 19
+  - name: Button_Icon_Notes
+    x: 512
+    y: 195
+    width: 155
+    height: 154
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 9
+    paddingTop: 10
+    paddingBottom: 11
+  - name: Button_Icon_Phone
+    x: 768
+    y: 131
+    width: 131
+    height: 146
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 22
+    paddingRight: 22
+    paddingTop: 15
+    paddingBottom: 14
+  - name: Button_Icon_Phone_Call
+    x: 1202
+    y: 165
+    width: 111
+    height: 131
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 32
+    paddingRight: 32
+    paddingTop: 21
+    paddingBottom: 23
+  - name: Button_Icon_Phone_Down
+    x: 768
+    y: 278
+    width: 131
+    height: 146
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 22
+    paddingRight: 22
+    paddingTop: 14
+    paddingBottom: 15
+  - name: Button_Icon_Shower
+    x: 1202
+    y: 532
+    width: 149
+    height: 123
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 13
+    paddingTop: 26
+    paddingBottom: 26
+  - name: Button_Icon_Sleep
+    x: 1865
+    y: 816
+    width: 150
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 14
+    paddingRight: 11
+    paddingTop: 61
+    paddingBottom: 59
+  - name: Button_Icon_Text
+    x: 908
+    y: 228
+    width: 141
+    height: 130
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 17
+    paddingRight: 17
+    paddingTop: 22
+    paddingBottom: 23
+  - name: Button_Icon_TV
+    x: 1202
+    y: 409
+    width: 150
+    height: 122
+    borderLeft: 1
+    borderRight: 1
+    borderTop: 1
+    borderBottom: 1
+    paddingLeft: 13
+    paddingRight: 12
+    paddingTop: 26
+    paddingBottom: 27
+  - name: Button_Tip
+    x: 512
+    y: 1
+    width: 38
+    height: 35
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Capsule_End
+    x: 768
+    y: 425
+    width: 99
+    height: 198
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Capsule_Mid
+    x: 507
+    y: 314
+    width: 1
+    height: 198
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 2
+    paddingBottom: 2
+  - name: Circle
+    x: 664
+    y: 36
+    width: 60
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
+  - name: ClockBold48
+    x: 1280
+    y: 770
+    width: 124
+    height: 108
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 4
+    paddingTop: 20
+    paddingBottom: 0
+  - name: ClockBold64
+    x: 512
+    y: 97
+    width: 242
+    height: 97
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 14
+    paddingTop: 31
+    paddingBottom: 0
+  - name: ClockReg30
+    x: 1730
+    y: 809
+    width: 117
+    height: 62
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 11
+    paddingTop: 2
+    paddingBottom: 0
+  - name: ClockReg40
+    x: 768
+    y: 11
+    width: 125
+    height: 119
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 3
+    paddingTop: 9
+    paddingBottom: 0
+  - name: ClockReg48
+    x: 1435
+    y: 771
+    width: 120
+    height: 108
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 8
+    paddingTop: 20
+    paddingBottom: 0
+  - name: Default
+    x: 512
+    y: 513
+    width: 255
+    height: 511
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 1
+    paddingBottom: 0
+  - name: Emphasis
+    x: 768
+    y: 769
+    width: 511
+    height: 255
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 1
+    paddingBottom: 0
+  - name: Square
+    x: 757
+    y: 502
+    width: 10
+    height: 10
+    borderLeft: 1
+    borderRight: 1
+    borderTop: 1
+    borderBottom: 1
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Star_Fill
+    x: 677
+    y: 437
+    width: 79
+    height: 75
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 5
+  - name: Star_Outline
+    x: 677
+    y: 361
+    width: 79
+    height: 75
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 3
+    paddingTop: 2
+    paddingBottom: 5
+  - name: Stat_Check
+    x: 668
+    y: 197
+    width: 76
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 5
+    paddingTop: 11
+    paddingBottom: 7
+  - name: Task_Frame
+    x: 2000
+    y: 975
+    width: 44
+    height: 49
+    borderLeft: 20
+    borderRight: 20
+    borderTop: 20
+    borderBottom: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Title
+    x: 0
+    y: 4
+    width: 506
+    height: 508
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 6
+    paddingTop: 4
+    paddingBottom: 0
+  - name: Title_Regular
+    x: 0
+    y: 513
+    width: 511
+    height: 511
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 1
+    paddingBottom: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []

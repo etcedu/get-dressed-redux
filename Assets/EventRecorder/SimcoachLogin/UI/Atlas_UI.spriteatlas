@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas_UI
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 1
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 08d57e7ca153a3846945cec19f9c0cee, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 0ddad900c35f42141a27a77c686a5f59: 21300000
+    - 394370b10411b4a49b62976e6e68c6ab: 21300000
+    - df3c9802779ede1498410c2277096c0c: 21300000
+    - a5860152048f3fc44813e8d70f251371: 21300000
+    - d3ff0c627791ad14797856f486d122e4: 21300000
+    - 8d67ac93be380c44fabcf7a926be46c6: 21300000
+    - bf849b95602d54f48a5063e5af7ac677: 21300000
+    - 820335b653e887b47bdb7325adb2424b: 21300000
+    - f1df544740c9fba4abb79d37b5d9d765: 21300000
+    - d2f8809794f7c9949b88401cfb31d834: 21300000
+    - 50f513f726193094882bfdd02a77d33a: 21300000
+    - 84a6ea482ffbeb345bf8418dbb1b37ba: 21300000
+    - e9b37b4ac879f854583f8c2c6b9208ec: 21300000
+    - 98b293aa994ee994da108f3bc5989b8f: 21300000
+    - 18ca084b207ed3a47bcaac371014dedf: 21300000
+    - b6e9a35c6b526174b96996fa38491f50: 21300000
+    - 84790f9c8c66bda41ba60b3133e67c35: 21300000
+    - 13f9d1bcd88eda8478e572b776306c8d: 21300000
+    - 736724ad044ef2b45b61ebd730f8cb7c: 21300000
+    - 89af6a5eee242c74d82daf4f53785e5f: 21300000
+    - 5c31586e8e5f27343bd517208d84b0be: 21300000
+    - 63e5229f33de199459ed0e134e608171: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 0ddad900c35f42141a27a77c686a5f59, type: 3}
+  - {fileID: 21300000, guid: 394370b10411b4a49b62976e6e68c6ab, type: 3}
+  - {fileID: 21300000, guid: df3c9802779ede1498410c2277096c0c, type: 3}
+  - {fileID: 21300000, guid: a5860152048f3fc44813e8d70f251371, type: 3}
+  - {fileID: 21300000, guid: d3ff0c627791ad14797856f486d122e4, type: 3}
+  - {fileID: 21300000, guid: 8d67ac93be380c44fabcf7a926be46c6, type: 3}
+  - {fileID: 21300000, guid: bf849b95602d54f48a5063e5af7ac677, type: 3}
+  - {fileID: 21300000, guid: 820335b653e887b47bdb7325adb2424b, type: 3}
+  - {fileID: 21300000, guid: f1df544740c9fba4abb79d37b5d9d765, type: 3}
+  - {fileID: 21300000, guid: d2f8809794f7c9949b88401cfb31d834, type: 3}
+  - {fileID: 21300000, guid: 50f513f726193094882bfdd02a77d33a, type: 3}
+  - {fileID: 21300000, guid: 84a6ea482ffbeb345bf8418dbb1b37ba, type: 3}
+  - {fileID: 21300000, guid: e9b37b4ac879f854583f8c2c6b9208ec, type: 3}
+  - {fileID: 21300000, guid: 98b293aa994ee994da108f3bc5989b8f, type: 3}
+  - {fileID: 21300000, guid: 18ca084b207ed3a47bcaac371014dedf, type: 3}
+  - {fileID: 21300000, guid: b6e9a35c6b526174b96996fa38491f50, type: 3}
+  - {fileID: 21300000, guid: 84790f9c8c66bda41ba60b3133e67c35, type: 3}
+  - {fileID: 21300000, guid: 13f9d1bcd88eda8478e572b776306c8d, type: 3}
+  - {fileID: 21300000, guid: 736724ad044ef2b45b61ebd730f8cb7c, type: 3}
+  - {fileID: 21300000, guid: 89af6a5eee242c74d82daf4f53785e5f, type: 3}
+  - {fileID: 21300000, guid: 5c31586e8e5f27343bd517208d84b0be, type: 3}
+  - {fileID: 21300000, guid: 63e5229f33de199459ed0e134e608171, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Icon_Clear
+  - Panel_15
+  - Panel_Tab
+  - Icon_Enter
+  - Panel_Shadow_15
+  - Button_Circle_72
+  - Icon_More
+  - Icon_Cal
+  - Panel_Rounded_24
+  - Button_Scroll
+  - Icon_Back
+  - Logo_SimcoachLogin
+  - Panel_Rounded_24_FlatBot
+  - Icon_S
+  - Button_15
+  - Icon_Lock
+  - Panel_30
+  - Icon_Sound
+  - Panel_Shadow_30
+  - Icon_Data
+  - Icon_Info
+  - Panel_Rounded_24_FlatTop
+  m_RenderDataMap: {}
+  m_Tag: Atlas_UI
+  m_IsVariant: 0
