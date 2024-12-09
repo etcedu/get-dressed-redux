@@ -600,6 +600,8 @@ GameObject:
   - component: {fileID: 7049776652081007528}
   - component: {fileID: 6842588970243556573}
   - component: {fileID: 9003027688113603846}
+  - component: {fileID: 1132005150607967368}
+  - component: {fileID: 3851133738117014645}
   m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
@@ -664,6 +666,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1132005150607967368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664939210135077491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
+  passedEvents: []
+  notPassedEvents:
+  - mTarget: {fileID: 3851133738117014645}
+    mMethodName: False
+    mParameters: []
+    oneShot: 0
+--- !u!114 &3851133738117014645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664939210135077491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8a49afd4ce3214cbe16e1d7c9b261d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1690812506760940904
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,10 +1004,10 @@ RectTransform:
   - {fileID: 6178672449999229443}
   m_Father: {fileID: 6492434851130589038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 132.92, y: -22.279999}
+  m_SizeDelta: {x: 265.84, y: 44.559998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8974004946369878874
 CanvasRenderer:
@@ -1511,10 +1544,10 @@ RectTransform:
   - {fileID: 7962934893832650687}
   m_Father: {fileID: 6492434851130589038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 132.92, y: -72.84}
+  m_SizeDelta: {x: 265.84, y: 44.559998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7702648370115188096
 CanvasRenderer:
@@ -1812,6 +1845,8 @@ GameObject:
   - component: {fileID: 8724348773800050507}
   - component: {fileID: 3345874566370239086}
   - component: {fileID: 4473817836457167920}
+  - component: {fileID: 2178474171559498861}
+  - component: {fileID: 9165925439628026249}
   m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
@@ -1876,6 +1911,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2178474171559498861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224172687257431111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
+  passedEvents: []
+  notPassedEvents:
+  - mTarget: {fileID: 9165925439628026249}
+    mMethodName: False
+    mParameters: []
+    oneShot: 0
+--- !u!114 &9165925439628026249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224172687257431111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8a49afd4ce3214cbe16e1d7c9b261d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3302886583666652164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2223,8 @@ GameObject:
   - component: {fileID: 8489458886573870199}
   - component: {fileID: 1545748558404429177}
   - component: {fileID: 3893959998314547774}
+  - component: {fileID: 4363678277392568887}
+  - component: {fileID: 5320800309579878030}
   m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
@@ -2221,6 +2289,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4363678277392568887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012394059588290560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
+  passedEvents: []
+  notPassedEvents:
+  - mTarget: {fileID: 5320800309579878030}
+    mMethodName: False
+    mParameters: []
+    oneShot: 0
+--- !u!114 &5320800309579878030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012394059588290560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8a49afd4ce3214cbe16e1d7c9b261d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4034766725628376295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,10 +3144,10 @@ RectTransform:
   - {fileID: 4248381617083904061}
   m_Father: {fileID: 6492434851130589038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 132.92, y: -123.399994}
+  m_SizeDelta: {x: 265.84, y: 44.559998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7616990352947876589
 CanvasRenderer:
@@ -4637,6 +4736,26 @@ MonoBehaviour:
       positionDressTier: 2
       positionInfo: Provide healthcare and education to patients. Hard worker and
         professional demeanor a must.
+  nameLabel: {fileID: 8825557345256868054}
+  mainButton: {fileID: 3600128172223524726}
+  positionContainer: {fileID: 335536926871063306}
+  progressBar: {fileID: 9025053587132570322}
+  descLabel: {fileID: 2119533958026084436}
+  star1: {fileID: 4363678277392568887}
+  star2: {fileID: 2178474171559498861}
+  star3: {fileID: 1132005150607967368}
+  pInfoContainers:
+  - {fileID: 4118454519802214582}
+  - {fileID: 9009181015456630528}
+  - {fileID: 2853320628869930625}
+  pInfoContainerTitles:
+  - {fileID: 7789010061683780389}
+  - {fileID: 8853158211635699657}
+  - {fileID: 8398655669306803738}
+  pInfoContainerDescs:
+  - {fileID: 5675232941398132449}
+  - {fileID: 5963564601486504120}
+  - {fileID: 5176678675468266931}
 --- !u!61 &4261457006997815544
 BoxCollider2D:
   m_ObjectHideFlags: 0

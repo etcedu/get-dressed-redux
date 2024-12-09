@@ -23,8 +23,19 @@ public class Company : MonoBehaviour {
 	CompanyPositionInfoButton positionOne = new CompanyPositionInfoButton(),
 	positionTwo = new CompanyPositionInfoButton(),
 	positionThree = new CompanyPositionInfoButton();
-	
-	public CompanyPositionInfo PositionOne
+
+	[SerializeField] public TMP_Text nameLabel;
+	[SerializeField] public LockAndKey mainButton;
+    [SerializeField] public GameObject positionContainer;
+	[SerializeField] public CompanyProgressBar progressBar;
+	[SerializeField] public TMP_Text descLabel;
+
+	[SerializeField] public InterviewPassedDependantEvents star1, star2, star3;
+
+	[SerializeField] public Transform[] pInfoContainers;
+	[SerializeField] public TMP_Text[] pInfoContainerTitles;
+    [SerializeField] public TMP_Text[] pInfoContainerDescs;
+    public CompanyPositionInfo PositionOne
 	{
 		get{ return positionOne.info; }
 		set{ positionOne.info = value; }

@@ -204,7 +204,8 @@ public class MapManager : MonoBehaviour
 				pin.transform.localScale = Vector3.one;
 				newCompany = pin.AddMissingComponent<Company>();
 				newCompany.gameObject.name = companyName;
-                pin.transform.Find("NameLabel").GetComponent<TMP_Text>().text = companyName;
+				newCompany.nameLabel.text = companyName;
+                //pin.transform.Find("NameLabel").GetComponent<TMP_Text>().text = companyName;
 				ArrayUtility.Add<Company>(ref companies, newCompany);
 				c = companies.Last();
 				c.CompanyName = companyName;
@@ -218,61 +219,42 @@ public class MapManager : MonoBehaviour
 			if(!int.TryParse(fields[1], out listPosition))
 				listPosition = 0;
 
-			GameObject positionContainer = c.transform.Find("Position Container").gameObject;
-
+			//GameObject positionContainer = c.transform.Find("Position Container").gameObject;
+           
 			CompanyPositionInfo cpi = null;
 			if(listPosition == 0)
 			{
-				Debug.Log("setup " + c.CompanyName);LockAndKey lak = c.transform.Find("MainButton").GetComponent<LockAndKey>();
-				lak.unlockRank = int.Parse(fields[4]);
-				c.transform.Find("ProgressBar").GetComponent<CompanyProgressBar>().rank = int.Parse(fields[4]);
-				positionContainer.GetChild("DescLabel").GetComponent<UILabel>().text = fields[5];
+				Debug.Log("setup " + c.CompanyName);
+				c.mainButton.unlockRank = int.Parse(fields[4]);
+				c.progressBar.rank = int.Parse(fields[4]);
+				c.descLabel.text = fields[5];
 				EditorUtility.SetDirty(c);
-				EditorUtility.SetDirty(lak);
 				continue;
 			}
 			else if(listPosition == 1)
 			{
 				cpi = c.PositionOne;
-				if(c.PositionOneButton == null)
-					c.PositionOneButton = positionContainer.transform.Find("PositionButton 1").GetComponent<Button>();
-				LockAndKey lak = positionContainer.transform.Find("PositionButton 1").GetComponent<LockAndKey>();
-				lak.unlockRank = int.Parse(fields[4]);
-				InterviewPassedDependantEvents ipde = c.gameObject.transform.Find("Star 1").GetChild("Fill").GetComponent<InterviewPassedDependantEvents>();
-				ipde.key = c.CompanyName + "_" + c.PositionOne.PositionName; 
+				c.PositionOneButton.GetComponent<LockAndKey>().unlockRank = int.Parse(fields[4]);
+				c.star1.key = c.CompanyName + "_" + c.PositionOne.PositionName;
 				EditorUtility.SetDirty(c);
-				EditorUtility.SetDirty(lak);
-				EditorUtility.SetDirty(ipde);
 				Debug.Log("setup " + c.CompanyName + ", position " + c.PositionOne.PositionName);
 			}
 			else if(listPosition == 2)
 			{
 				cpi = c.PositionTwo;
-				if(c.PositionTwoButton == null)
-					c.PositionTwoButton = positionContainer.transform.Find("PositionButton 2").GetComponent<Button>();
-				LockAndKey lak = positionContainer.transform.Find("PositionButton 2").GetComponent<LockAndKey>();
-				lak.unlockRank = int.Parse(fields[4]);
-				lak.unlockPassedLevels = new List<string>(){c.PositionOne.CompanyName + "_" + c.PositionOne.PositionName};
-				InterviewPassedDependantEvents ipde = c.gameObject.transform.Find("Star 2").GetChild("Fill").GetComponent<InterviewPassedDependantEvents>();
-				ipde.key = c.CompanyName + "_" + c.PositionTwo.PositionName; 
+                c.PositionTwoButton.GetComponent<LockAndKey>().unlockRank = int.Parse(fields[4]);
+                c.PositionTwoButton.GetComponent<LockAndKey>().unlockPassedLevels = new List<string>(){c.PositionOne.CompanyName + "_" + c.PositionOne.PositionName};
+				c.star2.key = c.CompanyName + "_" + c.PositionTwo.PositionName;
 				EditorUtility.SetDirty(c);
-				EditorUtility.SetDirty(lak);
-				EditorUtility.SetDirty(ipde);
 				Debug.Log("setup " + c.CompanyName + ", position " + c.PositionTwo.PositionName);
 			}
 			else
 			{
 				cpi = c.PositionThree;
-				if(c.PositionThreeButton == null)
-					c.PositionThreeButton = positionContainer.transform.Find("PositionButton 3").GetComponent<Button>();
-				LockAndKey lak = positionContainer.transform.Find("PositionButton 3").GetComponent<LockAndKey>();
-				lak.unlockRank = int.Parse(fields[4]);
-				lak.unlockPassedLevels = new List<string>(){c.PositionTwo.CompanyName + "_" + c.PositionTwo.PositionName};
-				InterviewPassedDependantEvents ipde = c.gameObject.transform.Find("Star 3").GetChild("Fill").GetComponent<InterviewPassedDependantEvents>();
-				ipde.key = c.CompanyName + "_" + c.PositionThree.PositionName; 
+                c.PositionThreeButton.GetComponent<LockAndKey>().unlockRank = int.Parse(fields[4]);
+                c.PositionThreeButton.GetComponent<LockAndKey>().unlockPassedLevels = new List<string>() { c.PositionTwo.CompanyName + "_" + c.PositionTwo.PositionName };
+                c.star3.key = c.CompanyName + "_" + c.PositionThree.PositionName;
 				EditorUtility.SetDirty(c);
-				EditorUtility.SetDirty(lak);
-				EditorUtility.SetDirty(ipde);
 				Debug.Log("setup " + c.CompanyName + ", position " + c.PositionThree.PositionName);
 			}
 			
@@ -280,9 +262,9 @@ public class MapManager : MonoBehaviour
 			string positionInfo = fields[6];
 			cpi.PositionName = positionName;
 			cpi.PositionInfo = positionInfo;
-			Transform pInfoContainer = c.transform.Find("Position"+listPosition+"_Info");
-			pInfoContainer.Find("Title").GetComponent<UILabel>().text = positionName;
-			pInfoContainer.Find("DescLabel").GetComponent<UILabel>().text = positionInfo;
+
+			c.pInfoContainerTitles[listPosition].text = positionName;
+			c.pInfoContainerDescs[listPosition].text = positionInfo;
 
 			string tier = fields[3];
 			if(tier != "")
