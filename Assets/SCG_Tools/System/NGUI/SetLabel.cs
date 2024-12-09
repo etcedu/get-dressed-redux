@@ -5,7 +5,7 @@ public class SetLabel : MonoBehaviour {
 	[SerializeField]
 	protected string text;
 	[SerializeField]
-	protected UILabel label;
+	protected TMPro.TMP_Text label;
 	[SerializeField]
 	protected bool setOnStart;
 
@@ -19,7 +19,7 @@ public class SetLabel : MonoBehaviour {
 	public void Execute () {
 		if(label == null)
 		{
-			label = GetComponent<UILabel>();
+			label = GetComponent<TMPro.TMP_Text>();
 			if(label == null) return;
 		}
 		label.text = text;

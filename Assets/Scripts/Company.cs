@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using TMPro;
+
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -13,16 +17,19 @@ public class Company : MonoBehaviour {
 		get{ return companyName; }
 		set{ companyName = value; }
 	}
+	public GameObject detailsPopup;
+
 	[SerializeField]
 	CompanyPositionInfoButton positionOne = new CompanyPositionInfoButton(),
 	positionTwo = new CompanyPositionInfoButton(),
 	positionThree = new CompanyPositionInfoButton();
+	
 	public CompanyPositionInfo PositionOne
 	{
 		get{ return positionOne.info; }
 		set{ positionOne.info = value; }
 	}
-	public UIButton PositionOneButton
+	public Button PositionOneButton
 	{
 		get{ return positionOne.button; }
 		set{ positionOne.button = value; }
@@ -32,7 +39,7 @@ public class Company : MonoBehaviour {
 		get{ return positionTwo.info; }
 		set{ positionTwo.info = value; }
 	}
-	public UIButton PositionTwoButton
+	public Button PositionTwoButton
 	{
 		get{ return positionTwo.button; }
 		set{ positionTwo.button = value; }
@@ -42,7 +49,7 @@ public class Company : MonoBehaviour {
 		get{ return positionThree.info; }
 		set{ positionThree.info = value; }
 	}
-	public UIButton PositionThreeButton
+	public Button PositionThreeButton
 	{
 		get{ return positionThree.button; }
 		set{ positionThree.button = value; }
@@ -54,11 +61,11 @@ public class Company : MonoBehaviour {
 		if(Application.isPlaying)
 			return;
 		if(positionOne.button != null)
-			positionOne.button.GetComponentInChildren<UILabel>().text = positionOne.info.PositionName;
+			positionOne.button.GetComponentInChildren<TMP_Text>().text = positionOne.info.PositionName;
 		if(positionTwo.button != null)
-			positionTwo.button.GetComponentInChildren<UILabel>().text = positionTwo.info.PositionName;
+			positionTwo.button.GetComponentInChildren<TMP_Text>().text = positionTwo.info.PositionName;
 		if(positionThree.button != null)
-			positionThree.button.GetComponentInChildren<UILabel>().text = positionThree.info.PositionName;
+			positionThree.button.GetComponentInChildren<TMP_Text>().text = positionThree.info.PositionName;
 	}
 #endif
 
@@ -66,7 +73,7 @@ public class Company : MonoBehaviour {
 	class CompanyPositionInfoButton
 	{
 		[SerializeField]
-		public UIButton button;
+		public Button button;
 		[SerializeField]
 		public CompanyPositionInfo info = new CompanyPositionInfo();
 	}

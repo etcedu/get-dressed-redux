@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class LockAndKey : MonoBehaviour
 {
@@ -40,9 +41,9 @@ public class LockAndKey : MonoBehaviour
 	{
 		if(target == null)
 			target = gameObject;
-		UIButton button = target.GetComponent<UIButton>();
+		Button button = target.GetComponent<Button>();
 		if(button != null && hideOrDisable == HideOrDisable.DISABLE)
-			button.isEnabled = false;
+			button.interactable = false;
 		else
 			target.SetActive(false);
 		EventDelegate.Execute(hideOrDisableEvents);

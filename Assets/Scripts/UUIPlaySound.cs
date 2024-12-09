@@ -38,6 +38,6 @@ public class UUIPlaySound : MonoBehaviour
 
     public virtual void Play ()
 	{
-		NGUITools.PlaySound(audioClip, volume, pitch);
+		FindObjectOfType<SoundSource>().PlaySound(audioClip, volume, pitch);
 	}
 }

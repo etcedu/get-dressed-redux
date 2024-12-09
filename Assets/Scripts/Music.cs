@@ -21,10 +21,10 @@ public class Music : MonoBehaviour {
 			DontDestroyOnLoad(gameObject);
 			source.mute = GameBase.Bools.GetValue(muteCheck, false);
 			Music.PlaySong(song);
-		} else if(_instance != this)
+		} 
+		else if(_instance != this)
 		{
-			source.enabled = false;
-			enabled = false;
+			Destroy(gameObject);
 		}
 	}
 	

@@ -2,6 +2,10 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
+
 #if UNITY_EDITOR
 using System.Linq;
 using UnityEditor;
@@ -23,11 +27,11 @@ public class MapManager : MonoBehaviour
 	// Used when closing a company without unselecting a selected position
 	Dictionary<CompanyPositionInfo, ButtonStateToggle> companyCloseDictionary = new Dictionary<CompanyPositionInfo, ButtonStateToggle>();
 	// Used when opening a company without having closed a previously opened one
-	Dictionary<GameObject, ButtonStateToggle> toggleCompanyDictionay = new Dictionary<GameObject, ButtonStateToggle>();
+	Dictionary<GameObject, GameObject> toggleCompanyDictionay = new Dictionary<GameObject, GameObject>();
 	[System.NonSerialized]
 	CompanyPositionInfo _lastSelectedPosition = null;
 	[System.NonSerialized]
-	ButtonStateToggle _lastSelectedCompany = null;
+	GameObject _lastSelectedCompany = null;
 	HashSet<Company> unlockedCompanies = new HashSet<Company>();
 
 	// Use this for initialization
@@ -36,9 +40,9 @@ public class MapManager : MonoBehaviour
 		foreach(Company pin in companies)
 		{
 			GameObject button = pin.gameObject.GetChildGameObject("Button");
-			button.AddMissingComponent<ForwardTouch>().Clicked += CompanyClicked;
-			ButtonStateToggle bst = button.GetComponent<ButtonStateToggle>();;
-			toggleCompanyDictionay.Add(button, bst);
+			button.GetComponent<Button>().onClick.AddListener(() => CompanyClicked(button));
+			//ButtonStateToggle bst = button.GetComponent<ButtonStateToggle>();;
+			toggleCompanyDictionay.Add(button, pin.detailsPopup);
 
 			GameObject p1 = pin.PositionOneButton.gameObject;
 			GameObject p2 = pin.PositionTwoButton.gameObject;
@@ -58,13 +62,13 @@ public class MapManager : MonoBehaviour
 			p3.AddMissingComponent<ForwardTouch>().Clicked += PositionClicked;
 
 			pin.gameObject.GetChildGameObject("Position1_Info").GetChildGameObject("Apply")
-				.GetComponent<UIButton>().onClick.Add(new EventDelegate(this, "ConfirmPosition"));
+				.GetComponent<Button>().onClick.AddListener(()=> ConfirmPosition());
 			pin.gameObject.GetChildGameObject("Position2_Info").GetChildGameObject("Apply")
-				.GetComponent<UIButton>().onClick.Add(new EventDelegate(this, "ConfirmPosition"));
-			pin.gameObject.GetChildGameObject("Position3_Info").GetChildGameObject("Apply")
-				.GetComponent<UIButton>().onClick.Add(new EventDelegate(this, "ConfirmPosition"));
+				.GetComponent<Button>().onClick.AddListener(()=> ConfirmPosition());
+            pin.gameObject.GetChildGameObject("Position3_Info").GetChildGameObject("Apply")
+				.GetComponent<Button>().onClick.AddListener(() => ConfirmPosition());
 
-			if(pin.gameObject.activeSelf)
+            if (pin.gameObject.activeSelf)
 				unlockedCompanies.Add(pin);
 		}
 	}
@@ -144,7 +148,7 @@ public class MapManager : MonoBehaviour
 	{
 		if(_lastSelectedCompany != null)
 		{
-			_lastSelectedCompany.SetToStart();
+			_lastSelectedCompany.SetActive(false);
 			closeCompany();
 		}
 	}
@@ -165,6 +169,9 @@ public class MapManager : MonoBehaviour
 	public List<GameObject> pinPanels = new List<GameObject>();
 	public GameObject basePinPanel;
 	public GameObject basePin;
+	[SerializeField]
+	Canvas mapCanvas;
+
 	[ContextMenu ("Import Companies")]
 	public void ParseCompanies()//TextAsset data, bool clearItemsOnImport)
 	{
@@ -178,12 +185,12 @@ public class MapManager : MonoBehaviour
 			string[] fields = items[i].Split(new char[]{'\t'});
 
 			string companyName = fields[0];
-			Company c = companies.FirstOrDefault(comp=>comp.CompanyName == fields[0]);
+			Company c = companies.FirstOrDefault(comp => comp.CompanyName == fields[0]);
 			GameObject parent;
 			int parentNum = int.Parse(fields[7]);
 			if(pinPanels.Count < parentNum)
 			{
-				parent = PrefabUtility.InstantiatePrefab(basePinPanel) as GameObject;
+				parent = Instantiate(basePinPanel, mapCanvas.transform) as GameObject;
 				parent.name += "_"+parentNum;
 			}
 			else
@@ -192,18 +199,12 @@ public class MapManager : MonoBehaviour
 			if(c == null)
 			{
 				Company newCompany;
-				if(PrefabUtility.GetPrefabType(basePin) != PrefabType.None)
-				{
-					GameObject pin = PrefabUtility.InstantiatePrefab(basePin) as GameObject;
-					pin.transform.SetParent(parent.transform);
-					pin.transform.localScale = Vector3.one;
-					newCompany = pin.AddMissingComponent<Company>();
-				}
-				else
-					newCompany = NGUITools.AddChild(parent, basePin).AddMissingComponent<Company>();
-
+				GameObject pin = Instantiate(basePin) as GameObject;
+				pin.transform.SetParent(parent.transform);
+				pin.transform.localScale = Vector3.one;
+				newCompany = pin.AddMissingComponent<Company>();
 				newCompany.gameObject.name = companyName;
-				newCompany.gameObject.GetChildGameObject("Name").GetComponent<UILabel>().text = companyName;
+                pin.transform.Find("NameLabel").GetComponent<TMP_Text>().text = companyName;
 				ArrayUtility.Add<Company>(ref companies, newCompany);
 				c = companies.Last();
 				c.CompanyName = companyName;
@@ -217,16 +218,15 @@ public class MapManager : MonoBehaviour
 			if(!int.TryParse(fields[1], out listPosition))
 				listPosition = 0;
 
-			GameObject positionContainer = c.gameObject.GetChildGameObject("Position_Container");
+			GameObject positionContainer = c.transform.Find("Position Container").gameObject;
 
 			CompanyPositionInfo cpi = null;
 			if(listPosition == 0)
 			{
-				Debug.Log("setup " + c.CompanyName);LockAndKey lak = c.gameObject.GetChildGameObject("Button").GetComponent<LockAndKey>();
+				Debug.Log("setup " + c.CompanyName);LockAndKey lak = c.transform.Find("MainButton").GetComponent<LockAndKey>();
 				lak.unlockRank = int.Parse(fields[4]);
-				c.gameObject.GetChildGameObject("NameBorder").GetChildGameObject("Progress_Bar").
-					GetComponent<CompanyProgressBar>().rank = int.Parse(fields[4]);
-				positionContainer.GetChild("Description").GetComponent<UILabel>().text = fields[5];
+				c.transform.Find("ProgressBar").GetComponent<CompanyProgressBar>().rank = int.Parse(fields[4]);
+				positionContainer.GetChild("DescLabel").GetComponent<UILabel>().text = fields[5];
 				EditorUtility.SetDirty(c);
 				EditorUtility.SetDirty(lak);
 				continue;
@@ -235,10 +235,10 @@ public class MapManager : MonoBehaviour
 			{
 				cpi = c.PositionOne;
 				if(c.PositionOneButton == null)
-					c.PositionOneButton = positionContainer.GetChildGameObject("Position1").GetComponent<UIButton>();
-				LockAndKey lak = positionContainer.GetChildGameObject("Position1").GetComponent<LockAndKey>();
+					c.PositionOneButton = positionContainer.transform.Find("PositionButton 1").GetComponent<Button>();
+				LockAndKey lak = positionContainer.transform.Find("PositionButton 1").GetComponent<LockAndKey>();
 				lak.unlockRank = int.Parse(fields[4]);
-				InterviewPassedDependantEvents ipde = c.gameObject.GetChildGameObject("1").GetChild("Star").GetComponent<InterviewPassedDependantEvents>();
+				InterviewPassedDependantEvents ipde = c.gameObject.transform.Find("Star 1").GetChild("Fill").GetComponent<InterviewPassedDependantEvents>();
 				ipde.key = c.CompanyName + "_" + c.PositionOne.PositionName; 
 				EditorUtility.SetDirty(c);
 				EditorUtility.SetDirty(lak);
@@ -249,11 +249,11 @@ public class MapManager : MonoBehaviour
 			{
 				cpi = c.PositionTwo;
 				if(c.PositionTwoButton == null)
-					c.PositionTwoButton = positionContainer.GetChildGameObject("Position2").GetComponent<UIButton>();
-				LockAndKey lak = positionContainer.GetChildGameObject("Position2").GetComponent<LockAndKey>();
+					c.PositionTwoButton = positionContainer.transform.Find("PositionButton 2").GetComponent<Button>();
+				LockAndKey lak = positionContainer.transform.Find("PositionButton 2").GetComponent<LockAndKey>();
 				lak.unlockRank = int.Parse(fields[4]);
 				lak.unlockPassedLevels = new List<string>(){c.PositionOne.CompanyName + "_" + c.PositionOne.PositionName};
-				InterviewPassedDependantEvents ipde = c.gameObject.GetChildGameObject("2").GetChild("Star").GetComponent<InterviewPassedDependantEvents>();
+				InterviewPassedDependantEvents ipde = c.gameObject.transform.Find("Star 2").GetChild("Fill").GetComponent<InterviewPassedDependantEvents>();
 				ipde.key = c.CompanyName + "_" + c.PositionTwo.PositionName; 
 				EditorUtility.SetDirty(c);
 				EditorUtility.SetDirty(lak);
@@ -264,11 +264,11 @@ public class MapManager : MonoBehaviour
 			{
 				cpi = c.PositionThree;
 				if(c.PositionThreeButton == null)
-					c.PositionThreeButton = positionContainer.GetChildGameObject("Position3").GetComponent<UIButton>();
-				LockAndKey lak = positionContainer.GetChildGameObject("Position3").GetComponent<LockAndKey>();
+					c.PositionThreeButton = positionContainer.transform.Find("PositionButton 3").GetComponent<Button>();
+				LockAndKey lak = positionContainer.transform.Find("PositionButton 3").GetComponent<LockAndKey>();
 				lak.unlockRank = int.Parse(fields[4]);
 				lak.unlockPassedLevels = new List<string>(){c.PositionTwo.CompanyName + "_" + c.PositionTwo.PositionName};
-				InterviewPassedDependantEvents ipde = c.gameObject.GetChildGameObject("3").GetChild("Star").GetComponent<InterviewPassedDependantEvents>();
+				InterviewPassedDependantEvents ipde = c.gameObject.transform.Find("Star 3").GetChild("Fill").GetComponent<InterviewPassedDependantEvents>();
 				ipde.key = c.CompanyName + "_" + c.PositionThree.PositionName; 
 				EditorUtility.SetDirty(c);
 				EditorUtility.SetDirty(lak);
@@ -280,9 +280,9 @@ public class MapManager : MonoBehaviour
 			string positionInfo = fields[6];
 			cpi.PositionName = positionName;
 			cpi.PositionInfo = positionInfo;
-			GameObject pInfoContainer = c.gameObject.GetChildGameObject("Position"+listPosition+"_Info");
-			pInfoContainer.GetChild("Role").GetComponent<UILabel>().text = positionName;
-			pInfoContainer.GetChild("Description").GetComponent<UILabel>().text = positionInfo;
+			Transform pInfoContainer = c.transform.Find("Position"+listPosition+"_Info");
+			pInfoContainer.Find("Title").GetComponent<UILabel>().text = positionName;
+			pInfoContainer.Find("DescLabel").GetComponent<UILabel>().text = positionInfo;
 
 			string tier = fields[3];
 			if(tier != "")

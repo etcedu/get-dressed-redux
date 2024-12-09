@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 72876022}
   - component: {fileID: 72876021}
   - component: {fileID: 72876020}
+  - component: {fileID: 72876024}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -307,7 +308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 702, y: 56.978}
+  m_AnchoredPosition: {x: 836.4, y: 57.6}
   m_SizeDelta: {x: 447.867, y: 99.633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72876020
@@ -368,7 +369,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 72876022}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 72876024}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &72876022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +420,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72876018}
   m_CullTransparentMesh: 1
+--- !u!114 &72876024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72876018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b30fdbab8458bd408d459ad7e7b7518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: Start Screen
 --- !u!1 &79156705
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +809,7 @@ GameObject:
   - component: {fileID: 221070118}
   - component: {fileID: 221070117}
   - component: {fileID: 221070116}
+  - component: {fileID: 221070119}
   m_Layer: 5
   m_Name: Scroll View
   m_TagString: Untagged
@@ -878,6 +905,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221070114}
   m_CullTransparentMesh: 1
+--- !u!114 &221070119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221070114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa45d0d2ab061543aef891dea22c80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetVelocity: {x: 0, y: 100}
+  delayToRestart: 2
 --- !u!1 &265280657
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 265280659}
   - component: {fileID: 265280658}
+  - component: {fileID: 265280660}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -961,6 +1003,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &265280660
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265280657}
+  m_Enabled: 1
 --- !u!1 &272439570
 GameObject:
   m_ObjectHideFlags: 0
@@ -6870,6 +6920,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 196734, guid: ed504042af323be44a612ffbe207a2e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 464540, guid: ed504042af323be44a612ffbe207a2e6, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(UIWidget))]
 public class ScrollForever : MonoBehaviour
 {
 	private UIWidget _widget;

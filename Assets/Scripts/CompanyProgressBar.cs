@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-
-[RequireComponent (typeof(UIProgressBar))]
+using UnityEngine.UI;
 public class CompanyProgressBar : MonoBehaviour
 {
 	[Range(0, 4)]
@@ -14,11 +13,11 @@ public class CompanyProgressBar : MonoBehaviour
 		set{
 			if(value == _numerator || _pBar == null) return;
 			if(Denominator == 0)
-				_pBar.value = 0;
+				_pBar.fillAmount = 0;
 			else
 			{
 				_numerator = Mathf.Clamp(value, 0, Denominator);
-				_pBar.value = _numerator / Denominator;
+				_pBar.fillAmount = _numerator / Denominator;
 			}
 		}
 	}
@@ -29,12 +28,12 @@ public class CompanyProgressBar : MonoBehaviour
 			return CrossSceneInfo.GetRankCutoff(rank);
 		}
 	}
-	private UIProgressBar _pBar;
+	private Image _pBar;
 	
 	void Start()
 	{
 		gameObject.SetActive(rank != 0 && CrossSceneInfo.TotalScore < CrossSceneInfo.GetRankCutoff(rank));
-		_pBar = GetComponent<UIProgressBar>();
+		_pBar = GetComponent<Image>();
 		Numerator = CrossSceneInfo.TotalScore;
 	}
 }
