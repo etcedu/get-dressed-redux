@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 using Simcoach.SkillArcade;
+using UnityEditor;
 
 public static class CrossSceneInfo
 {
@@ -262,6 +263,17 @@ public static class CrossSceneInfo
 			GameBase.Strings.Save();
 		}
 	}
+
+	public static int CharacterColorToggleIndex
+	{
+		get { return GameBase.Ints.GetValue("CharacterColorIndex", 0); }
+		set
+		{
+			GameBase.Ints.SetValue("CharacterColorIndex", value);
+			GameBase.Ints.Save();
+		}
+	}
+
 	public static Color CharacterColor
 	{
 		get{

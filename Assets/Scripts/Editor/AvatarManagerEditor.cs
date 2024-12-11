@@ -37,8 +37,8 @@ public class AvatarManagerEditor : Editor
 		}
 		GUILayout.Space(10);
 		
-		serializedObject.DrawArray("Colors", "colorButtons");
+        serializedObject.DrawArray("Colors", "colorToggles");
 
-		serializedObject.ApplyModifiedProperties();
+        serializedObject.ApplyModifiedProperties();
 	}
 }
