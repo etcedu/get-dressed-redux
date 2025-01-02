@@ -6,6 +6,7 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 #pragma warning disable 0649
 [System.Serializable]
@@ -25,8 +26,7 @@ public class AvatarManager : MonoBehaviour
 	private ButtonStateToggle maleToggle;
 	[SerializeField]
 	private ButtonStateToggle femaleToggle;
-	[SerializeField]
-	private List<ButtonStateToggle> colorButtons = new List<ButtonStateToggle>();
+	[SerializeField] List<Toggle> colorToggles = new List<Toggle>();
 	
 	public BodyPartRender[] maleSetup = new BodyPartRender[0];
 	public BodyPartRender[] femaleSetup = new BodyPartRender[0];
@@ -47,10 +47,9 @@ public class AvatarManager : MonoBehaviour
 	#endregion
 	
 	#region Unserialized Fields
-	private CrossSceneInfo.GenderEnum _currentGender;
-	private GameObject _currentGenderGO;
-	private Color _currentColor;
-	private GameObject _currentColorGO;
+	CrossSceneInfo.GenderEnum _currentGender;
+	Color _currentColor;
+	int _currentColorIndex;
 	
 	// Gameobject/Color ties
 	[System.NonSerialized]
@@ -69,87 +68,71 @@ public class AvatarManager : MonoBehaviour
 	// Populate the grids and set up interactions
 	void Awake()
 	{
-		GenderSetup(maleToggle, CrossSceneInfo.GenderEnum.MALE);
-		GenderSetup(femaleToggle, CrossSceneInfo.GenderEnum.FEMALE);
-
-		foreach(ButtonStateToggle colorButton in colorButtons)
-			ColorSetup(colorButton);
+		foreach(Toggle colorToggle in colorToggles)
+			ColorSetup(colorToggle);
 	}
 	
 	
 	// Establish starting category
 	void Start()
 	{
-		if(!CrossSceneInfo.CharacterColorChosen)
-			SetColor(colorButtons[0].gameObject);
-		else
+		if (!CrossSceneInfo.CharacterColorChosen)
 		{
-			SetColor(_colorGO[CrossSceneInfo.CharacterColorHex]);
+			colorToggles[0].SetIsOnWithoutNotify(true);
+			SetColor(true);
+		}
+		else
+		{ 
+			colorToggles[CrossSceneInfo.CharacterColorToggleIndex].SetIsOnWithoutNotify(true);
+			SetColor(true);
 		}
 
-		SetGender(_genderGO[CrossSceneInfo.Gender]);
+		SetGender(CrossSceneInfo.Gender);
 	}
 	
-	
-	// Setup the toggle, direct the interaction, and include in the appropriate dictionaries
-	void GenderSetup(ButtonStateToggle bst, CrossSceneInfo.GenderEnum gender)
-	{
-		bst.gameObject.AddMissingComponent<ForwardTouch>().Clicked += SetGender;
-		_goGender.Add(bst.gameObject, gender);
-		_genderGO.Add(gender, bst.gameObject);
-	}
-
 	/// <summary>
 	/// Sets the gender.
 	/// </summary>
-	/// <param name="bst">Bst.</param>
-	void SetGender(GameObject bst)
+	/// <param name="string">"male" is the only one recognized, otherwise default to female</param>
+	public void SetGender(string gender)
 	{
-		if(_currentGenderGO != null)
-		{
-			if(_currentGenderGO == bst) return;
-			_currentGenderGO.GetComponent<ButtonStateToggle>().SetToStart();
-		}
-		_currentGenderGO = bst;
-		bst.GetComponent<ButtonStateToggle>().SetToToggle();
-		_currentGender = _goGender[bst];
-		//CrossSceneInfo.Gender = _goGender[bst];
-		
-		if(_currentGender == CrossSceneInfo.GenderEnum.MALE)
-		{
-			foreach(BodyPartRender bpr in maleSetup)
-				bpr.renderer.sharedMaterial = bpr.material;
-			characterAnimator.runtimeAnimatorController = maleController;
-		}
-		else
-		{
-			foreach(BodyPartRender bpr in femaleSetup)
-				bpr.renderer.sharedMaterial = bpr.material;
-			characterAnimator.runtimeAnimatorController = femaleController;
-		}
-	}
+        SetGender(gender == "male" ? CrossSceneInfo.GenderEnum.MALE : CrossSceneInfo.GenderEnum.FEMALE);
+    }
 
-	
-	void ColorSetup(ButtonStateToggle bst)
+	void SetGender(CrossSceneInfo.GenderEnum gender)
 	{
-		bst.gameObject.AddMissingComponent<ForwardTouch>().Clicked += SetColor;
-		_goColor.Add(bst.gameObject, bst._startingState.colorNormal);
-		//Debug.Log(bst._startingState.colorNormal.ToHexStringRGBA());
-		_colorGO.Add(bst._startingState.colorNormal.ToHexStringRGBA(), bst.gameObject);
+		_currentGender = gender;
+
+        if (_currentGender == CrossSceneInfo.GenderEnum.MALE)
+        {
+            foreach (BodyPartRender bpr in maleSetup)
+                bpr.renderer.sharedMaterial = bpr.material;
+            characterAnimator.runtimeAnimatorController = maleController;
+        }
+        else
+        {
+            foreach (BodyPartRender bpr in femaleSetup)
+                bpr.renderer.sharedMaterial = bpr.material;
+            characterAnimator.runtimeAnimatorController = femaleController;
+        }
+    }
+		
+	void ColorSetup(Toggle toggle)
+	{
+		toggle.onValueChanged.AddListener((x) => { SetColor(x); });
 	}
 	
-	void SetColor(GameObject bst)
+	void SetColor(bool isOn)
 	{
-		if(_currentColorGO != null)
+		for (int i = 0; i < colorToggles.Count; i++)
 		{
-			if(_currentColorGO == bst) return;
-			_currentColorGO.GetComponent<ButtonStateToggle>().SetToStart();
+			if (colorToggles[i].isOn)
+			{
+				_currentColor = colorToggles[i].transform.GetChild(0).GetComponent<Image>().color;
+				_currentColorIndex = i;
+			}
 		}
-		_currentColorGO = bst;
-		bst.GetComponent<ButtonStateToggle>().SetToToggle();
-		_currentColor = _goColor[bst];
-		//CrossSceneInfo.CharacterColor = _goColor[bst];
-		
+
 		foreach(BodyPartRender bpr in maleSetup)
 			if(bpr.material != null)
 				bpr.material.color = _currentColor;
@@ -162,6 +145,7 @@ public class AvatarManager : MonoBehaviour
 
 	public void SaveAndQuit()
 	{
+		CrossSceneInfo.CharacterColorToggleIndex = _currentColorIndex;
 		CrossSceneInfo.CharacterColorHex = _currentColor.ToHexStringRGBA();
 		CrossSceneInfo.Gender = _currentGender;
 		Quit();
@@ -170,7 +154,11 @@ public class AvatarManager : MonoBehaviour
 	public void Quit()
 	{
         SceneManager.LoadScene("Map");
-		//Application.LoadLevel("Map");
+	}
+
+	public void ReturnToMenu()
+	{
+		SceneManager.LoadScene("Start Screen");
 	}
 
 	

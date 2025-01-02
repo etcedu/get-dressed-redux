@@ -7,10 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Start Screen.unity
-    guid: 7033ec68849fa4446b7d798c9ff897d0
+    guid: 43734fca7bea7b64ea9494b5ac5973b7
   - enabled: 1
     path: Assets/Scenes/Character Creator - START.unity
-    guid: 16eb32066ec492b4b9224aeb6270b7a7
+    guid: cd1855549971b7b4ebb51036913392f7
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 58d2087b79860eb4da0bd4300c1adaf7
