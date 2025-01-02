@@ -20,12 +20,12 @@ public class MapManager : MonoBehaviour
 	[SerializeField]
 	string dressSceneName = "";
 	[SerializeField]
-	List<UIButton> categories = new List<UIButton>();
+	List<Button> categories = new List<Button>();
 
 	// Ties the game object's click action with the position info
 	Dictionary<GameObject, CompanyPositionInfo> togglePositionDictionary = new Dictionary<GameObject, CompanyPositionInfo>();
 	// Used when closing a company without unselecting a selected position
-	Dictionary<CompanyPositionInfo, ButtonStateToggle> companyCloseDictionary = new Dictionary<CompanyPositionInfo, ButtonStateToggle>();
+	Dictionary<CompanyPositionInfo, GameObject> companyCloseDictionary = new Dictionary<CompanyPositionInfo, GameObject>();
 	// Used when opening a company without having closed a previously opened one
 	Dictionary<GameObject, GameObject> toggleCompanyDictionay = new Dictionary<GameObject, GameObject>();
 	[System.NonSerialized]
@@ -39,34 +39,34 @@ public class MapManager : MonoBehaviour
 	{
 		foreach(Company pin in companies)
 		{
-			GameObject button = pin.gameObject.GetChildGameObject("Button");
-			button.GetComponent<Button>().onClick.AddListener(() => CompanyClicked(button));
-			//ButtonStateToggle bst = button.GetComponent<ButtonStateToggle>();;
-			toggleCompanyDictionay.Add(button, pin.detailsPopup);
+			pin.mainButton.GetComponent<Button>().onClick.AddListener(() => CompanyClicked(pin.mainButton.gameObject));
+			toggleCompanyDictionay.Add(pin.mainButton.gameObject, pin.detailsPopup);
+			pin.detailsPopup.SetActive(false);
 
-			GameObject p1 = pin.PositionOneButton.gameObject;
-			GameObject p2 = pin.PositionTwoButton.gameObject;
-			GameObject p3 = pin.PositionThreeButton.gameObject;
 
-			togglePositionDictionary.Add(p1, pin.PositionOne);
-			companyCloseDictionary.Add(pin.PositionOne, p1.GetComponent<ButtonStateToggle>());
+			togglePositionDictionary.Add(pin.PositionOneButton.gameObject, pin.PositionOne);
+			companyCloseDictionary.Add(pin.PositionOne, pin.pInfoContainers[0]);
 
-			togglePositionDictionary.Add(p2, pin.PositionTwo);
-			companyCloseDictionary.Add(pin.PositionTwo, p2.GetComponent<ButtonStateToggle>());
+			togglePositionDictionary.Add(pin.PositionTwoButton.gameObject, pin.PositionTwo);
+			companyCloseDictionary.Add(pin.PositionTwo, pin.pInfoContainers[0]);
 
-			togglePositionDictionary.Add(p3, pin.PositionThree);
-			companyCloseDictionary.Add(pin.PositionThree, p3.GetComponent<ButtonStateToggle>());
+			togglePositionDictionary.Add(pin.PositionThreeButton.gameObject, pin.PositionThree);
+			companyCloseDictionary.Add(pin.PositionThree, pin.pInfoContainers[0]);
 
-			p1.AddMissingComponent<ForwardTouch>().Clicked += PositionClicked;
-			p2.AddMissingComponent<ForwardTouch>().Clicked += PositionClicked;
-			p3.AddMissingComponent<ForwardTouch>().Clicked += PositionClicked;
+			pin.PositionOneButton.onClick.AddListener(() => PositionClicked(pin.PositionOneButton.gameObject, pin, pin.pInfoContainers[0]));
+            pin.PositionTwoButton.onClick.AddListener(() => PositionClicked(pin.PositionTwoButton.gameObject, pin, pin.pInfoContainers[1]));
+            pin.PositionThreeButton.onClick.AddListener(() => PositionClicked(pin.PositionThreeButton.gameObject, pin, pin.pInfoContainers[2]));
+			//p1.AddMissingComponent<ForwardTouch>().Clicked += PositionClicked;
+			//p2.AddMissingComponent<ForwardTouch>().Clicked += PositionClicked;
+			//p3.AddMissingComponent<ForwardTouch>().Clicked += PositionClicked;
 
-			pin.gameObject.GetChildGameObject("Position1_Info").GetChildGameObject("Apply")
-				.GetComponent<Button>().onClick.AddListener(()=> ConfirmPosition());
-			pin.gameObject.GetChildGameObject("Position2_Info").GetChildGameObject("Apply")
-				.GetComponent<Button>().onClick.AddListener(()=> ConfirmPosition());
-            pin.gameObject.GetChildGameObject("Position3_Info").GetChildGameObject("Apply")
-				.GetComponent<Button>().onClick.AddListener(() => ConfirmPosition());
+			pin.pInfoContainers[0].transform.Find("Apply").GetComponent<Button>().onClick.AddListener(()=> ConfirmPosition());
+            pin.pInfoContainers[1].transform.Find("Apply").GetComponent<Button>().onClick.AddListener(() => ConfirmPosition());
+            pin.pInfoContainers[2].transform.Find("Apply").GetComponent<Button>().onClick.AddListener(() => ConfirmPosition());
+
+			pin.pInfoContainers[0].SetActive(false);
+            pin.pInfoContainers[1].SetActive(false);
+            pin.pInfoContainers[2].SetActive(false);
 
             if (pin.gameObject.activeSelf)
 				unlockedCompanies.Add(pin);
@@ -75,24 +75,31 @@ public class MapManager : MonoBehaviour
 
 	void Start()
 	{
-		UIButton selectedButton = categories[GameBase.Ints.GetValue("LastCategory", 1) - 1];
+		Button selectedButton = categories[GameBase.Ints.GetValue("LastCategory", 1) - 1];
 		if(selectedButton != null)
 		{
-			EventDelegate.Execute(selectedButton.onClick);
+			selectedButton.onClick.Invoke();
 		}
 	}
 
-	void PositionClicked(GameObject key)
+	void PositionClicked(GameObject key, Company currentCompany, GameObject positionPanel)
 	{
 		CompanyPositionInfo cpi = togglePositionDictionary[key];
+		currentCompany.pInfoContainers[0].SetActive(false);
+        currentCompany.pInfoContainers[1].SetActive(false);
+        currentCompany.pInfoContainers[2].SetActive(false);
+        positionPanel.SetActive(true);
 
-		if(_lastSelectedPosition != null)
+		/*
+        if (_lastSelectedPosition != null)
 		{
 			bool samePosition = cpi == _lastSelectedPosition;
 			ClosePosition();
 			if(samePosition)
 				return;
 		}
+		*/
+
 		_lastSelectedPosition = cpi;
 	}
 
@@ -124,24 +131,34 @@ public class MapManager : MonoBehaviour
 		if(_lastSelectedPosition == null)
 			return;
 
-		companyCloseDictionary[_lastSelectedPosition].SetToStart();
+		companyCloseDictionary[_lastSelectedPosition].SetActive(false);
 		_lastSelectedPosition = null;
 	}
 
 	void CompanyClicked(GameObject key)
 	{
 		Debug.Log("company clicked");
-		if(_lastSelectedCompany == null)
+		if (_lastSelectedCompany == null)
 		{
 			_lastSelectedCompany = toggleCompanyDictionay[key];
-			foreach(Company c in unlockedCompanies)
+			foreach (Company c in unlockedCompanies)
 			{
-				GameObject button = c.gameObject.GetChildGameObject("Button");
-				if(button != key)
+				GameObject button = c.mainButton.gameObject;
+				if (button != key)
+				{
 					c.gameObject.SetActive(false);
+					c.detailsPopup.SetActive(false);
+				}
+				else
+				{
+					c.detailsPopup.SetActive(true);
+				}
 			}
-		} else
+		}
+		else
+		{
 			closeCompany();
+		}
 	}
 	
 	public void CloseCompany()
@@ -157,9 +174,15 @@ public class MapManager : MonoBehaviour
 	{
 		if(_lastSelectedPosition != null)
 			ClosePosition();
-		
-		foreach(Company c in unlockedCompanies)
+
+		foreach (Company c in unlockedCompanies)
+		{
 			c.gameObject.SetActive(true);
+			c.detailsPopup.SetActive(false);
+			c.pInfoContainers[0].SetActive(false);
+            c.pInfoContainers[1].SetActive(false);
+            c.pInfoContainers[2].SetActive(false);
+        }
 		
 		_lastSelectedCompany = null;
 		_lastSelectedPosition = null;
@@ -263,8 +286,9 @@ public class MapManager : MonoBehaviour
 			cpi.PositionName = positionName;
 			cpi.PositionInfo = positionInfo;
 
-			c.pInfoContainerTitles[listPosition].text = positionName;
-			c.pInfoContainerDescs[listPosition].text = positionInfo;
+			Debug.Log(c.CompanyName + " " + listPosition);
+			c.pInfoContainerTitles[listPosition-1].text = positionName;
+			c.pInfoContainerDescs[listPosition-1].text = positionInfo;
 
 			string tier = fields[3];
 			if(tier != "")

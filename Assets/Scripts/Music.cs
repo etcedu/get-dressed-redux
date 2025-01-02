@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using System;
 
 [RequireComponent (typeof(AudioSource))]
 public class Music : MonoBehaviour {
@@ -11,9 +13,8 @@ public class Music : MonoBehaviour {
 	// Use this for initialization
 	IEnumerator Start ()
 	{
-		if(Application.isLoadingLevel)
-			yield return null;
 		yield return null;
+	
 		source = GetComponent<AudioSource>();
 		if(_instance == null)
 		{
@@ -21,22 +22,25 @@ public class Music : MonoBehaviour {
 			DontDestroyOnLoad(gameObject);
 			source.mute = GameBase.Bools.GetValue(muteCheck, false);
 			Music.PlaySong(song);
-		} 
+
+            SceneManager.sceneLoaded += LevelLoaded;
+        } 
 		else if(_instance != this)
 		{
 			Destroy(gameObject);
 		}
 	}
-	
-	IEnumerator OnLevelWasLoaded(int notImportant)
+
+    private void LevelLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        StartCoroutine(levelLoadedRoutine());
+    }
+		
+	IEnumerator levelLoadedRoutine()
 	{
-		if(Application.isLoadingLevel)
-			yield return null;
 		yield return null;
 		if(_instance == this)
 		{
-			if(Application.isLoadingLevel)
-				yield return null;
 			yield return null;
 			Music[] songs = GameObject.FindObjectsOfType<Music>();
 			
@@ -75,4 +79,9 @@ public class Music : MonoBehaviour {
 		_instance.source.clip = clip;
 		_instance.source.Play();
 	}
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= LevelLoaded;
+    }
 }

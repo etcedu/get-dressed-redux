@@ -32,7 +32,7 @@ public class Company : MonoBehaviour {
 
 	[SerializeField] public InterviewPassedDependantEvents star1, star2, star3;
 
-	[SerializeField] public Transform[] pInfoContainers;
+	[SerializeField] public GameObject[] pInfoContainers;
 	[SerializeField] public TMP_Text[] pInfoContainerTitles;
     [SerializeField] public TMP_Text[] pInfoContainerDescs;
     public CompanyPositionInfo PositionOne
@@ -83,9 +83,7 @@ public class Company : MonoBehaviour {
 	[System.Serializable]
 	class CompanyPositionInfoButton
 	{
-		[SerializeField]
-		public Button button;
-		[SerializeField]
-		public CompanyPositionInfo info = new CompanyPositionInfo();
+		[SerializeField] public Button button;
+		[SerializeField] public CompanyPositionInfo info = new CompanyPositionInfo();
 	}
 }

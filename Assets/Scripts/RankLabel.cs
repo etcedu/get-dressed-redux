@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
-[RequireComponent (typeof(UILabel))]
 public class RankLabel : MonoBehaviour
 {
 	void Start()
 	{
-		GetComponent<UILabel>().text = CrossSceneInfo.RankName;
+		GetComponent<TMP_Text>().text = CrossSceneInfo.RankName;
 	}
 }

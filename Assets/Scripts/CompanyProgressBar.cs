@@ -28,12 +28,12 @@ public class CompanyProgressBar : MonoBehaviour
 			return CrossSceneInfo.GetRankCutoff(rank);
 		}
 	}
-	private Image _pBar;
+	[SerializeField] private Image _pBar;
 	
 	void Start()
 	{
 		gameObject.SetActive(rank != 0 && CrossSceneInfo.TotalScore < CrossSceneInfo.GetRankCutoff(rank));
-		_pBar = GetComponent<Image>();
+		_pBar = transform.GetChild(0).GetComponent<Image>();
 		Numerator = CrossSceneInfo.TotalScore;
 	}
 }
