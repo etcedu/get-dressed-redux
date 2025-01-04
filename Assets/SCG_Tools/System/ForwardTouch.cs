@@ -29,7 +29,7 @@ public class ForwardTouch : MonoBehaviour
 
 	void Awake() {
 		if(GetComponent<Collider>() == null && GetComponent<Collider2D>() == null) {
-			Debug.LogWarning("No collider attached to "+gameObject.name+". Cannot forward touches.");
+			Debug.LogWarning("No collider attached to " + gameObject.name + ". Cannot forward touches.");
 			enabled = false;
 		}
 		_target = gameObject;

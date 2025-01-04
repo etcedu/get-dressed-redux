@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class TrackOnClick : MonoBehaviour {
+public class TrackOnClick : MonoBehaviour 
+{
 	[SerializeField]
 	private List<Collider2D> clickTargets;
 	[SerializeField]
@@ -23,7 +26,7 @@ public class TrackOnClick : MonoBehaviour {
 	[SerializeField]
 	private bool onClickOverride = false;
 	[SerializeField]
-	private List<EventDelegate> onClick = new List<EventDelegate>();
+	private UnityEvent onClick;
 
 	float zoomMax;
 
@@ -62,9 +65,9 @@ public class TrackOnClick : MonoBehaviour {
 	}
 #endif
 
-	public void AddToOnClick(EventDelegate newEvent)
+	public void AddToOnClick(UnityAction newEvent)
 	{
-		onClick.Add(newEvent);
+		onClick.AddListener(newEvent);
 	}
 
 	void Awake() 
@@ -84,13 +87,6 @@ public class TrackOnClick : MonoBehaviour {
 			offsetAmount += (Vector3)(zoomTarget.offset * zoomTarget.transform.lossyScale.x);
 		if(!clickTargets.Contains(zoomTarget))
 			zoomTarget.enabled = false;
-
-		if(actOn == ClickType.CLICK)
-			foreach(Collider2D c2D in clickTargets)
-				c2D.gameObject.AddMissingComponent<ForwardTouch>().Clicked += TargetClicked;
-		else if(actOn == ClickType.DOUBLECLICK)
-			foreach(Collider2D c2D in clickTargets)
-				c2D.gameObject.AddMissingComponent<ForwardTouch>().DoubleClicked += TargetClicked;
 	}
 
 	public void Focus()
@@ -98,15 +94,20 @@ public class TrackOnClick : MonoBehaviour {
 		TargetClicked();
 	}
 
+	public void EventTriggerClick()
+	{
+		TargetClicked(gameObject);
+	}
+
 	void TargetClicked(GameObject target)
 	{
-		if(onClickOverride)
-			EventDelegate.Execute(onClick);
+		if (onClickOverride)
+			onClick.Invoke();
 		else
 			TargetClicked();
 	}
 
-	void TargetClicked()
+    void TargetClicked()
 	{
 		if(offset)
 		{
@@ -120,7 +121,7 @@ public class TrackOnClick : MonoBehaviour {
 			CameraTrack2D.SetTarget(zoomTarget.transform, zoomMax);
 	}
 
-	private enum ClickType
+    private enum ClickType
 	{
 		CLICK, DOUBLECLICK
 	}

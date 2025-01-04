@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: City Hall_Orderlies
+  key: "City Hall_Intern \u2013 City Planning"
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 20041423}
@@ -2760,7 +2760,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 40100454}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -2810,7 +2810,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &40100455
 MonoBehaviour:
@@ -4105,7 +4105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Hotel_Orderlies
+  key: Hotel_Housekeeper
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 74918961}
@@ -5036,7 +5036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Pharmacy_Orderlies
+  key: Pharmacy_Pharmacy Cashier
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 95550141}
@@ -9743,7 +9743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Financial Institution_Orderlies
+  key: Financial Institution_Bank Teller
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 208059840}
@@ -10102,7 +10102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Pharmacy_Registered Nurse
+  key: Pharmacy_Pharmacist
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 216709551}
@@ -17270,7 +17270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: City Hall_Nursing Assistant
+  key: City Hall_City Zoning Technician
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 400250786}
@@ -17689,7 +17689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Library_Orderlies
+  key: Library_Library Assistant
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 403090660}
@@ -20536,7 +20536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Hotel_Registered Nurse
+  key: Hotel_Concierge
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 463451824}
@@ -25505,7 +25505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -413, y: 98}
+  m_AnchoredPosition: {x: -360, y: 98}
   m_SizeDelta: {x: 638.36, y: 291.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594567120
@@ -25524,7 +25524,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 594567121}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -25574,7 +25574,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &594567122
 MonoBehaviour:
@@ -28675,7 +28675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Retail Store_Orderlies
+  key: Retail Store_Cashier/Salesperson
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 659122702}
@@ -29607,7 +29607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Preschool/Daycare_Nursing Assistant
+  key: Preschool/Daycare_Daycare Aide
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 676768761}
@@ -32119,7 +32119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Grocery Store_Orderlies
+  key: Grocery Store_Bagger/Cart Attendant
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 709118772}
@@ -32388,7 +32388,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 710889365}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -32438,7 +32438,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &710889366
 MonoBehaviour:
@@ -33918,7 +33918,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 735759010}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -33968,7 +33968,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &735759011
 MonoBehaviour:
@@ -40588,7 +40588,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 860368719}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -40638,7 +40638,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &860368720
 MonoBehaviour:
@@ -41012,7 +41012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Preschool/Daycare_Orderlies
+  key: Preschool/Daycare_Cafeteria Cook
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 871493483}
@@ -41947,7 +41947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Software Company_Nursing Assistant
+  key: Software Company_Software Developer
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 893751110}
@@ -43296,7 +43296,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 914197991}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -43346,7 +43346,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &914197992
 MonoBehaviour:
@@ -44549,7 +44549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Retail Store_Nursing Assistant
+  key: Retail Store_Inventory Specialist
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 975375897}
@@ -45448,7 +45448,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 989112701}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -45498,7 +45498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &989112702
 MonoBehaviour:
@@ -47715,7 +47715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Pharmacy_Nursing Assistant
+  key: Pharmacy_Pharmacy Technician
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1044355220}
@@ -50010,7 +50010,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 1094731354}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -50060,7 +50060,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &1094731355
 MonoBehaviour:
@@ -51652,7 +51652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Preschool/Daycare_Registered Nurse
+  key: Preschool/Daycare_Preschool Teacher
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1153003993}
@@ -55764,7 +55764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Swimming Pool_Registered Nurse
+  key: Swimming Pool_Lifeguard
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1207734644}
@@ -56781,7 +56781,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 1219350394}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -56831,7 +56831,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &1219350395
 MonoBehaviour:
@@ -57814,7 +57814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Hotel_Nursing Assistant
+  key: Hotel_Receptionist
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1239623658}
@@ -58174,7 +58174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Swimming Pool_Nursing Assistant
+  key: Swimming Pool_Pool Attendant
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1244532104}
@@ -58962,7 +58962,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 1259118095}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -59012,7 +59012,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &1259118096
 MonoBehaviour:
@@ -61302,7 +61302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Amusement Park_Registered Nurse
+  key: Amusement Park_Shift Supervisor
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1304998307}
@@ -62304,7 +62304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Restaurant_Registered Nurse
+  key: Restaurant_Assistant Manager
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1317314892}
@@ -64241,7 +64241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Auto Shop_Registered Nurse
+  key: Auto Shop_Mechanics Supervisor
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1345801901}
@@ -66193,7 +66193,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 1395416376}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -66243,7 +66243,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &1395416377
 MonoBehaviour:
@@ -66402,7 +66402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Auto Shop_Nursing Assistant
+  key: Auto Shop_Master Mechanic
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1396825686}
@@ -68892,7 +68892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: City Hall_Registered Nurse
+  key: City Hall_Assistant Planning Director
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1449757653}
@@ -70033,7 +70033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Amusement Park_Nursing Assistant
+  key: Amusement Park_Ride Operator
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1476835540}
@@ -73224,7 +73224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Amusement Park_Orderlies
+  key: Amusement Park_Cook
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1556832840}
@@ -76032,7 +76032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Library_Registered Nurse
+  key: Library_Archives Director
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1603613168}
@@ -77669,7 +77669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Library_Nursing Assistant
+  key: Library_Library Media Specialist
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1646148674}
@@ -78838,7 +78838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Restaurant_Orderlies
+  key: Restaurant_Dishwasher
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1656598549}
@@ -82479,7 +82479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Software Company_Orderlies
+  key: Software Company_Development Intern
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1730304694}
@@ -85440,7 +85440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Restaurant_Nursing Assistant
+  key: Restaurant_Waiter/Waitress
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1768240564}
@@ -85548,7 +85548,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 1768469119}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -85598,7 +85598,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &1768469120
 MonoBehaviour:
@@ -87520,7 +87520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Software Company_Registered Nurse
+  key: Software Company_Development Manager
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1811678317}
@@ -89262,7 +89262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Grocery Store_Nursing Assistant
+  key: Grocery Store_Cashier
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1842607878}
@@ -89605,7 +89605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Grocery Store_Registered Nurse
+  key: Grocery Store_Floor Supervisor
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1853127236}
@@ -95665,7 +95665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Financial Institution_Registered Nurse
+  key: Financial Institution_Financial Manager
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1977355130}
@@ -95908,7 +95908,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 1981420729}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -95958,7 +95958,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &1981420730
 MonoBehaviour:
@@ -97000,7 +97000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Financial Institution_Nursing Assistant
+  key: Financial Institution_Loan Officer
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 1989970102}
@@ -97862,7 +97862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Swimming Pool_Orderlies
+  key: Swimming Pool_Snack Shop Cashier
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 2009708934}
@@ -98579,7 +98579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Retail Store_Registered Nurse
+  key: Retail Store_Inventory Specialist
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 2019546320}
@@ -99784,7 +99784,7 @@ MonoBehaviour:
   zoomTarget: {fileID: 2043550177}
   actOn: 0
   offset: 1
-  offsetAmount: {x: 1, y: -0.25, z: 0}
+  offsetAmount: {x: 0.4, y: -0.25, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
   zoomBoarderAmount: 0.5
@@ -99834,7 +99834,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 638.36, y: 291.29}
+  m_Size: {x: 641.37, y: 389.1405}
   m_EdgeRadius: 0
 --- !u!114 &2043550178
 MonoBehaviour:
@@ -100710,7 +100710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38faa40920cb47c47880239d47468b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Auto Shop_Orderlies
+  key: Auto Shop_Technician
   passedEvents: []
   notPassedEvents:
   - mTarget: {fileID: 2059989853}

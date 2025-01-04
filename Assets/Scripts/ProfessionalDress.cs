@@ -6,6 +6,9 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using TMPro;
 
 #pragma warning disable 0649
 [System.Serializable]
@@ -56,85 +59,91 @@ public class ProfessionalDress : MonoBehaviour
 	[SerializeField]
 	private Clothing.Category.CategoryEnum startingGrid;
 	[SerializeField]
-	private ButtonStateToggle faceToggle;
+	private GameObject faceToggle;
 	[SerializeField]
-	private UIGrid faceGrid;
+	private HorizontalLayoutGroup faceGrid;
 	[SerializeField]
 	private TrackOnClick faceTrack;
 	[SerializeField]
-	private ButtonStateToggle topToggle;
+	private GameObject topToggle;
 	[SerializeField]
-	private UIGrid topGrid;
+	private HorizontalLayoutGroup topGrid;
 	[SerializeField]
 	private TrackOnClick topTrack;
 	[SerializeField]
-	private ButtonStateToggle bottomToggle;
+	private GameObject bottomToggle;
 	[SerializeField]
-	private UIGrid bottomGrid;
+	private HorizontalLayoutGroup bottomGrid;
 	[SerializeField]
 	private TrackOnClick bottomTrack;
 	[SerializeField]
-	private ButtonStateToggle shoesToggle;
+	private GameObject shoesToggle;
 	[SerializeField]
-	private UIGrid shoesGrid;
+	private HorizontalLayoutGroup shoesGrid;
 	[SerializeField]
 	private TrackOnClick shoesTrack;
 	[SerializeField]
-	private ButtonStateToggle otherToggle;
+	private GameObject otherToggle;
 	[SerializeField]
-	private UIGrid otherGrid;
+	private HorizontalLayoutGroup otherGrid;
 	[SerializeField]
-	private UIButton previous, next;
+	private Button previous, next;
 
 	[SerializeField]
-	private UILabel clothingLabel;
+	private TMP_Text clothingLabel;
 	[SerializeField]
-	private UILabel companyLabel;
+	private TMP_Text companyLabel;
 	[SerializeField]
-	private UILabel positionLabel;
+	private TMP_Text positionLabel;
 
 	[SerializeField]
 	private CrossSceneInfo.GenderEnum gender;
 	[SerializeField]
 	private Clothing.Tier.TierEnum positionTier;
 	[SerializeField]
-	private UILabel faceScore, faceBonus;
+	private TMP_Text faceScore, faceBonus;
 	[SerializeField]
-	private UILabel faceFeedback;
+	private TMP_Text faceFeedback;
 	[SerializeField]
-	private UILabel topScore, topBonus;
+	private TMP_Text topScore, topBonus;
 	[SerializeField]
-	private UILabel topFeedback;
+	private TMP_Text topFeedback;
 	[SerializeField]
-	private UILabel bottomScore, bottomBonus;
+	private TMP_Text bottomScore, bottomBonus;
 	[SerializeField]
-	private UILabel bottomFeedback;
+	private TMP_Text bottomFeedback;
 	[SerializeField]
-	private UILabel shoesScore, shoesBonus;
+	private TMP_Text shoesScore, shoesBonus;
 	[SerializeField]
-	private UILabel shoesFeedback;
+	private TMP_Text shoesFeedback;
 	[SerializeField]
-	private UILabel otherScore, otherBonus;
+	private TMP_Text otherScore, otherBonus;
 	[SerializeField]
-	private UILabel otherFeedback;
+	private TMP_Text otherFeedback;
 	[SerializeField]
-	private TweenCustomProgressBar endScore;
+	private TweenFill endScoreBar;
 	
 	[SerializeField]
-	private ButtonStateToggle zoomToggle;
+	private GameObject zoomInButtom;
+	[SerializeField]
+	private GameObject zoomOutButtom;
+
+	bool zoomed;
+	public bool Zoomed { get { return zoomed; } set { zoomed = value; } }
 	
 	// Base toggle for clothing items
 	[SerializeField]
-	private ButtonStateToggle baseClothesToggle;
+	private GameObject baseClothesToggle;
 
 	public BodyPartRender[] maleSetup = new BodyPartRender[0];
 	public BodyPartRender[] femaleSetup = new BodyPartRender[0];
 	#endregion
 
 	#region Unserialized Fields
-	private ButtonStateToggle _currentGridToggle;
+	private GameObject _currentGridToggle;
 	private TrackOnClick _currentTrack;
-	private UIGrid _currentGrid;
+	private HorizontalLayoutGroup _currentGrid;
+	HorizontalLayoutGroup _currentHorizontalLayoutGroup;
 	private GameObject _currentCenter;
 	private Renderer[] _currentRenderers;
 	// Clothing Label tweens
@@ -142,29 +151,32 @@ public class ProfessionalDress : MonoBehaviour
 
 	// Renderers for each type of clothing item
 	[System.NonSerialized]
-	private Dictionary<GameObject, Renderer> _otherRendererDictionary = new Dictionary<GameObject, Renderer>();
+	private Dictionary<string, Renderer> _otherRendererDictionary = new Dictionary<string, Renderer>();
 	[System.NonSerialized]
-	private Dictionary<GameObject, Renderer> _otherRendererSecondaryDictionary = new Dictionary<GameObject, Renderer>();
+	private Dictionary<string, Renderer> _otherRendererSecondaryDictionary = new Dictionary<string, Renderer>();
 
 	// Clothing dictionary for toggle/clothing lookup
 	[System.NonSerialized]
-	private Dictionary<GameObject, Clothing.Info> _clothingDictionary = new Dictionary<GameObject, Clothing.Info>();
+	private Dictionary<string, Clothing.Info> _clothingDictionary = new Dictionary<string, Clothing.Info>();
 	// Clothing tier dictionary for tag/tier lookup (used for selected item tier comparison)
 	[System.NonSerialized]
 	private Dictionary<string, List<Clothing.Tier.TierEnum>> _clothingTierDictionary = new Dictionary<string, List<Clothing.Tier.TierEnum>>();
 	// Toggle dictionary for image/toggle lookup (used when disabling previously selected clothing item)
 	[System.NonSerialized]
-	private Dictionary<Clothing.Info, ButtonStateToggle> _toggleDictionary = new Dictionary<Clothing.Info, ButtonStateToggle>();
-	// Toggle dictionary for category/activeClothing lookup (used when disabling previously selected clothing item)
-	[System.NonSerialized]
-	private Dictionary<ButtonStateToggle, Clothing.Info> _toggleClothingDictionary = new Dictionary<ButtonStateToggle, Clothing.Info>();
+	private Dictionary<Clothing.Info, SetActive> _toggleDictionary = new Dictionary<Clothing.Info, SetActive>();
+    // Toggle button dictionary for image/toggle lookup (used when disabling previously selected clothing item)
+    [System.NonSerialized]
+    private Dictionary<Clothing.Info, Button> _toggleButtonDictionary = new Dictionary<Clothing.Info, Button>();
+    // Toggle dictionary for category/activeClothing lookup (used when disabling previously selected clothing item)
+    [System.NonSerialized]
+	private Dictionary<Toggle, Clothing.Info> _toggleClothingDictionary = new Dictionary<Toggle, Clothing.Info>();
 	
 	[System.NonSerialized]
 	private Clothing.Info _activeHair, _activeFacialHair, _activeTop, _activeBottom, _activeShoes;
 	[System.NonSerialized]
 	private List<Clothing.Info> _activeOther = new List<Clothing.Info>();
 
-	private ButtonStateToggle startingHair;
+	private GameObject startingHair;
 	#endregion
 	
 	/// Functions ///
@@ -216,9 +228,9 @@ public class ProfessionalDress : MonoBehaviour
 		}
 
 		// Tie active clothing to the appropriate catagory
-		_toggleClothingDictionary.Add(topToggle, _activeTop);
-		_toggleClothingDictionary.Add(bottomToggle, _activeBottom);
-		_toggleClothingDictionary.Add(shoesToggle, _activeShoes);
+		//_toggleClothingDictionary.Add(topToggle, _activeTop);
+		//_toggleClothingDictionary.Add(bottomToggle, _activeBottom);
+		//_toggleClothingDictionary.Add(shoesToggle, _activeShoes);
 
 		bool male = gender == CrossSceneInfo.GenderEnum.MALE;
 		hair.clothing.RemoveAll(c=> c.Gender != Clothing.Info.GenderClass.EITHER && (c.Gender == Clothing.Info.GenderClass.MALE) != male );
@@ -231,184 +243,181 @@ public class ProfessionalDress : MonoBehaviour
 			os.clothing.RemoveAll(c=> c.Gender != Clothing.Info.GenderClass.EITHER && (c.Gender == Clothing.Info.GenderClass.MALE) != male );
 		}
 
+	
 		// Assign toggles for each clothing item, setup "on click" actions, and position items correctly
 		foreach(Clothing.Info c in hair.clothing)
 		{
 			if(startingHair == null)
-				startingHair = Setup (c, faceGrid.gameObject, HairItem);
+				startingHair = Setup (c, faceGrid.gameObject, ()=> { HairItem(c.Tag); });
 			else
-				Setup (c, faceGrid.gameObject, HairItem);
-		}
+				Setup (c, faceGrid.gameObject, () => HairItem(c.Tag) );
+        }
 		foreach(Clothing.Info c in facialHair.clothing)
-			Setup (c, faceGrid.gameObject, FacialHairItem);
-		faceGrid.Reposition();
-		UICenterOnChild fc = faceGrid.GetComponent<UICenterOnChild>();
-		fc.onFinished += ()=> CancelCenter(fc);
-		
-		foreach(Clothing.Info c in top.clothing)
-			Setup (c, topGrid.gameObject, TopItem);
-		topGrid.Reposition();
-		UICenterOnChild tc = topGrid.GetComponent<UICenterOnChild>();
-		tc.onFinished += ()=> CancelCenter(tc);
+			Setup (c, faceGrid.gameObject, () => { FacialHairItem(c.Tag); });
+
+		foreach (Clothing.Info c in top.clothing)
+			Setup(c, topGrid.gameObject, () => TopItem(c.Tag) );
 		
 		foreach(Clothing.Info c in bottom.clothing)
-			Setup (c, bottomGrid.gameObject, BottomItem);
-		bottomGrid.Reposition();
-		UICenterOnChild bc = bottomGrid.GetComponent<UICenterOnChild>();
-		bc.onFinished += ()=> CancelCenter(bc);
+			Setup (c, bottomGrid.gameObject, () => BottomItem(c.Tag));
 		
 		foreach(Clothing.Info c in shoes.clothing)
-			Setup (c, shoesGrid.gameObject, ShoesItem);
-		shoesGrid.Reposition();
-		UICenterOnChild sc = shoesGrid.GetComponent<UICenterOnChild>();
-		sc.onFinished += ()=> CancelCenter(sc);
+			Setup (c, shoesGrid.gameObject, () => ShoesItem(c.Tag));
 		
 		foreach(OtherSetup aS in other)
 		{
 			foreach(Clothing.Info c in aS.clothing)
 			{
-				ButtonStateToggle cToggle = Setup (c, otherGrid.gameObject, OtherItem);
-				_otherRendererDictionary.Add(cToggle.gameObject, aS.renderer);
+				 Setup (c, otherGrid.gameObject, () => OtherItem(c.Tag));
+				_otherRendererDictionary.Add(c.Tag, aS.renderer);
 				if(aS.otherRenderer != null)
-					_otherRendererSecondaryDictionary.Add(cToggle.gameObject, aS.otherRenderer);
+					_otherRendererSecondaryDictionary.Add(c.Tag, aS.otherRenderer);
 			}
 		}
-		otherGrid.Reposition();
+		
 
 		// Set all category grid toggle and track click interactions
-		ForwardTouch ft = faceToggle.gameObject.AddMissingComponent<ForwardTouch>();
-		ft.Clicked += FaceToggleClicked;
-		faceTrack.AddToOnClick(new EventDelegate(()=> TrackClicked(faceTrack, ft)));
+		faceToggle.GetComponent<Button>().onClick.AddListener(FaceToggleClicked);
+		faceTrack.AddToOnClick(()=> TrackClicked(faceTrack, faceToggle.GetComponent<Button>()));
 
-		ForwardTouch tt = topToggle.gameObject.AddMissingComponent<ForwardTouch>();
-		tt.Clicked += TopToggleClicked;
-		topTrack.AddToOnClick(new EventDelegate(()=> TrackClicked(topTrack, tt)));
+        topToggle.GetComponent<Button>().onClick.AddListener(TopToggleClicked);
+        topTrack.AddToOnClick(() => TrackClicked(topTrack, topToggle.GetComponent<Button>()));
 
-		ForwardTouch bt = bottomToggle.gameObject.AddMissingComponent<ForwardTouch>();
-		bt.Clicked += BottomToggleClicked;
-		bottomTrack.AddToOnClick(new EventDelegate(()=> TrackClicked(bottomTrack, bt)));
+        bottomToggle.GetComponent<Button>().onClick.AddListener(BottomToggleClicked);
+        bottomTrack.AddToOnClick(() => TrackClicked(bottomTrack, bottomToggle.GetComponent<Button>()));
 
-		ForwardTouch st = shoesToggle.gameObject.AddMissingComponent<ForwardTouch>();
-		st.Clicked += ShoesToggleClicked;
-		shoesTrack.AddToOnClick(new EventDelegate(()=> TrackClicked(shoesTrack, st)));
+        shoesToggle.GetComponent<Button>().onClick.AddListener(ShoesToggleClicked);
+        shoesTrack.AddToOnClick(() => TrackClicked(shoesTrack, shoesToggle.GetComponent<Button>()));
 
-		otherToggle.gameObject.AddMissingComponent<ForwardTouch>().Clicked += OtherToggleClicked;
-	}
+        otherToggle.GetComponent<Button>().onClick.AddListener(OtherToggleClicked);
+
+		zoomInButtom = GameObject.Find("InspectZoomButton");
+        zoomOutButtom = GameObject.Find("InspectBackButton");
+
+		zoomOutButtom.SetActive(false);
+    }
 
 
-	// Setup the toggle, direct the interaction, and include in the appropriate dictionaries
-	ButtonStateToggle Setup(Clothing.Info c, GameObject grid, FT_Target action, bool setActive = false)
+    // Setup the toggle, direct the interaction, and include in the appropriate dictionaries
+    GameObject Setup(Clothing.Info c, GameObject grid, UnityAction action, bool setActive = false)
 	{
-		ButtonStateToggle cToggle = NGUITools.AddChild(grid, baseClothesToggle.gameObject).GetComponent<ButtonStateToggle>();
+		//ButtonStateToggle cToggle = NGUITools.AddChild(grid, baseClothesToggle.gameObject).GetComponent<ButtonStateToggle>();
+
+		GameObject newToggle = Instantiate(baseClothesToggle, grid.transform);
 		Clothing.Info thisC = c;
-		cToggle.GetComponent<UITexture>().mainTexture = thisC.Image;
-		ForwardTouch ft = cToggle.gameObject.AddMissingComponent<ForwardTouch>();
-		ft.Clicked += action;
-		_clothingDictionary.Add(cToggle.gameObject, thisC);
+        newToggle.transform.GetChild(0).GetChild(0).GetComponent<RawImage>().texture = thisC.Image;
+		
+		newToggle.GetComponent<Button>().onClick.AddListener(action);
+		
+		_clothingDictionary.Add(thisC.Tag, thisC);
 		_clothingTierDictionary.Add(thisC.Tag, thisC.Tiers);
-		_toggleDictionary.Add(thisC, cToggle);
-		if(setActive)
-			ft.CodeClick();
-		return cToggle;
+		_toggleDictionary.Add(thisC, newToggle.transform.GetChild(1).GetComponent<SetActive>());
+		_toggleButtonDictionary.Add(thisC, newToggle.GetComponent<Button>());
+		if (setActive)
+			newToggle.GetComponent<Button>().onClick.Invoke();
+
+		return newToggle;
 	}
 
 
 	// What to do when a tracker is clicked
-	void TrackClicked(TrackOnClick tracker, ForwardTouch touch)
+	void TrackClicked(TrackOnClick tracker, Button touch)
 	{
-		Debug.Log("here");
 		// If zoom is already toggled
-		if(zoomToggle.IsToggled)
+		if(zoomed)
 		{
 			// Reset zoom if you're already zoomed into this category
 			if(_currentTrack == tracker)
 			{
-				zoomToggle.SetToStart();
+				zoomOutButtom.GetComponent<Button>().onClick.Invoke();
 			}
 			// Select this category (will automatically zoom in)
 			else
 			{
-				touch.CodeClick();
+				touch.onClick.Invoke();
 			}
 		} 
 		// If zoom isn't toggled
 		else
 		{
-			// Select this category
-			touch.CodeClick();
-			// and zoom in
-			zoomToggle.SetToToggle();
-		}
+            // Select this category
+            touch.onClick.Invoke();
+            // and zoom in
+            zoomInButtom.GetComponent<Button>().onClick.Invoke();
+        }
 	}
 
 
 	// Establish starting category
 	void Start()
 	{
-		faceToggle.SetToStart();
-		topToggle.SetToStart();
-		bottomToggle.SetToStart();
-		shoesToggle.SetToStart();
-		otherToggle.SetToStart();
+		faceToggle.GetComponent<CategoryToggle>().SetToOff();
+		topToggle.GetComponent<CategoryToggle>().SetToOff();
+		bottomToggle.GetComponent<CategoryToggle>().SetToOff();
+		shoesToggle.GetComponent<CategoryToggle>().SetToOff();
+		otherToggle.GetComponent<CategoryToggle>().SetToOff();
 		// Open the default clothes category tab
 		switch(startingGrid)
 		{
-		case Clothing.Category.CategoryEnum.HEAD:
-			setCurrent(faceToggle, faceTrack, faceGrid, null);
-			previous.gameObject.SetActive(false);
-			next.gameObject.SetActive(false);
-			break;
-		case Clothing.Category.CategoryEnum.TOP:
-			setCurrent(topToggle, topTrack, topGrid, top.renderers);
-			break;
-		case Clothing.Category.CategoryEnum.BOTTOM:
-			setCurrent(bottomToggle, bottomTrack, bottomGrid, bottom.renderers);
-			break;
-		case Clothing.Category.CategoryEnum.SHOES:
-			setCurrent(shoesToggle, shoesTrack, shoesGrid, shoes.renderers);
-			break;
-		case Clothing.Category.CategoryEnum.OTHER:
-			setCurrent(otherToggle, null, otherGrid, null);
-			zoomToggle.GetComponent<UIButton>().isEnabled = false;
-			previous.gameObject.SetActive(false);
-			next.gameObject.SetActive(false);
-			break;
+			case Clothing.Category.CategoryEnum.HEAD:
+				setCurrent(faceToggle, faceTrack, faceGrid, null);
+				previous.gameObject.SetActive(false);
+				next.gameObject.SetActive(false);
+				break;
+			case Clothing.Category.CategoryEnum.TOP:
+				setCurrent(topToggle, topTrack, topGrid, top.renderers);
+				break;
+			case Clothing.Category.CategoryEnum.BOTTOM:
+				setCurrent(bottomToggle, bottomTrack, bottomGrid, bottom.renderers);
+				break;
+			case Clothing.Category.CategoryEnum.SHOES:
+				setCurrent(shoesToggle, shoesTrack, shoesGrid, shoes.renderers);
+				break;
+			case Clothing.Category.CategoryEnum.OTHER:
+				setCurrent(otherToggle, null, otherGrid, null);
+				
+				zoomInButtom.gameObject.SetActive(false);
+				zoomOutButtom.gameObject.SetActive(false);
+
+				previous.gameObject.SetActive(false);
+				next.gameObject.SetActive(false);
+				break;
 		}
 
-		_currentGridToggle.SetToToggle();
-
+		_currentGridToggle.GetComponent<CategoryToggle>().SetToOn();
 		
-		previous.onClick.Add(new EventDelegate(this, "Previous"));
-		next.onClick.Add(new EventDelegate(this, "Next"));
+		previous.onClick.AddListener(Previous);
+		next.onClick.AddListener(Next);
 
-		//yield return null;
-		EventDelegate.Execute(startingHair._startingState.onClickEvents);
-		startingHair.GetComponent<ForwardTouch>().CodeClick();
+		startingHair.GetComponent<Button>().onClick.Invoke();
  	}
-	#endregion 
+    #endregion
 
-	#region Clothing Handle	
-	// What to do when the other toggle is clicked
-	void OtherToggleClicked(GameObject target)
+    #region Clothing Handle	
+    // What to do when the other toggle is clicked
+    public void OtherToggleClicked()
 	{
 		if(_currentGridToggle != otherToggle) 
 		{
-			otherToggle.SetToToggle();
-			_currentGridToggle.SetToStart();
+			otherToggle.GetComponent<CategoryToggle>().SetToOn();
+			_currentGridToggle.GetComponent<CategoryToggle>().SetToOff();
+
 			setCurrent(otherToggle, null, otherGrid, null);
 			previous.gameObject.SetActive(false);
 			next.gameObject.SetActive(false);
-			zoomToggle.GetComponent<UIButton>().isEnabled = false;
-		}
-		if(zoomToggle.IsToggled)
-			zoomToggle.SetToStart();
+            zoomInButtom.gameObject.SetActive(false);
+            zoomOutButtom.gameObject.SetActive(false);
+        }
+
+		if (zoomed)
+			zoomInButtom.GetComponent<Button>().onClick.Invoke();
 	}
-	void OtherItem(GameObject target)
+	void OtherItem(string tag)
 	{
 		// Get the clothing item that corresponds with the selected toggle
-		Clothing.Info c = _clothingDictionary[target]; 
+		Clothing.Info c = _clothingDictionary[tag]; 
 		// Get the renderer that corresponds with the selected toggle
-		Renderer s = _otherRendererDictionary[target];
+		Renderer s = _otherRendererDictionary[tag];
 
 		// Remove a conflicting other if one exists
 		if(s.material.mainTexture != null)
@@ -418,13 +427,13 @@ public class ProfessionalDress : MonoBehaviour
 			{
 				if(activeCI != null)
 				{
-					ButtonStateToggle t = _toggleDictionary[activeCI];
-					t.SetToStart();
+					SetActive t = _toggleDictionary[activeCI];
+					t.False();
 				}
 				// Apply the selected other
 				s.material.mainTexture = c.Pieces[0];
-				if(_otherRendererSecondaryDictionary.ContainsKey(target))
-					_otherRendererSecondaryDictionary[target].material.mainTexture = c.Pieces[0];
+				if(_otherRendererSecondaryDictionary.ContainsKey(tag))
+					_otherRendererSecondaryDictionary[tag].material.mainTexture = c.Pieces[0];
 				// Add the other to the list of active others
 				_activeOther.Add(c);
 				clothingLabel.text = c.DisplayTag;
@@ -434,20 +443,20 @@ public class ProfessionalDress : MonoBehaviour
 			} else
 			{
 				s.material.mainTexture = null;
-				if(_otherRendererSecondaryDictionary.ContainsKey(target))
-					_otherRendererSecondaryDictionary[target].material.mainTexture = null;
+				if(_otherRendererSecondaryDictionary.ContainsKey(tag))
+					_otherRendererSecondaryDictionary[tag].material.mainTexture = null;
 			}
 			if(activeCI != null)
 			{
-				ButtonStateToggle t = _toggleDictionary[activeCI];
-				_activeOther.Remove(_clothingDictionary[t.gameObject]);
+				SetActive t = _toggleDictionary[activeCI];
+				_activeOther.Remove(_clothingDictionary[activeCI.Tag]);
 			}
 		} else
 		{
 			// Apply the selected other
 			s.material.mainTexture = c.Pieces[0];
-			if(_otherRendererSecondaryDictionary.ContainsKey(target))
-				_otherRendererSecondaryDictionary[target].material.mainTexture = c.Pieces[0];
+			if(_otherRendererSecondaryDictionary.ContainsKey(tag))
+				_otherRendererSecondaryDictionary[tag].material.mainTexture = c.Pieces[0];
 			
 			// Add the other to the list of active others
 			_activeOther.Add(c);
@@ -460,31 +469,33 @@ public class ProfessionalDress : MonoBehaviour
 	}
 
 
-	void setToggle(ButtonStateToggle bst, TrackOnClick toc, UIGrid grid, Renderer[] renderers, Clothing.Info c)
+	void setToggle(GameObject catToggle, TrackOnClick toc, HorizontalLayoutGroup grid, Renderer[] renderers, Clothing.Info c)
 	{
-		if(_currentGridToggle != bst) 
+		if(_currentGridToggle != catToggle) 
 		{
-			bst.SetToToggle();
-			_currentGridToggle.SetToStart();
-			setCurrent(bst, toc, grid, renderers);
+            catToggle.GetComponent<CategoryToggle>().SetToOn();
+            _currentGridToggle.GetComponent<CategoryToggle>().SetToOff();
+
+            setCurrent(catToggle, toc, grid, renderers);
 
 			previous.gameObject.SetActive(true);
 			next.gameObject.SetActive(true);
-			zoomToggle.GetComponent<UIButton>().isEnabled = true;
+            zoomInButtom.gameObject.SetActive(true);
+            zoomOutButtom.gameObject.SetActive(false);
 
-			if(zoomToggle.IsToggled)
-				zoomToggle.SetToToggle();
+            if (zoomed)
+				zoomOutButtom.GetComponent<Button>().onClick.Invoke();
 		}
 	}
 	
-	void setItem(GameObject target, ref Clothing.Info clothing, Renderer[] renderers)
+	void setItem(string tag, ref Clothing.Info clothing, Renderer[] renderers)
 	{
-		Clothing.Info c = _clothingDictionary[target];
+		Clothing.Info c = _clothingDictionary[tag];
 		
 		if(clothing != c)
 		{
 			if(clothing != null)
-				_toggleDictionary[clothing].SetToStart();
+				_toggleDictionary[clothing].False();
 
 			for(int i = 0; i < renderers.Length; i++) {
 				if(i >= c.Pieces.Length)
@@ -505,80 +516,84 @@ public class ProfessionalDress : MonoBehaviour
 		}
 	}
 
-
-	void setCurrent(ButtonStateToggle bst, TrackOnClick toc, UIGrid grid, Renderer[] renderers)
-	{
-		_currentGridToggle = bst;
-		_currentTrack = toc;
+    void setCurrent(GameObject catToggle, TrackOnClick toc, HorizontalLayoutGroup grid, Renderer[] renderers)
+    {
 		_currentGrid = grid;
-		_currentRenderers = renderers;
-	}
-	#endregion 
-	
-	#region Inputs
-	// What to do when the face toggle is clicked
-	void FaceToggleClicked(GameObject target)
+        _currentGridToggle = catToggle;
+        _currentTrack = toc;
+        _currentHorizontalLayoutGroup = grid;
+        _currentRenderers = renderers;
+    }
+    #endregion
+
+    #region Inputs
+    // What to do when the face toggle is clicked
+    public void FaceToggleClicked()
 	{
 		if(_currentGridToggle != faceToggle) 
 		{
-			faceToggle.SetToToggle();
-			_currentGridToggle.SetToStart();
+			faceToggle.GetComponent<CategoryToggle>().SetToOn();
+			_currentGridToggle.GetComponent<CategoryToggle>().SetToOff();
+			
 			setCurrent(faceToggle, faceTrack, faceGrid, null);
 			previous.gameObject.SetActive(false);
 			next.gameObject.SetActive(false);
-			zoomToggle.GetComponent<UIButton>().isEnabled = true;
-		}
-		if(zoomToggle.IsToggled)
-			zoomToggle.SetToToggle();
+
+			zoomInButtom.gameObject.SetActive(true);
+            zoomOutButtom.gameObject.SetActive(false);
+        }
+
+		if (zoomed)
+			zoomOutButtom.GetComponent<Button>().onClick.Invoke();
 	}
-	void HairItem(GameObject target)
+	void HairItem(string tag)
 	{
-		setItem(target, ref _activeHair, hair.renderers);
+		setItem(tag, ref _activeHair, hair.renderers);
 		if(gender == CrossSceneInfo.GenderEnum.FEMALE)
 			PlayAnimation("Hair Changed");
 	}
-	void FacialHairItem(GameObject target)
+	void FacialHairItem(string tag)
 	{
-		setItem(target, ref _activeFacialHair, facialHair.renderers);
+		setItem(tag, ref _activeFacialHair, facialHair.renderers);
 	}
-	
-	
-	// What to do when the top toggle is clicked
-	void TopToggleClicked(GameObject target)
+
+
+    // What to do when the top toggle is clicked
+    public void TopToggleClicked()
 	{
 		setToggle(topToggle, topTrack, topGrid, top.renderers, _activeTop);
 	}
-	void TopItem(GameObject target)
+	void TopItem(string tag)
 	{
-		setItem(target, ref _activeTop, top.renderers);
+		setItem(tag, ref _activeTop, top.renderers);
 		if(gender == CrossSceneInfo.GenderEnum.MALE)
 			characterAnimator.SetBool("Shirt Wipe", UnityEngine.Random.Range(0f, 1f) > .5f);
 		PlayAnimation("Shirt Changed");
 	}
-	
-	
-	// What to do when the bottom toggle is clicked
-	void BottomToggleClicked(GameObject target)
+
+
+    // What to do when the bottom toggle is clicked
+    public void BottomToggleClicked()
 	{
 		setToggle(bottomToggle, bottomTrack, bottomGrid, bottom.renderers, _activeBottom);
 	}
-	void BottomItem(GameObject target)
+	void BottomItem(string tag)
 	{
-		setItem(target, ref _activeBottom, bottom.renderers);
+		setItem(tag, ref _activeBottom, bottom.renderers);
 		if(gender == CrossSceneInfo.GenderEnum.FEMALE)
 			characterAnimator.SetBool("Skirt", _activeBottom != null && _activeBottom.Pieces[5] != null);
 		PlayAnimation("Pants Changed");
 	}
-	
-	
-	// What to do when the shoes toggle is clicked
-	void ShoesToggleClicked(GameObject target)
+
+
+    // What to do when the shoes toggle is clicked
+    public void ShoesToggleClicked()
 	{
 		setToggle(shoesToggle, shoesTrack, shoesGrid, shoes.renderers, _activeShoes);
 	}
-	void ShoesItem(GameObject target)
+	void ShoesItem(string tag)
 	{
-		setItem(target, ref _activeShoes, shoes.renderers);
+		setItem(tag, ref _activeShoes, shoes.renderers);
 		PlayAnimation("Shoes Changed");
 	}
 
@@ -590,15 +605,7 @@ public class ProfessionalDress : MonoBehaviour
 
 		characterAnimator.SetBool("Playing Animation", true);
 		characterAnimator.SetTrigger(trigger);
-	}
-	
-	
-	void CancelCenter(UICenterOnChild center)
-	{
-		if(center.centeredObject != _currentCenter)
-			center.CenterOn(_currentCenter.transform);
-		else center.enabled = false;
-	}
+	}	
 
 	// Zoom in on the current category's tracker
 	public void Zoom()
@@ -625,10 +632,12 @@ public class ProfessionalDress : MonoBehaviour
 
 		if(activeClothing != null)
 		{
-			ButtonStateToggle bst = _toggleDictionary[activeClothing];
-			bst.SetToStart();
-			bst.GetComponent<ForwardTouch>().CodeClick();
-			index = bst.transform.GetSiblingIndex();
+			//SetActive bst = _toggleDictionary[activeClothing];
+			//bst.False();
+
+			Button button = _toggleButtonDictionary[activeClothing];
+			button.onClick.Invoke();
+			index = button.transform.GetSiblingIndex();
 			
 			if(_currentGrid.transform.childCount == 1)
 				return;
@@ -638,14 +647,14 @@ public class ProfessionalDress : MonoBehaviour
 		if(index == _currentGrid.transform.childCount)
 			index = 0;
 
-		_currentCenter = _currentGrid.GetChild(index).gameObject;
-		_currentCenter.GetComponent<ButtonStateToggle>().SetToToggle();
-		_currentCenter.GetComponent<ForwardTouch>().CodeClick();
+		_currentCenter = _currentGrid.transform.GetChild(index).gameObject;
+        _currentCenter.transform.GetChild("Check").GetComponentInChildren<SetActive>().False();
+        _currentCenter.GetComponent<Button>().onClick.Invoke();
 
-		UICenterOnChild center = _currentGrid.GetComponent<UICenterOnChild>();
-		center.CenterOn(_currentCenter.transform);
-		center.enabled = true;
-	}
+        _currentGrid.transform.parent.parent.GetComponent<CenterItemInScrollrect>().CenterOnItem(_currentCenter.GetComponent<RectTransform>());
+        //center.CenterOn(_currentCenter.transform);
+        //center.enabled = true;
+    }
 
 
 	// Goes to the previous item in the category (goes to end if at first item)
@@ -665,10 +674,12 @@ public class ProfessionalDress : MonoBehaviour
 
 		if(activeClothing != null)
 		{
-			ButtonStateToggle bst = _toggleDictionary[activeClothing];
-			bst.SetToStart();
-			bst.GetComponent<ForwardTouch>().CodeClick();
-			index = bst.transform.GetSiblingIndex();
+			//SetActive bst = _toggleDictionary[activeClothing];
+			//bst.False();
+
+			Button button = _toggleButtonDictionary[activeClothing];
+			button.onClick.Invoke();
+			index = button.transform.GetSiblingIndex();
 			
 			if(_currentGrid.transform.childCount == 1)
 				return;
@@ -677,15 +688,15 @@ public class ProfessionalDress : MonoBehaviour
 		index--;
 		if(index == -1)
 			index = _currentGrid.transform.childCount - 1;
-		
-		_currentCenter = _currentGrid.GetChild(index).gameObject;
-		_currentCenter.GetComponent<ButtonStateToggle>().SetToToggle();
-		_currentCenter.GetComponent<ForwardTouch>().CodeClick();
-		
-		UICenterOnChild center = _currentGrid.GetComponent<UICenterOnChild>();
-		center.CenterOn(_currentCenter.transform);
-		center.enabled = true;
-	}
+
+        _currentCenter = _currentGrid.transform.GetChild(index).gameObject;
+        _currentCenter.transform.GetChild("Check").GetComponentInChildren<SetActive>().False();
+        _currentCenter.GetComponent<Button>().onClick.Invoke();
+
+		_currentGrid.transform.parent.parent.GetComponent<CenterItemInScrollrect>().CenterOnItem(_currentCenter.GetComponent<RectTransform>());
+        //center.CenterOn(_currentCenter.transform);
+        //center.enabled = true;
+    }
 	#endregion 
 
 	#region Analysis
@@ -923,8 +934,7 @@ public class ProfessionalDress : MonoBehaviour
 		{
 			passed = true;
 			Debug.Log("recording score");
-			CrossSceneInfo.SetScore(CrossSceneInfo.SelectedCompany.CompanyName +"_"+CrossSceneInfo.SelectedCompany.PositionName,
-			                        _score);
+			CrossSceneInfo.SetScore(CrossSceneInfo.SelectedCompany.CompanyName +"_"+CrossSceneInfo.SelectedCompany.PositionName, _score);
 		}
 		
 		faceScore.text = _faceScore.ToString();
@@ -937,7 +947,7 @@ public class ProfessionalDress : MonoBehaviour
 		shoesBonus.text = "+" + _shoesBonus.ToString();
 		otherScore.text = _itemScore.ToString();
 		otherBonus.text = "+" + Mathf.CeilToInt(_itemBonus).ToString();
-		endScore.numeratorTo = _score;
+		endScoreBar.to = (float)_score / (float)endScoreBar.GetComponent<CustomProgressBar>().denominator;
 
 		/*
 		var dataEvent = new SkillEvent();

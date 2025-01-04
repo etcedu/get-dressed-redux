@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [ExecuteInEditMode]
-[RequireComponent (typeof(UIProgressBar))]
 public class CustomProgressBar : MonoBehaviour
 {
 	[SerializeField]
@@ -16,13 +16,13 @@ public class CustomProgressBar : MonoBehaviour
 			while(numerator > ranges[i].highRange)
 				i++;
 			float percentInRange = (numerator - ranges[i].lowRange) / ranges[i].rangeDiff;
-			_pBar.value = (percentInRange * ranges[i].percentDiff) + ranges[i].lowPercent;
+			_pBar.fillAmount = (percentInRange * ranges[i].percentDiff) + ranges[i].lowPercent;
 		}
 	}
 	public float denominator;
 	[SerializeField]
 	private List<PercentRange> ranges = new List<PercentRange>();
-	private UIProgressBar _pBar;
+	[SerializeField] Image _pBar;
 	public List<EventDelegate> CurrentRangeEvents
 	{
 		get{ 
@@ -36,7 +36,7 @@ public class CustomProgressBar : MonoBehaviour
 	void OnEnable()
 	{
 		if(_pBar == null)
-			_pBar = GetComponent<UIProgressBar>();
+			_pBar = GetComponent<Image>();
 	}
 
 #if UNITY_EDITOR
