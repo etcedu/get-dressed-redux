@@ -9,6 +9,7 @@ public class BoolDependantAction : MonoBehaviour
 	private bool checkOnStart = false;
 	[SerializeField]
 	private bool executeOnCheck = false;
+	[SerializeField] private bool recheckOnExecute = false;
 	[SerializeField]
 	private List<EventDelegate> trueEvents = new List<EventDelegate>();
 	[SerializeField]
@@ -20,7 +21,7 @@ public class BoolDependantAction : MonoBehaviour
 	public List<EventDelegate> boolEvents
 	{
 		get{ 
-			Check(true);
+			Check(true, recheckOnExecute);
 			return (_boolValue ? trueEvents : falseEvents); 
 		}
 	}
@@ -37,9 +38,9 @@ public class BoolDependantAction : MonoBehaviour
 			Check(false);
 	}
 
-	void Check(bool ignoreExecuteOnCheck)
+	void Check(bool ignoreExecuteOnCheck, bool recheck = false)
 	{
-		if(!_checked)
+		if(!_checked || recheck)
 		{
 			_checked = true;
 			_boolValue = GameBase.Bools.GetValue(boolKey, false);

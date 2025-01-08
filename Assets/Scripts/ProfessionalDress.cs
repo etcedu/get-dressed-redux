@@ -121,9 +121,9 @@ public class ProfessionalDress : MonoBehaviour
 	[SerializeField]
 	private TMP_Text otherFeedback;
 	[SerializeField]
-	private TweenFill endScoreBar;
-	
-	[SerializeField]
+    private TweenCustomProgressBar endScore;
+
+    [SerializeField]
 	private GameObject zoomInButtom;
 	[SerializeField]
 	private GameObject zoomOutButtom;
@@ -947,9 +947,9 @@ public class ProfessionalDress : MonoBehaviour
 		shoesBonus.text = "+" + _shoesBonus.ToString();
 		otherScore.text = _itemScore.ToString();
 		otherBonus.text = "+" + Mathf.CeilToInt(_itemBonus).ToString();
-		endScoreBar.to = (float)_score / (float)endScoreBar.GetComponent<CustomProgressBar>().denominator;
+		endScore.numeratorTo = _score;
 
-		/*
+        /*
 		var dataEvent = new SkillEvent();
 		dataEvent.AddString("EventType", "FinishedLevel");
 		dataEvent.AddNumber("FaceScore", _faceScore);
@@ -961,7 +961,7 @@ public class ProfessionalDress : MonoBehaviour
 		dataEvent.Save();
 		*/
 
-		TimeSpan timeElapsed = (CrossSceneInfo.LevelStartedTimeStamp - DateTime.Now).Duration();
+        TimeSpan timeElapsed = (CrossSceneInfo.LevelStartedTimeStamp - DateTime.Now).Duration();
 		float secondsElapsed = (float) timeElapsed.TotalSeconds;
 		EventRecorder.RecordLevelCompleted(CrossSceneInfo.LevelAttemptId, CrossSceneInfo.LastCompanyName, CrossSceneInfo.LastPositionName, passed, _faceScore, _topScore, _bottomScore, _shoesScore, _itemScore, _score, CrossSceneInfo.PassingCuttoff, secondsElapsed);
 	}

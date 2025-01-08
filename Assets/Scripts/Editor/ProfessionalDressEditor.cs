@@ -177,7 +177,7 @@ public class ProfessionalDressEditor : Editor
 						serializedObject.DrawProperty("Item Score", "otherScore");
 						serializedObject.DrawProperty("Item Bonus", "otherBonus");
 						serializedObject.DrawProperty("Item Feedback", "otherFeedback");
-						serializedObject.DrawProperty("Final Score", "endScoreBar");
+						serializedObject.DrawProperty("Final Score", "endScore");
 						serializedObject.DrawProperty("Company", "companyLabel");
 						serializedObject.DrawProperty("Position", "positionLabel");
 						GUILayout.EndVertical();

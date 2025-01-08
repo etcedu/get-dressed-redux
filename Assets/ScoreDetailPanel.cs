@@ -35,6 +35,8 @@ public class ScoreDetailPanel : MonoBehaviour
             detailDescObjsToDisable[i].SetActive(false);
         for (int i = 0; i < tweens.Length; i++)
             tweens[i].PlayForward();
+
+        buttonLabel.text = "BACK";
     }
 
     public void HideDetail()
@@ -46,5 +48,7 @@ public class ScoreDetailPanel : MonoBehaviour
             detailDescObjsToDisable[i].SetActive(true);
         for (int i = 0; i < tweens.Length; i++)
             tweens[i].PlayReverse();
+
+        buttonLabel.text = "DETAIL...";
     }
 }
