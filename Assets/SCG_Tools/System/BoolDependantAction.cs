@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class BoolDependantAction : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class BoolDependantAction : MonoBehaviour
 	[SerializeField]
 	private List<EventDelegate> falseEvents = new List<EventDelegate>();
 
-	private bool _checked;
+    private bool _checked;
 	private bool _boolValue;
 
 	public List<EventDelegate> boolEvents

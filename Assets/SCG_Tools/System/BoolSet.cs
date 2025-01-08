@@ -34,5 +34,11 @@ public class BoolSet : MonoBehaviour
 		GameBase.Bools.SetValue(boolKey, !current);
 		GameBase.Bools.Save();
 	}
+
+	public void Set(bool value)
+	{
+		GameBase.Bools.SetValue (boolKey, value);
+        GameBase.Bools.Save();
+    }
 }
 

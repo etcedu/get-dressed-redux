@@ -813,7 +813,9 @@ MonoBehaviour:
   zoom: 1
   zoomBoarderAmount: 1
   onClickOverride: 1
-  onClick: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   maintain: 0
 --- !u!60 &108594389
 PolygonCollider2D:
@@ -1189,7 +1191,9 @@ MonoBehaviour:
   zoom: 1
   zoomBoarderAmount: 0.9
   onClickOverride: 1
-  onClick: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   maintain: 0
 --- !u!60 &220270286
 PolygonCollider2D:
@@ -1909,10 +1913,8 @@ MonoBehaviour:
   zoomBoarderAmount: 0.8
   onClickOverride: 1
   onClick:
-  - mTarget: {fileID: 0}
-    mMethodName: 
-    mParameters: []
-    oneShot: 0
+    m_PersistentCalls:
+      m_Calls: []
   maintain: 0
 --- !u!60 &392422773
 PolygonCollider2D:
@@ -4400,7 +4402,7 @@ Camera:
     serializedVersion: 2
     x: 0.4
     y: 0.015277778
-    width: 0.58436894
+    width: 0.58611107
     height: 0.7763889
   near clip plane: 0.3
   far clip plane: 1000
@@ -6728,7 +6730,9 @@ MonoBehaviour:
   zoom: 1
   zoomBoarderAmount: 0.8
   onClickOverride: 1
-  onClick: []
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   maintain: 0
 --- !u!114 &1189585359
 MonoBehaviour:
@@ -10325,56 +10329,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11415306, guid: ed504042af323be44a612ffbe207a2e6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed504042af323be44a612ffbe207a2e6, type: 3}
---- !u!1001 &1831485564
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.19480419
-      objectReference: {fileID: 0}
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0883497
-      objectReference: {fileID: 0}
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 421320, guid: d151204c934273b4ead85574fc5a0789, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d151204c934273b4ead85574fc5a0789, type: 3}
 --- !u!1 &1845880176
 GameObject:
   m_ObjectHideFlags: 0
@@ -12294,7 +12254,6 @@ SceneRoots:
   - {fileID: 1692763211}
   - {fileID: 1944430486}
   - {fileID: 367839969}
-  - {fileID: 1831485564}
   - {fileID: 1825380006}
   - {fileID: 2096187840}
   - {fileID: 81982372}

@@ -13,7 +13,8 @@ using UnityEngine.UI;
 public class UUIPlaySound : MonoBehaviour
 {
 
-	public AudioClip audioClip;
+    public string muteCheck = "MuteSound";
+    public AudioClip audioClip;
 
 	[Range(0f, 1f)] public float volume = 1f;
 	[Range(0f, 2f)] public float pitch = 1f;
@@ -33,11 +34,12 @@ public class UUIPlaySound : MonoBehaviour
     private void Start()
     {
 		button = GetComponent<Button>();
-		button.onClick.AddListener(() => Play());
+		button?.onClick.AddListener(() => Play());
     }
 
     public virtual void Play ()
 	{
-		FindObjectOfType<SoundSource>().PlaySound(audioClip, volume, pitch);
+        if (!GameBase.Bools.GetValue(muteCheck, false))
+			FindObjectOfType<SoundSource>().PlaySound(audioClip, volume, pitch);
 	}
 }

@@ -5,23 +5,22 @@ public class SoundMuter : MonoBehaviour
 {
 	public string muteCheck = "MuteSound";
 	bool mute;
-	UIPlaySound[] sounds = new UIPlaySound[0];
+	UUIPlaySound[] sounds = new UUIPlaySound[0];
 	static SoundMuter _instance;
 	
 	// Use this for initialization
 	IEnumerator Start ()
-	{
-		if(Application.isLoadingLevel)
-			yield return null;
+	{ 
 		yield return null;
-		if(_instance == null)
+		if (_instance == null)
 		{
 			_instance = this;
 			DontDestroyOnLoad(gameObject);
 			mute = GameBase.Bools.GetValue(muteCheck, false);
-			sounds = GameObject.FindObjectsOfType<UIPlaySound>();
+			sounds = GameObject.Find("Canvas").transform.GetComponentsInChildren<UUIPlaySound>(true);
 			SetMute();
-		} else if(_instance != this)
+		}
+		else if (_instance != this)
 		{
 			DestroyImmediate(this);
 		}
@@ -29,11 +28,9 @@ public class SoundMuter : MonoBehaviour
 	
 	IEnumerator OnLevelWasLoaded(int notImportant)
 	{
-		if(Application.isLoadingLevel)
-			yield return null;
 		yield return null;
-		sounds = GameObject.FindObjectsOfType<UIPlaySound>();
-		SetMute();
+        sounds = GameObject.Find("Canvas").transform.GetComponentsInChildren<UUIPlaySound>(true);
+        SetMute();
 	}
 	
 	// Update is called once per frame
@@ -48,8 +45,9 @@ public class SoundMuter : MonoBehaviour
 	
 	void SetMute()
 	{
-		foreach(UIPlaySound sound in sounds)
-			sound.enabled = !mute;
+		Debug.Log("SetMute: " + mute);
+		foreach (UUIPlaySound sound in sounds)
+			sound.volume = mute ? 0f : 1f;
 	}
 	
 	public static bool Muted
