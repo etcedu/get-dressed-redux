@@ -158,10 +158,10 @@ RectTransform:
   - {fileID: 1377360608}
   m_Father: {fileID: 1984731201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 735, y: -236.668}
-  m_SizeDelta: {x: 1470, y: 157.77867}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &17315674
 MonoBehaviour:
@@ -1100,10 +1100,10 @@ RectTransform:
   - {fileID: 853180348}
   m_Father: {fileID: 320719488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 563.174, y: -460.2483}
-  m_SizeDelta: {x: 1126.348, y: 184.09932}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82207630
 MonoBehaviour:
@@ -1154,13 +1154,16 @@ GameObject:
   - component: {fileID: 100035282}
   - component: {fileID: 100035284}
   - component: {fileID: 100035283}
+  - component: {fileID: 100035287}
+  - component: {fileID: 100035285}
+  - component: {fileID: 100035286}
   m_Layer: 5
   m_Name: Tutorial Select Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &100035282
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1220,6 +1223,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100035281}
   m_CullTransparentMesh: 1
+--- !u!114 &100035285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100035281}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0fe25ae2cfc734ea4c06a94eaeb83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.1
+  steeperCurves: 0
+  tweenGroup: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 0
+  to: 1
+--- !u!114 &100035286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100035281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ad1ea62aada034aa46b2d907566f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphaCutoff: 0.001
+--- !u!225 &100035287
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100035281}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &116113144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4770746124471584, guid: 0d6ca793d9ff89642b3d31dc43740aa9,
@@ -1337,10 +1412,10 @@ RectTransform:
   - {fileID: 1964468268}
   m_Father: {fileID: 1984731201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 735, y: -78.889336}
-  m_SizeDelta: {x: 1470, y: 157.77867}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154666668
 MonoBehaviour:
@@ -2692,10 +2767,10 @@ RectTransform:
   - {fileID: 842124996}
   m_Father: {fileID: 1876858320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -71.42487}
-  m_SizeDelta: {x: 716, y: 142.84975}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345773997
 MonoBehaviour:
@@ -2741,10 +2816,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 360687378}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 360687382}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayForward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3010,13 +3085,16 @@ GameObject:
   - component: {fileID: 360687379}
   - component: {fileID: 360687381}
   - component: {fileID: 360687380}
+  - component: {fileID: 360687384}
+  - component: {fileID: 360687382}
+  - component: {fileID: 360687383}
   m_Layer: 5
   m_Name: MapTutorialPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &360687379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3076,6 +3154,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360687378}
   m_CullTransparentMesh: 1
+--- !u!114 &360687382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360687378}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0fe25ae2cfc734ea4c06a94eaeb83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.1
+  steeperCurves: 0
+  tweenGroup: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 0
+  to: 1
+--- !u!114 &360687383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360687378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ad1ea62aada034aa46b2d907566f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphaCutoff: 0.001
+--- !u!225 &360687384
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360687378}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &378322318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,10 +4119,10 @@ RectTransform:
   - {fileID: 951582077}
   m_Father: {fileID: 1876858320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -606.4741}
-  m_SizeDelta: {x: 716, y: 142.84975}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569748332
 MonoBehaviour:
@@ -4018,10 +4168,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 100035281}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 100035285}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayReverse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5467,10 +5617,10 @@ RectTransform:
   - {fileID: 607837790}
   m_Father: {fileID: 1984731201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 735, y: -394.4467}
-  m_SizeDelta: {x: 1470, y: 157.77867}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707403799
 MonoBehaviour:
@@ -5966,13 +6116,15 @@ GameObject:
   - component: {fileID: 818569055}
   - component: {fileID: 818569054}
   - component: {fileID: 818569056}
+  - component: {fileID: 818569057}
+  - component: {fileID: 818569058}
   m_Layer: 5
   m_Name: OptionsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &818569053
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6040,10 +6192,70 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818569052}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &818569057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818569052}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0fe25ae2cfc734ea4c06a94eaeb83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.1
+  steeperCurves: 0
+  tweenGroup: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 0
+  to: 1
+--- !u!114 &818569058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818569052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ad1ea62aada034aa46b2d907566f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphaCutoff: 0.001
 --- !u!1 &829017161
 GameObject:
   m_ObjectHideFlags: 0
@@ -6293,10 +6505,10 @@ RectTransform:
   - {fileID: 1661293384}
   m_Father: {fileID: 285025741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -251.81201}
-  m_SizeDelta: {x: 716, y: 144.20801}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839341303
 MonoBehaviour:
@@ -10038,10 +10250,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 360687378}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 360687382}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayReverse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10267,10 +10479,10 @@ RectTransform:
   - {fileID: 277520501}
   m_Father: {fileID: 320719488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 563.174, y: -92.04966}
-  m_SizeDelta: {x: 1126.348, y: 184.09932}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448171971
 MonoBehaviour:
@@ -10590,10 +10802,10 @@ RectTransform:
   - {fileID: 550326940}
   m_Father: {fileID: 285025741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -431.52002}
-  m_SizeDelta: {x: 716, y: 144.20801}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494155819
 MonoBehaviour:
@@ -10639,10 +10851,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 818569052}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 818569057}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayReverse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10740,10 +10952,10 @@ RectTransform:
   - {fileID: 2022998437}
   m_Father: {fileID: 285025741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -72.104004}
-  m_SizeDelta: {x: 716, y: 144.20801}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504430807
 MonoBehaviour:
@@ -10789,10 +11001,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 100035281}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 100035285}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayForward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11419,10 +11631,10 @@ RectTransform:
   - {fileID: 956070113}
   m_Father: {fileID: 1876858320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -428.12436}
-  m_SizeDelta: {x: 716, y: 142.84975}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655211132
 MonoBehaviour:
@@ -11468,10 +11680,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2039349057}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2039349061}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayForward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11907,10 +12119,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 818569052}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 818569057}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayForward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12559,10 +12771,10 @@ RectTransform:
   - {fileID: 1702086991}
   m_Father: {fileID: 1876858320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -249.77463}
-  m_SizeDelta: {x: 716, y: 142.84975}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766948979
 MonoBehaviour:
@@ -12608,10 +12820,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2030422172}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2030422176}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayForward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12899,10 +13111,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2039349057}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2039349061}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayReverse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13709,10 +13921,10 @@ RectTransform:
   - {fileID: 1705046797}
   m_Father: {fileID: 320719488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 563.174, y: -276.149}
-  m_SizeDelta: {x: 1126.348, y: 184.09932}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917846947
 MonoBehaviour:
@@ -14513,13 +14725,16 @@ GameObject:
   - component: {fileID: 2030422173}
   - component: {fileID: 2030422175}
   - component: {fileID: 2030422174}
+  - component: {fileID: 2030422178}
+  - component: {fileID: 2030422177}
+  - component: {fileID: 2030422176}
   m_Layer: 5
   m_Name: ClothesTutorialWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2030422173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14579,6 +14794,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030422172}
   m_CullTransparentMesh: 1
+--- !u!114 &2030422176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030422172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0fe25ae2cfc734ea4c06a94eaeb83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.1
+  steeperCurves: 0
+  tweenGroup: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 0
+  to: 1
+--- !u!225 &2030422177
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030422172}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2030422178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030422172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ad1ea62aada034aa46b2d907566f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphaCutoff: 0.001
 --- !u!1 &2031354748
 GameObject:
   m_ObjectHideFlags: 0
@@ -14665,13 +14952,16 @@ GameObject:
   - component: {fileID: 2039349058}
   - component: {fileID: 2039349060}
   - component: {fileID: 2039349059}
+  - component: {fileID: 2039349063}
+  - component: {fileID: 2039349062}
+  - component: {fileID: 2039349061}
   m_Layer: 5
   m_Name: ResultsTutorialWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2039349058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14731,6 +15021,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039349057}
   m_CullTransparentMesh: 1
+--- !u!114 &2039349061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039349057}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0fe25ae2cfc734ea4c06a94eaeb83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.1
+  steeperCurves: 0
+  tweenGroup: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 0
+  to: 1
+--- !u!225 &2039349062
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039349057}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2039349063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039349057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ad1ea62aada034aa46b2d907566f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphaCutoff: 0.001
 --- !u!1 &2044812581
 GameObject:
   m_ObjectHideFlags: 0
@@ -15370,7 +15732,7 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 101.61458
+      value: 91.80931
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -15380,12 +15742,12 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50.80729
+      value: 45.904655
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.985619
+      value: -20.40207
       objectReference: {fileID: 0}
     - target: {fileID: 9062360013827195925, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -15631,10 +15993,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2030422172}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2030422176}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayReverse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
