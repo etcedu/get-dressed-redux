@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 6804595}
   - component: {fileID: 6804594}
   - component: {fileID: 6804593}
+  - component: {fileID: 6804597}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -483,14 +484,14 @@ MonoBehaviour:
   executeOnCheck: 1
   recheckOnExecute: 0
   trueEvents:
-  - mTarget: {fileID: 6804596}
+  - mTarget: {fileID: 6804597}
     mMethodName: SetOnWithoutNotify
     mParameters:
     - obj: {fileID: 0}
       field: 
     oneShot: 0
   falseEvents:
-  - mTarget: {fileID: 6804596}
+  - mTarget: {fileID: 6804597}
     mMethodName: SetOffWithoutNotify
     mParameters: []
     oneShot: 0
@@ -597,6 +598,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &6804597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a9f61ed70834a4d8fadb319c70be1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 6804596}
 --- !u!1 &7159812
 GameObject:
   m_ObjectHideFlags: 0
@@ -8770,6 +8784,7 @@ GameObject:
   - component: {fileID: 174360018}
   - component: {fileID: 174360017}
   - component: {fileID: 174360016}
+  - component: {fileID: 174360020}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -8814,14 +8829,14 @@ MonoBehaviour:
   executeOnCheck: 1
   recheckOnExecute: 0
   trueEvents:
-  - mTarget: {fileID: 174360019}
+  - mTarget: {fileID: 174360020}
     mMethodName: SetOnWithoutNotify
     mParameters:
     - obj: {fileID: 0}
       field: 
     oneShot: 0
   falseEvents:
-  - mTarget: {fileID: 174360019}
+  - mTarget: {fileID: 174360020}
     mMethodName: SetOffWithoutNotify
     mParameters: []
     oneShot: 0
@@ -8928,6 +8943,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &174360020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174360014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a9f61ed70834a4d8fadb319c70be1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 174360019}
 --- !u!1 &178500376
 GameObject:
   m_ObjectHideFlags: 0
@@ -35197,10 +35225,10 @@ RectTransform:
   - {fileID: 510070549}
   m_Father: {fileID: 846338039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -251.81201}
-  m_SizeDelta: {x: 716, y: 144.20801}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742647402
 MonoBehaviour:
@@ -35860,10 +35888,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1575817135}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1575817140}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayForward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -44279,10 +44307,10 @@ RectTransform:
   - {fileID: 829565881}
   m_Father: {fileID: 846338039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -386.59302}
-  m_SizeDelta: {x: 716, y: 234.062}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934018276
 MonoBehaviour:
@@ -44344,10 +44372,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1575817135}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1575817140}
+        m_TargetAssemblyTypeName: Simcoach.SkillArcade.UITweener_SA, Assembly-CSharp
+        m_MethodName: PlayReverse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -71010,10 +71038,10 @@ RectTransform:
   - {fileID: 809631999}
   m_Father: {fileID: 846338039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 358, y: -117.031}
-  m_SizeDelta: {x: 716, y: 234.062}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491511034
 MonoBehaviour:
@@ -74087,13 +74115,15 @@ GameObject:
   - component: {fileID: 1575817139}
   - component: {fileID: 1575817138}
   - component: {fileID: 1575817137}
+  - component: {fileID: 1575817140}
+  - component: {fileID: 1575817141}
   m_Layer: 5
   m_Name: OptionsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1575817136
 RectTransform:
   m_ObjectHideFlags: 0
@@ -74123,7 +74153,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575817135}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -74165,6 +74195,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575817135}
   m_CullTransparentMesh: 1
+--- !u!114 &1575817140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575817135}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0fe25ae2cfc734ea4c06a94eaeb83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.1
+  steeperCurves: 0
+  tweenGroup: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 0
+  to: 1
+--- !u!114 &1575817141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575817135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ad1ea62aada034aa46b2d907566f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphaCutoff: 0.001
 --- !u!1 &1575963991
 GameObject:
   m_ObjectHideFlags: 0

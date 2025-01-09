@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 #pragma warning disable 0649
 [System.Serializable]
@@ -88,6 +89,7 @@ public class AvatarManager : MonoBehaviour
 		}
 
 		SetGender(CrossSceneInfo.Gender);
+		FindObjectOfType<ToggleCustom>()?.SetIsOnWithoutNotify(CrossSceneInfo.Gender == CrossSceneInfo.GenderEnum.MALE);
 	}
 	
 	/// <summary>
@@ -97,6 +99,11 @@ public class AvatarManager : MonoBehaviour
 	public void SetGender(string gender)
 	{
         SetGender(gender == "male" ? CrossSceneInfo.GenderEnum.MALE : CrossSceneInfo.GenderEnum.FEMALE);
+    }
+
+	public void SetBody(bool isMale)
+	{
+        SetGender(isMale ? CrossSceneInfo.GenderEnum.MALE : CrossSceneInfo.GenderEnum.FEMALE);
     }
 
 	void SetGender(CrossSceneInfo.GenderEnum gender)

@@ -829,7 +829,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 106.795}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72325944
 MonoBehaviour:
@@ -8344,8 +8344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 418.747, y: -396.18}
-  m_SizeDelta: {x: 447.867, y: 271.679}
+  m_AnchoredPosition: {x: 416.1, y: -342.8}
+  m_SizeDelta: {x: 447.867, y: 322.396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066602275
 MonoBehaviour:
@@ -8365,11 +8365,11 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 21.24
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -8805,6 +8805,7 @@ GameObject:
   - component: {fileID: 1139464179}
   - component: {fileID: 1139464180}
   - component: {fileID: 1139464181}
+  - component: {fileID: 1139464182}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -8952,17 +8953,30 @@ MonoBehaviour:
   executeOnCheck: 1
   recheckOnExecute: 0
   trueEvents:
-  - mTarget: {fileID: 1139464178}
+  - mTarget: {fileID: 1139464182}
     mMethodName: SetOnWithoutNotify
     mParameters:
     - obj: {fileID: 0}
       field: 
     oneShot: 0
   falseEvents:
-  - mTarget: {fileID: 1139464178}
+  - mTarget: {fileID: 1139464182}
     mMethodName: SetOffWithoutNotify
     mParameters: []
     oneShot: 0
+--- !u!114 &1139464182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139464176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a9f61ed70834a4d8fadb319c70be1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 1139464178}
 --- !u!1 &1141087992
 GameObject:
   m_ObjectHideFlags: 0
@@ -11438,6 +11452,7 @@ GameObject:
   - component: {fileID: 1649963088}
   - component: {fileID: 1649963089}
   - component: {fileID: 1649963090}
+  - component: {fileID: 1649963091}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -11585,17 +11600,30 @@ MonoBehaviour:
   executeOnCheck: 1
   recheckOnExecute: 0
   trueEvents:
-  - mTarget: {fileID: 1649963087}
+  - mTarget: {fileID: 1649963091}
     mMethodName: SetOnWithoutNotify
     mParameters:
     - obj: {fileID: 0}
       field: 
     oneShot: 0
   falseEvents:
-  - mTarget: {fileID: 1649963087}
+  - mTarget: {fileID: 1649963091}
     mMethodName: SetOffWithoutNotify
     mParameters: []
     oneShot: 0
+--- !u!114 &1649963091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649963085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a9f61ed70834a4d8fadb319c70be1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 1649963087}
 --- !u!1 &1655211130
 GameObject:
   m_ObjectHideFlags: 0
@@ -12073,7 +12101,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 106.795}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665023015
 MonoBehaviour:
@@ -15732,7 +15760,7 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 91.80931
+      value: 101.61458
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -15742,12 +15770,12 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 45.904655
+      value: 50.80729
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.40207
+      value: -20.985619
       objectReference: {fileID: 0}
     - target: {fileID: 9062360013827195925, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
