@@ -44,18 +44,6 @@ public class RankUpDetect : MonoBehaviour
         }
 	}
 
-    public void ShowFullScreenAd()
-    {
-        if (!GlobalData.sawAdThisGame)
-        {
-            if (DynamicAdManager.instance != null)
-            {
-                DynamicAdManager.instance.ShowFullScreenAd("FullScreenAd_A");
-            }
-            GlobalData.sawAdThisGame = true;
-        }
-    }
-
     private void CheckAndSendBadgeEvents()
     {
         if(WebComms.LoggedIn())
