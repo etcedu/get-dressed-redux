@@ -1,0 +1,53 @@
+ID	Category	Gender	Human Name	Tier
+Male_Hair_01	Head	Male	Black Undercut	Casual
+Male_Hair_02	Head	Male	Black Undercut	Casual;Business Casual;Business Professional
+Male_Hair_03	Head	Male	Black Undercut	Casual;Business Casual;Business Professional
+Male_Hair_04	Head	Male	Brown Undercut	Casual;Business Casual;Business Professional
+Male_Hair_06	Head	Male	Side-Swept Bang	Casual; Business Casual
+Male_Hair_07	Head	Male	Long Hair	Casual; Business Casual
+Male_Hair_08	Head	Male	Short Black Hair	Casual; Business Casual;Business Professional
+Male_Hat_01	Head	Either	Blue and White Ball Cap	Informal
+Male_Hat_02	Head	Male	Fedora	Informal
+Male_Hat_03	Head	Male	Cowboy Hat	Informal
+Male_Hat_05	Head	Either	Beanie	Informal
+Male_Pants_01	Bottom	Male	Khaki Slacks	Business Casual
+Male_Pants_02	Bottom	Male	Blue Suit Pants - M	Business Professional
+Male_Pants_03	Bottom	Male	Navy Blue Slacks	Business Professional
+Male_Pants_04	Bottom	Male	Corduroy Khakis	Casual;Business Casual
+Male_Pants_05	Bottom	Male	Gray Suit Pants - M	Business Professional
+Male_Pants_06	Bottom	Male	Black Suit Pants - M	Business Professional
+Male_Pants_07	Bottom	Male	Blue Jeans	Casual
+Male_Pants_08	Bottom	Male	Ripped Blue Jeans	Informal
+Male_Pants_09	Bottom	Male	Red Basketball Shorts	Informal
+Male_Pants_10	Bottom	Male	Black Shorts	Casual
+Male_Pants_11	Bottom	Male	Pleated Shorts	Casual
+Male_Pants_12	Bottom	Male	Jean Shorts	Informal
+Male_Pants_13	Bottom	Male	Gray Sweat Pants	Informal
+Male_Pants_14	Bottom	Male	Camo Pants	Informal
+Male_Pants_15	Bottom	Male	Baggy Jeans	Informal
+Male_Shirt_01	Top	Male	Blue Solid Button Up	Business Casual
+Male_Shirt_02	Top	Male	Striped Button Up	Business Casual
+Male_Shirt_03	Top	Male	Red Solid Polo Shirt	Business Casual
+Male_Shirt_04	Top	Male	Striped Polo Shirt	Casual
+Male_Shirt_05	Top	Male	Black Graphic T-Shirt	Informal
+Male_Shirt_06	Top	Male	Brown Sports Coat	Business Casual; Business Professional
+Male_Shirt_07	Top	Male	Black Tuxedo Vest	Business Professional
+Male_Shirt_08	Top	Male	Gray Sweater Vest	Business Casual
+Male_Shirt_09	Top	Male	Navy Sweater	Casual
+Male_Shirt_10	Top	Male	Blue Polka Dot Button Up	Business Casual
+Male_Shirt_11	Top	Male	V-Neck T-shirt	Informal
+Male_Shirt_12	Top	Male	Rocker Vest	Informal
+Male_Shirt_13	Top	Male	Checkered Suit Jacket and Tie	Business Professional
+Male_Shirt_14	Top	Male	Striped Suit Jacket and Tie	Business Professional
+Male_Shirt_15	Top	Male	Tweed Coat and Blue Oxford Shirt	Business Casual; Business Professional
+Male_Shirt_16	Top	Male	Printed Pattern Shirt	Informal
+Male_Shirt_17	Top	Male	Tuxedo Costume T-Shirt	Informal
+Male_Shirt_18	Top	Male	Blue Suit Jacket and Button Up	Business Casual
+Male_Shoe_01	Feet	Male	Black Loafers	Business Casual
+Male_Shoe_02	Feet	Male	Brown Wingtip Shoes	Business Casual; Business Professional
+Male_Shoe_03	Feet	Male	Black Oxford Dress Shoes	Business Professional
+Male_Shoe_04	Feet	Male	Black and White Wingtip Shoes	Business Professional
+Male_Shoe_05	Feet	Male	Tan Laced Loafers	Casual; Business Casual
+Male_Shoe_06	Feet	Male	White Basketball Shoes	Casual
+Male_Shoe_07	Feet	Male	Red Sandals	Informal
+Male_Shoe_08	Feet	Male	Black Hightop Sneakers - M	Informal

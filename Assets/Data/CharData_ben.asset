@@ -18,7 +18,18 @@ MonoBehaviour:
   description: Put some pants on for god's sake.
   jobAttireDescription: literally anything
   imageAssetPath: CharacterPortraits/Appearance_App_Icon
-  headOptions: []
-  topOptions: []
-  bottomOptions: []
-  feetOptions: []
+  headOptions:
+  - Male_Hat_01
+  - Male_Hair_02
+  topOptions:
+  - Male_Shirt_02
+  - Male_Shirt_04
+  - Male_Shirt_06
+  bottomOptions:
+  - Male_Pants_01
+  - Male_Pants_03
+  - Male_Pants_05
+  feetOptions:
+  - Male_Shoe_03
+  - Male_Shoe_04
+  - Male_Shoe_05

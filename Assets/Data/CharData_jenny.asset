@@ -18,7 +18,18 @@ MonoBehaviour:
   description: Dress your teeth with toothpaste.
   jobAttireDescription: TEETH
   imageAssetPath: CharacterPortraits/Button_Icon_Brush Teeth
-  headOptions: []
-  topOptions: []
-  bottomOptions: []
-  feetOptions: []
+  headOptions:
+  - 
+  - 
+  topOptions:
+  - 
+  - 
+  - 
+  bottomOptions:
+  - 
+  - 
+  - 
+  feetOptions:
+  - 
+  - 
+  - 

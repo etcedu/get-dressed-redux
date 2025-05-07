@@ -1,56 +1,53 @@
-using Clothing;
-using Simcoach.SkillArcade;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class ClothingCloset : MonoBehaviour
+[CreateAssetMenu(menuName = "Custom/ClothingCloset", fileName = "New Clothing Closet")]
+[System.Serializable]
+public class ClothingCloset : ScriptableObject
 {
-    public List<ClothingPiece> head = new List<ClothingPiece>();
-    public List<ClothingPiece> top = new List<ClothingPiece>();
-    public List<ClothingPiece> bottom = new List<ClothingPiece>();
-    public List<ClothingPiece> feet = new List<ClothingPiece>();
+    public TextAsset clothingDataFile;
+    public List<ClothingPiece> clothingPieces;
+    public List<ClothingModelConnection> connections;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public ClothingPiece GetClothingPiece(string name)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return clothingPieces.Find(x => x.Tag == name);
     }
 
     #region Importing
-    #if UNITY_EDITOR
-    public void ParseClothes(TextAsset tsvData, bool clearItemsOnImport)
+#if UNITY_EDITOR
+    [ExecuteInEditMode]
+    [ContextMenu("Load Clothing")]
+    public void LoadClothing()
+    {
+        LoadConnections();
+
+        clothingPieces.Clear();
+        clothingPieces = new List<ClothingPiece>();
+        ParseClothes(clothingDataFile);
+    }
+
+    [ExecuteInEditMode]
+    public void ParseClothes(TextAsset tsvData)
     {
         if (tsvData == null)
             return;
-
-        if (clearItemsOnImport)
-        {
-            head = new List<ClothingPiece>();
-            top = new List<ClothingPiece>();
-            bottom = new List<ClothingPiece>();
-            feet = new List<ClothingPiece>();
-        }
 
         string[] items = tsvData.text.Split(new char[] { '\n' });
 
         for (int i = 1; i < items.Length; i++)
         {
             string[] fields = items[i].Split(new char[] { '\t' });
-            
+
             ClothingPiece c = new ClothingPiece();
 
             string id = fields[0];
             c.Tag = id;
 
+            
             string category = fields[1];
             if (Enum.TryParse(category.ToUpper(), out Category categoryParsed))
                 c.Category = categoryParsed;
@@ -66,8 +63,8 @@ public class ClothingCloset : MonoBehaviour
             string humanName = fields[3];
             c.DisplayName = humanName;
 
-
             string[] tiers = fields[4].Split(new char[] { ';' }).Trim();
+            c.Tiers = new();
             foreach (string tier in tiers)
             {
                 if (Enum.TryParse(tier.ToUpper().Replace(' ', '_'), out Tier tierParsed))
@@ -75,8 +72,38 @@ public class ClothingCloset : MonoBehaviour
                 else
                     Debug.LogError($"Error parsing category {tier} on line {i} ");
             }           
+
+            clothingPieces.Add(c);
+
+            ClothingModelConnection connection = connections.Find(x => x.name == c.Tag);
+            if (connection == null)
+                Debug.LogError($"No ClothingModelConnection found for {c.DisplayName} at line {i}");
+            else
+                c.Connection = connection;
+
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
         }
     }
-    #endif
+
+    [ExecuteInEditMode]
+    [ContextMenu("Load Connections")]
+    public void LoadConnections()
+    {
+        connections.Clear();
+        connections = new();
+               
+        string[] guids = AssetDatabase.FindAssets("t:ClothingModelConnection");
+        foreach (string guid in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            connections.Add(AssetDatabase.LoadAssetAtPath<ClothingModelConnection>(path));
+        }
+        EditorUtility.SetDirty(this);
+        AssetDatabase.SaveAssets();
+
+    }
+#endif
     #endregion
-}   
+
+}

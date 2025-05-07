@@ -48,3 +48,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 93179d0530a58804db92ea04ddc8e6af, type: 2}
   - {fileID: 11400000, guid: 094efb6d79902ec4ea0fe500d771fdc6, type: 2}
   - {fileID: 11400000, guid: 183ce47d00a09464b9edccfc120c9263, type: 2}
+  theCloset: {fileID: 11400000, guid: 1230d46fe777dc44883a0fe8cbb06be1, type: 2}
