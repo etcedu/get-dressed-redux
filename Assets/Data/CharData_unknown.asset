@@ -18,7 +18,9 @@ MonoBehaviour:
   description: help me
   jobAttireDescription: skin
   imageAssetPath: CharacterPortraits/Icon_Dressed
-  headOptions: []
+  headOptions:
+  - 
+  - 
   topOptions: []
   bottomOptions: []
   feetOptions: []
