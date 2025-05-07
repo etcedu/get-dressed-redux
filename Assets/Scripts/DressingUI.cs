@@ -19,6 +19,8 @@ public class DressingUI : MonoBehaviour
     [SerializeField] ClothingPieceSelectionToggle[] bottomToggles;
     [SerializeField] ClothingPieceSelectionToggle[] feetToggles;
 
+    [SerializeField] Button readyButton;
+
     bool init;
 
     private void Start()
@@ -27,6 +29,7 @@ public class DressingUI : MonoBehaviour
         positionLabel.text = GlobalData.currentCharacterSelection.jobTitle;
         descriptionLabel.text = GlobalData.currentCharacterSelection.description;
 
+        CheckAndSetReadyButtonState();
         SetUpClothingButtons();
         init = true;
     }
@@ -109,5 +112,15 @@ public class DressingUI : MonoBehaviour
 
         dressingManager.ClearClothingFromCategory(sender.clothingPiece.Category);
         dressingManager.SetClothing(sender.clothingPiece);
+
+        CheckAndSetReadyButtonState();
+    }
+
+    void CheckAndSetReadyButtonState()
+    {
+        readyButton.interactable = GlobalData.selectedBottomPiece != null &&
+            GlobalData.selectedFeetPiece != null &&
+            GlobalData.selectedTopPiece != null &&
+            GlobalData.selectedHeadPiece != null;
     }
 }
