@@ -6,11 +6,15 @@ using UnityEngine;
 public class ClothingPiece
 {
     // Identifier
-    public string Tag { get; private set; }
-    public string DisplayTag { get; private set; }
+    public string Tag { get; set; }
+    public string DisplayName { get; set; }
         //for loading from Resources
-    public string ImageAssetName { get; private set; }
-    public Gender GenderRole { get; private set; }
-    public Category Category { get; private set; }
-    public Tier[] Tiers { get; private set; }
+    public string ImageAssetName { get; set; }
+    public Gender GenderRole { get; set; }
+    public Category Category { get; set; }
+    public List<Tier> Tiers { get; set; }
+
+    // Renderer sprites
+    public Texture[] Pieces { get; set; }
+ 
 }
