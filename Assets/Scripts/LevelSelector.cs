@@ -11,12 +11,12 @@ public class LevelSelector : MonoBehaviour
     {
         GlobalData.SetCharacter(scrollView.GetCurrentCharacter().characterTag);
 
-        SceneManager.LoadScene("Dressing");
+        SceneLoader.LoadScene("Dressing");
     }
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneLoader.LoadScene("MainMenu");
     }
 
 

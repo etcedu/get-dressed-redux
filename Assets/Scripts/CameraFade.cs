@@ -49,7 +49,7 @@ public class CameraFade : MonoBehaviour
         image.raycastTarget = true;
 
         fadeFinishedCallback = finishedCallback;
-        Invoke("DoCallback", tween.duration + 1f);
+        Invoke("DoCallback", tween.duration + 0.25f);
 
         tween.@from = 0;
         tween.to = 1;

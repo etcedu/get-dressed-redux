@@ -120,8 +120,6 @@ public class ProfessionalDress : MonoBehaviour
 	private TMP_Text otherScore, otherBonus;
 	[SerializeField]
 	private TMP_Text otherFeedback;
-	[SerializeField]
-    private TweenCustomProgressBar endScore;
 
     [SerializeField]
 	private GameObject zoomInButtom;
@@ -944,7 +942,7 @@ public class ProfessionalDress : MonoBehaviour
 		shoesBonus.text = "+" + _shoesBonus.ToString();
 		otherScore.text = _itemScore.ToString();
 		otherBonus.text = "+" + Mathf.CeilToInt(_itemBonus).ToString();
-		endScore.numeratorTo = _score;
+		
 
         /*
 		var dataEvent = new SkillEvent();

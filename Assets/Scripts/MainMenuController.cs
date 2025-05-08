@@ -7,6 +7,11 @@ public class MainMenuController : MonoBehaviour
         Screen.orientation = ScreenOrientation.AutoRotation;
     }
 
+    public void StartButton_OnClick()
+    {
+        SceneLoader.LoadScene("LevelSelection");
+    }
+
     private void Start()
     {
         /*

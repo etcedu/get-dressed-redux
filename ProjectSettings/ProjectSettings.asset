@@ -81,6 +81,7 @@ PlayerSettings:
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
   androidAutoRotationBehavior: 1
+  androidPredictiveBackSupport: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 0
@@ -193,8 +194,10 @@ PlayerSettings:
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 214
   iPhoneSdkVersion: 988
+  iOSSimulatorArchitecture: 0
   iOSTargetOSVersionString: 12.0
   tvOSSdkVersion: 0
+  tvOSSimulatorArchitecture: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 12.0
   VisionOSSdkVersion: 0
@@ -740,6 +743,7 @@ PlayerSettings:
   switchSocketBufferEfficiency: 4
   switchSocketInitializeEnabled: 1
   switchNetworkInterfaceManagerInitializeEnabled: 1
+  switchDisableHTCSPlayerConnection: 0
   switchUseNewStyleFilepaths: 1
   switchUseLegacyFmodPriorities: 0
   switchUseMicroSleepForYield: 1
@@ -849,7 +853,22 @@ PlayerSettings:
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    EmbeddedLinux: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    GameCoreXboxOne: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    Nintendo Switch: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    PS4: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    PS5: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    QNX: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    Stadia: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    Standalone: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    VisionOS: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    WebGL: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    Windows Store Apps: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    XboxOne: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    iPhone: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
+    tvOS: CT_UI;CT_RTV;CT_RTV_DEMO;CT_PROC
   additionalCompilerArguments: {}
   platformArchitecture:
     iPhone: 1
