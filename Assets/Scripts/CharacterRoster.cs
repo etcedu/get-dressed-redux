@@ -59,6 +59,7 @@ public class CharacterRoster : ScriptableObject
             c.bottomOptions = fields[9].Split(new char[] { ';' }).Trim();
             c.feetOptions = fields[10].Split(new char[] { ';' }).Trim();
             c.otherClothes = fields[11].Split(new char[] { ';' }).Trim();
+            
             if (ColorExtensions.TryParseHexStringRGBA(fields[12], out Color32 skinColor))
                 c.skinColor = skinColor;
             else

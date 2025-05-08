@@ -176,7 +176,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 88f675d4f008e8b468bf75dec3a69a28, type: 2}
   - {fileID: 2100000, guid: b78cf36b8cc514043b0a4c5c1ee6e629, type: 2}
   feetMaterials:
-  - {fileID: 2100000, guid: 815948c98d610b84ca25da9591ae06b5, type: 2}
+  - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   - {fileID: 2100000, guid: 1d28c683402d42f498e561ca06239d2e, type: 2}
   maleSetup:
   - renderer: {fileID: 355605727}
@@ -7340,7 +7340,6 @@ GameObject:
   - component: {fileID: 1777954340}
   - component: {fileID: 1777954339}
   - component: {fileID: 1777954338}
-  - component: {fileID: 1777954337}
   - component: {fileID: 1777954336}
   - component: {fileID: 1777954335}
   - component: {fileID: 1777954334}
@@ -7382,42 +7381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365827806a6dd8b4583deeefe6e483c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  method: 0
-  style: 0
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ignoreTimeScale: 0
-  delay: 0.25
-  duration: 1
-  steeperCurves: 0
-  tweenGroup: 11
-  onFinished: []
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
-  from: 2.6
-  to: 2
 --- !u!114 &1777954333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7461,7 +7424,10 @@ MonoBehaviour:
   duration: 1
   steeperCurves: 0
   tweenGroup: 11
+  useFixedUpdate: 0
+  triggerOnFinishedOnlyOnForward: 0
   onFinished: []
+  onStarted: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   to: {x: 0.3, y: -0.63, z: -10}
@@ -7509,7 +7475,10 @@ MonoBehaviour:
   duration: 1
   steeperCurves: 0
   tweenGroup: 11
+  useFixedUpdate: 0
+  triggerOnFinishedOnlyOnForward: 0
   onFinished: []
+  onStarted: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   target: {fileID: 1777954336}
@@ -7584,47 +7553,6 @@ MonoBehaviour:
     pixelOffset: 0
   baseOffContentHeight: 1
   contentHeight: 747
---- !u!114 &1777954337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777954330}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a92b5d748695fd44aac9feef17ba415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventType: 2
-  eventsGoToColliders: 1
-  eventReceiverMask:
-    serializedVersion: 2
-    m_Bits: 1
-  debug: 0
-  useMouse: 1
-  useTouch: 1
-  allowMultiTouch: 0
-  useKeyboard: 0
-  useController: 0
-  stickyTooltip: 0
-  tooltipDelay: 1
-  longPressTooltip: 0
-  mouseDragThreshold: 4
-  mouseClickThreshold: 10
-  touchDragThreshold: 40
-  touchClickThreshold: 40
-  rangeDistance: -1
-  horizontalAxisName: Horizontal
-  verticalAxisName: Vertical
-  horizontalPanAxisName: 
-  verticalPanAxisName: 
-  scrollAxisName: Mouse ScrollWheel
-  commandClick: 1
-  submitKey0: 13
-  submitKey1: 330
-  cancelKey0: 27
-  cancelKey1: 331
 --- !u!114 &1777954338
 MonoBehaviour:
   m_ObjectHideFlags: 0

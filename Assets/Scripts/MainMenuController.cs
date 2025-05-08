@@ -1,6 +1,4 @@
-﻿using Simcoach.SkillArcade;
-using UnityEngine;
-//using Simcoach.SkillArcade;
+﻿using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {

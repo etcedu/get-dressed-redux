@@ -39,7 +39,6 @@ public class UUIPlaySound : MonoBehaviour
 
     public virtual void Play ()
 	{
-        if (!GameBase.Bools.GetValue(muteCheck, false))
-			FindObjectOfType<SoundSource>().PlaySound(audioClip, volume, pitch);
+       FindObjectOfType<SoundSource>().PlaySound(audioClip, volume, pitch);
 	}
 }

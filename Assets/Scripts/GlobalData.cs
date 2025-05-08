@@ -81,6 +81,8 @@ public class GlobalData : MonoBehaviour
         }
         else if (clothingSet.Length == 3)
         {
+            Debug.Log(clothingSet[0]);
+
             GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
             GetPieceOfClothing(clothingSet[1]).scoreForCurrentCharacter = Score.OK;
             GetPieceOfClothing(clothingSet[2]).scoreForCurrentCharacter = Score.BAD;
@@ -114,22 +116,5 @@ public class GlobalData : MonoBehaviour
                 selectedFeetPiece = clothingPiece;
                 break;
         }
-    }
-
-    public static Color CharacterColor
-    {
-        get
-        {
-            Color32 retColor = DefaultCharacterColor;
-            ColorExtensions.TryParseHexStringRGBA(GameBase.Strings.GetValue("CharacterColor", DefaultCharacterColor.ToHexStringRGBA()),
-                                                  out retColor);
-            return (Color)retColor;
-        }
-    }
-
-    private const int interviewPassedCutoff = 400;
-    public static int PassingCuttoff
-    {
-        get { return interviewPassedCutoff; }
     }
 }

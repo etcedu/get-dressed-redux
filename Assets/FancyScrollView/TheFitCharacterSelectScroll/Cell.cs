@@ -18,6 +18,7 @@ namespace FancyScrollView.TheFitCharacterSelect
 
         [SerializeField] Text title = default;
         [SerializeField] Text description = default;
+        [SerializeField] Text job = default;
         [SerializeField] RawImage image = default;
         [SerializeField] Image background = default;
         [SerializeField] CanvasGroup canvasGroup = default;
@@ -29,10 +30,10 @@ namespace FancyScrollView.TheFitCharacterSelect
             data = charData;
             image.texture = null;
 
-            image.texture = Resources.Load<Texture>(charData.imageAssetPath);
-
+            image.texture = Resources.Load<Texture>($"CharacterPortraits/{charData.imageAssetPath}");
             title.text = charData.characterName;
             description.text = charData.description;
+            job.text = charData.jobTitle;
 
             UpdateSibling();
         }

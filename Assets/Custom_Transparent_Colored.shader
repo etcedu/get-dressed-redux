@@ -20,6 +20,8 @@
                 
                 // Multiplies color (in constant) with texture
                 combine constant * texture
+
+                
             } 
         }
     }

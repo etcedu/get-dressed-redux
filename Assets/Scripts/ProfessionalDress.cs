@@ -203,16 +203,13 @@ public class ProfessionalDress : MonoBehaviour
 			positionLabel.text = CrossSceneInfo.SelectedCompany.PositionName;
 			positionTier = CrossSceneInfo.SelectedCompany.PositionDressTier;
 		}
-		if(CrossSceneInfo.Gender != null)
-		{
-			gender = CrossSceneInfo.Gender;
-		}
+		
 
 		if(gender == CrossSceneInfo.GenderEnum.MALE)
 		{
 			foreach(BodyPartRender bpr in maleSetup)
 			{
-				bpr.material.color = CrossSceneInfo.CharacterColor;
+				bpr.material.color = GlobalData.currentCharacterSelection.skinColor;
 				bpr.renderer.sharedMaterial = bpr.material;
 			}
 			characterAnimator.runtimeAnimatorController = maleController;
@@ -221,7 +218,7 @@ public class ProfessionalDress : MonoBehaviour
 		{
 			foreach(BodyPartRender bpr in femaleSetup)
 			{
-				bpr.material.color = CrossSceneInfo.CharacterColor;
+				bpr.material.color = GlobalData.currentCharacterSelection.skinColor;
 				bpr.renderer.sharedMaterial = bpr.material;
 			}
 			characterAnimator.runtimeAnimatorController = femaleController;
