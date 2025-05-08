@@ -15,7 +15,7 @@ MonoBehaviour:
   tag: 
   icon: {fileID: 21300000, guid: fb71a198c0ec5454d9a00dc9e6a93969, type: 3}
   maleMaterials:
-  - {fileID: 2100000, guid: 815948c98d610b84ca25da9591ae06b5, type: 2}
+  - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   femaleMaterials:
   - {fileID: 2100000, guid: 1d28c683402d42f498e561ca06239d2e, type: 2}
   textures:

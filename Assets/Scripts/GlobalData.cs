@@ -35,8 +35,8 @@ public class GlobalData : MonoBehaviour
     public static ClothingPiece selectedBottomPiece;
     public static ClothingPiece selectedFeetPiece;
 
-    [SerializeField] List<CharacterData> characters = new List<CharacterData>();
     [SerializeField] ClothingCloset theCloset;
+    [SerializeField] CharacterRoster theCharacterRoster;
 
     public void Start()
     {
@@ -59,9 +59,9 @@ public class GlobalData : MonoBehaviour
         selectedFeetPiece = null;
     }
 
-    public static void SetCharacter(CharacterData charData)
+    public static void SetCharacter(string characterTag)
     {
-        currentCharacterSelection = charData;
+        currentCharacterSelection = Instance.theCharacterRoster.GetCharacter(characterTag);
         Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.headOptions);
         Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.topOptions);
         Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.bottomOptions);
@@ -89,7 +89,7 @@ public class GlobalData : MonoBehaviour
 
     public static IList<CharacterData> GetCharacters()
     {
-        return Instance.characters;
+        return Instance.theCharacterRoster.characters;
     }
 
     public static ClothingPiece GetPieceOfClothing(string name)
@@ -116,34 +116,16 @@ public class GlobalData : MonoBehaviour
         }
     }
 
-    #region Gender
-    /// <summary>
-    /// Gets the current gender, loading it from save if necessary
-    /// </summary>
-    public static GenderEnum Gender
+    public static Color CharacterColor
     {
         get
         {
-            if (!_genderLoaded)
-                _gender = (GameBase.Strings.GetValue("Gender", "Male") == "Male") ? GenderEnum.MALE : GenderEnum.FEMALE;
-            return _gender;
-        }
-        set
-        {
-            _gender = value;
-            GameBase.Strings.SetValue("Gender", (value == GenderEnum.MALE) ? "Male" : "Female");
-            GameBase.Strings.Save();
+            Color32 retColor = DefaultCharacterColor;
+            ColorExtensions.TryParseHexStringRGBA(GameBase.Strings.GetValue("CharacterColor", DefaultCharacterColor.ToHexStringRGBA()),
+                                                  out retColor);
+            return (Color)retColor;
         }
     }
-    /// <summary>
-    /// DO NOT REFERENCE DIRECTLY. Use Gender instead.
-    /// </summary>
-    private static GenderEnum _gender;
-    /// <summary>
-    /// Flag for loading gender
-    /// </summary>
-    private static bool _genderLoaded = false;
-    #endregion
 
     private const int interviewPassedCutoff = 400;
     public static int PassingCuttoff

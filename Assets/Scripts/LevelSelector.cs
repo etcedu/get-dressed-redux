@@ -8,6 +8,6 @@ public class LevelSelector : MonoBehaviour
         
     public void SelectCharacter()
     {
-        GlobalData.SetCharacter(scrollView.GetCurrentCharacter());
+        GlobalData.SetCharacter(scrollView.GetCurrentCharacter().characterTag);
     }
 }

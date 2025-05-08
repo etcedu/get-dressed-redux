@@ -9,6 +9,7 @@ using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.Analytics;
 
 [System.Serializable]
 public class DressingManager : MonoBehaviour
@@ -25,6 +26,10 @@ public class DressingManager : MonoBehaviour
     [SerializeField] List<Material> bottomMaterials = new();
     [SerializeField] List<Material> feetMaterials = new();
 
+
+    public BodyPartRender[] maleSetup = new BodyPartRender[0];
+    public BodyPartRender[] femaleSetup = new BodyPartRender[0];
+
     void Start()
     {
         ClearClothingFromCategory(Category.HEAD);
@@ -40,9 +45,28 @@ public class DressingManager : MonoBehaviour
     void SetupCharacter()
     {
         if (GlobalData.currentCharacterSelection == null)
-            GlobalData.SetCharacter(GlobalData.GetCharacters()[0]);
+            GlobalData.SetCharacter(GlobalData.GetCharacters()[0].characterTag);
 
         GlobalData.InitNewLevel();
+
+        if (GlobalData.currentCharacterSelection.gender == Gender.MALE)
+        {
+            foreach (BodyPartRender bpr in maleSetup)
+            {
+                bpr.material.color = GlobalData.currentCharacterSelection.skinColor;
+                bpr.renderer.sharedMaterial = bpr.material;
+            }
+            characterAnimator.runtimeAnimatorController = maleController;
+        }
+        else
+        {
+            foreach (BodyPartRender bpr in femaleSetup)
+            {
+                bpr.material.color = GlobalData.currentCharacterSelection.skinColor;
+                bpr.renderer.sharedMaterial = bpr.material;
+            }
+            characterAnimator.runtimeAnimatorController = femaleController;
+        }
     }
 
     public void ClearClothingFromCategory(Category clothingCategory)

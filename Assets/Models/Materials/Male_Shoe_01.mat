@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Male_Shoe_Formal_Black
+  m_Name: Male_Shoe_01
   m_Shader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1c0332bcf53982740ab1934d91c58d59, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -41,5 +41,5 @@ Material:
     - _StencilWriteMask: 0
     - _Strength: 0
     m_Colors:
-    - _Color: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
+    - _Color: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
   m_BuildTextureStacks: []
