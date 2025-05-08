@@ -20,6 +20,10 @@ public enum Tier
     INFORMAL, CASUAL, BUSINESS_CASUAL, BUSINESS_PROFESSIONAL
 }
 
+public enum Score
+{
+    GOOD, OK, BAD
+}
 
 public class GlobalData : MonoBehaviour
 {
@@ -45,11 +49,9 @@ public class GlobalData : MonoBehaviour
             Instance = this;
         }
 
-        currentCharacterSelection = characters[0];
-        InitNewLevel();
     }
 
-    public void InitNewLevel()
+    public static void InitNewLevel()
     {
         selectedHeadPiece = null;
         selectedTopPiece = null;
@@ -60,6 +62,29 @@ public class GlobalData : MonoBehaviour
     public static void SetCharacter(CharacterData charData)
     {
         currentCharacterSelection = charData;
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.headOptions);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.topOptions);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.bottomOptions);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.feetOptions);
+    }
+
+    void SetScoresForCurrentCharacterClothingPieces(string[] clothingSet)
+    {
+        if (clothingSet.Length == 1)
+        {
+            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
+        }
+        if (clothingSet.Length == 2)
+        {
+            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
+            GetPieceOfClothing(clothingSet[1]).scoreForCurrentCharacter = Score.BAD;
+        }
+        else if (clothingSet.Length == 3)
+        {
+            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
+            GetPieceOfClothing(clothingSet[1]).scoreForCurrentCharacter = Score.OK;
+            GetPieceOfClothing(clothingSet[2]).scoreForCurrentCharacter = Score.BAD;
+        }
     }
 
     public static IList<CharacterData> GetCharacters()

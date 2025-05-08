@@ -13,6 +13,8 @@ using TMPro;
 [System.Serializable]
 public class DressingManager : MonoBehaviour
 {
+    [SerializeField] DressingUI dressingUI;
+
     [SerializeField] [Range(0f, 1f)] private float clothingAnimationProbability = .2f;
     [SerializeField] private Animator characterAnimator;
     [SerializeField] private RuntimeAnimatorController maleController;
@@ -23,24 +25,25 @@ public class DressingManager : MonoBehaviour
     [SerializeField] List<Material> bottomMaterials = new();
     [SerializeField] List<Material> feetMaterials = new();
 
-    /// Functions ///
-
-    #region Setup
-    // Populate the grids and set up interactions
-    void Awake()
-    {
-
-    }
-
-    // Establish starting category
     void Start()
     {
         ClearClothingFromCategory(Category.HEAD);
         ClearClothingFromCategory(Category.TOP);
         ClearClothingFromCategory(Category.BOTTOM);
         ClearClothingFromCategory(Category.FEET);
+
+        SetupCharacter();
+
+        dressingUI.Init();
     }
-    #endregion
+
+    void SetupCharacter()
+    {
+        if (GlobalData.currentCharacterSelection == null)
+            GlobalData.SetCharacter(GlobalData.GetCharacters()[0]);
+
+        GlobalData.InitNewLevel();
+    }
 
     public void ClearClothingFromCategory(Category clothingCategory)
     {
@@ -109,10 +112,10 @@ public class DressingManager : MonoBehaviour
     // Evaluate the clothing selection
     public void Evaluate()
     {
-        Debug.Log($"Selected Head: {GlobalData.selectedHeadPiece.DisplayName}");
-        Debug.Log($"Selected Top: {GlobalData.selectedTopPiece.DisplayName}");
-        Debug.Log($"Selected Bottom: {GlobalData.selectedBottomPiece.DisplayName}");
-        Debug.Log($"Selected Feet: {GlobalData.selectedFeetPiece.DisplayName}");
+        Debug.Log($"Selected Head: {GlobalData.selectedHeadPiece.DisplayName} -- Score: {GlobalData.selectedHeadPiece.scoreForCurrentCharacter}");
+        Debug.Log($"Selected Top: {GlobalData.selectedTopPiece.DisplayName} -- Score: {GlobalData.selectedTopPiece.scoreForCurrentCharacter}");
+        Debug.Log($"Selected Bottom: {GlobalData.selectedBottomPiece.DisplayName} -- Score: {GlobalData.selectedBottomPiece.scoreForCurrentCharacter}");
+        Debug.Log($"Selected Feet: {GlobalData.selectedFeetPiece.DisplayName} -- Score: {GlobalData.selectedFeetPiece.scoreForCurrentCharacter}");
 
         TimeSpan timeElapsed = (CrossSceneInfo.LevelStartedTimeStamp - DateTime.Now).Duration();
         float secondsElapsed = (float)timeElapsed.TotalSeconds;

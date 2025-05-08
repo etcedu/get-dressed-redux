@@ -71,7 +71,14 @@ public class ClothingCloset : ScriptableObject
                     c.Tiers.Add(tierParsed);
                 else
                     Debug.LogError($"Error parsing category {tier} on line {i} ");
-            }           
+            }
+
+            string goodFeedback = fields[5];
+            c.GoodFeedback = goodFeedback;
+            string okFeedback = fields[6];
+            c.OKFeedback = okFeedback;
+            string badFeedback = fields[7];
+            c.BadFeedback = badFeedback;
 
             clothingPieces.Add(c);
 

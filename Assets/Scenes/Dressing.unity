@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39de4134cd2b0f048b25b43d23be4d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dressingUI: {fileID: 1265987974}
   clothingAnimationProbability: 0.35
   characterAnimator: {fileID: 1912155440}
   maleController: {fileID: 9100000, guid: 63279d5b65863d849aa2272384453796, type: 2}

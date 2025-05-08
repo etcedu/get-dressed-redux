@@ -12,4 +12,12 @@ public class ClothingPiece
     public Category Category;
     public List<Tier> Tiers;
     public ClothingModelConnection Connection;
+
+    public string GoodFeedback;
+    public string OKFeedback;
+    public string BadFeedback;
+
+    //set by character at runtime
+    public Score scoreForCurrentCharacter;
+
 }

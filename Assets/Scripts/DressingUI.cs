@@ -23,7 +23,7 @@ public class DressingUI : MonoBehaviour
 
     bool init;
 
-    private void Start()
+    public void Init()
     {
         nameLabel.text = GlobalData.currentCharacterSelection.characterName;
         positionLabel.text = GlobalData.currentCharacterSelection.jobTitle;
