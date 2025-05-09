@@ -15,6 +15,7 @@ using UnityEngine.Analytics;
 public class DressingManager : MonoBehaviour
 {
     [SerializeField] DressingUI dressingUI;
+    [SerializeField] SimpleFeedback feedbackUI;
 
     [SerializeField] [Range(0f, 1f)] private float clothingAnimationProbability = .2f;
     [SerializeField] private Animator characterAnimator;
@@ -135,15 +136,23 @@ public class DressingManager : MonoBehaviour
 
     // Evaluate the clothing selection
     public void Evaluate()
-    {
-        Debug.Log($"Selected Head: {GlobalData.selectedHeadPiece.DisplayName} -- Score: {GlobalData.selectedHeadPiece.scoreForCurrentCharacter}");
-        Debug.Log($"Selected Top: {GlobalData.selectedTopPiece.DisplayName} -- Score: {GlobalData.selectedTopPiece.scoreForCurrentCharacter}");
-        Debug.Log($"Selected Bottom: {GlobalData.selectedBottomPiece.DisplayName} -- Score: {GlobalData.selectedBottomPiece.scoreForCurrentCharacter}");
-        Debug.Log($"Selected Feet: {GlobalData.selectedFeetPiece.DisplayName} -- Score: {GlobalData.selectedFeetPiece.scoreForCurrentCharacter}");
-
+    { 
         TimeSpan timeElapsed = (CrossSceneInfo.LevelStartedTimeStamp - DateTime.Now).Duration();
         float secondsElapsed = (float)timeElapsed.TotalSeconds;
+
+        dressingUI.Hide();
+        feedbackUI.StartFeedback();
         //EventRecorder.RecordLevelCompleted(CrossSceneInfo.LevelAttemptId, CrossSceneInfo.LastCompanyName, CrossSceneInfo.LastPositionName, passed, _faceScore, _topScore, _bottomScore, _shoesScore, _itemScore, _score, CrossSceneInfo.PassingCuttoff, secondsElapsed);
+    }
+
+    public void Restart()
+    {
+        SceneLoader.LoadScene("Dressing");
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneLoader.LoadScene("MainMenu");
     }
      
 

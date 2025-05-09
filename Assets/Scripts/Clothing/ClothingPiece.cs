@@ -20,4 +20,12 @@ public class ClothingPiece
     //set by character at runtime
     public Score scoreForCurrentCharacter;
 
+    public string GetFeedback()
+    {
+        if (scoreForCurrentCharacter == Score.GOOD) return GoodFeedback;
+        if (scoreForCurrentCharacter == Score.OK) return OKFeedback;
+        if (scoreForCurrentCharacter == Score.BAD) return BadFeedback;
+        else return "NoScore";
+    }
+
 }

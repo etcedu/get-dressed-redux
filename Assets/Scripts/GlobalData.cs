@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using static CrossSceneInfo;
 
@@ -24,6 +25,7 @@ public enum Score
 {
     GOOD, OK, BAD
 }
+
 
 public class GlobalData : MonoBehaviour
 {
@@ -97,6 +99,39 @@ public class GlobalData : MonoBehaviour
     public static ClothingPiece GetPieceOfClothing(string name)
     {
         return Instance.theCloset.GetClothingPiece(name);
+    }
+
+    public static int GetScoreForPiece(ClothingPiece clothingPiece)
+    {
+        return Enum.GetValues(typeof(Score)).Length - (int)clothingPiece.scoreForCurrentCharacter;
+    }
+
+    public static float GetOverallScore()
+    {
+        float totalScore = 0;
+
+        totalScore += GetScoreForPiece(selectedHeadPiece);
+        Debug.Log(totalScore);
+        totalScore += GetScoreForPiece(selectedTopPiece);
+        Debug.Log(totalScore);
+        totalScore += GetScoreForPiece(selectedBottomPiece);
+        Debug.Log(totalScore);
+        totalScore += GetScoreForPiece(selectedFeetPiece);
+        Debug.Log(totalScore);
+
+        return (totalScore / 12f);
+    }
+
+    public static List<ClothingPiece> GetListOfSelectedClothes()
+    {
+        List<ClothingPiece> list = new List<ClothingPiece>
+        {
+            selectedHeadPiece,
+            selectedTopPiece,
+            selectedBottomPiece,
+            selectedFeetPiece
+        };
+        return list;
     }
 
     public static void SetClothingSelection(ClothingPiece clothingPiece)

@@ -9,6 +9,7 @@ public class DressingUI : MonoBehaviour
 {
     [SerializeField] DressingManager dressingManager;
     [SerializeField] Animator uiAnimator;
+    [SerializeField] GameObject dressingCanvasObject;
 
     [SerializeField] TMP_Text nameLabel;
     [SerializeField] TMP_Text positionLabel;
@@ -22,6 +23,14 @@ public class DressingUI : MonoBehaviour
     [SerializeField] Button readyButton;
 
     bool init;
+
+    private IEnumerator Start()
+    {
+        //triggers all the bouncing intro tweens
+        dressingCanvasObject.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        dressingCanvasObject.SetActive(true);
+    }
 
     public void Init()
     {
@@ -122,5 +131,10 @@ public class DressingUI : MonoBehaviour
             GlobalData.selectedFeetPiece != null &&
             GlobalData.selectedTopPiece != null &&
             GlobalData.selectedHeadPiece != null;
+    }
+
+    public void Hide()
+    {
+        dressingCanvasObject.SetActive(false);
     }
 }
