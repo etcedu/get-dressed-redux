@@ -143,6 +143,14 @@ public class SimpleFeedback : MonoBehaviour
         AudioManager.Instance.SpeakWithRTVoice(message, "feedbackVoice");
     }
 
+    public void SpeakMainFeedback()
+    {
+        fitOrNotHeader.ForceMeshUpdate();
+        fitOrNotText.ForceMeshUpdate();
+        string message = $"{fitOrNotHeader.text}, {fitOrNotText.text}";
+        SimpleRTVoiceExample.Instance.Speak("default", message);
+    }
+
     public void ClickedReviewFeedbackButton()
     {
         //EventRecorder.RecordViewedDetailedFeedbackEvent();

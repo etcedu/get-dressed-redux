@@ -829,6 +829,41 @@ PrefabInstance:
       propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4976498961251934411, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976498961251934411, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976498961251934411, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 40597937}
+    - target: {fileID: 4976498961251934411, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976498961251934411, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Speak
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976498961251934411, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpeakLabel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976498961251934411, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5406060491833791374, guid: b97907c0ff80c9b438ccfc068b3a724b,
         type: 3}
       propertyPath: m_Name
@@ -837,7 +872,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4976498961251934409, guid: b97907c0ff80c9b438ccfc068b3a724b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 40597937}
   m_SourcePrefab: {fileID: 100100000, guid: b97907c0ff80c9b438ccfc068b3a724b, type: 3}
 --- !u!224 &40597935 stripped
 RectTransform:
@@ -845,6 +884,25 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 40597934}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &40597936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4976498961251934409, guid: b97907c0ff80c9b438ccfc068b3a724b,
+    type: 3}
+  m_PrefabInstance: {fileID: 40597934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &40597937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40597936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb00c069396d3a42b179fa25b0ff344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 2140857354}
 --- !u!1 &42721743
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,13 +5682,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 795226042}
         m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-        m_MethodName: ReadFeedback
-        m_Mode: 2
+        m_MethodName: SpeakMainFeedback
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1784791884}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7069,6 +7127,7 @@ GameObject:
   - component: {fileID: 650839715}
   - component: {fileID: 650839714}
   - component: {fileID: 650839713}
+  - component: {fileID: 650839717}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -7161,13 +7220,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-        m_MethodName: ReadFeedback
-        m_Mode: 2
+      - m_Target: {fileID: 650839717}
+        m_TargetAssemblyTypeName: SpeakLabel, Assembly-CSharp
+        m_MethodName: Speak
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2145927733}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7211,6 +7270,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650839711}
   m_CullTransparentMesh: 1
+--- !u!114 &650839717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650839711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb00c069396d3a42b179fa25b0ff344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 2145927733}
 --- !u!1 &663965637
 GameObject:
   m_ObjectHideFlags: 0
@@ -10387,6 +10459,7 @@ GameObject:
   - component: {fileID: 960554419}
   - component: {fileID: 960554418}
   - component: {fileID: 960554417}
+  - component: {fileID: 960554421}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -10479,13 +10552,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-        m_MethodName: ReadFeedback
-        m_Mode: 2
+      - m_Target: {fileID: 960554421}
+        m_TargetAssemblyTypeName: SpeakLabel, Assembly-CSharp
+        m_MethodName: Speak
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1196022334}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10529,6 +10602,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960554415}
   m_CullTransparentMesh: 1
+--- !u!114 &960554421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960554415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb00c069396d3a42b179fa25b0ff344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 1196022334}
 --- !u!1 &961079285
 GameObject:
   m_ObjectHideFlags: 0
@@ -12921,6 +13007,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetOnDisable: 1
   tweeners: []
+--- !u!1 &1303750432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303750434}
+  - component: {fileID: 1303750433}
+  m_Layer: 0
+  m_Name: RTVoice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1303750433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303750432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5a2435c35e09e4f8bf4c9cb7cc859d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSpeakCompleteTriggerEarlyTimeReduction: 1
+  characterVoices:
+  - name: default
+    gender: 0
+    culture: en-US
+  voiceMixerGroup: {fileID: -2198019825923687758, guid: 965778e194614bf46beeaab29820d99e,
+    type: 2}
+--- !u!4 &1303750434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303750432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 549.1935, y: 1138.4912, z: 34.08635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1304106849
 GameObject:
   m_ObjectHideFlags: 0
@@ -18766,6 +18903,7 @@ GameObject:
   - component: {fileID: 2138358751}
   - component: {fileID: 2138358750}
   - component: {fileID: 2138358749}
+  - component: {fileID: 2138358753}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -18858,13 +18996,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-        m_MethodName: ReadFeedback
-        m_Mode: 2
+      - m_Target: {fileID: 2138358753}
+        m_TargetAssemblyTypeName: SpeakLabel, Assembly-CSharp
+        m_MethodName: Speak
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1784791884}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18908,6 +19046,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138358747}
   m_CullTransparentMesh: 1
+--- !u!114 &2138358753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138358747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb00c069396d3a42b179fa25b0ff344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 1784791884}
 --- !u!1 &2140857352
 GameObject:
   m_ObjectHideFlags: 0
@@ -23678,6 +23829,7 @@ GameObject:
   - component: {fileID: 7663005613602279982}
   - component: {fileID: 7663005613602279983}
   - component: {fileID: 6101303983220059336}
+  - component: {fileID: 7663005613602279984}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -23759,18 +23911,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-        m_MethodName: ReadFeedback
-        m_Mode: 2
+      - m_Target: {fileID: 7663005613602279984}
+        m_TargetAssemblyTypeName: SpeakLabel, Assembly-CSharp
+        m_MethodName: Speak
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 7602644844864925508}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7663005613602279984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663005613602279981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb00c069396d3a42b179fa25b0ff344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 7602644844864925508}
 --- !u!224 &7677731497717753803
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25093,3 +25258,4 @@ SceneRoots:
   - {fileID: 795226043}
   - {fileID: 13129403}
   - {fileID: 1265987975}
+  - {fileID: 1303750434}
