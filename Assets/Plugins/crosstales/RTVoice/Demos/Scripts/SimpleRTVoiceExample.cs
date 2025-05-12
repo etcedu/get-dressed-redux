@@ -114,6 +114,12 @@ public class SimpleRTVoiceExample : MonoBehaviour
         }        
     }
 
+
+    public void Speak(string speaker, string message)
+    {
+        Speak(GetVoice(speaker), message);
+    }
+
     public void Speak(Voice voice, string message)
     {
         message = message.Trim();
