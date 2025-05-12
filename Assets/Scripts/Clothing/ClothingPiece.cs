@@ -13,6 +13,8 @@ public class ClothingPiece
     public List<Tier> Tiers;
     public ClothingModelConnection Connection;
 
+
+    public string FeedbackName;
     public string GoodFeedback;
     public string OKFeedback;
     public string BadFeedback;

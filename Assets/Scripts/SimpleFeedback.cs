@@ -74,7 +74,7 @@ public class SimpleFeedback : MonoBehaviour
 
         didStarFillAnimation = true;
         float percentageScore = GlobalData.GetOverallScore();
-        Debug.Log(percentageScore);
+        Debug.Log($"Percentage score: {percentageScore}");
 
         while (starBarFill.fillAmount < percentageScore)
         {
@@ -118,7 +118,7 @@ public class SimpleFeedback : MonoBehaviour
             Debug.Log($"Checking: {clothingPiece.Category}  Score: {score}");
 
             int uiIndex = clothingPiece.Category == Category.HEAD ? 0 : (clothingPiece.Category == Category.TOP ? 1 : (clothingPiece.Category == Category.BOTTOM ? 2 : 3));
-            feedbackClothingName[uiIndex].text = clothingPiece.DisplayName;
+            feedbackClothingName[uiIndex].text = clothingPiece.FeedbackName;
             feedbackTexts[uiIndex].text = clothingPiece.GetFeedback();
             feedbackButtonTexts[uiIndex].text = feedbackButtonLabelOptions[score - 1];
             feedbackButtonFaces[uiIndex].color = scoreColors[score - 1];
