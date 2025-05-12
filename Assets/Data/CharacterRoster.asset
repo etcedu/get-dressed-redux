@@ -15,8 +15,33 @@ MonoBehaviour:
   charactersDataFile: {fileID: -402774707588977448, guid: c8fad94bed80d054cad89bca76a61b72,
     type: 3}
   characters:
+  - characterTag: Stanley
+    characterName: Stanley
+    gender: 1
+    jobTitle: Undergraduate Admission
+    description: Stanley has landed an interview at Stanford. They're highly selective,
+      so the clothes he wears to class aren't going to cut it.
+    jobAttireDescription: Business Casual
+    imageAssetPath: Icon_Dressed
+    headOptions:
+    - Male_Hair_03
+    topOptions:
+    - Male_Shirt_02
+    - Male_Shirt_03
+    - Male_Shirt_05
+    bottomOptions:
+    - Male_Pants_01
+    - Male_Pants_07
+    - Male_Pants_11
+    feetOptions:
+    - Male_Shoe_02
+    - Male_Shoe_06
+    - Male_Shoe_08
+    otherClothes:
+    - none
+    skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
   - characterTag: ben
-    characterName: Benathon "Benny" Bennifer
+    characterName: Benathan "Benny" Bennifer
     gender: 1
     jobTitle: Go out for food
     description: Put some pants on for god's sake.
@@ -44,7 +69,7 @@ MonoBehaviour:
     characterName: Jenny
     gender: 2
     jobTitle: Jennnnny
-    description: Jeeeeeeen
+    description: Jen
     jobAttireDescription: JENY
     imageAssetPath: Icon_Dressed
     headOptions:
