@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93fdc6203e5b4f49b3ccdca7210ca48, type: 3}
   m_Name: TheCloset
   m_EditorClassIdentifier: 
-  clothingDataFile: {fileID: 161434182714850883, guid: 656593a110242184fac1a969942902b6,
+  clothingDataFile: {fileID: 5610012026079243688, guid: 628b3376c83cb5d409f0524b88a97e39,
     type: 3}
   clothingPieces:
   - Tag: Female_Hair_02
@@ -80,7 +80,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Female_Hair_08
     DisplayName: Bun
     GenderRole: 2
@@ -146,7 +146,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Female_Pants_05
     DisplayName: Blue Suit Pants - F
     GenderRole: 2
@@ -190,7 +190,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 1
+    scoreForCurrentCharacter: 0
   - Tag: Female_Shirt_02
     DisplayName: Black Suit
     GenderRole: 2
@@ -201,7 +201,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 1
+    scoreForCurrentCharacter: 0
   - Tag: Female_Shirt_03
     DisplayName: Pink Deep V
     GenderRole: 2
@@ -212,7 +212,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Female_Shirt_04
     DisplayName: T-shirt
     GenderRole: 2
@@ -421,7 +421,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 1
+    scoreForCurrentCharacter: 0
   - Tag: Female_Shoe_08
     DisplayName: Brown Mid Heels
     GenderRole: 2
@@ -432,7 +432,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Female_Skirt_02
     DisplayName: Black Knee Length Skirt
     GenderRole: 2
@@ -616,7 +616,8 @@ MonoBehaviour:
     Tiers: 02000000
     Connection: {fileID: 11400000, guid: 45de37c5ec0599b4ab703c606432f144, type: 2}
     FeedbackName: Khaki Slacks
-    GoodFeedback: Good
+    GoodFeedback: Business Casual<br>Signals that you understand the environment
+      by dressing with respect for the occasion.
     OKFeedback: OK
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
@@ -683,7 +684,8 @@ MonoBehaviour:
     Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
     FeedbackName: Blue Jeans
     GoodFeedback: Good
-    OKFeedback: OK
+    OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
+      occasion like this interview.
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Pants_08
@@ -720,15 +722,16 @@ MonoBehaviour:
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Pants_11
-    DisplayName: Pleated Shorts
+    DisplayName: Chino Shorts
     GenderRole: 1
     Category: 2
     Tiers: 01000000
     Connection: {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
-    FeedbackName: Pleated Shorts
+    FeedbackName: Chino Shorts
     GoodFeedback: Good
     OKFeedback: OK
-    BadFeedback: "Bad\r"
+    BadFeedback: "Ultra Casual<br>It's generally wise to never wear shorts to an
+      interview.\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Pants_12
     DisplayName: Jean Shorts
@@ -792,19 +795,21 @@ MonoBehaviour:
     Tiers: 02000000
     Connection: {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
     FeedbackName: Striped Button Up
-    GoodFeedback: Good
+    GoodFeedback: Business Casual<br>Widely considered to be professional attire,
+      shows employers you understand the basics.
     OKFeedback: OK
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Shirt_03
-    DisplayName: Red Solid Polo Shirt
+    DisplayName: Polo Shirt
     GenderRole: 1
     Category: 1
     Tiers: 02000000
     Connection: {fileID: 11400000, guid: c294f86bdf861e34b842d0a17b0dcbb3, type: 2}
-    FeedbackName: Red Solid Polo Shirt
+    FeedbackName: Polo Shirt
     GoodFeedback: Good
-    OKFeedback: OK
+    OKFeedback: Casual<br>A sporty shirt that's often worn on the job, but is seen
+      as too informal for this interview.
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Shirt_04
@@ -827,7 +832,8 @@ MonoBehaviour:
     FeedbackName: Black Graphic T-Shirt
     GoodFeedback: Good
     OKFeedback: OK
-    BadFeedback: "Bad\r"
+    BadFeedback: "Ultra Casual<br>Perfect for everyday wear, but inappropriate interviews
+      like this!\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Shirt_06
     DisplayName: Brown Sports Coat
@@ -984,13 +990,14 @@ MonoBehaviour:
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Shoe_02
-    DisplayName: Brown Wingtip Shoes
+    DisplayName: Derby Shoes
     GenderRole: 1
     Category: 3
     Tiers: 0200000003000000
     Connection: {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
-    FeedbackName: Brown Wingtip Shoes
-    GoodFeedback: Good
+    FeedbackName: Derby Shoes
+    GoodFeedback: Business Casual<br>A timeless style that shows  a sense of professionalism
+      and maturity without being overly formal.
     OKFeedback: OK
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
@@ -1028,14 +1035,15 @@ MonoBehaviour:
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Shoe_06
-    DisplayName: White Basketball Shoes
+    DisplayName: Basketball Shoes
     GenderRole: 1
     Category: 3
     Tiers: 01000000
     Connection: {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
-    FeedbackName: White Basketball Shoes
+    FeedbackName: Basketball Shoes
     GoodFeedback: Good
-    OKFeedback: OK
+    OKFeedback: Casual<br>Comfy and versatile footwear, but doesn't show that you
+      understand interview expectations.
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Shoe_07
@@ -1050,15 +1058,15 @@ MonoBehaviour:
     BadFeedback: "Bad\r"
     scoreForCurrentCharacter: 0
   - Tag: Male_Shoe_08
-    DisplayName: Black Hightop Sneakers - M
+    DisplayName: High Top Sneakers
     GenderRole: 1
     Category: 3
     Tiers: 00000000
     Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
-    FeedbackName: Black Hightop Sneakers - M
+    FeedbackName: High Top Sneakers
     GoodFeedback: Good
     OKFeedback: OK
-    BadFeedback: Bad
+    BadFeedback: Ultra Casual<b> Are you going to the mall or to an interview?
     scoreForCurrentCharacter: 0
   connections:
   - {fileID: 11400000, guid: c03d845ee3d25784f9227d3f540f94c9, type: 2}
