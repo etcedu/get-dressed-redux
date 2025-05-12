@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Male_Shirt_05
   m_EditorClassIdentifier: 
   tag: 
-  icon: {fileID: 21300000, guid: a605af254e758af45910d8a04ae0cf46, type: 3}
+  icon: {fileID: 21300000, guid: e4002d8bc55190443ac7b5038f355c9a, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: d322058a85048234da8cb610d7e963a0, type: 2}
   - {fileID: 2100000, guid: a794bb104a38987498cc81e196510f56, type: 2}
@@ -24,5 +24,5 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ea5c0804f9719bb4bb940daa5609779b, type: 2}
   textures:
   - {fileID: 0}
-  - {fileID: 2800000, guid: 855af4b194346844e9ecd0c938008f96, type: 3}
-  - {fileID: 2800000, guid: e216a0abe22d33145a248c14a71fd8e3, type: 3}
+  - {fileID: 2800000, guid: 56e00ca534c7c4a4d9e5bc1c2cc79eb8, type: 3}
+  - {fileID: 2800000, guid: 39044c716e874f54cbeea746b82fae31, type: 3}

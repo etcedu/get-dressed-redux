@@ -464,7 +464,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Male_Hair_03
     DisplayName: Black Undercut
     GenderRole: 1
@@ -574,7 +574,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 1
+    scoreForCurrentCharacter: 0
   - Tag: Male_Pants_03
     DisplayName: Navy Blue Slacks
     GenderRole: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Male_Pants_04
     DisplayName: Corduroy Khakis
     GenderRole: 1
@@ -744,7 +744,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 1
+    scoreForCurrentCharacter: 0
   - Tag: Male_Shirt_05
     DisplayName: Black Graphic T-Shirt
     GenderRole: 1
@@ -764,7 +764,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Male_Shirt_07
     DisplayName: Black Tuxedo Vest
     GenderRole: 1
@@ -924,7 +924,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 1
+    scoreForCurrentCharacter: 0
   - Tag: Male_Shoe_05
     DisplayName: Tan Laced Loafers
     GenderRole: 1
@@ -934,7 +934,7 @@ MonoBehaviour:
     GoodFeedback: Good
     OKFeedback: OK
     BadFeedback: "Bad\r"
-    scoreForCurrentCharacter: 2
+    scoreForCurrentCharacter: 0
   - Tag: Male_Shoe_06
     DisplayName: White Basketball Shoes
     GenderRole: 1
