@@ -134,7 +134,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2090594057}
+    m_TransformParent: {fileID: 101497623}
     m_Modifications:
     - target: {fileID: 137572363024820343, guid: 79273e7771c3ef147bcbc8dbde70cb94,
         type: 3}
@@ -435,6 +435,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603040569550393529, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1303750433}
+    - target: {fileID: 8603040569550393529, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeTTSRate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1527,6 +1537,7 @@ RectTransform:
   m_Children:
   - {fileID: 2090594057}
   - {fileID: 638965924}
+  - {fileID: 7716754}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2844,12 +2855,12 @@ PrefabInstance:
     - target: {fileID: 2586532902729649488, guid: 8a61a817c858a3241b6e0e93dc50b91c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 65.9683
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2586532902729649488, guid: 8a61a817c858a3241b6e0e93dc50b91c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 59.6252
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 2586532902729649488, guid: 8a61a817c858a3241b6e0e93dc50b91c,
         type: 3}
@@ -3000,7 +3011,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f5b6a95d928dfde43bfb70f52d655f8f,
+      objectReference: {fileID: 21300000, guid: 12745bd133db064448ebdc15ff2a5bee,
         type: 3}
     - target: {fileID: 9013147612959692287, guid: 8a61a817c858a3241b6e0e93dc50b91c,
         type: 3}
@@ -13996,7 +14007,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 02994868519370e43bb76bb87cda9ae2,
+      objectReference: {fileID: 21300000, guid: db2eea9f2fd134440be9a84e889b2201,
         type: 3}
     - target: {fileID: 9013147612959692287, guid: 8a61a817c858a3241b6e0e93dc50b91c,
         type: 3}
@@ -18425,7 +18436,6 @@ RectTransform:
   - {fileID: 1823066857}
   - {fileID: 919108291}
   - {fileID: 1650263541}
-  - {fileID: 7716754}
   m_Father: {fileID: 101497623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
