@@ -60,10 +60,10 @@ public class ClothingCloset : ScriptableObject
             else
                 Debug.LogError($"Error parsing gender {gender} on line {i} ");
 
-            string humanName = fields[3];
-            c.DisplayName = humanName;
+            c.DisplayName = fields[3];
+            c.FeedbackName = fields[4];
 
-            string[] tiers = fields[4].Split(new char[] { ';' }).Trim();
+            string[] tiers = fields[5].Split(new char[] { ';' }).Trim();
             c.Tiers = new();
             foreach (string tier in tiers)
             {
@@ -73,11 +73,11 @@ public class ClothingCloset : ScriptableObject
                     Debug.LogError($"Error parsing category {tier} on line {i} ");
             }
 
-            string goodFeedback = fields[5];
+            string goodFeedback = fields[6];
             c.GoodFeedback = goodFeedback;
-            string okFeedback = fields[6];
+            string okFeedback = fields[7];
             c.OKFeedback = okFeedback;
-            string badFeedback = fields[7];
+            string badFeedback = fields[8];
             c.BadFeedback = badFeedback;
 
             clothingPieces.Add(c);

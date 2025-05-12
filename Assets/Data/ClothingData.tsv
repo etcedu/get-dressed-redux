@@ -1,0 +1,96 @@
+ID	Category	Gender	Human Name	Feedback Name	Tier	Good Feedback	OK Feedback	Bad Feedback
+Female_Hair_02	Head	Female	Bob Haircut	Bob Haircut	Casual;Business Casual;Business Professional	Good	OK	Bad
+Female_Hair_03	Head	Female	Pixie Cut	Pixie Cut	Casual;Business Casual;Business Professional	Good	OK	Bad
+Female_Hair_04	Head	Female	Long Fluffy Hair	Long Fluffy Hair	Casual;Business Casual	Good	OK	Bad
+Female_Hair_05	Head	Female	Short Wispy Hair	Short Wispy Hair	Casual;Business Casual	Good	OK	Bad
+Female_Hair_06	Head	Female	Short Afro	Short Afro	Casual;Business Casual	Good	OK	Bad
+Female_Hair_07	Head	Female	Shoulder Length Hair	Shoulder Length Hair	Business Casual;Business Professional	Good	OK	Bad
+Female_Hair_08	Head	Female	Bun	Bun	Business Professional	Good	OK	Bad
+Female_Hair_09	Head	Female	Medium Length Black Hair	Medium Length Black Hair	Casual;Business Casual	Good	OK	Bad
+Female_Hair_10	Head	Female	Up Flair	Up Flair	Informal	Good	OK	Bad
+Female_Pants_02	Bottom	Female	Short Jeans	Short Jeans	Informal	Good	OK	Bad
+Female_Pants_03	Bottom	Female	Blue Sweatpants	Blue Sweatpants	Informal	Good	OK	Bad
+Female_Pants_04	Bottom	Female	Black Suit Pants - F	Black Suit Pants - F	Business Casual;Business Professional	Good	OK	Bad
+Female_Pants_05	Bottom	Female	Blue Suit Pants - F	Blue Suit Pants - F	Business Casual;Business Professional	Good	OK	Bad
+Female_Pants_06	Bottom	Female	Grey Suit Pants - F	Grey Suit Pants - F	Business Casual;Business Professional	Good	OK	Bad
+Female_Pants_07	Bottom	Female	Purple Suit Pants	Purple Suit Pants	Business Casual;Business Professional	Good	OK	Bad
+Female_Pants_08	Bottom	Female	Tight Jeans	Tight Jeans	Casual	Good	OK	Bad
+Female_Shirt_02	Top	Female	Black Suit	Black Suit	Business Professional	Good	OK	Bad
+Female_Shirt_03	Top	Female	Pink Deep V	Pink Deep V	Informal; Casual	Good	OK	Bad
+Female_Shirt_04	Top	Female	T-shirt	T-shirt	Casual	Good	OK	Bad
+Female_Shirt_05	Top	Female	Purple Suit	Purple Suit	Business Professional	Good	OK	Bad
+Female_Shirt_06	Top	Female	Light Brown Blazer	Light Brown Blazer	Business Casual;Business Professional	Good	OK	Bad
+Female_Shirt_07	Top	Female	Striped Sleeveless Shirt	Striped Sleeveless Shirt	Business Casual	Good	OK	Bad
+Female_Shirt_08	Top	Female	Pink Striped Button Up	Pink Striped Button Up	Business Casual	Good	OK	Bad
+Female_Shirt_09	Top	Female	Green Sleeveless Button Up	Green Sleeveless Button Up	Casual;Business Casual	Good	OK	Bad
+Female_Shirt_10	Top	Female	Red Collared Shirt	Red Collared Shirt	Business Casual	Good	OK	Bad
+Female_Shirt_11	Top	Female	Grey Blazer & White Button Up	Grey Blazer & White Button Up	Business Professional	Good	OK	Bad
+Female_Shirt_12	Top	Female	Spaghetti Strap Shirt	Spaghetti Strap Shirt	Informal	Good	OK	Bad
+Female_Shirt_13	Top	Female	Striped Short Sleeved Button Shirt	Striped Short Sleeved Button Shirt	Casual;Business Casual	Good	OK	Bad
+Female_Shirt_14	Top	Female	Blue Blazer	Blue Blazer	Business Casual;Business Professional	Good	OK	Bad
+Female_Shirt_15	Top	Female	Sports Jacket	Sports Jacket	Informal	Good	OK	Bad
+Female_Shirt_16	Top	Female	Team T-Shirt	Team T-Shirt	Informal	Good	OK	Bad
+Female_Shoe_02	Feet	Female	Red Heels	Red Heels	Business Casual	Good	OK	Bad
+Female_Shoe_03	Feet	Female	Blue Cotton Flats	Blue Cotton Flats	Casual	Good	OK	Bad
+Female_Shoe_04	Feet	Female	Black Hightop Sneakers - F	Black Hightop Sneakers - F	Informal	Good	OK	Bad
+Female_Shoe_05	Feet	Female	Open Toe Heels	Open Toe Heels	Business Professional	Good	OK	Bad
+Female_Shoe_06	Feet	Female	Wrapped Heels	Wrapped Heels	Casual	Good	OK	Bad
+Female_Shoe_07	Feet	Female	Black Stripe Closed Toe Heels	Black Stripe Closed Toe Heels	Business Casual;Business Professional	Good	OK	Bad
+Female_Shoe_08	Feet	Female	Brown Mid Heels	Brown Mid Heels	Business Casual	Good	OK	Bad
+Female_Skirt_02	Bottom	Female	Black Knee Length Skirt	Black Knee Length Skirt	Business Casual	Good	OK	Bad
+Female_Skirt_03	Bottom	Female	Yellow Patterned Skirt	Yellow Patterned Skirt	Casual	Good	OK	Bad
+Female_Skirt_04	Bottom	Female	Gray Knee Length Skirt	Gray Knee Length Skirt	Business Casual	Good	OK	Bad
+Female_Skirt_05	Bottom	Female	Pink Skirt	Pink Skirt	Casual	Good	OK	Bad
+Female_Skirt_06	Bottom	Female	Brown Skirt	Brown Skirt	Casual	Good	OK	Bad
+Male_Hair_01	Head	Male	Black Undercut	Black Undercut	Casual	Good	OK	Bad
+Male_Hair_02	Head	Male	Black Undercut	Black Undercut	Casual;Business Casual;Business Professional	Good	OK	Bad
+Male_Hair_03	Head	Male	Black Undercut	Black Undercut	Casual;Business Casual;Business Professional	Good	OK	Bad
+Male_Hair_04	Head	Male	Brown Undercut	Brown Undercut	Casual;Business Casual;Business Professional	Good	OK	Bad
+Male_Hair_06	Head	Male	Side-Swept Bang	Side-Swept Bang	Casual; Business Casual	Good	OK	Bad
+Male_Hair_07	Head	Male	Long Hair	Long Hair	Casual; Business Casual	Good	OK	Bad
+Male_Hair_08	Head	Male	Short Black Hair	Short Black Hair	Casual; Business Casual;Business Professional	Good	OK	Bad
+Male_Hat_01	Head	Either	Blue and White Ball Cap	Blue and White Ball Cap	Informal	Good	OK	Bad
+Male_Hat_02	Head	Male	Fedora	Fedora	Informal	Good	OK	Bad
+Male_Hat_03	Head	Male	Cowboy Hat	Cowboy Hat	Informal	Good	OK	Bad
+Male_Hat_05	Head	Either	Beanie	Beanie	Informal	Good	OK	Bad
+Male_Pants_01	Bottom	Male	Khaki Slacks	Khaki Slacks	Business Casual	Good	OK	Bad
+Male_Pants_02	Bottom	Male	Blue Suit Pants - M	Blue Suit Pants - M	Business Professional	Good	OK	Bad
+Male_Pants_03	Bottom	Male	Navy Blue Slacks	Navy Blue Slacks	Business Professional	Good	OK	Bad
+Male_Pants_04	Bottom	Male	Corduroy Khakis	Corduroy Khakis	Casual;Business Casual	Good	OK	Bad
+Male_Pants_05	Bottom	Male	Gray Suit Pants - M	Gray Suit Pants - M	Business Professional	Good	OK	Bad
+Male_Pants_06	Bottom	Male	Black Suit Pants - M	Black Suit Pants - M	Business Professional	Good	OK	Bad
+Male_Pants_07	Bottom	Male	Blue Jeans	Blue Jeans	Casual	Good	OK	Bad
+Male_Pants_08	Bottom	Male	Ripped Blue Jeans	Ripped Blue Jeans	Informal	Good	OK	Bad
+Male_Pants_09	Bottom	Male	Red Basketball Shorts	Red Basketball Shorts	Informal	Good	OK	Bad
+Male_Pants_10	Bottom	Male	Black Shorts	Black Shorts	Casual	Good	OK	Bad
+Male_Pants_11	Bottom	Male	Pleated Shorts	Pleated Shorts	Casual	Good	OK	Bad
+Male_Pants_12	Bottom	Male	Jean Shorts	Jean Shorts	Informal	Good	OK	Bad
+Male_Pants_13	Bottom	Male	Gray Sweat Pants	Gray Sweat Pants	Informal	Good	OK	Bad
+Male_Pants_14	Bottom	Male	Camo Pants	Camo Pants	Informal	Good	OK	Bad
+Male_Pants_15	Bottom	Male	Baggy Jeans	Baggy Jeans	Informal	Good	OK	Bad
+Male_Shirt_01	Top	Male	Blue Solid Button Up	Blue Solid Button Up	Business Casual	Good	OK	Bad
+Male_Shirt_02	Top	Male	Striped Button Up	Striped Button Up	Business Casual	Good	OK	Bad
+Male_Shirt_03	Top	Male	Red Solid Polo Shirt	Red Solid Polo Shirt	Business Casual	Good	OK	Bad
+Male_Shirt_04	Top	Male	Striped Polo Shirt	Striped Polo Shirt	Casual	Good	OK	Bad
+Male_Shirt_05	Top	Male	Black Graphic T-Shirt	Black Graphic T-Shirt	Informal	Good	OK	Bad
+Male_Shirt_06	Top	Male	Brown Sports Coat	Brown Sports Coat	Business Casual; Business Professional	Good	OK	Bad
+Male_Shirt_07	Top	Male	Black Tuxedo Vest	Black Tuxedo Vest	Business Professional	Good	OK	Bad
+Male_Shirt_08	Top	Male	Gray Sweater Vest	Gray Sweater Vest	Business Casual	Good	OK	Bad
+Male_Shirt_09	Top	Male	Navy Sweater	Navy Sweater	Casual	Good	OK	Bad
+Male_Shirt_10	Top	Male	Blue Polka Dot Button Up	Blue Polka Dot Button Up	Business Casual	Good	OK	Bad
+Male_Shirt_11	Top	Male	V-Neck T-shirt	V-Neck T-shirt	Informal	Good	OK	Bad
+Male_Shirt_12	Top	Male	Rocker Vest	Rocker Vest	Informal	Good	OK	Bad
+Male_Shirt_13	Top	Male	Checkered Suit Jacket and Tie	Checkered Suit Jacket and Tie	Business Professional	Good	OK	Bad
+Male_Shirt_14	Top	Male	Striped Suit Jacket and Tie	Striped Suit Jacket and Tie	Business Professional	Good	OK	Bad
+Male_Shirt_15	Top	Male	Tweed Coat and Blue Oxford Shirt	Tweed Coat and Blue Oxford Shirt	Business Casual; Business Professional	Good	OK	Bad
+Male_Shirt_16	Top	Male	Printed Pattern Shirt	Printed Pattern Shirt	Informal	Good	OK	Bad
+Male_Shirt_17	Top	Male	Tuxedo Costume T-Shirt	Tuxedo Costume T-Shirt	Informal	Good	OK	Bad
+Male_Shirt_18	Top	Male	Blue Suit Jacket and Button Up	Blue Suit Jacket and Button Up	Business Casual	Good	OK	Bad
+Male_Shoe_01	Feet	Male	Black Loafers	Black Loafers	Business Casual	Good	OK	Bad
+Male_Shoe_02	Feet	Male	Brown Wingtip Shoes	Brown Wingtip Shoes	Business Casual; Business Professional	Good	OK	Bad
+Male_Shoe_03	Feet	Male	Black Oxford Dress Shoes	Black Oxford Dress Shoes	Business Professional	Good	OK	Bad
+Male_Shoe_04	Feet	Male	Black and White Wingtip Shoes	Black and White Wingtip Shoes	Business Professional	Good	OK	Bad
+Male_Shoe_05	Feet	Male	Tan Laced Loafers	Tan Laced Loafers	Casual; Business Casual	Good	OK	Bad
+Male_Shoe_06	Feet	Male	White Basketball Shoes	White Basketball Shoes	Casual	Good	OK	Bad
+Male_Shoe_07	Feet	Male	Red Sandals	Red Sandals	Informal	Good	OK	Bad
+Male_Shoe_08	Feet	Male	Black Hightop Sneakers - M	Black Hightop Sneakers - M	Informal	Good	OK	Bad
