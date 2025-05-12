@@ -1,19 +1,29 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using static CrossSceneInfo;
 
-
+[System.Serializable]
 public enum Gender
 {
     EITHER, MALE, FEMALE
 }
+
+[System.Serializable]
 public enum Category
 {
-    HEAD, TOP, BOTTOM, SHOES
+    HEAD, TOP, BOTTOM, FEET
 }
+
+[System.Serializable]
 public enum Tier
 {
     INFORMAL, CASUAL, BUSINESS_CASUAL, BUSINESS_PROFESSIONAL
+}
+
+public enum Score
+{
+    GOOD, OK, BAD
 }
 
 
@@ -22,8 +32,13 @@ public class GlobalData : MonoBehaviour
     public static GlobalData Instance { get; private set; }
 
     public static CharacterData currentCharacterSelection;
+    public static ClothingPiece selectedHeadPiece;
+    public static ClothingPiece selectedTopPiece;
+    public static ClothingPiece selectedBottomPiece;
+    public static ClothingPiece selectedFeetPiece;
 
-    [SerializeField] List<CharacterData> characters = new List<CharacterData>();
+    [SerializeField] ClothingCloset theCloset;
+    [SerializeField] CharacterRoster theCharacterRoster;
 
     public void Start()
     {
@@ -36,51 +51,105 @@ public class GlobalData : MonoBehaviour
             Instance = this;
         }
 
-        currentCharacterSelection = null;
     }
 
-    public static void SetCharacter(CharacterData charData)
+    public static void InitNewLevel()
     {
-        currentCharacterSelection = charData;
+        selectedHeadPiece = null;
+        selectedTopPiece = null;
+        selectedBottomPiece = null;
+        selectedFeetPiece = null;
+    }
+
+    public static void SetCharacter(string characterTag)
+    {
+        currentCharacterSelection = Instance.theCharacterRoster.GetCharacter(characterTag);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.headOptions);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.topOptions);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.bottomOptions);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.feetOptions);
+    }
+
+    void SetScoresForCurrentCharacterClothingPieces(string[] clothingSet)
+    {
+        if (clothingSet.Length == 1)
+        {
+            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
+        }
+        if (clothingSet.Length == 2)
+        {
+            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
+            GetPieceOfClothing(clothingSet[1]).scoreForCurrentCharacter = Score.BAD;
+        }
+        else if (clothingSet.Length == 3)
+        {
+            Debug.Log(clothingSet[0]);
+
+            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
+            GetPieceOfClothing(clothingSet[1]).scoreForCurrentCharacter = Score.OK;
+            GetPieceOfClothing(clothingSet[2]).scoreForCurrentCharacter = Score.BAD;
+        }
     }
 
     public static IList<CharacterData> GetCharacters()
     {
-        return Instance.characters;
+        return Instance.theCharacterRoster.characters;
     }
 
-    #region Gender
-    /// <summary>
-    /// Gets the current gender, loading it from save if necessary
-    /// </summary>
-    public static GenderEnum Gender
+    public static ClothingPiece GetPieceOfClothing(string name)
     {
-        get
-        {
-            if (!_genderLoaded)
-                _gender = (GameBase.Strings.GetValue("Gender", "Male") == "Male") ? GenderEnum.MALE : GenderEnum.FEMALE;
-            return _gender;
-        }
-        set
-        {
-            _gender = value;
-            GameBase.Strings.SetValue("Gender", (value == GenderEnum.MALE) ? "Male" : "Female");
-            GameBase.Strings.Save();
-        }
+        return Instance.theCloset.GetClothingPiece(name);
     }
-    /// <summary>
-    /// DO NOT REFERENCE DIRECTLY. Use Gender instead.
-    /// </summary>
-    private static GenderEnum _gender;
-    /// <summary>
-    /// Flag for loading gender
-    /// </summary>
-    private static bool _genderLoaded = false;
-    #endregion
 
-    private const int interviewPassedCutoff = 400;
-    public static int PassingCuttoff
+    public static int GetScoreForPiece(ClothingPiece clothingPiece)
     {
-        get { return interviewPassedCutoff; }
+        return Enum.GetValues(typeof(Score)).Length - (int)clothingPiece.scoreForCurrentCharacter;
+    }
+
+    public static float GetOverallScore()
+    {
+        float totalScore = 0;
+
+        totalScore += GetScoreForPiece(selectedHeadPiece);
+        Debug.Log(totalScore);
+        totalScore += GetScoreForPiece(selectedTopPiece);
+        Debug.Log(totalScore);
+        totalScore += GetScoreForPiece(selectedBottomPiece);
+        Debug.Log(totalScore);
+        totalScore += GetScoreForPiece(selectedFeetPiece);
+        Debug.Log(totalScore);
+
+        return (totalScore / 12f);
+    }
+
+    public static List<ClothingPiece> GetListOfSelectedClothes()
+    {
+        List<ClothingPiece> list = new List<ClothingPiece>
+        {
+            selectedHeadPiece,
+            selectedTopPiece,
+            selectedBottomPiece,
+            selectedFeetPiece
+        };
+        return list;
+    }
+
+    public static void SetClothingSelection(ClothingPiece clothingPiece)
+    {
+        switch (clothingPiece.Category)
+        {
+            case Category.HEAD:
+                selectedHeadPiece = clothingPiece;
+                break;
+            case Category.TOP:
+                selectedTopPiece = clothingPiece;
+                break;
+            case Category.BOTTOM:
+                selectedBottomPiece = clothingPiece;
+                break;
+            case Category.FEET:
+                selectedFeetPiece = clothingPiece;
+                break;
+        }
     }
 }

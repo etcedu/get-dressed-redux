@@ -1,12 +1,15 @@
-﻿using Simcoach.SkillArcade;
-using UnityEngine;
-//using Simcoach.SkillArcade;
+﻿using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
     private void Awake()
     {
         Screen.orientation = ScreenOrientation.AutoRotation;
+    }
+
+    public void StartButton_OnClick()
+    {
+        SceneLoader.LoadScene("LevelSelection");
     }
 
     private void Start()

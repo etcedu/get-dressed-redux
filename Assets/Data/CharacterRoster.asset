@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddcf955f0d4eb34ea931c54f6a4f71c, type: 3}
+  m_Name: CharacterRoster
+  m_EditorClassIdentifier: 
+  charactersDataFile: {fileID: -402774707588977448, guid: c8fad94bed80d054cad89bca76a61b72,
+    type: 3}
+  characters:
+  - characterTag: ben
+    characterName: Benathon "Benny" Bennifer
+    gender: 1
+    jobTitle: Go out for food
+    description: Put some pants on for god's sake.
+    jobAttireDescription: literally anything
+    imageAssetPath: Appearance_App_Icon
+    headOptions:
+    - Male_Hat_01
+    - Male_Hair_02
+    topOptions:
+    - Male_Shirt_02
+    - Male_Shirt_04
+    - Male_Shirt_06
+    bottomOptions:
+    - Male_Pants_01
+    - Male_Pants_02
+    - Male_Pants_03
+    feetOptions:
+    - Male_Shoe_03
+    - Male_Shoe_04
+    - Male_Shoe_05
+    otherClothes:
+    - none
+    skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
+  - characterTag: jenny
+    characterName: Jenny
+    gender: 2
+    jobTitle: Jennnnny
+    description: Jeeeeeeen
+    jobAttireDescription: JENY
+    imageAssetPath: Icon_Dressed
+    headOptions:
+    - Female_Hair_02
+    - Female_Hair_07
+    topOptions:
+    - Female_Shirt_07
+    - Female_Shirt_02
+    - Female_Shirt_03
+    bottomOptions:
+    - Female_Skirt_03
+    - Female_Pants_08
+    - Female_Pants_04
+    feetOptions:
+    - Female_Shoe_06
+    - Female_Shoe_07
+    - Female_Shoe_08
+    otherClothes:
+    - none
+    skinColor: {r: 0.0627451, g: 1, b: 0.5686275, a: 1}
+  - characterTag: ben
+    characterName: Benathon "Benny" Bennifer
+    gender: 1
+    jobTitle: Go out for food
+    description: Put some pants on for god's sake.
+    jobAttireDescription: literally anything
+    imageAssetPath: Appearance_App_Icon
+    headOptions:
+    - Male_Hat_01
+    - Male_Hair_02
+    topOptions:
+    - Male_Shirt_02
+    - Male_Shirt_04
+    - Male_Shirt_06
+    bottomOptions:
+    - Male_Pants_01
+    - Male_Pants_02
+    - Male_Pants_03
+    feetOptions:
+    - Male_Shoe_03
+    - Male_Shoe_04
+    - Male_Shoe_05
+    otherClothes:
+    - none
+    skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
+  - characterTag: jenny
+    characterName: Jenny
+    gender: 2
+    jobTitle: Jennnnny
+    description: Jeeeeeeen
+    jobAttireDescription: JENY
+    imageAssetPath: Icon_Dressed
+    headOptions:
+    - Female_Hair_02
+    - Female_Hair_07
+    topOptions:
+    - Female_Shirt_07
+    - Female_Shirt_02
+    - Female_Shirt_03
+    bottomOptions:
+    - Female_Skirt_03
+    - Female_Pants_08
+    - Female_Pants_04
+    feetOptions:
+    - Female_Shoe_06
+    - Female_Shoe_07
+    - Female_Shoe_08
+    otherClothes:
+    - none
+    skinColor: {r: 0.0627451, g: 1, b: 0.5686275, a: 1}
+  - characterTag: ben
+    characterName: Benathon "Benny" Bennifer
+    gender: 1
+    jobTitle: Go out for food
+    description: Put some pants on for god's sake.
+    jobAttireDescription: literally anything
+    imageAssetPath: Appearance_App_Icon
+    headOptions:
+    - Male_Hat_01
+    - Male_Hair_02
+    topOptions:
+    - Male_Shirt_02
+    - Male_Shirt_04
+    - Male_Shirt_06
+    bottomOptions:
+    - Male_Pants_01
+    - Male_Pants_02
+    - Male_Pants_03
+    feetOptions:
+    - Male_Shoe_03
+    - Male_Shoe_04
+    - Male_Shoe_05
+    otherClothes:
+    - none
+    skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
+  - characterTag: jenny
+    characterName: Jenny
+    gender: 2
+    jobTitle: Jennnnny
+    description: Jeeeeeeen
+    jobAttireDescription: JENY
+    imageAssetPath: Icon_Dressed
+    headOptions:
+    - Female_Hair_02
+    - Female_Hair_07
+    topOptions:
+    - Female_Shirt_07
+    - Female_Shirt_02
+    - Female_Shirt_03
+    bottomOptions:
+    - Female_Skirt_03
+    - Female_Pants_08
+    - Female_Pants_04
+    feetOptions:
+    - Female_Shoe_06
+    - Female_Shoe_07
+    - Female_Shoe_08
+    otherClothes:
+    - none
+    skinColor: {r: 0.0627451, g: 1, b: 0.5686275, a: 1}
