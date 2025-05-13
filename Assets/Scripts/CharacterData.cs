@@ -42,4 +42,5 @@ public class CharacterData
     public List<ClothingPiece> topPieces = new();
     public List<ClothingPiece> bottomPieces = new();
     public List<ClothingPiece> feetPieces = new();
+    public List<ClothingPiece> otherPieces = new();
 }

@@ -12,7 +12,7 @@ public enum Gender
 [System.Serializable]
 public enum Category
 {
-    HEAD, TOP, BOTTOM, FEET
+    HEAD, TOP, BOTTOM, FEET, OTHER
 }
 
 [System.Serializable]

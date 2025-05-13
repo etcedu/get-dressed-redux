@@ -15,6 +15,172 @@ MonoBehaviour:
   charactersDataFile: {fileID: 1905001501106251880, guid: d4382a4b43bd68f48b12b4a607b1d774,
     type: 3}
   characters:
+  - characterTag: Stanley
+    characterName: Stanley
+    gender: 1
+    jobTitle: Undergraduate Admission
+    description: Stanley has landed an interview at Stanford. They're highly selective,
+      so the clothes he wears to class aren't going to cut it.
+    jobAttireDescription: Business Casual
+    imageAssetPath: stanley
+    headOptions: []
+    topOptions: []
+    bottomOptions: []
+    feetOptions: []
+    otherClothes:
+    - none
+    skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
+    winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
+      will help his chances of getting into Stanford!
+    loseFeedback: "This outfit isn't appropriate for this kind of interview. Help
+      Stanley make a more professional outfit for his college interview!\r"
+    headPieces:
+    - Tag: Stanley_Hair_Good
+      DisplayName: Clean Shave
+      GenderRole: 1
+      Category: 0
+      Tiers: 010000000200000003000000
+      Connection: {fileID: 11400000, guid: 49e87b10653298d4a959249b13841e86, type: 2}
+      FeedbackName: Clean Shave
+      GoodFeedback: Groomed<br>A clean shave is always a safe bet if you aren't sure
+        what to do about your facial hair.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_Hair_Bad
+      DisplayName: Scruffy Stubble
+      GenderRole: 1
+      Category: 0
+      Tiers: 010000000200000003000000
+      Connection: {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
+      FeedbackName: Scruffy Stubble
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>Stubble, especially if it's creeping down your neck,
+        might show that you didn't take the time to prepare.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Male_Shirt_02
+      DisplayName: Striped Button Up
+      GenderRole: 1
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
+      FeedbackName: Striped Button Up
+      GoodFeedback: Business Casual<br>Widely considered to be professional attire,
+        shows employers you understand the basics.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Shirt_03
+      DisplayName: Polo Shirt
+      GenderRole: 1
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: c294f86bdf861e34b842d0a17b0dcbb3, type: 2}
+      FeedbackName: Polo Shirt
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A sporty shirt that's often worn on the job, but is seen
+        as too informal for this interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Shirt_05
+      DisplayName: Black Graphic T-Shirt
+      GenderRole: 1
+      Category: 1
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
+      FeedbackName: Black Graphic T-Shirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
+        interviews like this!
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Male_Pants_04
+      DisplayName: Khaki Slacks
+      GenderRole: 1
+      Category: 2
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 2a90e17455e01b34288f8603b89493af, type: 2}
+      FeedbackName: Khaki Slacks
+      GoodFeedback: Business Casual<br>Signals that you understand the environment
+        by dressing with respect for the occasion.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Pants_07
+      DisplayName: Blue Jeans
+      GenderRole: 1
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
+      FeedbackName: Blue Jeans
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
+        occasion like this interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Pants_11
+      DisplayName: Chino Shorts
+      GenderRole: 1
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
+      FeedbackName: Chino Shorts
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>It's generally wise to never wear shorts to an
+        interview.
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Male_Shoe_02
+      DisplayName: Derby Shoes
+      GenderRole: 1
+      Category: 3
+      Tiers: 0200000003000000
+      Connection: {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
+      FeedbackName: Derby Shoes
+      GoodFeedback: Business Casual<br>A timeless style that shows  a sense of professionalism
+        and maturity without being overly formal.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Shoe_06
+      DisplayName: Basketball Shoes
+      GenderRole: 1
+      Category: 3
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
+      FeedbackName: Basketball Shoes
+      GoodFeedback: Good
+      OKFeedback: Casual<br>Comfy and versatile footwear, but doesn't show that you
+        understand interview expectations.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Shoe_08
+      DisplayName: High Top Sneakers
+      GenderRole: 1
+      Category: 3
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+      FeedbackName: High Top Sneakers
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<b> Are you going to the mall or to an interview?
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Stanley_Face
+      DisplayName: Face
+      GenderRole: 1
+      Category: 4
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
+      FeedbackName: Face
+      GoodFeedback: Face
+      OKFeedback: Face
+      BadFeedback: Face
+      scoreForCurrentCharacter: 0
   - characterTag: ben
     characterName: Benathan "Benny" Bennifer
     gender: 1
@@ -53,7 +219,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Male_Shirt_02
       DisplayName: Striped Button Up
@@ -76,7 +242,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Male_Shirt_06
       DisplayName: Brown Sports Coat
       GenderRole: 1
@@ -87,7 +253,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: Male_Pants_10
       DisplayName: Black Shorts
@@ -110,7 +276,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Male_Pants_12
       DisplayName: Jean Shorts
       GenderRole: 1
@@ -121,7 +287,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Male_Shoe_06
       DisplayName: White Basketball Shoes
@@ -144,7 +310,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Male_Shoe_08
       DisplayName: Black Hightop Sneakers - M
       GenderRole: 1
@@ -155,7 +321,8 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
+    otherPieces: []
   - characterTag: jenny
     characterName: Jenny
     gender: 2
@@ -297,137 +464,5 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-  - characterTag: Stanley
-    characterName: Stanley
-    gender: 1
-    jobTitle: Undergraduate Admission
-    description: Stanley has landed an interview at Stanford. They're highly selective,
-      so the clothes he wears to class aren't going to cut it.
-    jobAttireDescription: Business Casual
-    imageAssetPath: stanely
-    headOptions: []
-    topOptions: []
-    bottomOptions: []
-    feetOptions: []
-    otherClothes:
-    - none
-    skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
-    winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
-      will help his chances of getting into Stanford!
-    loseFeedback: "This outfit isn't appropriate for this kind of interview. Help
-      Stanley make a more professional outfit for his college interview!\r"
-    headPieces:
-    - Tag: Male_Hair_03
-      DisplayName: Black Undercut
-      GenderRole: 1
-      Category: 0
-      Tiers: 010000000200000003000000
-      Connection: {fileID: 11400000, guid: a1d296f81dd27314496e1ac1c35f10ef, type: 2}
-      FeedbackName: Black Undercut
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: Male_Shirt_02
-      DisplayName: Striped Button Up
-      GenderRole: 1
-      Category: 1
-      Tiers: 02000000
-      Connection: {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
-      FeedbackName: Striped Button Up
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Male_Shirt_03
-      DisplayName: Red Solid Polo Shirt
-      GenderRole: 1
-      Category: 1
-      Tiers: 02000000
-      Connection: {fileID: 11400000, guid: c294f86bdf861e34b842d0a17b0dcbb3, type: 2}
-      FeedbackName: Red Solid Polo Shirt
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Male_Shirt_05
-      DisplayName: Black Graphic T-Shirt
-      GenderRole: 1
-      Category: 1
-      Tiers: 00000000
-      Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
-      FeedbackName: Black Graphic T-Shirt
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: Male_Pants_01
-      DisplayName: Khaki Slacks
-      GenderRole: 1
-      Category: 2
-      Tiers: 02000000
-      Connection: {fileID: 11400000, guid: 45de37c5ec0599b4ab703c606432f144, type: 2}
-      FeedbackName: Khaki Slacks
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Male_Pants_07
-      DisplayName: Blue Jeans
-      GenderRole: 1
-      Category: 2
-      Tiers: 01000000
-      Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
-      FeedbackName: Blue Jeans
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Male_Pants_11
-      DisplayName: Pleated Shorts
-      GenderRole: 1
-      Category: 2
-      Tiers: 01000000
-      Connection: {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
-      FeedbackName: Pleated Shorts
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: Male_Shoe_02
-      DisplayName: Brown Wingtip Shoes
-      GenderRole: 1
-      Category: 3
-      Tiers: 0200000003000000
-      Connection: {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
-      FeedbackName: Brown Wingtip Shoes
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Male_Shoe_06
-      DisplayName: White Basketball Shoes
-      GenderRole: 1
-      Category: 3
-      Tiers: 01000000
-      Connection: {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
-      FeedbackName: White Basketball Shoes
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Male_Shoe_08
-      DisplayName: Black Hightop Sneakers - M
-      GenderRole: 1
-      Category: 3
-      Tiers: 00000000
-      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
-      FeedbackName: Black Hightop Sneakers - M
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+    otherPieces: []
   clothingCloset: {fileID: 11400000, guid: 1230d46fe777dc44883a0fe8cbb06be1, type: 2}

@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.MemoryProfiler;
 using UnityEditor;
 using UnityEngine;
-using System.Linq;
 
 [CreateAssetMenu(menuName = "Custom/CharacterRoster", fileName = "New Character Roster")]
 [System.Serializable]
@@ -177,6 +174,8 @@ public class CharacterRoster : ScriptableObject
                     characters[characters.Count - 1].bottomPieces.Add(c);
                 else if (c.Category == Category.FEET)
                     characters[characters.Count - 1].feetPieces.Add(c);
+                else if (c.Category == Category.OTHER)
+                    characters[characters.Count - 1].otherPieces.Add(c);
             }            
 
             EditorUtility.SetDirty(this);

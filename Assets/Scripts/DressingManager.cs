@@ -28,6 +28,7 @@ public class DressingManager : MonoBehaviour
     [SerializeField] List<Material> topMaterials = new();
     [SerializeField] List<Material> bottomMaterials = new();
     [SerializeField] List<Material> feetMaterials = new();
+    [SerializeField] List<Material> otherMaterials = new();
 
 
     public BodyPartRender[] maleSetup = new BodyPartRender[0];
@@ -39,6 +40,7 @@ public class DressingManager : MonoBehaviour
         ClearClothingFromCategory(Category.TOP);
         ClearClothingFromCategory(Category.BOTTOM);
         ClearClothingFromCategory(Category.FEET);
+        ClearClothingFromCategory(Category.OTHER);
 
         SetupCharacter();
 
@@ -70,6 +72,11 @@ public class DressingManager : MonoBehaviour
             }
             characterAnimator.runtimeAnimatorController = femaleController;
         }
+
+        for (int i = 0; i < GlobalData.currentCharacterSelection.otherPieces.Count; i++)
+        {
+            SetClothing(GlobalData.currentCharacterSelection.otherPieces[i]);
+        }
     }
 
     public void ClearClothingFromCategory(Category clothingCategory)
@@ -91,6 +98,10 @@ public class DressingManager : MonoBehaviour
             case Category.FEET:
                 for (int i = 0; i < feetMaterials.Count; i++)
                     feetMaterials[i].mainTexture = null;
+                break;
+            case Category.OTHER:
+                for (int i = 0; i < otherMaterials.Count; i++)
+                    otherMaterials[i].mainTexture = null;
                 break;
         }
     }
