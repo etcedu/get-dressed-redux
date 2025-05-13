@@ -17,7 +17,6 @@ public class ClothingCloset : ScriptableObject
         return clothingPieces.Find(x => x.Tag == name);
     }
 
-    #region Importing
 #if UNITY_EDITOR
     [ExecuteInEditMode]
     [ContextMenu("Load Clothing")]
@@ -73,12 +72,9 @@ public class ClothingCloset : ScriptableObject
                     Debug.LogError($"Error parsing category {tier} on line {i} ");
             }
 
-            string goodFeedback = fields[6];
-            c.GoodFeedback = goodFeedback;
-            string okFeedback = fields[7];
-            c.OKFeedback = okFeedback;
-            string badFeedback = fields[8];
-            c.BadFeedback = badFeedback;
+            c.GoodFeedback = fields[6];
+            c.OKFeedback = fields[7];
+            c.BadFeedback = fields[8];
 
             clothingPieces.Add(c);
 
@@ -111,6 +107,5 @@ public class ClothingCloset : ScriptableObject
 
     }
 #endif
-    #endregion
 
 }

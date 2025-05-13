@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Female_Skirt_05
   m_EditorClassIdentifier: 
-  tag: 
+  tag: Female_Skirt_05
   icon: {fileID: 21300000, guid: 8af167b7155062d43889a86be179fa2a, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 232f65a8a6ff8cd488d9a8514ede3373, type: 2}

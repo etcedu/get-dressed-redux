@@ -64,10 +64,10 @@ public class GlobalData : MonoBehaviour
     public static void SetCharacter(string characterTag)
     {
         currentCharacterSelection = Instance.theCharacterRoster.GetCharacter(characterTag);
-        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.headOptions);
-        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.topOptions);
-        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.bottomOptions);
-        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.feetOptions);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.headPieces);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.topPieces);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.bottomPieces);
+        Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.feetPieces);
     }
 
     void SetScoresForCurrentCharacterClothingPieces(string[] clothingSet)
@@ -91,6 +91,25 @@ public class GlobalData : MonoBehaviour
         }
     }
 
+    void SetScoresForCurrentCharacterClothingPieces(List<ClothingPiece> clothingSet)
+    {
+        if (clothingSet.Count == 1)
+        {
+            clothingSet[0].scoreForCurrentCharacter = Score.GOOD;
+        }
+        if (clothingSet.Count == 2)
+        {
+            clothingSet[0].scoreForCurrentCharacter = Score.GOOD;
+            clothingSet[1].scoreForCurrentCharacter = Score.BAD;
+        }
+        else if (clothingSet.Count == 3)
+        {
+            clothingSet[0].scoreForCurrentCharacter = Score.GOOD;
+            clothingSet[1].scoreForCurrentCharacter = Score.OK;
+            clothingSet[2].scoreForCurrentCharacter = Score.BAD;
+        }
+    }
+
     public static IList<CharacterData> GetCharacters()
     {
         return Instance.theCharacterRoster.characters;
@@ -111,13 +130,9 @@ public class GlobalData : MonoBehaviour
         float totalScore = 0;
 
         totalScore += GetScoreForPiece(selectedHeadPiece);
-        Debug.Log(totalScore);
         totalScore += GetScoreForPiece(selectedTopPiece);
-        Debug.Log(totalScore);
         totalScore += GetScoreForPiece(selectedBottomPiece);
-        Debug.Log(totalScore);
         totalScore += GetScoreForPiece(selectedFeetPiece);
-        Debug.Log(totalScore);
 
         return (totalScore / 12f);
     }

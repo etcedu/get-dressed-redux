@@ -8323,11 +8323,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackCanvasObject: {fileID: 5162633671031366833}
-  animator: {fileID: 490114225}
+  animator: {fileID: 1777954343}
   charAnimator: {fileID: 469393685}
-  fitTitle: YOU'RE FIT!
+  fitTitle: GREAT OUTFIT!
   fitText: nice drip brah
-  unfitTitle: YOU'RE UNFIT...
+  unfitTitle: UH OH
   unfitText: broke lookin' fool
   fitOrNotHeader: {fileID: 1665322958}
   fitOrNotText: {fileID: 820588146}
@@ -15486,6 +15486,7 @@ GameObject:
   - component: {fileID: 1777954335}
   - component: {fileID: 1777954332}
   - component: {fileID: 1777954331}
+  - component: {fileID: 1777954343}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -15715,6 +15716,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1777954343
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777954330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4648cb3b5a197e44dbdd90d435495065, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1781060835
 GameObject:
   m_ObjectHideFlags: 0
