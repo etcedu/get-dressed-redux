@@ -38,6 +38,7 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] List<Image> feedbackButtonFaces;
     [SerializeField] List<TMP_Text> feedbackButtonTexts;
     [SerializeField] string[] feedbackButtonLabelOptions;
+    [SerializeField] Image[] headerImages;
 
     [Header("General")]    
     [SerializeField] List<Color> scoreColors;
@@ -104,6 +105,8 @@ public class SimpleFeedback : MonoBehaviour
 
         fitOrNotHeader.text = fit ? fitTitle : unfitTitle;
         fitOrNotText.text = fit ? GlobalData.currentCharacterSelection.winFeedback : GlobalData.currentCharacterSelection.loseFeedback;
+        foreach (Image i in headerImages)
+            i.color = fit ? scoreColors[2] : scoreColors[0];
 
         musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
 

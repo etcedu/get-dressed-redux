@@ -37,7 +37,6 @@ public class GlobalData : MonoBehaviour
     public static ClothingPiece selectedBottomPiece;
     public static ClothingPiece selectedFeetPiece;
 
-    [SerializeField] ClothingCloset theCloset;
     [SerializeField] CharacterRoster theCharacterRoster;
 
     public void Start()
@@ -70,27 +69,6 @@ public class GlobalData : MonoBehaviour
         Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.feetPieces);
     }
 
-    void SetScoresForCurrentCharacterClothingPieces(string[] clothingSet)
-    {
-        if (clothingSet.Length == 1)
-        {
-            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
-        }
-        if (clothingSet.Length == 2)
-        {
-            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
-            GetPieceOfClothing(clothingSet[1]).scoreForCurrentCharacter = Score.BAD;
-        }
-        else if (clothingSet.Length == 3)
-        {
-            Debug.Log(clothingSet[0]);
-
-            GetPieceOfClothing(clothingSet[0]).scoreForCurrentCharacter = Score.GOOD;
-            GetPieceOfClothing(clothingSet[1]).scoreForCurrentCharacter = Score.OK;
-            GetPieceOfClothing(clothingSet[2]).scoreForCurrentCharacter = Score.BAD;
-        }
-    }
-
     void SetScoresForCurrentCharacterClothingPieces(List<ClothingPiece> clothingSet)
     {
         if (clothingSet.Count == 1)
@@ -113,11 +91,6 @@ public class GlobalData : MonoBehaviour
     public static IList<CharacterData> GetCharacters()
     {
         return Instance.theCharacterRoster.characters;
-    }
-
-    public static ClothingPiece GetPieceOfClothing(string name)
-    {
-        return Instance.theCloset.GetClothingPiece(name);
     }
 
     public static int GetScoreForPiece(ClothingPiece clothingPiece)
