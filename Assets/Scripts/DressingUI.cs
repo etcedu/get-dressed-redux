@@ -17,7 +17,7 @@ public class DressingUI : MonoBehaviour
     [SerializeField] TMP_Text positionLabel;
     [SerializeField] TMP_Text descriptionLabel;
 
-    [SerializeField] ClothingPieceSelectionToggle[] headToggles;
+    [SerializeField] List<ClothingPieceSelectionToggle> headToggles;
     [SerializeField] ClothingPieceSelectionToggle[] topToggles;
     [SerializeField] ClothingPieceSelectionToggle[] bottomToggles;
     [SerializeField] ClothingPieceSelectionToggle[] feetToggles;
@@ -43,11 +43,15 @@ public class DressingUI : MonoBehaviour
         CheckAndSetReadyButtonState();
         SetUpClothingButtons();
         init = true;
+
+        //set bad head piece to start with
+        headToggles.Find(x => x.clothingPiece == GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count-1]).toggle.SetIsOnWithoutNotify(true);
+        SetClothingPieceManual(GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count - 1]);
     }
 
     void SetUpClothingButtons()
     {
-        for (int i = 0; i < headToggles.Length; i++)
+        for (int i = 0; i < headToggles.Count; i++)
             headToggles[i].gameObject.SetActive(false);
         for (int i = 0; i < topToggles.Length; i++)
             topToggles[i].gameObject.SetActive(false);
@@ -57,34 +61,37 @@ public class DressingUI : MonoBehaviour
             feetToggles[i].gameObject.SetActive(false);
 
 
-        for (int i = 0; i < GlobalData.currentCharacterSelection.headPieces.Count; i++)
+        for (int i = 0; i < headToggles.Count; i++)
         {
-            headToggles[i].gameObject.SetActive(true);
-            //headToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.headOptions[i]));
-            headToggles[i].InitButton(GlobalData.currentCharacterSelection.headPieces[i]);
+            if (i > GlobalData.currentCharacterSelection.headPieces.Count-1)
+            {
+                headToggles.RemoveAt(i);
+            }
+            else
+            {
+                headToggles[i].gameObject.SetActive(true);
+                headToggles[i].InitButton(GlobalData.currentCharacterSelection.headPieces[i]);
+            }
         }
         for (int i = 0; i < GlobalData.currentCharacterSelection.topPieces.Count; i++)
         {
             topToggles[i].gameObject.SetActive(true);
-            //topToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.topOptions[i]));
             topToggles[i].InitButton(GlobalData.currentCharacterSelection.topPieces[i]);
 
         }
         for (int i = 0; i < GlobalData.currentCharacterSelection.bottomPieces.Count; i++)
         {
             bottomToggles[i].gameObject.SetActive(true);
-            //bottomToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.bottomOptions[i]));
             bottomToggles[i].InitButton(GlobalData.currentCharacterSelection.bottomPieces[i]);
         }
         for (int i = 0; i < GlobalData.currentCharacterSelection.feetPieces.Count; i++)
         {
             feetToggles[i].gameObject.SetActive(true);
-            //feetToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.feetOptions[i]));
             feetToggles[i].InitButton(GlobalData.currentCharacterSelection.feetPieces[i]);
         }
 
         headToggles.Shuffle();
-        for (int i = 0; i < headToggles.Length; i++)
+        for (int i = 0; i < headToggles.Count; i++)
             headToggles[i].transform.SetSiblingIndex(i);
         topToggles.Shuffle();
         for (int i = 0; i < topToggles.Length; i++)
@@ -155,6 +162,13 @@ public class DressingUI : MonoBehaviour
         dressingManager.SetClothing(sender.clothingPiece);
         SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
 
+        CheckAndSetReadyButtonState();
+    }
+
+    void SetClothingPieceManual(ClothingPiece clothingPiece)
+    {
+        dressingManager.ClearClothingFromCategory(clothingPiece.Category);
+        dressingManager.SetClothing(clothingPiece);
         CheckAndSetReadyButtonState();
     }
 
