@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Custom/CharacterDataSO", fileName = "New Character Data")]
@@ -33,4 +34,13 @@ public class CharacterData
     public string[] feetOptions;
     public string[] otherClothes;
     public Color skinColor;
+    public string winFeedback;
+    public string loseFeedback;
+
+    //combined data test
+    public List<ClothingPiece> headPieces = new();
+    public List<ClothingPiece> topPieces = new();
+    public List<ClothingPiece> bottomPieces = new();
+    public List<ClothingPiece> feetPieces = new();
+    public List<ClothingPiece> otherPieces = new();
 }

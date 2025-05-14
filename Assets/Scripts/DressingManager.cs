@@ -10,6 +10,8 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 using UnityEngine.Analytics;
+using Crosstales.RTVoice.Model.Enum;
+using System.Reflection;
 
 [System.Serializable]
 public class DressingManager : MonoBehaviour
@@ -26,6 +28,7 @@ public class DressingManager : MonoBehaviour
     [SerializeField] List<Material> topMaterials = new();
     [SerializeField] List<Material> bottomMaterials = new();
     [SerializeField] List<Material> feetMaterials = new();
+    [SerializeField] List<Material> otherMaterials = new();
 
 
     public BodyPartRender[] maleSetup = new BodyPartRender[0];
@@ -37,6 +40,7 @@ public class DressingManager : MonoBehaviour
         ClearClothingFromCategory(Category.TOP);
         ClearClothingFromCategory(Category.BOTTOM);
         ClearClothingFromCategory(Category.FEET);
+        ClearClothingFromCategory(Category.OTHER);
 
         SetupCharacter();
 
@@ -68,6 +72,11 @@ public class DressingManager : MonoBehaviour
             }
             characterAnimator.runtimeAnimatorController = femaleController;
         }
+
+        for (int i = 0; i < GlobalData.currentCharacterSelection.otherPieces.Count; i++)
+        {
+            SetClothing(GlobalData.currentCharacterSelection.otherPieces[i]);
+        }
     }
 
     public void ClearClothingFromCategory(Category clothingCategory)
@@ -89,6 +98,10 @@ public class DressingManager : MonoBehaviour
             case Category.FEET:
                 for (int i = 0; i < feetMaterials.Count; i++)
                     feetMaterials[i].mainTexture = null;
+                break;
+            case Category.OTHER:
+                for (int i = 0; i < otherMaterials.Count; i++)
+                    otherMaterials[i].mainTexture = null;
                 break;
         }
     }
@@ -122,10 +135,52 @@ public class DressingManager : MonoBehaviour
             if (i < connection.textures.Count)
                 connection.femaleMaterials[i].mainTexture = connection.textures[i];
         }
-    }
-   
 
-    void PlayAnimation(string trigger)
+        switch (clothingPiece.Category)
+        {
+            case Category.HEAD:
+                PlayHeadAnimation();
+                break;
+            case Category.TOP:
+                PlayTopAnimation();
+                break;
+            case Category.BOTTOM:
+                PlayBottomAnimation();
+                break;
+            case Category.FEET:
+                PlayFeetAnimation();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void PlayHeadAnimation()
+    {
+        if (GlobalData.currentCharacterSelection.gender == Gender.FEMALE)
+            PlayAnimation("Hair Changed");
+    }
+
+    public void PlayTopAnimation()
+    {
+        if (GlobalData.currentCharacterSelection.gender == Gender.MALE)
+            characterAnimator.SetBool("Shirt Wipe", UnityEngine.Random.Range(0f, 1f) > .5f);
+        PlayAnimation("Shirt Changed");
+    }
+
+    public void PlayBottomAnimation()
+    {
+        if (GlobalData.currentCharacterSelection.gender == Gender.FEMALE)
+            characterAnimator.SetBool("Skirt", GlobalData.selectedBottomPiece != null && GlobalData.selectedBottomPiece.Tag.Contains("Skirt"));
+        PlayAnimation("Pants Changed");
+    }
+
+    public void PlayFeetAnimation()
+    {
+        PlayAnimation("Shoes Changed");
+    }
+
+    public void PlayAnimation(string trigger)
     {
         if (UnityEngine.Random.Range(0f, 1f) > clothingAnimationProbability || characterAnimator.GetBool("Playing Animation"))
             return;

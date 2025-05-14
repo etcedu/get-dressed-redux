@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddcf955f0d4eb34ea931c54f6a4f71c, type: 3}
   m_Name: CharacterRoster
   m_EditorClassIdentifier: 
-  charactersDataFile: {fileID: -402774707588977448, guid: c8fad94bed80d054cad89bca76a61b72,
+  charactersDataFile: {fileID: 1905001501106251880, guid: d4382a4b43bd68f48b12b4a607b1d774,
     type: 3}
   characters:
   - characterTag: Stanley
@@ -22,24 +22,165 @@ MonoBehaviour:
     description: Stanley has landed an interview at Stanford. They're highly selective,
       so the clothes he wears to class aren't going to cut it.
     jobAttireDescription: Business Casual
-    imageAssetPath: Icon_Dressed
-    headOptions:
-    - Male_Hair_03
-    topOptions:
-    - Male_Shirt_02
-    - Male_Shirt_03
-    - Male_Shirt_05
-    bottomOptions:
-    - Male_Pants_01
-    - Male_Pants_07
-    - Male_Pants_11
-    feetOptions:
-    - Male_Shoe_02
-    - Male_Shoe_06
-    - Male_Shoe_08
+    imageAssetPath: stanley
+    headOptions: []
+    topOptions: []
+    bottomOptions: []
+    feetOptions: []
     otherClothes:
     - none
     skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
+    winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
+      will help his chances of getting into Stanford!
+    loseFeedback: "This outfit isn't appropriate for this kind of interview. Help
+      Stanley make a more professional outfit for his college interview!\r"
+    headPieces:
+    - Tag: Stanley_Hair_Good
+      DisplayName: Clean Shave
+      GenderRole: 1
+      Category: 0
+      Tiers: 010000000200000003000000
+      Connection: {fileID: 11400000, guid: 49e87b10653298d4a959249b13841e86, type: 2}
+      FeedbackName: Clean Shave
+      GoodFeedback: Groomed<br>A clean shave is always a safe bet if you aren't sure
+        what to do about your facial hair.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_Hair_Bad
+      DisplayName: Scruffy Stubble
+      GenderRole: 1
+      Category: 0
+      Tiers: 010000000200000003000000
+      Connection: {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
+      FeedbackName: Scruffy Stubble
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>Stubble, especially if it's creeping down your neck,
+        might show that you didn't take the time to prepare.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Male_Shirt_02
+      DisplayName: Striped Button Up
+      GenderRole: 1
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
+      FeedbackName: Striped Button Up
+      GoodFeedback: Business Casual<br>Widely considered to be professional attire,
+        shows employers you understand the basics.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Shirt_03
+      DisplayName: Polo Shirt
+      GenderRole: 1
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: c294f86bdf861e34b842d0a17b0dcbb3, type: 2}
+      FeedbackName: Polo Shirt
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A sporty shirt that's often worn on the job, but is seen
+        as too informal for this interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Shirt_05
+      DisplayName: Black Graphic T-Shirt
+      GenderRole: 1
+      Category: 1
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
+      FeedbackName: Black Graphic T-Shirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
+        interviews like this!
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Male_Pants_04
+      DisplayName: Khaki Slacks
+      GenderRole: 1
+      Category: 2
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 2a90e17455e01b34288f8603b89493af, type: 2}
+      FeedbackName: Khaki Slacks
+      GoodFeedback: Business Casual<br>Signals that you understand the environment
+        by dressing with respect for the occasion.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Pants_07
+      DisplayName: Blue Jeans
+      GenderRole: 1
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
+      FeedbackName: Blue Jeans
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
+        occasion like this interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Pants_11
+      DisplayName: Chino Shorts
+      GenderRole: 1
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
+      FeedbackName: Chino Shorts
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>It's generally wise to never wear shorts to an
+        interview.
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Male_Shoe_02
+      DisplayName: Derby Shoes
+      GenderRole: 1
+      Category: 3
+      Tiers: 0200000003000000
+      Connection: {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
+      FeedbackName: Derby Shoes
+      GoodFeedback: Business Casual<br>A timeless style that shows  a sense of professionalism
+        and maturity without being overly formal.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Shoe_06
+      DisplayName: Basketball Shoes
+      GenderRole: 1
+      Category: 3
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
+      FeedbackName: Basketball Shoes
+      GoodFeedback: Good
+      OKFeedback: Casual<br>Comfy and versatile footwear, but doesn't show that you
+        understand interview expectations.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Shoe_08
+      DisplayName: High Top Sneakers
+      GenderRole: 1
+      Category: 3
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+      FeedbackName: High Top Sneakers
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<b> Are you going to the mall or to an interview?
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Stanley_Face
+      DisplayName: Face
+      GenderRole: 1
+      Category: 4
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
+      FeedbackName: Face
+      GoodFeedback: Face
+      OKFeedback: Face
+      BadFeedback: Face
+      scoreForCurrentCharacter: 0
   - characterTag: ben
     characterName: Benathan "Benny" Bennifer
     gender: 1
@@ -47,24 +188,141 @@ MonoBehaviour:
     description: Put some pants on for god's sake.
     jobAttireDescription: literally anything
     imageAssetPath: Appearance_App_Icon
-    headOptions:
-    - Male_Hat_01
-    - Male_Hair_02
-    topOptions:
-    - Male_Shirt_02
-    - Male_Shirt_04
-    - Male_Shirt_06
-    bottomOptions:
-    - Male_Pants_01
-    - Male_Pants_02
-    - Male_Pants_03
-    feetOptions:
-    - Male_Shoe_03
-    - Male_Shoe_04
-    - Male_Shoe_05
+    headOptions: []
+    topOptions: []
+    bottomOptions: []
+    feetOptions: []
     otherClothes:
     - none
     skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
+    winFeedback: Your fit is fly, Bennifer.
+    loseFeedback: "Too Bad\r"
+    headPieces:
+    - Tag: Male_Hair_07
+      DisplayName: Long Hair
+      GenderRole: 1
+      Category: 0
+      Tiers: 0100000002000000
+      Connection: {fileID: 11400000, guid: fb129aa761185204b93507ccff375114, type: 2}
+      FeedbackName: Long Hair
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Hat_01
+      DisplayName: Blue and White Ball Cap
+      GenderRole: 0
+      Category: 0
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
+      FeedbackName: Blue and White Ball Cap
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Male_Shirt_02
+      DisplayName: Striped Button Up
+      GenderRole: 1
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
+      FeedbackName: Striped Button Up
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Shirt_04
+      DisplayName: Striped Polo Shirt
+      GenderRole: 1
+      Category: 1
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 2b815150ac4d45d4eb5d8b2c9be567e6, type: 2}
+      FeedbackName: Striped Polo Shirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Shirt_06
+      DisplayName: Brown Sports Coat
+      GenderRole: 1
+      Category: 1
+      Tiers: 0200000003000000
+      Connection: {fileID: 11400000, guid: 6b42dd6edfcd8ff44b85ae967113df7a, type: 2}
+      FeedbackName: Brown Sports Coat
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Male_Pants_10
+      DisplayName: Black Shorts
+      GenderRole: 1
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 387ed3fef1352d3408215f2cdfb07d33, type: 2}
+      FeedbackName: Black Shorts
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Pants_11
+      DisplayName: Pleated Shorts
+      GenderRole: 1
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
+      FeedbackName: Pleated Shorts
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Pants_12
+      DisplayName: Jean Shorts
+      GenderRole: 1
+      Category: 2
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: fd1b9c8fa1dc7b241a9e1c22e8a946e1, type: 2}
+      FeedbackName: Jean Shorts
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Male_Shoe_06
+      DisplayName: White Basketball Shoes
+      GenderRole: 1
+      Category: 3
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
+      FeedbackName: White Basketball Shoes
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Male_Shoe_07
+      DisplayName: Red Sandals
+      GenderRole: 1
+      Category: 3
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: ce95b79e7ec82b148a8cf9bfa3a6ff29, type: 2}
+      FeedbackName: Red Sandals
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Male_Shoe_08
+      DisplayName: Black Hightop Sneakers - M
+      GenderRole: 1
+      Category: 3
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+      FeedbackName: Black Hightop Sneakers - M
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    otherPieces: []
   - characterTag: jenny
     characterName: Jenny
     gender: 2
@@ -72,21 +330,139 @@ MonoBehaviour:
     description: Jen
     jobAttireDescription: JENY
     imageAssetPath: Icon_Dressed
-    headOptions:
-    - Female_Hair_02
-    - Female_Hair_07
-    topOptions:
-    - Female_Shirt_07
-    - Female_Shirt_02
-    - Female_Shirt_03
-    bottomOptions:
-    - Female_Skirt_03
-    - Female_Pants_08
-    - Female_Pants_04
-    feetOptions:
-    - Female_Shoe_06
-    - Female_Shoe_07
-    - Female_Shoe_08
+    headOptions: []
+    topOptions: []
+    bottomOptions: []
+    feetOptions: []
     otherClothes:
     - none
     skinColor: {r: 0.0627451, g: 1, b: 0.5686275, a: 1}
+    winFeedback: Great outfit, Jenny
+    loseFeedback: "Nope\r"
+    headPieces:
+    - Tag: Female_Hair_06
+      DisplayName: Short Afro
+      GenderRole: 2
+      Category: 0
+      Tiers: 0100000002000000
+      Connection: {fileID: 11400000, guid: c89c94b19d71cc04096c1e5a2b130ec4, type: 2}
+      FeedbackName: Short Afro
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Hair_09
+      DisplayName: Medium Length Black Hair
+      GenderRole: 2
+      Category: 0
+      Tiers: 0100000002000000
+      Connection: {fileID: 11400000, guid: b59a2f63c5d636d499dbaed3db9f7640, type: 2}
+      FeedbackName: Medium Length Black Hair
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    topPieces:
+    - Tag: Female_Shirt_07
+      DisplayName: Striped Sleeveless Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: af04cf0e350858b40952e982f88ae4ea, type: 2}
+      FeedbackName: Striped Sleeveless Shirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Shirt_10
+      DisplayName: Red Collared Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 8e17e4dabc7cf1544bd3760439a1df1f, type: 2}
+      FeedbackName: Red Collared Shirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Shirt_15
+      DisplayName: Sports Jacket
+      GenderRole: 2
+      Category: 1
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: 8c843130e09d93e4da892fecc225d7af, type: 2}
+      FeedbackName: Sports Jacket
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    bottomPieces:
+    - Tag: Female_Pants_06
+      DisplayName: Grey Suit Pants - F
+      GenderRole: 2
+      Category: 2
+      Tiers: 0200000003000000
+      Connection: {fileID: 11400000, guid: 91e1c734263e19647b56d21491a4297d, type: 2}
+      FeedbackName: Grey Suit Pants - F
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Skirt_04
+      DisplayName: Gray Knee Length Skirt
+      GenderRole: 2
+      Category: 2
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 8d09d4fa08e0693439dd4c84879951b3, type: 2}
+      FeedbackName: Gray Knee Length Skirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Skirt_05
+      DisplayName: Pink Skirt
+      GenderRole: 2
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 0cf84c3d34b863541b8b17539b062c74, type: 2}
+      FeedbackName: Pink Skirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    feetPieces:
+    - Tag: Female_Shoe_03
+      DisplayName: Blue Cotton Flats
+      GenderRole: 2
+      Category: 3
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: bbc35c67d9910c24b9372d7ce8f17996, type: 2}
+      FeedbackName: Blue Cotton Flats
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Shoe_06
+      DisplayName: Wrapped Heels
+      GenderRole: 2
+      Category: 3
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 3c7f8cbb8f54b924f87477b6050a7c7b, type: 2}
+      FeedbackName: Wrapped Heels
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Shoe_07
+      DisplayName: Black Stripe Closed Toe Heels
+      GenderRole: 2
+      Category: 3
+      Tiers: 0200000003000000
+      Connection: {fileID: 11400000, guid: f9db39dfa7b7fba4bb87d058f053a0ff, type: 2}
+      FeedbackName: Black Stripe Closed Toe Heels
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    otherPieces: []
+  clothingCloset: {fileID: 11400000, guid: 1230d46fe777dc44883a0fe8cbb06be1, type: 2}

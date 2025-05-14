@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
-  m_Name: Female_Skirt_03
+  m_Name: Stanley_Hair_Bad
   m_EditorClassIdentifier: 
-  tag: Female_Skirt_03
-  icon: {fileID: 21300000, guid: f5f5f92e65f2f574d9fb12803e560280, type: 3}
+  tag: 
+  icon: {fileID: 21300000, guid: f4a89f0336dd5e444b7a8cc0babea862, type: 3}
   maleMaterials:
-  - {fileID: 2100000, guid: 232f65a8a6ff8cd488d9a8514ede3373, type: 2}
+  - {fileID: 2100000, guid: 77dfa93059ec19048afda6031dc1cdc9, type: 2}
   femaleMaterials:
-  - {fileID: 2100000, guid: ae4d9415f954b224eb7ca8c653cdd3b4, type: 2}
+  - {fileID: 2100000, guid: 7cb27802f1af95f418dc26986aa49d8b, type: 2}
+  - {fileID: 2100000, guid: 9059ba81ed5427848a94dd39bfa800d3, type: 2}
   textures:
-  - {fileID: 2800000, guid: 8250877a4573d0045866b1520ddabcf8, type: 3}
+  - {fileID: 2800000, guid: 3ff7338ac59b49c4588e1c82a5778f7d, type: 3}

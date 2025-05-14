@@ -60,7 +60,7 @@ public class SimpleFeedback : MonoBehaviour
 
     IEnumerator startFeedbackRoutine()
     {
-        animator.Play("MoveCharToFeedbackSpot");
+        animator.Play("MoveToFeedbackPos");
         yield return new WaitForSeconds(1.0f);
         feedbackCanvasObject.SetActive(true);
         yield return new WaitForSeconds(1.0f);
@@ -102,8 +102,8 @@ public class SimpleFeedback : MonoBehaviour
 
         starBarFill.fillAmount = 0;
 
-        fitOrNotHeader.text = fit ? fitTitle :unfitTitle;
-        fitOrNotText.text = fit ? fitText : unfitText;
+        fitOrNotHeader.text = fit ? fitTitle : unfitTitle;
+        fitOrNotText.text = fit ? GlobalData.currentCharacterSelection.winFeedback : GlobalData.currentCharacterSelection.loseFeedback;
 
         musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
 
@@ -123,8 +123,6 @@ public class SimpleFeedback : MonoBehaviour
             feedbackButtonTexts[uiIndex].text = feedbackButtonLabelOptions[score - 1];
             feedbackButtonFaces[uiIndex].color = scoreColors[score - 1];
         }
-
-        //AudioManager.Instance.SpeakWithRTVoice(hiredOrNotHeader.GetParsedText() + ": " + hiredOrNotText.GetParsedText(), "feedbackVoice
     }
 
 

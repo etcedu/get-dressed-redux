@@ -514,6 +514,9 @@ MonoBehaviour:
   feetMaterials:
   - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   - {fileID: 2100000, guid: 1d28c683402d42f498e561ca06239d2e, type: 2}
+  otherMaterials:
+  - {fileID: 2100000, guid: 404ca8f9b7b374746ae9ea94e89a87e5, type: 2}
+  - {fileID: 2100000, guid: f43597c5cb1a2664fb18a10f657a553c, type: 2}
   maleSetup:
   - renderer: {fileID: 355605727}
     material: {fileID: 2100000, guid: 6f4874eb60198164789257e19fbbdb96, type: 2}
@@ -4481,6 +4484,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13700098, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f43597c5cb1a2664fb18a10f657a553c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5282,7 +5289,7 @@ Transform:
   m_GameObject: {fileID: 490114223}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0.33, y: -1.72, z: -1}
+  m_LocalPosition: {x: 0.153, y: -1.72, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8323,11 +8330,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackCanvasObject: {fileID: 5162633671031366833}
-  animator: {fileID: 490114225}
+  animator: {fileID: 1777954343}
   charAnimator: {fileID: 469393685}
-  fitTitle: YOU'RE FIT!
+  fitTitle: GREAT OUTFIT!
   fitText: nice drip brah
-  unfitTitle: YOU'RE UNFIT...
+  unfitTitle: UH OH
   unfitText: broke lookin' fool
   fitOrNotHeader: {fileID: 1665322958}
   fitOrNotText: {fileID: 820588146}
@@ -15486,6 +15493,7 @@ GameObject:
   - component: {fileID: 1777954335}
   - component: {fileID: 1777954332}
   - component: {fileID: 1777954331}
+  - component: {fileID: 1777954343}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -15684,7 +15692,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.4
+  orthographic size: 2.64
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -15715,6 +15723,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1777954343
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777954330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4648cb3b5a197e44dbdd90d435495065, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1781060835
 GameObject:
   m_ObjectHideFlags: 0

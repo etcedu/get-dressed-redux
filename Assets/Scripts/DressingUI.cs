@@ -2,6 +2,7 @@ using SimcoachGames.EventRecorder;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -56,25 +57,30 @@ public class DressingUI : MonoBehaviour
             feetToggles[i].gameObject.SetActive(false);
 
 
-        for (int i = 0; i < GlobalData.currentCharacterSelection.headOptions.Length; i++)
+        for (int i = 0; i < GlobalData.currentCharacterSelection.headPieces.Count; i++)
         {
             headToggles[i].gameObject.SetActive(true);
-            headToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.headOptions[i]));
+            //headToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.headOptions[i]));
+            headToggles[i].InitButton(GlobalData.currentCharacterSelection.headPieces[i]);
         }
-        for (int i = 0; i < GlobalData.currentCharacterSelection.topOptions.Length; i++)
+        for (int i = 0; i < GlobalData.currentCharacterSelection.topPieces.Count; i++)
         {
-            topToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.topOptions[i]));
             topToggles[i].gameObject.SetActive(true);
+            //topToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.topOptions[i]));
+            topToggles[i].InitButton(GlobalData.currentCharacterSelection.topPieces[i]);
+
         }
-        for (int i = 0; i < GlobalData.currentCharacterSelection.bottomOptions.Length; i++)
+        for (int i = 0; i < GlobalData.currentCharacterSelection.bottomPieces.Count; i++)
         {
-            bottomToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.bottomOptions[i]));
             bottomToggles[i].gameObject.SetActive(true);
+            //bottomToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.bottomOptions[i]));
+            bottomToggles[i].InitButton(GlobalData.currentCharacterSelection.bottomPieces[i]);
         }
-        for (int i = 0; i < GlobalData.currentCharacterSelection.feetOptions.Length; i++)
+        for (int i = 0; i < GlobalData.currentCharacterSelection.feetPieces.Count; i++)
         {
-            feetToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.feetOptions[i]));
             feetToggles[i].gameObject.SetActive(true);
+            //feetToggles[i].InitButton(GlobalData.GetPieceOfClothing(GlobalData.currentCharacterSelection.feetOptions[i]));
+            feetToggles[i].InitButton(GlobalData.currentCharacterSelection.feetPieces[i]);
         }
 
         headToggles.Shuffle();
