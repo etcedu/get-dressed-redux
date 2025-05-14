@@ -153,7 +153,7 @@ public class CharacterRoster : ScriptableObject
                     if (Enum.TryParse(tier.ToUpper().Replace(' ', '_'), out Tier tierParsed))
                         c.Tiers.Add(tierParsed);
                     else
-                        Debug.LogError($"Error parsing category {tier} on line {i} ");
+                        Debug.LogError($"No tier found for \"{tier}\" on line {i} ");
                 }
 
                 c.GoodFeedback = fields[7];

@@ -29,7 +29,7 @@ MonoBehaviour:
     feetOptions: []
     otherClothes:
     - none
-    skinColor: {r: 1, g: 0.84705883, b: 0.90588236, a: 1}
+    skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
     winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
       will help his chances of getting into Stanford!
     loseFeedback: "This outfit isn't appropriate for this kind of interview. Help
@@ -171,15 +171,15 @@ MonoBehaviour:
       scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: Stanley_Face
-      DisplayName: Face
+      DisplayName: none
       GenderRole: 1
       Category: 4
-      Tiers: 00000000
+      Tiers: 
       Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
-      FeedbackName: Face
-      GoodFeedback: Face
-      OKFeedback: Face
-      BadFeedback: Face
+      FeedbackName: none
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
       scoreForCurrentCharacter: 0
   - characterTag: ben
     characterName: Benathan "Benny" Bennifer

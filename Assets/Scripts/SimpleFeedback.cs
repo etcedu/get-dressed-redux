@@ -98,7 +98,7 @@ public class SimpleFeedback : MonoBehaviour
     void SetupTotals()
     {
         float scorePercentage = GlobalData.GetOverallScore();
-        bool fit = scorePercentage >= 0.8f;
+        bool fit = scorePercentage >= 1.0f;
 
         starBarFill.fillAmount = 0;
 
