@@ -70,3 +70,19 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Models/Textures/rock_normal_map.png
+Assets/Models/Textures/rock_normal_map.png.meta
+Assets/Models/Textures/rock_roughness_map.png
+Assets/Models/Textures/rock_roughness_map.png.meta
+Assets/Models/Textures/Tile.png
+Assets/Models/Textures/Tile.png.meta
+Assets/Scenes/dev/ClothingTest.unity
+Assets/Scenes/dev/ClothingTest.unity.meta
+Assets/Scenes/dev/test.unity
+Assets/Scenes/dev/test.unity.meta
+Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffHeight.png.meta
+Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffNormals.png.meta
+Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffHeight.png.meta
+Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffNormals.png.meta
+Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffNormals.png.meta
+Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffHeight.png.meta
