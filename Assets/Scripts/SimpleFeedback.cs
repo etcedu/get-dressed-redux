@@ -101,6 +101,10 @@ public class SimpleFeedback : MonoBehaviour
         float scorePercentage = GlobalData.GetOverallScore();
         bool fit = scorePercentage >= 1.0f;
 
+        if (GlobalData.isTutorial && fit)
+            GlobalData.SetTutorialState(true);
+        GlobalData.SetCharacterCompleted(GlobalData.currentCharacterSelection.characterTag, fit);
+
         starBarFill.fillAmount = 0;
 
         fitOrNotHeader.text = fit ? fitTitle : unfitTitle;
@@ -132,9 +136,8 @@ public class SimpleFeedback : MonoBehaviour
 
     public void LoadMainMenu()
     {
-
         SimpleRTVoiceExample.Instance.StopSpeech();
-        SceneLoader.LoadScene("MainMenu");
+        SceneLoader.LoadScene("LevelSelection");
     }
 
     public void ReadFeedback(TMP_Text textObject)

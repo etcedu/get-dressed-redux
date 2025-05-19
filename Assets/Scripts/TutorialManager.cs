@@ -6,6 +6,7 @@ using UnityEditor.MPE;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class TutorialStep
@@ -14,6 +15,7 @@ public class TutorialStep
     public string message;
     public string hintFingerTag; //optional
     public GameObject limitInteractionToThis; //optional
+    public List<Button> lockedButtons; //optional
     public UnityEvent onStepStartEvent;
     public UnityEvent onStepFinishEvent;
 }
@@ -23,8 +25,15 @@ public class TutorialManager : MonoBehaviour
     public List<TutorialStep> steps = new List<TutorialStep>();
     int currentStepIndex;
     TutorialStep currentStep;
+    HintFingerManager hintFingerManager;
 
     [SerializeField] TutorialPanel tutorialPanel;
+    [SerializeField] float hintFingerDelayDefault = 3.0f;
+
+    private void Start()
+    {
+        hintFingerManager = FindObjectOfType<HintFingerManager>();
+    }
 
     [ContextMenu("Start Tutorial")]
     public void StartTutorial()
@@ -36,28 +45,63 @@ public class TutorialManager : MonoBehaviour
 
     void StartStep(TutorialStep step)
     {        
+        if (hintFingerManager == null)            
+            hintFingerManager = FindObjectOfType<HintFingerManager>();
+
         currentStep = step;
 
         step.onStepStartEvent.Invoke();
         if (!string.IsNullOrEmpty(step.message))
             tutorialPanel.Show(step.message);
 
+
         if (step.limitInteractionToThis != null)
         {
             EventSystem.current.limitInputToThisObject = step.limitInteractionToThis;
-            EventSystem.current.eventOnLimitedInputInteraction += EndStep;
+            //EventSystem.current.eventOnLimitedInputInteraction += EndStep;
+
+            Debug.Log("ADded listener");
+            step.limitInteractionToThis.GetComponentInChildren<Button>()?.onClick.AddListener(EndStep);
+            step.limitInteractionToThis.GetComponentInChildren<Toggle>()?.onValueChanged.AddListener(EndStep);
+        }
+
+        if (step.lockedButtons != null)
+        {
+            foreach (Button b in step.lockedButtons)
+                b.interactable = false;
         }
         
         if (!string.IsNullOrEmpty(step.hintFingerTag))
-            HintFingerManager.ShowHintFinger(step.hintFingerTag);
+            hintFingerManager.ShowHintOnTimer(step.hintFingerTag, hintFingerDelayDefault);
+    }
+
+    void EndStep(bool _)
+    {
+        EndStep();
     }
 
     void EndStep()
     {
-        HintFingerManager.HideHintFinger(currentStep.hintFingerTag);
+        if (hintFingerManager == null)
+            hintFingerManager = FindObjectOfType<HintFingerManager>();
+
+        hintFingerManager.HideHintFinger(currentStep.hintFingerTag);
         currentStep.onStepFinishEvent.Invoke();
+
+        if (currentStep.limitInteractionToThis != null)
+        {
+            currentStep.limitInteractionToThis.GetComponentInChildren<Button>()?.onClick.RemoveListener(EndStep);
+            currentStep.limitInteractionToThis.GetComponentInChildren<Toggle>()?.onValueChanged.RemoveListener(EndStep);
+        }
+
         EventSystem.current.limitInputToThisObject = null;
         EventSystem.current.eventOnLimitedInputInteraction -= EndStep;
+        if (currentStep.lockedButtons != null)
+        {
+            foreach (Button b in currentStep.lockedButtons)
+                b.interactable = true;
+        }
+        tutorialPanel.Hide();
 
         currentStepIndex++;
         if (currentStepIndex < steps.Count)

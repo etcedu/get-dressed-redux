@@ -8,11 +8,6 @@ public class HintFinger : MonoBehaviour
     [SerializeField] GameObject linkedObject;
     UITweener tween;
 
-    void Start()
-    {
-        tween = GetComponent<UITweener>();
-    }
-
     private void Update()
     {
         if (linkedObject != null)
@@ -23,10 +18,14 @@ public class HintFinger : MonoBehaviour
 
     public void Show()
     {
+        if (!tween)
+            tween = GetComponent<UITweener>();
         tween?.PlayForward();
     }
     public void Hide()
     {
+        if (!tween)
+            tween = GetComponent<UITweener>();
         tween?.PlayReverse();
     }
 }

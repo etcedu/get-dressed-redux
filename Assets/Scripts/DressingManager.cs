@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System.Collections;
+
 #if UNITY_EDITOR
 #endif
 using System.Collections.Generic;
@@ -29,7 +31,7 @@ public class DressingManager : MonoBehaviour
     [SerializeField] SoundVolumePair[] hairSounds;
     SFXManager sfxManager;
 
-    void Start()
+    IEnumerator Start()
     {
         sfxManager = FindObjectOfType<SFXManager>();
 
@@ -40,8 +42,12 @@ public class DressingManager : MonoBehaviour
         ClearClothingFromCategory(Category.OTHER);
 
         SetupCharacter();
-
         dressingUI.Init();
+
+        yield return new WaitForSeconds(1.45f);
+
+        if (GlobalData.isTutorial)
+            FindObjectOfType<TutorialManager>()?.StartTutorial();
     }
 
     void SetupCharacter()

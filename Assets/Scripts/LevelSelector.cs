@@ -19,5 +19,10 @@ public class LevelSelector : MonoBehaviour
         SceneLoader.LoadScene("MainMenu");
     }
 
-
+    [ExecuteInEditMode]
+    [ContextMenu("Toggle Tutorial Completion")]
+    public void ToggleTutorialCompletiong()
+    {
+        GlobalData.SetTutorialState(!GlobalData.GetTutorialFinished());
+    }
 }

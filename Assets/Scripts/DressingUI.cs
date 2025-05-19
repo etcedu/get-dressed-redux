@@ -13,6 +13,7 @@ public class DressingUI : MonoBehaviour
     [SerializeField] Animator uiAnimator;
     [SerializeField] GameObject dressingCanvasObject;
 
+    [SerializeField] GameObject infoPanel;
     [SerializeField] TMP_Text nameLabel;
     [SerializeField] TMP_Text positionLabel;
     [SerializeField] TMP_Text descriptionLabel;
@@ -39,6 +40,8 @@ public class DressingUI : MonoBehaviour
         nameLabel.text = GlobalData.currentCharacterSelection.characterName;
         positionLabel.text = GlobalData.currentCharacterSelection.jobTitle;
         descriptionLabel.text = GlobalData.currentCharacterSelection.description;
+        if (GlobalData.isTutorial)
+            infoPanel.SetActive(false);
 
         CheckAndSetReadyButtonState();
         SetUpClothingButtons();
@@ -47,6 +50,11 @@ public class DressingUI : MonoBehaviour
         //set bad head piece to start with
         headToggles.Find(x => x.clothingPiece == GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count-1]).toggle.SetIsOnWithoutNotify(true);
         SetClothingPieceManual(GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count - 1]);
+    }
+
+    public void EnableInfoPanel()
+    {
+        infoPanel.SetActive(true);
     }
 
     void SetUpClothingButtons()
@@ -121,28 +129,28 @@ public class DressingUI : MonoBehaviour
         switch (categoryParsed)
         {
             case Category.HEAD:
-                if (!headButtonsOpen)
+                if (!headButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Head");
 
                 uiAnimator.CrossFade(headButtonsOpen ? "CloseHeadButtons" : "OpenHeadButtons", 0.2f);
                 uiAnimator.SetBool("HeadButtonsOpen", !headButtonsOpen);
                 break;
             case Category.TOP:
-                if (!topButtonsOpen)
+                if (!topButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Top");
 
                 uiAnimator.CrossFade(topButtonsOpen ? "CloseTopButtons" : "OpenTopButtons", 0.2f);
                 uiAnimator.SetBool("TopButtonsOpen", !topButtonsOpen);
                 break;
             case Category.BOTTOM:
-                if (!bottomButtonsOpen)
+                if (!bottomButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Bottom");
 
                 uiAnimator.CrossFade(bottomButtonsOpen ? "CloseBottomButtons" : "OpenBottomButtons", 0.2f);
                 uiAnimator.SetBool("BottomButtonsOpen", !bottomButtonsOpen);
                 break;
             case Category.FEET:
-                if (!feetButtonsOpen)
+                if (!feetButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Feet");
 
                 uiAnimator.CrossFade(feetButtonsOpen ? "CloseFeetButtons" : "OpenFeetButtons", 0.2f);
@@ -164,7 +172,9 @@ public class DressingUI : MonoBehaviour
             dressingManager.PlayHairSounds();
         else
             dressingManager.PlayClothSound();
-        SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
+        
+        if (!GlobalData.isTutorial)
+            SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
 
         CheckAndSetReadyButtonState();
     }
