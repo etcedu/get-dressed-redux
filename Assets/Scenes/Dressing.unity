@@ -166,6 +166,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Options
       objectReference: {fileID: 0}
+    - target: {fileID: 1425812569213429724, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 1889690881918568638, guid: 79273e7771c3ef147bcbc8dbde70cb94,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -699,6 +704,16 @@ MonoBehaviour:
     material: {fileID: 2100000, guid: e722fdf5bf5924646a84f287336021fc, type: 2}
   - renderer: {fileID: 355605682}
     material: {fileID: 2100000, guid: a6d6e84ed0f3b2542b7b284c3d7fc8fc, type: 2}
+  clothSounds:
+  - {fileID: 11400000, guid: 71190951660e0e844b5d00dfc3634d5c, type: 2}
+  - {fileID: 11400000, guid: 1d6a74001821c2e4e952edce4bc384ce, type: 2}
+  - {fileID: 11400000, guid: 82b700f37f6ea934fa95f49b6d1989c2, type: 2}
+  - {fileID: 11400000, guid: d2fe13f56b282824e853fc378a8e09ea, type: 2}
+  - {fileID: 11400000, guid: 7047858d364ca3243a1050bb20995be3, type: 2}
+  hairSounds:
+  - {fileID: 11400000, guid: 5b3e83623ea35c541b891662e5eba0b6, type: 2}
+  - {fileID: 11400000, guid: 796c370646f5e7a4e870ac702dd939c1, type: 2}
+  - {fileID: 11400000, guid: db2bcd224199b1e47b9970046dc0e48a, type: 2}
 --- !u!4 &13129403
 Transform:
   m_ObjectHideFlags: 0

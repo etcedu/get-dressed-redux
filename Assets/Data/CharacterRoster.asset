@@ -361,7 +361,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Female_Shirt_07
       DisplayName: Striped Sleeveless Shirt
@@ -384,7 +384,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Female_Shirt_15
       DisplayName: Sports Jacket
       GenderRole: 2
@@ -395,7 +395,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: Female_Pants_06
       DisplayName: Grey Suit Pants - F
@@ -418,7 +418,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Female_Skirt_05
       DisplayName: Pink Skirt
       GenderRole: 2
@@ -429,7 +429,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Female_Shoe_03
       DisplayName: Blue Cotton Flats
@@ -452,7 +452,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Female_Shoe_07
       DisplayName: Black Stripe Closed Toe Heels
       GenderRole: 2
@@ -463,7 +463,7 @@ MonoBehaviour:
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces: []
   connections:
   - {fileID: 11400000, guid: c03d845ee3d25784f9227d3f540f94c9, type: 2}

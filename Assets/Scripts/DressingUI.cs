@@ -160,6 +160,10 @@ public class DressingUI : MonoBehaviour
 
         dressingManager.ClearClothingFromCategory(sender.clothingPiece.Category);
         dressingManager.SetClothing(sender.clothingPiece);
+        if (sender.clothingPiece.Category == Category.HEAD)
+            dressingManager.PlayHairSounds();
+        else
+            dressingManager.PlayClothSound();
         SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
 
         CheckAndSetReadyButtonState();

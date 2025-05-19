@@ -1319,6 +1319,10 @@ MonoBehaviour:
   scroller: {fileID: 666912579}
   cellPrefab: {fileID: 5330224153193493941, guid: 6171c6d497db2a241a6889b7017ba42a,
     type: 3}
+  pageChangeSounds:
+  - {fileID: 11400000, guid: 5e7e7494b938e7141b5fb2c7e2f1a127, type: 2}
+  - {fileID: 11400000, guid: 659a30c24b7339f46a70698758121b1b, type: 2}
+  - {fileID: 11400000, guid: 6542d48869d26c145aa058250d163dbc, type: 2}
   currentCell: 0
 --- !u!114 &666912579
 MonoBehaviour:

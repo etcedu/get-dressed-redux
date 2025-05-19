@@ -8,6 +8,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class SFXManager : MonoBehaviour
 {
+    public static SFXManager instance;
+
     [SerializeField] AudioMixer audioMixer;
     
     public static bool SFXIsOn { get; private set; } = true;
@@ -41,6 +43,8 @@ public class SFXManager : MonoBehaviour
         
         //Update instances
         OnSFXSettingChanged += SettingChanged;
+
+        instance = this;
     }
 
     private void Start()
@@ -123,6 +127,14 @@ public class SFXManager : MonoBehaviour
             return;
 
         audioSource.PlayOneShot(audioClip);
+    }
+
+    public void PlayOneShot(SoundVolumePair soundVolumePair)
+    {
+        if (!SFXIsOn || soundVolumePair.clip == null)
+            return;
+
+        audioSource.PlayOneShot(soundVolumePair.clip, soundVolumePair.volume);
     }
 
     #region DynamicFunctionsForSliders

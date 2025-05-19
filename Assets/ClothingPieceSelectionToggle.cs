@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ClothingPieceSelectionToggle : MonoBehaviour
 {
     [SerializeField] Image icon;
+    [SerializeField] Image shadowIcon;
     public ClothingPiece clothingPiece;
     public Toggle toggle;
 
@@ -13,5 +14,6 @@ public class ClothingPieceSelectionToggle : MonoBehaviour
     {
         clothingPiece = _clothingPiece;
         icon.sprite = clothingPiece.Connection.icon;
+        shadowIcon.sprite = clothingPiece.Connection.icon;
     }
 }

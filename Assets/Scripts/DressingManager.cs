@@ -1,17 +1,8 @@
 using System;
 using UnityEngine;
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine.UI;
-using UnityEngine.Events;
-using TMPro;
-using UnityEngine.Analytics;
-using Crosstales.RTVoice.Model.Enum;
-using System.Reflection;
 
 [System.Serializable]
 public class DressingManager : MonoBehaviour
@@ -34,8 +25,14 @@ public class DressingManager : MonoBehaviour
     public BodyPartRender[] maleSetup = new BodyPartRender[0];
     public BodyPartRender[] femaleSetup = new BodyPartRender[0];
 
+    [SerializeField] SoundVolumePair[] clothSounds;
+    [SerializeField] SoundVolumePair[] hairSounds;
+    SFXManager sfxManager;
+
     void Start()
     {
+        sfxManager = FindObjectOfType<SFXManager>();
+
         ClearClothingFromCategory(Category.HEAD);
         ClearClothingFromCategory(Category.TOP);
         ClearClothingFromCategory(Category.BOTTOM);
@@ -187,6 +184,16 @@ public class DressingManager : MonoBehaviour
 
         characterAnimator.SetBool("Playing Animation", true);
         characterAnimator.SetTrigger(trigger);
+    }
+
+    public void PlayClothSound()
+    {
+        sfxManager?.PlayOneShot(clothSounds[UnityEngine.Random.Range(0, clothSounds.Length)]);
+    }
+
+    public void PlayHairSounds()
+    {
+        sfxManager?.PlayOneShot(hairSounds[UnityEngine.Random.Range(0, hairSounds.Length)]);
     }
 
     // Evaluate the clothing selection

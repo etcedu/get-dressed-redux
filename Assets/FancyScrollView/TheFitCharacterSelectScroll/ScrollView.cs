@@ -15,6 +15,7 @@ namespace FancyScrollView.TheFitCharacterSelect
     {
         [SerializeField] Scroller scroller = default;
         [SerializeField] GameObject cellPrefab = default;
+        [SerializeField] SoundVolumePair[] pageChangeSounds;
 
         Action<int> onSelectionChanged;
         public int currentCell;
@@ -39,6 +40,8 @@ namespace FancyScrollView.TheFitCharacterSelect
             
             Refresh();
             onSelectionChanged?.Invoke(index);
+
+            SFXManager.instance.PlayOneShot(pageChangeSounds[UnityEngine.Random.Range(0, pageChangeSounds.Length)]);
         }
 
         public void UpdateData(IList<CharacterData> items)
