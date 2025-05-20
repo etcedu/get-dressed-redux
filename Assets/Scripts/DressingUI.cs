@@ -163,29 +163,40 @@ public class DressingUI : MonoBehaviour
 
     public void ClothingToggle_OnClick(ClothingPieceSelectionToggle sender)
     {
-        if (!init)
+        if (!init || !sender.toggle.isOn)
             return;
+
+        Debug.Log($"Here from {sender.clothingPiece.DisplayName}");
 
         dressingManager.ClearClothingFromCategory(sender.clothingPiece.Category);
 
-        //if currently wearing dress, clear top and bottom before setting new pieces
-        if (GlobalData.selectedTopPiece?.Category == Category.DRESS)
+        if (sender.clothingPiece.Category == Category.DRESS)
         {
-            if (sender.clothingPiece.Category == Category.TOP)
+            dressingManager.ClearClothingFromCategory(Category.BOTTOM);
+            GlobalData.selectedBottomPiece = null;
+            for (int i = 0; i < bottomToggles.Length; i++)
+                bottomToggles[i].toggle.SetIsOnWithoutNotify(false);
+        }
+        else if (sender.clothingPiece.Category == Category.TOP) 
+        {
+            if (GlobalData.selectedTopPiece?.Category == Category.DRESS)
             {
                 dressingManager.ClearClothingFromCategory(Category.BOTTOM);
                 GlobalData.selectedBottomPiece = null;
                 for (int i = 0; i < bottomToggles.Length; i++)
                     bottomToggles[i].toggle.SetIsOnWithoutNotify(false);
             }
-            else if (sender.clothingPiece.Category == Category.BOTTOM)
+        }
+        else if (sender.clothingPiece.Category == Category.BOTTOM)
+        {
+            if (GlobalData.selectedTopPiece?.Category == Category.DRESS)
             {
                 dressingManager.ClearClothingFromCategory(Category.TOP);
                 GlobalData.selectedTopPiece = null;
                 for (int i = 0; i < topToggles.Length; i++)
                     topToggles[i].toggle.SetIsOnWithoutNotify(false);
             }
-        }        
+        }
 
         dressingManager.SetClothing(sender.clothingPiece);
 

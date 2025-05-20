@@ -15,6 +15,137 @@ MonoBehaviour:
   charactersDataFile: {fileID: 1905001501106251880, guid: d4382a4b43bd68f48b12b4a607b1d774,
     type: 3}
   characters:
+  - characterTag: jenny
+    characterName: Jenny
+    gender: 2
+    jobTitle: Jennnnny
+    description: Jen
+    jobAttireDescription: JENY
+    imageAssetPath: Icon_Dressed
+    headOptions: []
+    topOptions: []
+    bottomOptions: []
+    feetOptions: []
+    otherClothes:
+    - none
+    skinColor: {r: 0.0627451, g: 1, b: 0.5686275, a: 1}
+    winFeedback: Great outfit, Jenny
+    loseFeedback: "Nope\r"
+    headPieces:
+    - Tag: Female_Hair_06
+      DisplayName: Short Afro
+      GenderRole: 2
+      Category: 0
+      Tiers: 0100000002000000
+      Connection: {fileID: 11400000, guid: c89c94b19d71cc04096c1e5a2b130ec4, type: 2}
+      FeedbackName: Short Afro
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Hair_09
+      DisplayName: Medium Length Black Hair
+      GenderRole: 2
+      Category: 0
+      Tiers: 0100000002000000
+      Connection: {fileID: 11400000, guid: b59a2f63c5d636d499dbaed3db9f7640, type: 2}
+      FeedbackName: Medium Length Black Hair
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Female_Dress
+      DisplayName: Dress
+      GenderRole: 2
+      Category: 5
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: cad7ff403652b364091b0616720e1c96, type: 2}
+      FeedbackName: Dress
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Shirt_10
+      DisplayName: Red Collared Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 8e17e4dabc7cf1544bd3760439a1df1f, type: 2}
+      FeedbackName: Red Collared Shirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Female_Shirt_15
+      DisplayName: Sports Jacket
+      GenderRole: 2
+      Category: 1
+      Tiers: 00000000
+      Connection: {fileID: 11400000, guid: 8c843130e09d93e4da892fecc225d7af, type: 2}
+      FeedbackName: Sports Jacket
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Female_Skirt_04
+      DisplayName: Gray Knee Length Skirt
+      GenderRole: 2
+      Category: 2
+      Tiers: 02000000
+      Connection: {fileID: 11400000, guid: 8d09d4fa08e0693439dd4c84879951b3, type: 2}
+      FeedbackName: Gray Knee Length Skirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Skirt_05
+      DisplayName: Pink Skirt
+      GenderRole: 2
+      Category: 2
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 0cf84c3d34b863541b8b17539b062c74, type: 2}
+      FeedbackName: Pink Skirt
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Female_Shoe_03
+      DisplayName: Blue Cotton Flats
+      GenderRole: 2
+      Category: 3
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: bbc35c67d9910c24b9372d7ce8f17996, type: 2}
+      FeedbackName: Blue Cotton Flats
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Female_Shoe_06
+      DisplayName: Wrapped Heels
+      GenderRole: 2
+      Category: 3
+      Tiers: 01000000
+      Connection: {fileID: 11400000, guid: 3c7f8cbb8f54b924f87477b6050a7c7b, type: 2}
+      FeedbackName: Wrapped Heels
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Female_Shoe_07
+      DisplayName: Black Stripe Closed Toe Heels
+      GenderRole: 2
+      Category: 3
+      Tiers: 0200000003000000
+      Connection: {fileID: 11400000, guid: f9db39dfa7b7fba4bb87d058f053a0ff, type: 2}
+      FeedbackName: Black Stripe Closed Toe Heels
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    otherPieces: []
   - characterTag: ben
     characterName: Benathan "Benny" Bennifer
     gender: 1
@@ -152,137 +283,6 @@ MonoBehaviour:
       Tiers: 00000000
       Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
       FeedbackName: Black Hightop Sneakers - M
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    otherPieces: []
-  - characterTag: jenny
-    characterName: Jenny
-    gender: 2
-    jobTitle: Jennnnny
-    description: Jen
-    jobAttireDescription: JENY
-    imageAssetPath: Icon_Dressed
-    headOptions: []
-    topOptions: []
-    bottomOptions: []
-    feetOptions: []
-    otherClothes:
-    - none
-    skinColor: {r: 0.0627451, g: 1, b: 0.5686275, a: 1}
-    winFeedback: Great outfit, Jenny
-    loseFeedback: "Nope\r"
-    headPieces:
-    - Tag: Female_Hair_06
-      DisplayName: Short Afro
-      GenderRole: 2
-      Category: 0
-      Tiers: 0100000002000000
-      Connection: {fileID: 11400000, guid: c89c94b19d71cc04096c1e5a2b130ec4, type: 2}
-      FeedbackName: Short Afro
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Female_Hair_09
-      DisplayName: Medium Length Black Hair
-      GenderRole: 2
-      Category: 0
-      Tiers: 0100000002000000
-      Connection: {fileID: 11400000, guid: b59a2f63c5d636d499dbaed3db9f7640, type: 2}
-      FeedbackName: Medium Length Black Hair
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: Female_Dress
-      DisplayName: Dress
-      GenderRole: 2
-      Category: 5
-      Tiers: 02000000
-      Connection: {fileID: 11400000, guid: cad7ff403652b364091b0616720e1c96, type: 2}
-      FeedbackName: Dress
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Female_Shirt_10
-      DisplayName: Red Collared Shirt
-      GenderRole: 2
-      Category: 1
-      Tiers: 02000000
-      Connection: {fileID: 11400000, guid: 8e17e4dabc7cf1544bd3760439a1df1f, type: 2}
-      FeedbackName: Red Collared Shirt
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Female_Shirt_15
-      DisplayName: Sports Jacket
-      GenderRole: 2
-      Category: 1
-      Tiers: 00000000
-      Connection: {fileID: 11400000, guid: 8c843130e09d93e4da892fecc225d7af, type: 2}
-      FeedbackName: Sports Jacket
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: Female_Skirt_04
-      DisplayName: Gray Knee Length Skirt
-      GenderRole: 2
-      Category: 2
-      Tiers: 02000000
-      Connection: {fileID: 11400000, guid: 8d09d4fa08e0693439dd4c84879951b3, type: 2}
-      FeedbackName: Gray Knee Length Skirt
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Female_Skirt_05
-      DisplayName: Pink Skirt
-      GenderRole: 2
-      Category: 2
-      Tiers: 01000000
-      Connection: {fileID: 11400000, guid: 0cf84c3d34b863541b8b17539b062c74, type: 2}
-      FeedbackName: Pink Skirt
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: Female_Shoe_03
-      DisplayName: Blue Cotton Flats
-      GenderRole: 2
-      Category: 3
-      Tiers: 01000000
-      Connection: {fileID: 11400000, guid: bbc35c67d9910c24b9372d7ce8f17996, type: 2}
-      FeedbackName: Blue Cotton Flats
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Female_Shoe_06
-      DisplayName: Wrapped Heels
-      GenderRole: 2
-      Category: 3
-      Tiers: 01000000
-      Connection: {fileID: 11400000, guid: 3c7f8cbb8f54b924f87477b6050a7c7b, type: 2}
-      FeedbackName: Wrapped Heels
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Female_Shoe_07
-      DisplayName: Black Stripe Closed Toe Heels
-      GenderRole: 2
-      Category: 3
-      Tiers: 0200000003000000
-      Connection: {fileID: 11400000, guid: f9db39dfa7b7fba4bb87d058f053a0ff, type: 2}
-      FeedbackName: Black Stripe Closed Toe Heels
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Bad
