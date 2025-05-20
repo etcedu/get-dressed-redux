@@ -112,7 +112,7 @@ public class CharacterRoster : ScriptableObject
 
                 if (c.Category == Category.HEAD)
                     characters[characters.Count - 1].headPieces.Add(c);
-                else if (c.Category == Category.TOP)
+                else if (c.Category == Category.TOP || c.Category == Category.DRESS)
                     characters[characters.Count - 1].topPieces.Add(c);
                 else if (c.Category == Category.BOTTOM)
                     characters[characters.Count - 1].bottomPieces.Add(c);

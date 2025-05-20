@@ -5,17 +5,18 @@ using UnityEngine;
 public class PlaySoundEffect : MonoBehaviour
 {
     [SerializeField] AudioClip clip;
+    [SerializeField] SoundVolumePair volumePair;
     SFXManager sfxManager;
-
-    private void Start()
-    {
-        sfxManager = FindObjectOfType<SFXManager>();
-    }
 
     public void Play()
     {
-        sfxManager = FindObjectOfType<SFXManager>();
-        if (sfxManager != null)
-            sfxManager.PlayOneShot(clip);
+        if (sfxManager == null)
+            sfxManager = FindObjectOfType<SFXManager>();
+
+        if (volumePair != null)
+            sfxManager?.PlayOneShot(volumePair);
+        else
+            sfxManager?.PlayOneShot(clip);
+
     }
 }

@@ -37,6 +37,7 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] List<TMP_Text> feedbackTexts;
     [SerializeField] List<Image> feedbackButtonFaces;
     [SerializeField] List<TMP_Text> feedbackButtonTexts;
+    [SerializeField] Button bottomButton;
     [SerializeField] string[] feedbackButtonLabelOptions;
     [SerializeField] Image[] headerImages;
 
@@ -45,6 +46,8 @@ public class SimpleFeedback : MonoBehaviour
 
     [SerializeField] AudioClip fitMusic, unfitMusic;
     [SerializeField] MusicManager musicManager;
+    [SerializeField] SoundVolumePair feedbackDrumroll_Good, feedbackDrumroll_Bad;
+    bool fit;
 
     bool didStarFillAnimation;
 
@@ -61,8 +64,9 @@ public class SimpleFeedback : MonoBehaviour
 
     IEnumerator startFeedbackRoutine()
     {
+        SFXManager.instance.PlayOneShot(fit ? feedbackDrumroll_Good : feedbackDrumroll_Bad);
         animator.Play("MoveToFeedbackPos");
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.8f);
         feedbackCanvasObject.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         StartCoroutine(starsFillRoutine());
@@ -99,7 +103,7 @@ public class SimpleFeedback : MonoBehaviour
     void SetupTotals()
     {
         float scorePercentage = GlobalData.GetOverallScore();
-        bool fit = scorePercentage >= 1.0f;
+        fit = scorePercentage >= 1.0f;
 
         if (GlobalData.isTutorial && fit)
             GlobalData.SetTutorialState(true);
@@ -119,12 +123,14 @@ public class SimpleFeedback : MonoBehaviour
 
         foreach (ClothingPiece clothingPiece in GlobalData.GetListOfSelectedClothes())
         {
+            if (clothingPiece.Category == Category.DRESS)
+                bottomButton.interactable = false;
 
             int score = GlobalData.GetScoreForPiece(clothingPiece);
 
             Debug.Log($"Checking: {clothingPiece.Category}  Score: {score}");
 
-            int uiIndex = clothingPiece.Category == Category.HEAD ? 0 : (clothingPiece.Category == Category.TOP ? 1 : (clothingPiece.Category == Category.BOTTOM ? 2 : 3));
+            int uiIndex = clothingPiece.Category == Category.HEAD ? 0 : (clothingPiece.Category == Category.TOP || clothingPiece.Category == Category.DRESS ? 1 : (clothingPiece.Category == Category.BOTTOM ? 2 : 3));
             feedbackClothingName[uiIndex].text = clothingPiece.FeedbackName;
             feedbackTexts[uiIndex].text = clothingPiece.GetFeedback();
             feedbackButtonTexts[uiIndex].text = feedbackButtonLabelOptions[score - 1];

@@ -106,6 +106,12 @@ public class DressingManager : MonoBehaviour
                 for (int i = 0; i < otherMaterials.Count; i++)
                     otherMaterials[i].mainTexture = null;
                 break;
+            case Category.DRESS:
+                for (int i = 0; i < topMaterials.Count; i++)
+                    topMaterials[i].mainTexture = null;
+                for (int i = 0; i < bottomMaterials.Count; i++)
+                    bottomMaterials[i].mainTexture = null;
+                break;
         }
     }
 

@@ -167,14 +167,37 @@ public class DressingUI : MonoBehaviour
             return;
 
         dressingManager.ClearClothingFromCategory(sender.clothingPiece.Category);
+
+        //if currently wearing dress, clear top and bottom before setting new pieces
+        if (GlobalData.selectedTopPiece?.Category == Category.DRESS)
+        {
+            if (sender.clothingPiece.Category == Category.TOP)
+            {
+                dressingManager.ClearClothingFromCategory(Category.BOTTOM);
+                GlobalData.selectedBottomPiece = null;
+                for (int i = 0; i < bottomToggles.Length; i++)
+                    bottomToggles[i].toggle.SetIsOnWithoutNotify(false);
+            }
+            else if (sender.clothingPiece.Category == Category.BOTTOM)
+            {
+                dressingManager.ClearClothingFromCategory(Category.TOP);
+                GlobalData.selectedTopPiece = null;
+                for (int i = 0; i < topToggles.Length; i++)
+                    topToggles[i].toggle.SetIsOnWithoutNotify(false);
+            }
+        }        
+
         dressingManager.SetClothing(sender.clothingPiece);
+
         if (sender.clothingPiece.Category == Category.HEAD)
             dressingManager.PlayHairSounds();
         else
             dressingManager.PlayClothSound();
-        
+     
+
         if (!GlobalData.isTutorial)
             SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
+       
 
         CheckAndSetReadyButtonState();
     }

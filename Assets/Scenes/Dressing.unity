@@ -9372,6 +9372,10 @@ MonoBehaviour:
   fitMusic: {fileID: 8300000, guid: 0123ded65e0b8e2499b7d38df3de153c, type: 3}
   unfitMusic: {fileID: 8300000, guid: 72fd9eead82ca8d4aaa83d0a8d0d32d5, type: 3}
   musicManager: {fileID: 749561982}
+  feedbackDrumroll_Good: {fileID: 11400000, guid: 887e9001be41cee40aa14da16b0e422c,
+    type: 2}
+  feedbackDrumroll_Bad: {fileID: 11400000, guid: f9f1dd34fb69ec646bfbfc82b592e96e,
+    type: 2}
 --- !u!4 &795226043
 Transform:
   m_ObjectHideFlags: 0
@@ -26675,7 +26679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c197aea4d599d4ebd1fb04167eda92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: ca4fa197c64e25343b205da80520fb7c, type: 3}
+  clip: {fileID: 8300000, guid: aea956422c523284fb76bbe26c6a80ff, type: 3}
+  volumePair: {fileID: 11400000, guid: ec33215ce7a29c94bae9f1a76c9e0e11, type: 2}
 --- !u!114 &7870991602358599261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26998,7 +27003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c197aea4d599d4ebd1fb04167eda92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 80a3774530d1e9140a2839c2e75b2551, type: 3}
+  clip: {fileID: 8300000, guid: 9e4c31ff4c5704b429e8269bf0c429cf, type: 3}
+  volumePair: {fileID: 11400000, guid: 97f5e272c0da710479bb4d420942d6ba, type: 2}
 --- !u!114 &8374654132838158321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27430,7 +27436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c197aea4d599d4ebd1fb04167eda92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: a04c0552cc87a974c953468e9742f957, type: 3}
+  clip: {fileID: 8300000, guid: 315eef1438dbba84c92f039b87511ee2, type: 3}
+  volumePair: {fileID: 11400000, guid: 273b3ae455adc7c459d3c0d94bf987b1, type: 2}
 --- !u!114 &8983610645915290636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27594,7 +27601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c197aea4d599d4ebd1fb04167eda92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: e349391c75ae3a94b9e1c6739022d833, type: 3}
+  clip: {fileID: 8300000, guid: 2d9e299f7350679469ab7f962175e7a5, type: 3}
+  volumePair: {fileID: 11400000, guid: 3bf0d62570426ac4381c58df7b1eeb3f, type: 2}
 --- !u!222 &9137464855452997874
 CanvasRenderer:
   m_ObjectHideFlags: 0

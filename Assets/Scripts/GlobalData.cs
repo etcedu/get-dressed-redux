@@ -12,7 +12,7 @@ public enum Gender
 [System.Serializable]
 public enum Category
 {
-    HEAD, TOP, BOTTOM, FEET, OTHER
+    HEAD, TOP, BOTTOM, FEET, OTHER, DRESS
 }
 
 [System.Serializable]
@@ -142,6 +142,10 @@ public class GlobalData : MonoBehaviour
                 break;
             case Category.FEET:
                 selectedFeetPiece = clothingPiece;
+                break;
+            case Category.DRESS:
+                selectedTopPiece = clothingPiece;
+                selectedBottomPiece = clothingPiece;
                 break;
         }
     }
