@@ -121,10 +121,12 @@ public class DressingUI : MonoBehaviour
         bool bottomButtonsOpen  = uiAnimator.GetBool("BottomButtonsOpen");
         bool feetButtonsOpen    = uiAnimator.GetBool("FeetButtonsOpen");
 
-        if (headButtonsOpen)    { uiAnimator.CrossFade("CloseHeadButtons", 0.2f);   headButtonsOpen = false; }
-        if (topButtonsOpen)     { uiAnimator.CrossFade("CloseTopButtons", 0.2f);    topButtonsOpen = false; }
-        if (bottomButtonsOpen)  { uiAnimator.CrossFade("CloseBottomButtons", 0.2f); bottomButtonsOpen = false; }
-        if (feetButtonsOpen)    { uiAnimator.CrossFade("CloseFeetButtons", 0.2f);   feetButtonsOpen = false; }
+        if (headButtonsOpen)    { uiAnimator.CrossFade($"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);   headButtonsOpen = false; }
+        if (topButtonsOpen)     { uiAnimator.CrossFade($"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);    topButtonsOpen = false; }
+        if (bottomButtonsOpen)  { uiAnimator.CrossFade($"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f); bottomButtonsOpen = false; }
+        if (feetButtonsOpen)    { uiAnimator.CrossFade($"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);   feetButtonsOpen = false; }
+
+        Debug.Log($"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button");
 
         switch (categoryParsed)
         {
@@ -132,28 +134,32 @@ public class DressingUI : MonoBehaviour
                 if (!headButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Head");
 
-                uiAnimator.CrossFade(headButtonsOpen ? "CloseHeadButtons" : "OpenHeadButtons", 0.2f);
+                uiAnimator.CrossFade(headButtonsOpen ? $"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button" 
+                                                     : $"OpenHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("HeadButtonsOpen", !headButtonsOpen);
                 break;
             case Category.TOP:
                 if (!topButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Top");
 
-                uiAnimator.CrossFade(topButtonsOpen ? "CloseTopButtons" : "OpenTopButtons", 0.2f);
+                uiAnimator.CrossFade(topButtonsOpen ? $"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button" 
+                                                    : $"OpenTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("TopButtonsOpen", !topButtonsOpen);
                 break;
             case Category.BOTTOM:
                 if (!bottomButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Bottom");
 
-                uiAnimator.CrossFade(bottomButtonsOpen ? "CloseBottomButtons" : "OpenBottomButtons", 0.2f);
+                uiAnimator.CrossFade(bottomButtonsOpen ? $"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button" 
+                                                       : $"OpenBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("BottomButtonsOpen", !bottomButtonsOpen);
                 break;
             case Category.FEET:
                 if (!feetButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Feet");
 
-                uiAnimator.CrossFade(feetButtonsOpen ? "CloseFeetButtons" : "OpenFeetButtons", 0.2f);
+                uiAnimator.CrossFade(feetButtonsOpen ? $"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button" 
+                                                     : $"OpenFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("FeetButtonsOpen", !feetButtonsOpen);
                 break;
             default:
