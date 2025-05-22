@@ -8,7 +8,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using EasingCore;
-using FancyScrollView.Example09;
 using TMPro;
 
 namespace FancyScrollView.TheFitCharacterSelect

@@ -54,16 +54,14 @@ public class CharacterRoster : ScriptableObject
                 currentCharacterLoading.description = fields[5];
                 currentCharacterLoading.jobAttireDescription = fields[6];
                 currentCharacterLoading.imageAssetPath = fields[7];
-
-                currentCharacterLoading.otherClothes = fields[8].Split(new char[] { ';' }).Trim();
-
-                if (ColorExtensions.TryParseHexStringRGBA(fields[9], out Color32 skinColor))
+                
+                if (ColorExtensions.TryParseHexStringRGBA(fields[8], out Color32 skinColor))
                     currentCharacterLoading.skinColor = skinColor;
                 else
                     currentCharacterLoading.skinColor = Color.white;
 
-                currentCharacterLoading.winFeedback = fields[10];
-                currentCharacterLoading.loseFeedback = fields[11];
+                currentCharacterLoading.winFeedback = fields[9];
+                currentCharacterLoading.loseFeedback = fields[10];
                               
 
                 characters.Add(currentCharacterLoading);

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -70,6 +71,11 @@ public class SimpleFeedback : MonoBehaviour
         feedbackCanvasObject.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         StartCoroutine(starsFillRoutine());
+        
+        if (GlobalData.isTutorial)
+        {
+            SimpleRTVoiceExample.Instance.Speak("default", $"{fitOrNotHeader.text}, {fitOrNotText.text}");
+        }
     }
 
 
@@ -115,11 +121,11 @@ public class SimpleFeedback : MonoBehaviour
         fitOrNotText.text = fit ? GlobalData.currentCharacterSelection.winFeedback : GlobalData.currentCharacterSelection.loseFeedback;
         foreach (Image i in headerImages)
             i.color = fit ? scoreColors[2] : scoreColors[0];
-
-        musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
-
+                
         fitOrNotHeader.ForceMeshUpdate();
         fitOrNotText.ForceMeshUpdate();
+        
+        musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
 
         foreach (ClothingPiece clothingPiece in GlobalData.GetListOfSelectedClothes())
         {

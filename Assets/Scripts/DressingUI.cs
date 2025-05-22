@@ -126,8 +126,6 @@ public class DressingUI : MonoBehaviour
         if (bottomButtonsOpen)  { uiAnimator.CrossFade($"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f); bottomButtonsOpen = false; }
         if (feetButtonsOpen)    { uiAnimator.CrossFade($"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);   feetButtonsOpen = false; }
 
-        Debug.Log($"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button");
-
         switch (categoryParsed)
         {
             case Category.HEAD:

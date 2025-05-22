@@ -7781,6 +7781,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: Now pick the other head
     hintFingerTag: changeHair
     limitInteractionToThis: {fileID: 1029671838}
@@ -7794,6 +7795,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: Now the shirt
     hintFingerTag: topButton
     limitInteractionToThis: {fileID: 74266835}
@@ -7807,6 +7809,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: now put it on
     hintFingerTag: shirtButton
     limitInteractionToThis: {fileID: 60032137}
@@ -7820,6 +7823,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: Great, let's get some pants on
     hintFingerTag: bottomButton
     limitInteractionToThis: {fileID: 77213602}
@@ -7833,6 +7837,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: yep, those are pants
     hintFingerTag: pantsButton
     limitInteractionToThis: {fileID: 974414906}
@@ -7846,6 +7851,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: finally, it's time to put those dogs away
     hintFingerTag: feetButton
     limitInteractionToThis: {fileID: 1114265953}
@@ -7859,6 +7865,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: we'll assume you put on socks too
     hintFingerTag: shoeButton
     limitInteractionToThis: {fileID: 495460790}
@@ -7872,6 +7879,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: great. now all that's left is to hit the ready button to get rated on
       your fit.
     hintFingerTag: readyButton
@@ -7887,6 +7895,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: -1
   - message: 
     hintFingerTag: feedbackButton
     limitInteractionToThis: {fileID: 6920189330265393466}
@@ -7902,6 +7911,7 @@ MonoBehaviour:
     onStepFinishEvent:
       m_PersistentCalls:
         m_Calls: []
+    hintFingerDelayOverride: 8
   tutorialPanel: {fileID: 993155163}
   hintFingerDelayDefault: 3
 --- !u!4 &708792818

@@ -18,6 +18,7 @@ public class TutorialStep
     public List<Button> lockedButtons; //optional
     public UnityEvent onStepStartEvent;
     public UnityEvent onStepFinishEvent;
+    public float hintFingerDelayOverride = -1;
 }
 
 public class TutorialManager : MonoBehaviour
@@ -72,7 +73,7 @@ public class TutorialManager : MonoBehaviour
         }
         
         if (!string.IsNullOrEmpty(step.hintFingerTag))
-            hintFingerManager.ShowHintOnTimer(step.hintFingerTag, hintFingerDelayDefault);
+            hintFingerManager.ShowHintOnTimer(step.hintFingerTag, step.hintFingerDelayOverride > 0 ? step.hintFingerDelayOverride : hintFingerDelayDefault);
     }
 
     void EndStep(bool _)
@@ -82,6 +83,8 @@ public class TutorialManager : MonoBehaviour
 
     void EndStep()
     {
+        SimpleRTVoiceExample.Instance.StopSpeech();
+
         if (hintFingerManager == null)
             hintFingerManager = FindObjectOfType<HintFingerManager>();
 
