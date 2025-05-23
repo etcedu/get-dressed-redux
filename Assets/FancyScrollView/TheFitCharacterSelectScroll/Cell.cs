@@ -8,7 +8,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using EasingCore;
-using FancyScrollView.Example09;
+using TMPro;
 
 namespace FancyScrollView.TheFitCharacterSelect
 {
@@ -16,11 +16,19 @@ namespace FancyScrollView.TheFitCharacterSelect
     {
         readonly EasingFunction alphaEasing = Easing.Get(Ease.OutQuint);
 
-        [SerializeField] Text title = default;
-        [SerializeField] Text description = default;
+        [SerializeField] TMP_Text title = default;
+        [SerializeField] TMP_Text description = default;
+        [SerializeField] TMP_Text job = default;
         [SerializeField] RawImage image = default;
         [SerializeField] Image background = default;
         [SerializeField] CanvasGroup canvasGroup = default;
+
+        [SerializeField] Color normalColor;
+        [SerializeField] Color fadedColor;
+
+        [SerializeField] Image fader;
+        [SerializeField] GameObject lockedObject;
+        [SerializeField] GameObject completedObject;
 
         CharacterData data;
 
@@ -29,10 +37,13 @@ namespace FancyScrollView.TheFitCharacterSelect
             data = charData;
             image.texture = null;
 
-            image.texture = Resources.Load<Texture>(charData.imageAssetPath);
-
+            image.texture = Resources.Load<Texture>($"CharacterPortraits/{charData.imageAssetPath}");
             title.text = charData.characterName;
             description.text = charData.description;
+            job.text = charData.jobTitle;
+
+            SetLockState(!GlobalData.GetTutorialFinished() && !data.characterTag.ToLower().Contains("tutorial"));
+            completedObject.SetActive(GlobalData.GetCharacterCompleted(data.characterTag));
 
             UpdateSibling();
         }
@@ -52,6 +63,11 @@ namespace FancyScrollView.TheFitCharacterSelect
             {
                 transform.SetAsFirstSibling();
             }
+        }
+
+        public void SetLockState(bool locked)
+        {
+            lockedObject.SetActive(locked);
         }
 
         public override void UpdatePosition(float t)
@@ -75,7 +91,7 @@ namespace FancyScrollView.TheFitCharacterSelect
 
             canvasGroup.alpha = alphaEasing(1f - slide);
 
-            background.color = Color.Lerp(Color.gray, Color.white, pop);
+            fader.color = Color.Lerp(fadedColor, normalColor, pop);
         }
     }
 }

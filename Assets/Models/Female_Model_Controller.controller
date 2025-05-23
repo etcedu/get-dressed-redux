@@ -775,14 +775,14 @@ AnimatorStateMachine:
     m_Position: {x: 336, y: 324, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110210598}
-    m_Position: {x: 456, y: 384, z: 0}
+    m_Position: {x: 470, y: 410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110210518}
     m_Position: {x: 780, y: 324, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 110729986}
-    m_Position: {x: 660, y: 372, z: 0}
+    m_Position: {x: 700, y: 410, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions:
   - {fileID: 110963164}

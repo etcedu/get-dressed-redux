@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.olegknyazev.softmask": {
+      "version": "file:com.olegknyazev.softmask@ba10acd1e9",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.ui": "1.0.0"
+      }
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -56,6 +65,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.mobile.android-logcat": {
+      "version": "1.4.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
       "depth": 0,
@@ -96,9 +112,9 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
-      "version": "1.0.0",
-      "depth": 1,
-      "source": "builtin",
+      "version": "file:com.unity.ugui@1.0.0",
+      "depth": 0,
+      "source": "embedded",
       "dependencies": {
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
+  m_Name: Male_Pants_02
+  m_EditorClassIdentifier: 
+  tag: 
+  icon: {fileID: 21300000, guid: ff8d8ae00655f754494a78be69414332, type: 3}
+  maleMaterials:
+  - {fileID: 2100000, guid: 97e0aa4f25bc3f8439c1ed7f4448e6e4, type: 2}
+  - {fileID: 2100000, guid: 88f675d4f008e8b468bf75dec3a69a28, type: 2}
+  - {fileID: 2100000, guid: b78cf36b8cc514043b0a4c5c1ee6e629, type: 2}
+  femaleMaterials:
+  - {fileID: 2100000, guid: 3334caf3e3efbcd4da4ec2ad2130a7b9, type: 2}
+  - {fileID: 2100000, guid: f9f69985b65800b4c931829b83f589e0, type: 2}
+  - {fileID: 2100000, guid: c8bf325ad952c984abd5dd73f6b645bb, type: 2}
+  textures:
+  - {fileID: 2800000, guid: a66096ab7d6a64847be24b6e51960c1c, type: 3}
+  - {fileID: 2800000, guid: 5fb488e7fdd001744ad6598bdf3a70e0, type: 3}
+  - {fileID: 2800000, guid: be4baf74e3a292f4792555bda4985c9c, type: 3}

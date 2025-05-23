@@ -6,7 +6,6 @@ using UnityEngine;
 [System.Serializable]
 public class ClothingModelConnection : ScriptableObject
 {
-    public string tag;
     public Sprite icon;
     public List<Material> maleMaterials;
     public List<Material> femaleMaterials;

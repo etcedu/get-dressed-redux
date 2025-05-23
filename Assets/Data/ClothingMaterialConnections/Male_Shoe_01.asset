@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
+  m_Name: Male_Shoe_01
+  m_EditorClassIdentifier: 
+  tag: 
+  icon: {fileID: 21300000, guid: fb71a198c0ec5454d9a00dc9e6a93969, type: 3}
+  maleMaterials:
+  - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
+  femaleMaterials:
+  - {fileID: 2100000, guid: 1d28c683402d42f498e561ca06239d2e, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 40ac998628dd1c34090269cae090b605, type: 3}

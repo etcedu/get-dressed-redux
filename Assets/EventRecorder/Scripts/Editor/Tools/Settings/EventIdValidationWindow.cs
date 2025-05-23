@@ -123,12 +123,12 @@ namespace SimcoachGames.EventRecorder
             
             Settings.ChangeEventId(eventId);
             DisplayMessage = $"{nameof(Event)} Id successfully set to [{eventId}]";
+
+            Settings.ChangeAuthCallbackUrl("authhub://" + eventId);
+            DisplayMessage += $"\n{nameof(Event)} Auth Callback URL successfully set to [{"authhub://" + eventId}]";
             Debug.Log(DisplayMessage);
 
             UniWebViewSettingsProvider.SetAuthCallbackURLs(eventId);
-            if (FindObjectOfType<UniWebViewAuthenticationFlowCustomize>() != null)
-                FindObjectOfType<UniWebViewAuthenticationFlowCustomize>().mobileRedirectUri = "authhub://" + eventId;
-
             Repaint();
         }
     }
