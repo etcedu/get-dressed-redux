@@ -9388,8 +9388,8 @@ MonoBehaviour:
   - {r: 1, g: 0.36862746, b: 0.26666668, a: 1}
   - {r: 0.25490198, g: 0.40784317, b: 0.5764706, a: 1}
   - {r: 0.10196079, g: 0.77647066, b: 0.5647059, a: 1}
-  fitMusic: {fileID: 8300000, guid: 0123ded65e0b8e2499b7d38df3de153c, type: 3}
-  unfitMusic: {fileID: 8300000, guid: 72fd9eead82ca8d4aaa83d0a8d0d32d5, type: 3}
+  fitMusic: {fileID: 11400000, guid: 44a23fd19b9ba4946b0b345deb55626f, type: 2}
+  unfitMusic: {fileID: 11400000, guid: 6edca024ac53cfa47a7335e2b8c7cb1f, type: 2}
   musicManager: {fileID: 749561982}
   feedbackDrumroll_Good: {fileID: 11400000, guid: 887e9001be41cee40aa14da16b0e422c,
     type: 2}
