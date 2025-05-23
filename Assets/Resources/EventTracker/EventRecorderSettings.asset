@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae04381070a7ea439148ac6ee6ecb4d, type: 3}
   m_Name: EventRecorderSettings
   m_EditorClassIdentifier: 
-  eventId: getdressedredux
+  authCallbackUrl: authhub://yourehiredthefit
+  eventId: yourehiredthefit
   buildUseCase: 2
   targetEndpoint: {fileID: 11400000, guid: 4a426c4560c12f543a75b9d90ec0233e, type: 2}
   postInterval: 60

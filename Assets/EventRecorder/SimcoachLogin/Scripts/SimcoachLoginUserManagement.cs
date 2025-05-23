@@ -260,7 +260,7 @@ namespace SimcoachGames.EventRecorder.Login
         void Start()
         {
             //set this based on UniWebView settings which in turn is set by retrieving the eventID
-            cognitoOauthFlow.mobileRedirectUri = "authhub://" + EventRecorderSettingsSO.GetInstance().eventId;
+            cognitoOauthFlow.mobileRedirectUri = EventRecorderSettingsSO.GetInstance().authCallbackUrl;
             TrySignInThroughRefreshToken();
         }
 

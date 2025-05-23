@@ -23,5 +23,5 @@ MonoBehaviour:
   androidXCoreVersion: 
   enableJetifier: 1
   authCallbackUrls:
-  - authhub://getdressedredux
+  - authhub://yourehiredthefit
   supportLINELogin: 0

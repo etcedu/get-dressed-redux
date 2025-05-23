@@ -207,6 +207,7 @@ public static class UniWebViewSettingsProvider {
 
         SerializedProperty authCallbacksSP = settings.FindProperty("authCallbackUrls");
         authCallbacksSP.GetArrayElementAtIndex(0).stringValue = "authhub://" + eventID;
+
         settings.ApplyModifiedProperties();
         AssetDatabase.SaveAssets();
     }
