@@ -251,6 +251,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5105447636700270366, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5463805758917773971, guid: 79273e7771c3ef147bcbc8dbde70cb94,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -8750,6 +8755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c25efa6e23756b40b124db939a3f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicTrackSoundVolumePairs:
+  - {fileID: 11400000, guid: 5041aa8921d1b7c4c8de8ea4191d4f28, type: 2}
+  - {fileID: 11400000, guid: 7eaa3743eb65e7d4d9fcb29bbe26495c, type: 2}
 --- !u!82 &749561983
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8761,7 +8769,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 5512894533446935400, guid: 965778e194614bf46beeaab29820d99e,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: f9e2c666451cbf24191b5f7faf423f2a, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

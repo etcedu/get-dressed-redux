@@ -45,7 +45,7 @@ public class SimpleFeedback : MonoBehaviour
     [Header("General")]    
     [SerializeField] List<Color> scoreColors;
 
-    [SerializeField] AudioClip fitMusic, unfitMusic;
+    [SerializeField] SoundVolumePair fitMusic, unfitMusic;
     [SerializeField] MusicManager musicManager;
     [SerializeField] SoundVolumePair feedbackDrumroll_Good, feedbackDrumroll_Bad;
     bool fit;

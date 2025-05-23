@@ -7,17 +7,23 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class MusicManager : MonoBehaviour
 {
-    public static bool MusicIsOn { get; private set; } = true;
-    public static Action<bool> OnMusicSettingChanged;
-
     //Note that this is not static. It's possible more than one of these components exsists in the scene.
     AudioSource audioSource;
+    [SerializeField] SoundVolumePair[] musicTrackSoundVolumePairs;
+
+    float trackVolume;
 
     bool init = false;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0;
+
+        SoundVolumePair track = musicTrackSoundVolumePairs[UnityEngine.Random.Range(0, musicTrackSoundVolumePairs.Length)];
+        audioSource.clip = track.clip;
+        trackVolume = track.volume;
+        audioSource.Play();
+
         Debug.Log($"{audioSource.clip.name}");
 
         List<MusicManager> otherMusicSources = FindObjectsOfType<MusicManager>().ToList();
@@ -32,44 +38,21 @@ public class MusicManager : MonoBehaviour
                     Destroy(gameObject);
             }
         }
-
-        //Update instances
-        OnMusicSettingChanged += SettingChanged; 
-        
-        if (MusicIsOn)
-        {
-            ToggleMusicOn();
-        }
-        else
-        {
-            ToggleMusicOff();
-        }
-
+                
         StartCoroutine(fadeInMusic());
         DontDestroyOnLoad(this.gameObject);
         init = true;
-    }
-
-    public static void ToggleMusicOn()
-    {
-        MusicIsOn = true;
-        OnMusicSettingChanged?.Invoke(MusicIsOn);
-    }
-
-    public static void ToggleMusicOff()
-    {
-        MusicIsOn = false;
-        OnMusicSettingChanged?.Invoke(MusicIsOn);
-    }
+    }   
 
     void SettingChanged(bool sfxIsOn)
     {
         audioSource.mute = !sfxIsOn;
     }
 
-    void OnDestroy()
+    public void ChangeMusic(SoundVolumePair svp)
     {
-        OnMusicSettingChanged -= SettingChanged;
+        trackVolume = svp.volume;
+        ChangeMusic(svp.clip);
     }
 
     public void ChangeMusic(AudioClip clip)
@@ -94,12 +77,12 @@ public class MusicManager : MonoBehaviour
 
     public IEnumerator fadeInMusic()
     {
-        while (audioSource.volume < 1)
+        while (audioSource.volume < trackVolume)
         {
             audioSource.volume += Time.deltaTime * 0.75f;
             yield return null;
         }
-        audioSource.volume = 1;
+        audioSource.volume = trackVolume;
     }
 
     public IEnumerator fadeOutMusicAndKill()
