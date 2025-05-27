@@ -13,5 +13,7 @@ public class SpeakLabel : MonoBehaviour
         label.ForceMeshUpdate();
         string message = label.GetParsedText();
         SimpleRTVoiceExample.Instance.Speak("default", message);
+
+        EventRecorder.RecordManuallyPlayedVoiceOverEvent("default", message.Substring(0, message.Length > 30 ? 30 : message.Length));
     }
 }

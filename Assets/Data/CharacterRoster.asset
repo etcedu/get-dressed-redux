@@ -15,6 +15,153 @@ MonoBehaviour:
   charactersDataFile: {fileID: 1905001501106251880, guid: d4382a4b43bd68f48b12b4a607b1d774,
     type: 3}
   characters:
+  - characterTag: John
+    characterName: John
+    gender: 1
+    jobTitle: ...
+    description: ...
+    jobAttireDescription: ...
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0.92156863, g: 0.7882353, b: 0.6509804, a: 1}
+    winFeedback: Great outfit, John
+    loseFeedback: Nope
+    headPieces:
+    - Tag: John_CombedHair
+      DisplayName: Combed
+      GenderRole: 1
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: d4e8e8d5b3eb4d24abf4bedd5372c748, type: 2}
+      FeedbackName: Well Groomed
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_BedHair
+      DisplayName: Ungroomed
+      GenderRole: 1
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 5bb5385ab5d2a5a40a1fd0d4c7f59e91, type: 2}
+      FeedbackName: Bed Head
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: John_Buttonup
+      DisplayName: Buttonup
+      GenderRole: 1
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 32eef665607471a4aa54114cca8b12f1, type: 2}
+      FeedbackName: Buttonup
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_WrinkledButtonup
+      DisplayName: Buttonup
+      GenderRole: 1
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 3561e65bf80e7cb4b88a730024a26f69, type: 2}
+      FeedbackName: Wrinkled Buttonup
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: John_SweatButtonup
+      DisplayName: Buttonup
+      GenderRole: 1
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 584f38c026266724bae246ed2f89a234, type: 2}
+      FeedbackName: Sweaty Buttonup
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: John_Pants
+      DisplayName: Pants
+      GenderRole: 1
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: c75e258bf5bfbe5429d8076620a5f43f, type: 2}
+      FeedbackName: Pants
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_CatHairPants
+      DisplayName: Pants
+      GenderRole: 1
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: c52d6ec69130e7f4eb244f110de3c09d, type: 2}
+      FeedbackName: Cat hair covered pants
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: John_DrinkStainPants
+      DisplayName: Pants
+      GenderRole: 1
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 8b24231fc5e3c90468a644f6adfe7dd4, type: 2}
+      FeedbackName: Stained pants
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: John_ChelseaBoots
+      DisplayName: Chealsea Boots
+      GenderRole: 1
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: f42c17498d0488d4f9bff833820aae72, type: 2}
+      FeedbackName: Chealsea Boots
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_ScuffedDerby
+      DisplayName: Derby Shoes
+      GenderRole: 1
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 775396e3633e02f46b4aa0bd3ea37edf, type: 2}
+      FeedbackName: Scuffed Derbys
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: John_DirtyOxfords
+      DisplayName: Oxfords
+      GenderRole: 1
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: ce9685e10e224be4199624ff80727546, type: 2}
+      FeedbackName: Dirty Oxfords
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: John_Face
+      DisplayName: none
+      GenderRole: 1
+      Category: 4
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 747531d79427273498598f16935565b9, type: 2}
+      FeedbackName: none
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
   - characterTag: Kris
     characterName: Kris
     gender: 2
@@ -404,153 +551,6 @@ MonoBehaviour:
       Category: 4
       Tiers: 
       Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
-      FeedbackName: none
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
-  - characterTag: John
-    characterName: John
-    gender: 1
-    jobTitle: ...
-    description: ...
-    jobAttireDescription: ...
-    imageAssetPath: Icon_Dressed
-    skinColor: {r: 0.92156863, g: 0.7882353, b: 0.6509804, a: 1}
-    winFeedback: Great outfit, John
-    loseFeedback: Nope
-    headPieces:
-    - Tag: John_CombedHair
-      DisplayName: Combed
-      GenderRole: 1
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: d4e8e8d5b3eb4d24abf4bedd5372c748, type: 2}
-      FeedbackName: Well Groomed
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_BedHair
-      DisplayName: Ungroomed
-      GenderRole: 1
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 5bb5385ab5d2a5a40a1fd0d4c7f59e91, type: 2}
-      FeedbackName: Bed Head
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: John_Buttonup
-      DisplayName: Buttonup
-      GenderRole: 1
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 32eef665607471a4aa54114cca8b12f1, type: 2}
-      FeedbackName: Buttonup
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_WrinkledButtonup
-      DisplayName: Buttonup
-      GenderRole: 1
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 3561e65bf80e7cb4b88a730024a26f69, type: 2}
-      FeedbackName: Wrinkled Buttonup
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_SweatButtonup
-      DisplayName: Buttonup
-      GenderRole: 1
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 584f38c026266724bae246ed2f89a234, type: 2}
-      FeedbackName: Sweaty Buttonup
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: John_Pants
-      DisplayName: Pants
-      GenderRole: 1
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: c75e258bf5bfbe5429d8076620a5f43f, type: 2}
-      FeedbackName: Pants
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_CatHairPants
-      DisplayName: Pants
-      GenderRole: 1
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: c52d6ec69130e7f4eb244f110de3c09d, type: 2}
-      FeedbackName: Cat hair covered pants
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_DrinkStainPants
-      DisplayName: Pants
-      GenderRole: 1
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 8b24231fc5e3c90468a644f6adfe7dd4, type: 2}
-      FeedbackName: Stained pants
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: John_ChelseaBoots
-      DisplayName: Chealsea Boots
-      GenderRole: 1
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: f42c17498d0488d4f9bff833820aae72, type: 2}
-      FeedbackName: Chealsea Boots
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_ScuffedDerby
-      DisplayName: Derby Shoes
-      GenderRole: 1
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 775396e3633e02f46b4aa0bd3ea37edf, type: 2}
-      FeedbackName: Scuffed Derbys
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_DirtyOxfords
-      DisplayName: Oxfords
-      GenderRole: 1
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: ce9685e10e224be4199624ff80727546, type: 2}
-      FeedbackName: Dirty Oxfords
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    otherPieces:
-    - Tag: John_Face
-      DisplayName: none
-      GenderRole: 1
-      Category: 4
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 747531d79427273498598f16935565b9, type: 2}
       FeedbackName: none
       GoodFeedback: none
       OKFeedback: none

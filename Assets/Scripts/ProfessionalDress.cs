@@ -958,7 +958,7 @@ public class ProfessionalDress : MonoBehaviour
 
         TimeSpan timeElapsed = (CrossSceneInfo.LevelStartedTimeStamp - DateTime.Now).Duration();
 		float secondsElapsed = (float) timeElapsed.TotalSeconds;
-		EventRecorder.RecordLevelCompleted(CrossSceneInfo.LevelAttemptId, CrossSceneInfo.LastCompanyName, CrossSceneInfo.LastPositionName, passed, _faceScore, _topScore, _bottomScore, _shoesScore, _itemScore, _score, CrossSceneInfo.PassingCuttoff, secondsElapsed);
+		//EventRecorder.RecordLevelCompleted(CrossSceneInfo.LevelAttemptId, CrossSceneInfo.LastCompanyName, CrossSceneInfo.LastPositionName, passed, _faceScore, _topScore, _bottomScore, _shoesScore, _itemScore, _score, CrossSceneInfo.PassingCuttoff, secondsElapsed);
 	}
 
 	bool itemColorCheck(Clothing.Info item)

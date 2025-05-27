@@ -115,6 +115,18 @@ public class GlobalData : MonoBehaviour
         return (totalScore / 12f);
     }
 
+    public static int GetTotalNumericalScore()
+    {
+        int totalScore = 0;
+
+        totalScore += GetScoreForPiece(selectedHeadPiece);
+        totalScore += GetScoreForPiece(selectedTopPiece);
+        totalScore += GetScoreForPiece(selectedBottomPiece);
+        totalScore += GetScoreForPiece(selectedFeetPiece);
+
+        return totalScore;
+    }
+
     public static List<ClothingPiece> GetListOfSelectedClothes()
     {
         List<ClothingPiece> list = new List<ClothingPiece>

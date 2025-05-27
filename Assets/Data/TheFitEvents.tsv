@@ -1,0 +1,27 @@
+In-game event	Parameters	Notes	Status		Common Parameters		
+Milestones					Unique session ID		
+CompletedTutorial	duration : float				Platform info		
+LevelStarted	levelName: string						
+LevelCompleted	duration : float, passed : bool, score : float, levelname: string, headPiece: string, headScore : int, topPiece: string, topScore : int, bottomPiece: string, bottomScore : int, feetPiece: string, feetScore : int						
+LevelRestarted	duration : float, levelname : string						
+LevelQuit	duration : float, levelname : string						
+Interaction							
+ManuallyPlayedVoiceOver	speakerId : string, messagePreview : string						
+							
+							
+Navigation							
+ViewedDetailedFeedback	none						
+							
+					LevelStarted		LevelCompleted
+							
+					Add hashes that pass from LevelStarted to LevelCompleted for identification		
+							
+					LevelCompleted should specifically contain:		
+						Accuracy/Score in range from 0-100	
+						Duration from start to end (seconds as float is fine)	
+						Level name/difficulty (ex. 5-5, Medium)	
+							
+					If your game does not adhere to any of these standards:		
+						We will update the data team (Abbie, Suman, Justin) as soon as possible	
+							
+						They'll help us come up with alternatives	

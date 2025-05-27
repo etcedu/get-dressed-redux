@@ -49,6 +49,7 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] MusicManager musicManager;
     [SerializeField] SoundVolumePair feedbackDrumroll_Good, feedbackDrumroll_Bad;
     bool fit;
+    float gameDuration;
 
     bool didStarFillAnimation;
 
@@ -57,8 +58,9 @@ public class SimpleFeedback : MonoBehaviour
         feedbackCanvasObject.SetActive(false);
     }
 
-    public void StartFeedback()
+    public void StartFeedback(double duration)
     {
+        gameDuration = (float)duration;
         SetupTotals();
         StartCoroutine(startFeedbackRoutine());
     }
@@ -142,6 +144,12 @@ public class SimpleFeedback : MonoBehaviour
             feedbackButtonTexts[uiIndex].text = feedbackButtonLabelOptions[score - 1];
             feedbackButtonFaces[uiIndex].color = scoreColors[score - 1];
         }
+
+        EventRecorder.RecordLevelCompletedEvent(gameDuration, fit, scorePercentage, GlobalData.currentCharacterSelection.characterName,
+            GlobalData.selectedHeadPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedHeadPiece),
+            GlobalData.selectedTopPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedTopPiece),
+            GlobalData.selectedBottomPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedBottomPiece),
+            GlobalData.selectedFeetPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedFeetPiece));
     }
 
 
