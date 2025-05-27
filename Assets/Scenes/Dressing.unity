@@ -1219,6 +1219,7 @@ GameObject:
   - component: {fileID: 50115026}
   - component: {fileID: 50115025}
   - component: {fileID: 50115024}
+  - component: {fileID: 50115028}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -1396,6 +1397,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 50115028}
+        m_TargetAssemblyTypeName: RecordDetailedFeedbackEventOnClick, Assembly-CSharp
+        m_MethodName: SendEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &50115026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1447,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50115022}
   m_CullTransparentMesh: 1
+--- !u!114 &50115028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50115022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb032235b6c735846bb313b2edf7d60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &60032137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7598059698562304588, guid: 084c684724749ea4cab70a124efb5665,
@@ -12996,6 +13021,7 @@ GameObject:
   - component: {fileID: 1142511921}
   - component: {fileID: 1142511920}
   - component: {fileID: 1142511919}
+  - component: {fileID: 1142511923}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -13173,6 +13199,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1142511923}
+        m_TargetAssemblyTypeName: RecordDetailedFeedbackEventOnClick, Assembly-CSharp
+        m_MethodName: SendEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1142511921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13211,6 +13249,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142511917}
   m_CullTransparentMesh: 1
+--- !u!114 &1142511923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142511917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb032235b6c735846bb313b2edf7d60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196022333
 GameObject:
   m_ObjectHideFlags: 0
@@ -21434,6 +21484,7 @@ GameObject:
   - component: {fileID: 2110008645}
   - component: {fileID: 2110008644}
   - component: {fileID: 2110008643}
+  - component: {fileID: 2110008647}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -21611,6 +21662,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2110008647}
+        m_TargetAssemblyTypeName: RecordDetailedFeedbackEventOnClick, Assembly-CSharp
+        m_MethodName: SendEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2110008645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21649,6 +21712,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110008641}
   m_CullTransparentMesh: 1
+--- !u!114 &2110008647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110008641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb032235b6c735846bb313b2edf7d60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2138358747
 GameObject:
   m_ObjectHideFlags: 0
@@ -23086,6 +23161,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4030731183602180212}
         m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
         m_MethodName: SetAsLastSibling
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6884301904340659556}
+        m_TargetAssemblyTypeName: RecordDetailedFeedbackEventOnClick, Assembly-CSharp
+        m_MethodName: SendEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25358,6 +25445,7 @@ GameObject:
   - component: {fileID: 6884301904340659555}
   - component: {fileID: 1964058902452611670}
   - component: {fileID: 3330067076289511110}
+  - component: {fileID: 6884301904340659556}
   m_Layer: 5
   m_Name: AnimatedButton
   m_TagString: Untagged
@@ -25906,6 +25994,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1.26
+--- !u!114 &6884301904340659556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5709463530567745755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb032235b6c735846bb313b2edf7d60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6920189330265393466
 GameObject:
   m_ObjectHideFlags: 0
