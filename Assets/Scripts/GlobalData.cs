@@ -12,7 +12,7 @@ public enum Gender
 [System.Serializable]
 public enum Category
 {
-    HEAD, TOP, BOTTOM, FEET, OTHER
+    HEAD, TOP, BOTTOM, FEET, OTHER, DRESS
 }
 
 [System.Serializable]
@@ -36,6 +36,9 @@ public class GlobalData : MonoBehaviour
     public static ClothingPiece selectedTopPiece;
     public static ClothingPiece selectedBottomPiece;
     public static ClothingPiece selectedFeetPiece;
+
+    public static bool isTutorial;
+    public static int lastCharacterIndex;
 
     [SerializeField] CharacterRoster theCharacterRoster;
 
@@ -67,6 +70,8 @@ public class GlobalData : MonoBehaviour
         Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.topPieces);
         Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.bottomPieces);
         Instance.SetScoresForCurrentCharacterClothingPieces(currentCharacterSelection.feetPieces);
+
+        isTutorial = currentCharacterSelection.characterTag.ToLower().Contains("tutorial");
     }
 
     void SetScoresForCurrentCharacterClothingPieces(List<ClothingPiece> clothingSet)
@@ -110,6 +115,18 @@ public class GlobalData : MonoBehaviour
         return (totalScore / 12f);
     }
 
+    public static int GetTotalNumericalScore()
+    {
+        int totalScore = 0;
+
+        totalScore += GetScoreForPiece(selectedHeadPiece);
+        totalScore += GetScoreForPiece(selectedTopPiece);
+        totalScore += GetScoreForPiece(selectedBottomPiece);
+        totalScore += GetScoreForPiece(selectedFeetPiece);
+
+        return totalScore;
+    }
+
     public static List<ClothingPiece> GetListOfSelectedClothes()
     {
         List<ClothingPiece> list = new List<ClothingPiece>
@@ -138,6 +155,44 @@ public class GlobalData : MonoBehaviour
             case Category.FEET:
                 selectedFeetPiece = clothingPiece;
                 break;
+            case Category.DRESS:
+                selectedTopPiece = clothingPiece;
+                selectedBottomPiece = clothingPiece;
+                break;
         }
+    }
+
+    public static bool GetTutorialFinished()
+    {
+        return PlayerPrefs.GetInt("FinishedTutorial", 0) == 1;
+    }
+
+    public static void SetTutorialState(bool finished)
+    {
+        PlayerPrefs.SetInt("FinishedTutorial", finished ? 1 : 0);
+    }
+
+    public static bool GetCharacterCompleted(string charTag)
+    {
+        return PlayerPrefs.GetInt($"Completed_{charTag}", 0) == 1;
+    }
+
+    public static void SetCharacterCompleted(string charTag, bool completed)
+    {
+        if (GetCharacterCompleted(charTag))
+            return;
+
+        PlayerPrefs.SetInt($"Completed_{charTag}", completed ? 1 : 0);
+    }
+
+    public static int GetLastCharacterIndex()
+    {
+        Debug.Log($"GetLastCharacterIndex: {PlayerPrefs.GetInt($"lastCharacterIndex", 0)}");
+        return PlayerPrefs.GetInt($"lastCharacterIndex", 0);
+    }
+
+    public static void SetLastCharacterIndex(int index)
+    {
+        PlayerPrefs.SetInt($"lastCharacterIndex", index);
     }
 }

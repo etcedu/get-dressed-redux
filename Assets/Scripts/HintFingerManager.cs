@@ -6,54 +6,53 @@ using UnityEngine;
 
 public class HintFingerManager : MonoBehaviour
 {
-    public static HintFingerManager instance;
-    List<HintFinger> hintFingers;
-
+    [SerializeField] List<HintFinger> hintFingers;
     Dictionary<string, float> timers = new();
-
-    private void Awake()
+    
+    void Start()
     {
-        if (instance != null)
-            Destroy(this.gameObject);
-        instance = this;
-    }
-    private void Start()
-    {
-        hintFingers = FindObjectsByType<HintFinger>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
+        FindHintFingers();
         HideAllFingers();
     }
 
-    public static void ShowHintFinger(string fingerId)
+    void FindHintFingers()
     {
-        instance.hintFingers.Find(x => x.id == fingerId)?.Show();
+        hintFingers = FindObjectsByType<HintFinger>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
     }
 
-    public static void HideHintFinger(string fingerId)
+    public void ShowHintFinger(string fingerId)
     {
-        instance.hintFingers.Find(x => x.id == fingerId)?.Hide();
+        hintFingers.Find(x => x.id == fingerId)?.Show();
+    }
+
+    public void HideHintFinger(string fingerId)
+    {
+        hintFingers.Find(x => x.id == fingerId)?.Hide();
         CancelHintTimer(fingerId);
     }
 
-    public static void HideAllFingers()
+    public void HideAllFingers()
     {
-        for (int i = 0; i < instance.hintFingers.Count; i++)
+        FindHintFingers();
+
+        for (int i = 0; i < hintFingers.Count; i++)
         {
-            instance.hintFingers[i].Hide();
-            CancelHintTimer(instance.hintFingers[i].id);
+            hintFingers[i].Hide();
+            CancelHintTimer(hintFingers[i].id);
         }
     }
 
-    public static void ShowHintOnTimer(string id, float delay)
+    public void ShowHintOnTimer(string id, float delay)
     {
-        if (!instance.timers.ContainsKey(id))
-            instance.timers.Add(id, delay);
+        if (!timers.ContainsKey(id))
+            timers.Add(id, delay);
         else
-            instance.timers[id] = delay;
+            timers[id] = delay;
     }
 
-    public static void CancelHintTimer(string id)
+    public void CancelHintTimer(string id)
     {
-        instance.timers.Remove(id);
+        timers.Remove(id);
     }
 
     private void Update()

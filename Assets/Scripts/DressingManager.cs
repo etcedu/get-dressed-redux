@@ -1,17 +1,12 @@
 using System;
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using System.Collections;
+using System.Diagnostics;
+
+
+#if UNITY_EDITOR
+#endif
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine.UI;
-using UnityEngine.Events;
-using TMPro;
-using UnityEngine.Analytics;
-using Crosstales.RTVoice.Model.Enum;
-using System.Reflection;
 
 [System.Serializable]
 public class DressingManager : MonoBehaviour
@@ -34,8 +29,16 @@ public class DressingManager : MonoBehaviour
     public BodyPartRender[] maleSetup = new BodyPartRender[0];
     public BodyPartRender[] femaleSetup = new BodyPartRender[0];
 
-    void Start()
+    [SerializeField] SoundVolumePair[] clothSounds;
+    [SerializeField] SoundVolumePair[] hairSounds;
+    SFXManager sfxManager;
+
+    Stopwatch stopwatch;
+
+    IEnumerator Start()
     {
+        sfxManager = FindObjectOfType<SFXManager>();
+
         ClearClothingFromCategory(Category.HEAD);
         ClearClothingFromCategory(Category.TOP);
         ClearClothingFromCategory(Category.BOTTOM);
@@ -43,8 +46,17 @@ public class DressingManager : MonoBehaviour
         ClearClothingFromCategory(Category.OTHER);
 
         SetupCharacter();
-
         dressingUI.Init();
+
+        yield return new WaitForSeconds(1.45f);
+
+        if (GlobalData.isTutorial)
+            FindObjectOfType<TutorialManager>()?.StartTutorial();
+
+        stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        EventRecorder.RecordLevelStartedEvent(GlobalData.currentCharacterSelection.characterName);
     }
 
     void SetupCharacter()
@@ -102,6 +114,12 @@ public class DressingManager : MonoBehaviour
             case Category.OTHER:
                 for (int i = 0; i < otherMaterials.Count; i++)
                     otherMaterials[i].mainTexture = null;
+                break;
+            case Category.DRESS:
+                for (int i = 0; i < topMaterials.Count; i++)
+                    topMaterials[i].mainTexture = null;
+                for (int i = 0; i < bottomMaterials.Count; i++)
+                    bottomMaterials[i].mainTexture = null;
                 break;
         }
     }
@@ -189,24 +207,37 @@ public class DressingManager : MonoBehaviour
         characterAnimator.SetTrigger(trigger);
     }
 
+    public void PlayClothSound()
+    {
+        sfxManager?.PlayOneShot(clothSounds[UnityEngine.Random.Range(0, clothSounds.Length)]);
+    }
+
+    public void PlayHairSounds()
+    {
+        sfxManager?.PlayOneShot(hairSounds[UnityEngine.Random.Range(0, hairSounds.Length)]);
+    }
+
     // Evaluate the clothing selection
     public void Evaluate()
     { 
-        TimeSpan timeElapsed = (CrossSceneInfo.LevelStartedTimeStamp - DateTime.Now).Duration();
-        float secondsElapsed = (float)timeElapsed.TotalSeconds;
+        stopwatch.Stop();
+        if (GlobalData.isTutorial)
+            EventRecorder.RecordCompletedTutorialEvent((float)stopwatch.Elapsed.TotalSeconds);
 
         dressingUI.Hide();
-        feedbackUI.StartFeedback();
-        //EventRecorder.RecordLevelCompleted(CrossSceneInfo.LevelAttemptId, CrossSceneInfo.LastCompanyName, CrossSceneInfo.LastPositionName, passed, _faceScore, _topScore, _bottomScore, _shoesScore, _itemScore, _score, CrossSceneInfo.PassingCuttoff, secondsElapsed);
+        feedbackUI.StartFeedback(stopwatch.Elapsed.TotalSeconds);
     }
 
     public void Restart()
     {
+        stopwatch.Stop();
+        EventRecorder.RecordLevelRestartedEvent((float)stopwatch.Elapsed.TotalSeconds, GlobalData.currentCharacterSelection.characterName);
         SceneLoader.LoadScene("Dressing");
     }
 
     public void ReturnToMenu()
     {
+        EventRecorder.RecordLevelQuitEvent((float)stopwatch.Elapsed.TotalSeconds, GlobalData.currentCharacterSelection.characterName);
         SceneLoader.LoadScene("MainMenu");
     }
      

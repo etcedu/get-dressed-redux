@@ -1,0 +1,45 @@
+	Tag	Name	Gender	Job Title	Description	Job Attire Desc	Image Asset Path	Other Clothing	Skin Color (hex)	Win Feedback	Lose Feedback
+Character	ben	Benathan "Benny" Bennifer	Male	Go out for food	Put some pants on for god's sake.	literally anything	Appearance_App_Icon	none	FFD8E7FF	Your fit is fly, Bennifer.	Too Bad
+	Male_Hair_07	Head	Male	Long Hair	Long Hair	Casual; Business Casual	Good	OK	Bad		
+	Male_Hat_01	Head	Either	Blue and White Ball Cap	Blue and White Ball Cap	Informal	Good	OK	Bad		
+	Male_Shirt_02	Top	Male	Striped Button Up	Striped Button Up	Business Casual	Good	OK	Bad		
+	Male_Shirt_04	Top	Male	Striped Polo Shirt	Striped Polo Shirt	Casual	Good	OK	Bad		
+	Male_Shirt_06	Top	Male	Brown Sports Coat	Brown Sports Coat	Business Casual; Business Professional	Good	OK	Bad		
+	Male_Pants_10	Bottom	Male	Black Shorts	Black Shorts	Casual	Good	OK	Bad		
+	Male_Pants_11	Bottom	Male	Pleated Shorts	Pleated Shorts	Casual	Good	OK	Bad		
+	Male_Pants_12	Bottom	Male	Jean Shorts	Jean Shorts	Informal	Good	OK	Bad		
+	Male_Shoe_06	Feet	Male	White Basketball Shoes	White Basketball Shoes	Casual	Good	OK	Bad		
+	Male_Shoe_07	Feet	Male	Red Sandals	Red Sandals	Informal	Good	OK	Bad		
+	Male_Shoe_08	Feet	Male	Black Hightop Sneakers - M	Black Hightop Sneakers - M	Informal	Good	OK	Bad		
+Character	jenny	Jenny	Female	Jennnnny	Jen	JENY	Icon_Dressed	none	10FF91FF	Great outfit, Jenny	Nope
+	Female_Hair_06	Head	Female	Short Afro	Short Afro	Casual;Business Casual	Good	OK	Bad		
+	Female_Hair_09	Head	Female	Medium Length Black Hair	Medium Length Black Hair	Casual;Business Casual	Good	OK	Bad		
+	Female_Shirt_07	Top	Female	Striped Sleeveless Shirt	Striped Sleeveless Shirt	Business Casual	Good	OK	Bad		
+	Female_Shirt_10	Top	Female	Red Collared Shirt	Red Collared Shirt	Business Casual	Good	OK	Bad		
+	Female_Shirt_15	Top	Female	Sports Jacket	Sports Jacket	Informal	Good	OK	Bad		
+	Female_Pants_06	Bottom	Female	Grey Suit Pants - F	Grey Suit Pants - F	Business Casual;Business Professional	Good	OK	Bad		
+	Female_Skirt_04	Bottom	Female	Gray Knee Length Skirt	Gray Knee Length Skirt	Business Casual	Good	OK	Bad		
+	Female_Skirt_05	Bottom	Female	Pink Skirt	Pink Skirt	Casual	Good	OK	Bad		
+	Female_Shoe_03	Feet	Female	Blue Cotton Flats	Blue Cotton Flats	Casual	Good	OK	Bad		
+	Female_Shoe_06	Feet	Female	Wrapped Heels	Wrapped Heels	Casual	Good	OK	Bad		
+	Female_Shoe_07	Feet	Female	Black Stripe Closed Toe Heels	Black Stripe Closed Toe Heels	Business Casual;Business Professional	Good	OK	Bad		
+Character	Stanley	Stanley	MALE	Undergraduate Admission	Stanley has landed an interview at Stanford. They're highly selective, so the clothes he wears to class aren't going to cut it.	Business Casual	stanley	none	f5c8a1FF	You helped Stanley choose the perfect outfit. Dressing like a professional will help his chances of getting into Stanford!	This outfit isn't appropriate for this kind of interview. Help Stanley make a more professional outfit for his college interview!
+	Stanley_Hair_Good	Head	Male	Clean Shave	Clean Shave	Casual; Business Casual;Business Professional	Groomed<br>A clean shave is always a safe bet if you aren't sure what to do about your facial hair.	OK	Bad		
+	Stanley_Hair_Bad	Head	Male	Scruffy Stubble	Scruffy Stubble	Casual; Business Casual;Business Professional	Good	OK	Sloppy<br>Stubble, especially if it's creeping down your neck, might show that you didn't take the time to prepare.		
+	Male_Shirt_02	Top	Male	Striped Button Up	Striped Button Up	Business Casual	Business Casual<br>Widely considered to be professional attire, shows employers you understand the basics.	OK	Bad		
+	Male_Shirt_03	Top	Male	Polo Shirt	Polo Shirt	Business Casual	Good	Casual<br>A sporty shirt that's often worn on the job, but is seen as too informal for this interview.	Bad		
+	Male_Shirt_05	Top	Male	Black Graphic T-Shirt	Black Graphic T-Shirt	Informal	Good	OK	Ultra Casual<br>Perfect for everyday wear, but inappropriate for interviews like this!		
+	Male_Pants_04	Bottom	Male	Khaki Slacks	Khaki Slacks	Business Casual	Business Casual<br>Signals that you understand the environment by dressing with respect for the occasion.	OK	Bad		
+	Male_Pants_07	Bottom	Male	Blue Jeans	Blue Jeans	Casual	Good	Casual<br>A common piece of clothing, but too informal for a serious occasion like this interview.	Bad		
+	Male_Pants_11	Bottom	Male	Chino Shorts	Chino Shorts	Casual	Good	OK	Ultra Casual<br>It's generally wise to never wear shorts to an interview.		
+	Male_Shoe_02	Feet	Male	Derby Shoes	Derby Shoes	Business Casual; Business Professional	Business Casual<br>A timeless style that shows  a sense of professionalism and maturity without being overly formal.	OK	Bad		
+	Male_Shoe_06	Feet	Male	Basketball Shoes	Basketball Shoes	Casual	Good	Casual<br>Comfy and versatile footwear, but doesn't show that you understand interview expectations.	Bad		
+	Male_Shoe_08	Feet	Male	High Top Sneakers	High Top Sneakers	Informal	Good	OK	Ultra Casual<b> Are you going to the mall or to an interview?		
+	Stanley_Face	Other	Male	none	none	none	none	none	none		
+Character	TutorialStanley	Stanley	MALE	Going for burgers	Stanley is hungry, but no shoes no shirt no service.	Informal	stanley	none	f5c8a1FF	You helped Stanley choose the perfect outfit. Dressing like a professional will help his chances of getting into Stanford!	This outfit isn't appropriate for this kind of interview. Help Stanley make a more professional outfit for his college interview!
+	Stanley_Hair_Good	Head	Male	Clean Shave	Clean Shave	Casual; Business Casual;Business Professional	Groomed<br>A clean shave is always a safe bet if you aren't sure what to do about your facial hair.	OK	Bad		
+	Stanley_Hair_Bad	Head	Male	Scruffy Stubble	Scruffy Stubble	Casual; Business Casual;Business Professional	Good	OK	Sloppy<br>Stubble, especially if it's creeping down your neck, might show that you didn't take the time to prepare.		
+	Male_Shirt_05	Top	Male	Black Graphic T-Shirt	Black Graphic T-Shirt	Informal	Good	OK	Ultra Casual<br>Perfect for everyday wear, but inappropriate for interviews like this!		
+	Male_Pants_07	Bottom	Male	Blue Jeans	Blue Jeans	Casual	Good	Casual<br>A common piece of clothing, but too informal for a serious occasion like this interview.	Bad		
+	Male_Shoe_08	Feet	Male	High Top Sneakers	High Top Sneakers	Informal	Good	OK	Ultra Casual<b> Are you going to the mall or to an interview?		
+	Stanley_Face	Other	Male	none	none	none	none	none	none		

@@ -58,9 +58,8 @@ namespace SimcoachGames.EventRecorder
             RuntimeOptionsToggle = EditorGUILayout.BeginFoldoutHeaderGroup(RuntimeOptionsToggle, "Runtime Options");
             if (RuntimeOptionsToggle)
             {
-
-
                 GUI_DrawGameId();
+                GUI_DrawGameAuthCallbackUrl();
                 GUI_DrawBuildUseCaseEnum();
 
                 if (Settings.buildUseCase != BuildUseCase.Development)
@@ -133,7 +132,7 @@ namespace SimcoachGames.EventRecorder
             GUI.enabled = false;
             EditorGUILayout.TextField("Event Id", Settings.eventId);
             GUI.enabled = true;
-            if(GUILayout.Button("Change"))
+            if (GUILayout.Button("Change"))
             {
                 EventIdValidationWindow.Init();
             }
@@ -142,6 +141,15 @@ namespace SimcoachGames.EventRecorder
             {
                 EditorGUILayout.HelpBox("Invalid Game Id", MessageType.Error);
             }
+        }
+
+        static void GUI_DrawGameAuthCallbackUrl()
+        {
+            EditorGUILayout.BeginHorizontal();
+            GUI.enabled = false;
+            EditorGUILayout.TextField("Auth Callback URL", Settings.authCallbackUrl);
+            GUI.enabled = true;
+            EditorGUILayout.EndHorizontal();
         }
 
         static void ShowFakeServerResponseOption()

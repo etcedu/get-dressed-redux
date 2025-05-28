@@ -5,19 +5,27 @@ using UnityEngine;
 public class HintFinger : MonoBehaviour
 {
     [SerializeField] public string id;
+    [SerializeField] GameObject linkedObject;
     UITweener tween;
 
-    void Start()
+    private void Update()
     {
-        tween = GetComponent<UITweener>();
+        if (linkedObject != null)
+        {
+            transform.position = linkedObject.transform.position;
+        }
     }
-        
+
     public void Show()
     {
+        if (!tween)
+            tween = GetComponent<UITweener>();
         tween?.PlayForward();
     }
     public void Hide()
     {
+        if (!tween)
+            tween = GetComponent<UITweener>();
         tween?.PlayReverse();
     }
 }

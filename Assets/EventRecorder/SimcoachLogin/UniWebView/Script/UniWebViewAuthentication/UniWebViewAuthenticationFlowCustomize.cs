@@ -17,6 +17,7 @@
 
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -245,6 +246,14 @@ public class UniWebViewAuthenticationFlowCustomize : UniWebViewAuthenticationCom
     /// </summary>
     [field: SerializeField]
     public UnityEvent<string> OnSignOutErrored { get; set; }
+
+    public void SetAuthCallback(string newCallback)
+    {
+        mobileRedirectUri = newCallback;
+
+        EditorUtility.SetDirty(this);
+        AssetDatabase.SaveAssetIfDirty(this);
+    }
   
 }
 

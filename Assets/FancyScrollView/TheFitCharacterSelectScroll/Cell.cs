@@ -8,7 +8,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using EasingCore;
-using FancyScrollView.Example09;
 using TMPro;
 
 namespace FancyScrollView.TheFitCharacterSelect
@@ -28,6 +27,8 @@ namespace FancyScrollView.TheFitCharacterSelect
         [SerializeField] Color fadedColor;
 
         [SerializeField] Image fader;
+        [SerializeField] GameObject lockedObject;
+        [SerializeField] GameObject completedObject;
 
         CharacterData data;
 
@@ -40,6 +41,9 @@ namespace FancyScrollView.TheFitCharacterSelect
             title.text = charData.characterName;
             description.text = charData.description;
             job.text = charData.jobTitle;
+
+            SetLockState(!GlobalData.GetTutorialFinished() && !data.characterTag.ToLower().Contains("tutorial"));
+            completedObject.SetActive(GlobalData.GetCharacterCompleted(data.characterTag));
 
             UpdateSibling();
         }
@@ -59,6 +63,11 @@ namespace FancyScrollView.TheFitCharacterSelect
             {
                 transform.SetAsFirstSibling();
             }
+        }
+
+        public void SetLockState(bool locked)
+        {
+            lockedObject.SetActive(locked);
         }
 
         public override void UpdatePosition(float t)

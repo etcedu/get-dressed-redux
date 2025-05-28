@@ -13,9 +13,11 @@ public class DressingUI : MonoBehaviour
     [SerializeField] Animator uiAnimator;
     [SerializeField] GameObject dressingCanvasObject;
 
+    [SerializeField] GameObject infoPanel;
     [SerializeField] TMP_Text nameLabel;
     [SerializeField] TMP_Text positionLabel;
     [SerializeField] TMP_Text descriptionLabel;
+    [SerializeField] ClothingNameTextObject clothingNameLabel;
 
     [SerializeField] List<ClothingPieceSelectionToggle> headToggles;
     [SerializeField] ClothingPieceSelectionToggle[] topToggles;
@@ -39,6 +41,8 @@ public class DressingUI : MonoBehaviour
         nameLabel.text = GlobalData.currentCharacterSelection.characterName;
         positionLabel.text = GlobalData.currentCharacterSelection.jobTitle;
         descriptionLabel.text = GlobalData.currentCharacterSelection.description;
+        if (GlobalData.isTutorial)
+            infoPanel.SetActive(false);
 
         CheckAndSetReadyButtonState();
         SetUpClothingButtons();
@@ -47,6 +51,11 @@ public class DressingUI : MonoBehaviour
         //set bad head piece to start with
         headToggles.Find(x => x.clothingPiece == GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count-1]).toggle.SetIsOnWithoutNotify(true);
         SetClothingPieceManual(GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count - 1]);
+    }
+
+    public void EnableInfoPanel()
+    {
+        infoPanel.SetActive(true);
     }
 
     void SetUpClothingButtons()
@@ -113,39 +122,43 @@ public class DressingUI : MonoBehaviour
         bool bottomButtonsOpen  = uiAnimator.GetBool("BottomButtonsOpen");
         bool feetButtonsOpen    = uiAnimator.GetBool("FeetButtonsOpen");
 
-        if (headButtonsOpen)    { uiAnimator.CrossFade("CloseHeadButtons", 0.2f);   headButtonsOpen = false; }
-        if (topButtonsOpen)     { uiAnimator.CrossFade("CloseTopButtons", 0.2f);    topButtonsOpen = false; }
-        if (bottomButtonsOpen)  { uiAnimator.CrossFade("CloseBottomButtons", 0.2f); bottomButtonsOpen = false; }
-        if (feetButtonsOpen)    { uiAnimator.CrossFade("CloseFeetButtons", 0.2f);   feetButtonsOpen = false; }
+        if (headButtonsOpen)    { uiAnimator.CrossFade($"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);   headButtonsOpen = false; }
+        if (topButtonsOpen)     { uiAnimator.CrossFade($"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);    topButtonsOpen = false; }
+        if (bottomButtonsOpen)  { uiAnimator.CrossFade($"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f); bottomButtonsOpen = false; }
+        if (feetButtonsOpen)    { uiAnimator.CrossFade($"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);   feetButtonsOpen = false; }
 
         switch (categoryParsed)
         {
             case Category.HEAD:
-                if (!headButtonsOpen)
+                if (!headButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Head");
 
-                uiAnimator.CrossFade(headButtonsOpen ? "CloseHeadButtons" : "OpenHeadButtons", 0.2f);
+                uiAnimator.CrossFade(headButtonsOpen ? $"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button" 
+                                                     : $"OpenHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("HeadButtonsOpen", !headButtonsOpen);
                 break;
             case Category.TOP:
-                if (!topButtonsOpen)
+                if (!topButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Top");
 
-                uiAnimator.CrossFade(topButtonsOpen ? "CloseTopButtons" : "OpenTopButtons", 0.2f);
+                uiAnimator.CrossFade(topButtonsOpen ? $"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button" 
+                                                    : $"OpenTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("TopButtonsOpen", !topButtonsOpen);
                 break;
             case Category.BOTTOM:
-                if (!bottomButtonsOpen)
+                if (!bottomButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Bottom");
 
-                uiAnimator.CrossFade(bottomButtonsOpen ? "CloseBottomButtons" : "OpenBottomButtons", 0.2f);
+                uiAnimator.CrossFade(bottomButtonsOpen ? $"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button" 
+                                                       : $"OpenBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("BottomButtonsOpen", !bottomButtonsOpen);
                 break;
             case Category.FEET:
-                if (!feetButtonsOpen)
+                if (!feetButtonsOpen && !GlobalData.isTutorial)
                     SimpleRTVoiceExample.Instance.Speak("default", "Feet");
 
-                uiAnimator.CrossFade(feetButtonsOpen ? "CloseFeetButtons" : "OpenFeetButtons", 0.2f);
+                uiAnimator.CrossFade(feetButtonsOpen ? $"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button" 
+                                                     : $"OpenFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);
                 uiAnimator.SetBool("FeetButtonsOpen", !feetButtonsOpen);
                 break;
             default:
@@ -155,12 +168,53 @@ public class DressingUI : MonoBehaviour
 
     public void ClothingToggle_OnClick(ClothingPieceSelectionToggle sender)
     {
-        if (!init)
+        if (!init || !sender.toggle.isOn)
             return;
 
+        Debug.Log($"Here from {sender.clothingPiece.DisplayName}");
+
         dressingManager.ClearClothingFromCategory(sender.clothingPiece.Category);
+
+        if (sender.clothingPiece.Category == Category.DRESS)
+        {
+            dressingManager.ClearClothingFromCategory(Category.BOTTOM);
+            GlobalData.selectedBottomPiece = null;
+            for (int i = 0; i < bottomToggles.Length; i++)
+                bottomToggles[i].toggle.SetIsOnWithoutNotify(false);
+        }
+        else if (sender.clothingPiece.Category == Category.TOP) 
+        {
+            if (GlobalData.selectedTopPiece?.Category == Category.DRESS)
+            {
+                dressingManager.ClearClothingFromCategory(Category.BOTTOM);
+                GlobalData.selectedBottomPiece = null;
+                for (int i = 0; i < bottomToggles.Length; i++)
+                    bottomToggles[i].toggle.SetIsOnWithoutNotify(false);
+            }
+        }
+        else if (sender.clothingPiece.Category == Category.BOTTOM)
+        {
+            if (GlobalData.selectedTopPiece?.Category == Category.DRESS)
+            {
+                dressingManager.ClearClothingFromCategory(Category.TOP);
+                GlobalData.selectedTopPiece = null;
+                for (int i = 0; i < topToggles.Length; i++)
+                    topToggles[i].toggle.SetIsOnWithoutNotify(false);
+            }
+        }
+
         dressingManager.SetClothing(sender.clothingPiece);
-        SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
+
+        if (sender.clothingPiece.Category == Category.HEAD)
+            dressingManager.PlayHairSounds();
+        else
+            dressingManager.PlayClothSound();
+     
+
+        if (!GlobalData.isTutorial)
+            SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
+
+        clothingNameLabel.Show(sender.clothingPiece.DisplayName, sender.gameObject);
 
         CheckAndSetReadyButtonState();
     }

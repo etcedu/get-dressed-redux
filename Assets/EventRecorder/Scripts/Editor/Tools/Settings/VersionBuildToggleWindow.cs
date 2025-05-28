@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using SimcoachGames.EventRecorder;
+using SimcoachGames.EventRecorder.Login;
 
 public class VersionBuildToggleWindow : EditorWindow
 {
@@ -76,8 +77,9 @@ public class VersionBuildToggleWindow : EditorWindow
 
         buildVersionSettings.SaveData();
 
-        FindObjectOfType<SimcoachLicenseManagementUI>().blockerText.text 
-            = FindObjectOfType<SimcoachLicenseManagementUI>().blockerText.text.Replace("{$game}", BuildVersionToggleSettingsSO.GetInstance().productName_Consumer);
+        if (FindObjectOfType<SimcoachLicenseManagementUI>()?.blockerText != null)
+            FindObjectOfType<SimcoachLicenseManagementUI>().blockerText.text 
+                = FindObjectOfType<SimcoachLicenseManagementUI>().blockerText.text.Replace("{$game}", BuildVersionToggleSettingsSO.GetInstance().productName_Consumer);
     }
 
     static void SetEditorBuildSettingsScenes(bool enterprise)

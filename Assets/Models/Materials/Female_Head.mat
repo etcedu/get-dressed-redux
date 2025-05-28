@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Female_Head
-  m_Shader: {fileID: 4800000, guid: b6c51b100ea184f65ab99d4471f0898b, type: 3}
+  m_Shader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -30,5 +30,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Color: {r: 0.0627451, g: 1, b: 0.5686275, a: 0}
+    - _Color: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
   m_BuildTextureStacks: []

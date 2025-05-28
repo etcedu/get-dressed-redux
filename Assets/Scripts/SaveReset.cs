@@ -11,7 +11,6 @@ public class SaveReset : MonoBehaviour
 		dataEvent.Save();
 		*/
 
-		EventRecorder.RecordLevelRestarted();
 	}
 }
 
