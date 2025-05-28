@@ -9,15 +9,16 @@ using UnityEngine;
 public class ClothingCloset : ScriptableObject
 {
     public TextAsset clothingDataFile;
-    public List<ClothingPiece> clothingPieces;
+    //public List<ClothingPiece> clothingPieces;
     public List<ClothingModelConnection> connections;
-
-    public ClothingPiece GetClothingPiece(string name)
-    {
-        return clothingPieces.Find(x => x.Tag == name);
-    }
+    
+    //public ClothingPiece GetClothingPiece(string name)
+    //{
+    //    return clothingPieces.Find(x => x.Tag == name);
+   // }
 
 #if UNITY_EDITOR
+    /*
     [ExecuteInEditMode]
     [ContextMenu("Load Clothing")]
     public void LoadClothing()
@@ -88,6 +89,7 @@ public class ClothingCloset : ScriptableObject
             AssetDatabase.SaveAssets();
         }
     }
+    */
 
     [ExecuteInEditMode]
     [ContextMenu("Load Connections")]

@@ -7,6 +7,7 @@ public class ClothingPieceSelectionToggle : MonoBehaviour
 {
     [SerializeField] Image icon;
     public ClothingPiece clothingPiece;
+    public Toggle toggle;
 
     public void InitButton(ClothingPiece _clothingPiece)
     {

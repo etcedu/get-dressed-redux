@@ -9,7 +9,7 @@ public class CharacterRoster : ScriptableObject
 {
     public TextAsset charactersDataFile;
     public List<CharacterData> characters;
-    public ClothingCloset clothingCloset;
+    public List<ClothingModelConnection> connections;
 
     public CharacterData GetCharacter(string characterTag)
     {
@@ -18,71 +18,15 @@ public class CharacterRoster : ScriptableObject
 
 #if UNITY_EDITOR
     [ExecuteInEditMode]
-    [ContextMenu("Load Characters")]
-    public void LoadCharacters()
-    {
-        characters.Clear();
-        characters = new();
-        ParseCharacters(charactersDataFile);
-    }
-
-    [ExecuteInEditMode]
     [ContextMenu("Load Combined Data")]
     public void LoadCombinedData()
     {
         characters.Clear();
         characters = new();
+        LoadConnections();
         ParseCombined(charactersDataFile);
     }
-
-    [ExecuteInEditMode]
-    public void ParseCharacters(TextAsset tsvData)
-    {
-        if (tsvData == null)
-            return;
-
-        string[] items = tsvData.text.Split(new char[] { '\n' });
-
-        for (int i = 1; i < items.Length; i++)
-        {
-            string[] fields = items[i].Split(new char[] { '\t' });
-
-            CharacterData c = new CharacterData();
-
-            c.characterTag = fields[0];
-            c.characterName = fields[1];
-
-            if (Enum.TryParse(fields[2].ToUpper(), out Gender genderParsed))
-                c.gender = genderParsed;
-            else
-                Debug.LogError($"Error parsing gender {fields[2]} on line {i} ");
-
-            c.jobTitle = fields[3];
-            c.description = fields[4];
-            c.jobAttireDescription = fields[5];
-            c.imageAssetPath = fields[6];
-
-            c.headOptions = fields[7].Split(new char[] { ';' }).Trim();
-            c.topOptions = fields[8].Split(new char[] { ';' }).Trim();
-            c.bottomOptions = fields[9].Split(new char[] { ';' }).Trim();
-            c.feetOptions = fields[10].Split(new char[] { ';' }).Trim();
-            c.otherClothes = fields[11].Split(new char[] { ';' }).Trim();
-            
-            if (ColorExtensions.TryParseHexStringRGBA(fields[12], out Color32 skinColor))
-                c.skinColor = skinColor;
-            else
-                c.skinColor = Color.white;
-
-            c.winFeedback = fields[13];
-            c.loseFeedback = fields[14];
-
-            characters.Add(c);
-
-            EditorUtility.SetDirty(this);
-            AssetDatabase.SaveAssets();
-        }
-    }
-
+      
     [ExecuteInEditMode]
     public void ParseCombined(TextAsset tsvData)
     {
@@ -160,7 +104,7 @@ public class CharacterRoster : ScriptableObject
                 c.OKFeedback = fields[8];
                 c.BadFeedback = fields[9];
 
-                ClothingModelConnection connection = clothingCloset.connections.Find(x => x.name == c.Tag);
+                ClothingModelConnection connection = connections.Find(x => x.name == c.Tag);
                 if (connection == null)
                     Debug.LogError($"No ClothingModelConnection found for {c.DisplayName} at line {i}");
                 else
@@ -181,6 +125,23 @@ public class CharacterRoster : ScriptableObject
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
         }
+    }
+
+    [ExecuteInEditMode]
+    [ContextMenu("Load Connections")]
+    public void LoadConnections()
+    {
+        connections.Clear();
+        connections = new();
+
+        string[] guids = AssetDatabase.FindAssets("t:ClothingModelConnection");
+        foreach (string guid in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            connections.Add(AssetDatabase.LoadAssetAtPath<ClothingModelConnection>(path));
+        }
+        EditorUtility.SetDirty(this);
+        AssetDatabase.SaveAssets();
     }
 #endif
 }
