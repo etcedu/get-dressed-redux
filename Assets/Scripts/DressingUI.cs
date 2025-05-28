@@ -17,6 +17,7 @@ public class DressingUI : MonoBehaviour
     [SerializeField] TMP_Text nameLabel;
     [SerializeField] TMP_Text positionLabel;
     [SerializeField] TMP_Text descriptionLabel;
+    [SerializeField] ClothingNameTextObject clothingNameLabel;
 
     [SerializeField] List<ClothingPieceSelectionToggle> headToggles;
     [SerializeField] ClothingPieceSelectionToggle[] topToggles;
@@ -212,7 +213,8 @@ public class DressingUI : MonoBehaviour
 
         if (!GlobalData.isTutorial)
             SimpleRTVoiceExample.Instance.Speak("default", sender.clothingPiece.DisplayName);
-       
+
+        clothingNameLabel.Show(sender.clothingPiece.DisplayName, sender.gameObject);
 
         CheckAndSetReadyButtonState();
     }

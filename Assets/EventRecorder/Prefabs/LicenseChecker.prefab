@@ -39,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 21.3011, y: -23.3017}
-  m_SizeDelta: {x: 1203, y: 0}
+  m_SizeDelta: {x: 1203, y: 428.66998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &231570024414879126
 CanvasRenderer:
@@ -826,10 +826,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7103421651815615835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 576.5, y: -50.285}
+  m_SizeDelta: {x: 1153, y: 100.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7269617423272556363
 CanvasRenderer:
@@ -1157,7 +1157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1741072316242226540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1407,9 +1407,9 @@ RectTransform:
   - {fileID: 1266644794454332011}
   m_Father: {fileID: 942237572946595324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 576.5, y: -45.78}
   m_SizeDelta: {x: 403.2, y: 91.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6261678928550739074
@@ -1970,6 +1970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuButtonsBlocker: {fileID: 5950637413529929604}
   errorBlocker: {fileID: 956358344887366644}
+  blockerText: {fileID: 6716368398678182527}
   errorBlockerText: {fileID: 7988538602150684687}
   error_noOrgID: Organization ID does not exist for this account or is not recognized.
     Please contact support for information about gaining access to this app.
@@ -2295,10 +2296,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1145710921056161227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 576.5, y: -58.86}
+  m_SizeDelta: {x: 1153, y: 53.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &784231720765721485
 CanvasRenderer:
@@ -3978,7 +3979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4685500899834315649
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4042,10 +4043,10 @@ RectTransform:
   - {fileID: 1442174946471123544}
   m_Father: {fileID: 7103421651815615835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 576.5, y: -306.88998}
+  m_SizeDelta: {x: 1153, y: 91.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2371158674251992447
 CanvasRenderer:
@@ -4646,10 +4647,10 @@ RectTransform:
   - {fileID: 7312691599373558}
   m_Father: {fileID: 7103421651815615835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 576.5, y: 0}
-  m_SizeDelta: {x: 1153, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 576.5, y: -180.84}
+  m_SizeDelta: {x: 1153, y: 117.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6539698927929912230
 CanvasRenderer:
@@ -4979,10 +4980,10 @@ RectTransform:
   - {fileID: 942237572946595324}
   m_Father: {fileID: 8412804931890122835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 576.5, y: 0}
-  m_SizeDelta: {x: 1153, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 576.5, y: -189.33499}
+  m_SizeDelta: {x: 1153, y: 378.66998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1731629054948534077
 CanvasRenderer:

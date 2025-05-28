@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using System.Diagnostics;
+
 
 #if UNITY_EDITOR
 #endif
@@ -31,6 +33,8 @@ public class DressingManager : MonoBehaviour
     [SerializeField] SoundVolumePair[] hairSounds;
     SFXManager sfxManager;
 
+    Stopwatch stopwatch;
+
     IEnumerator Start()
     {
         sfxManager = FindObjectOfType<SFXManager>();
@@ -48,6 +52,11 @@ public class DressingManager : MonoBehaviour
 
         if (GlobalData.isTutorial)
             FindObjectOfType<TutorialManager>()?.StartTutorial();
+
+        stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        EventRecorder.RecordLevelStartedEvent(GlobalData.currentCharacterSelection.characterName);
     }
 
     void SetupCharacter()
@@ -211,21 +220,24 @@ public class DressingManager : MonoBehaviour
     // Evaluate the clothing selection
     public void Evaluate()
     { 
-        TimeSpan timeElapsed = (CrossSceneInfo.LevelStartedTimeStamp - DateTime.Now).Duration();
-        float secondsElapsed = (float)timeElapsed.TotalSeconds;
+        stopwatch.Stop();
+        if (GlobalData.isTutorial)
+            EventRecorder.RecordCompletedTutorialEvent((float)stopwatch.Elapsed.TotalSeconds);
 
         dressingUI.Hide();
-        feedbackUI.StartFeedback();
-        //EventRecorder.RecordLevelCompleted(CrossSceneInfo.LevelAttemptId, CrossSceneInfo.LastCompanyName, CrossSceneInfo.LastPositionName, passed, _faceScore, _topScore, _bottomScore, _shoesScore, _itemScore, _score, CrossSceneInfo.PassingCuttoff, secondsElapsed);
+        feedbackUI.StartFeedback(stopwatch.Elapsed.TotalSeconds);
     }
 
     public void Restart()
     {
+        stopwatch.Stop();
+        EventRecorder.RecordLevelRestartedEvent((float)stopwatch.Elapsed.TotalSeconds, GlobalData.currentCharacterSelection.characterName);
         SceneLoader.LoadScene("Dressing");
     }
 
     public void ReturnToMenu()
     {
+        EventRecorder.RecordLevelQuitEvent((float)stopwatch.Elapsed.TotalSeconds, GlobalData.currentCharacterSelection.characterName);
         SceneLoader.LoadScene("MainMenu");
     }
      

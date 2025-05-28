@@ -177,20 +177,21 @@ public class GameEventManager : MonoBehaviour
             EventRecorderLog.Log("------------ EventProcess Routine already running");
         }
     }
-    
+
+    static DateTime LastPost;
     static IEnumerator EventProcessCoroutine()
     {
-        DateTime lastPost = DateTime.Now;
+        LastPost = DateTime.Now;
         
         while (true)
         {
             if (EventRecorderStorage.BuffersReady)
                 EventRecorderStorage.WriteBuffersToDisk();
 
-            if (EventPoster.WaitingForPost && (DateTime.Now - lastPost).TotalSeconds >= Settings.postInterval)
+            if (EventPoster.WaitingForPost && (DateTime.Now - LastPost).TotalSeconds >= Settings.postInterval)
             {
                 yield return EventPoster.PostUpdatedBacklogsRoutine();
-                lastPost = DateTime.Now;
+                LastPost = DateTime.Now;
             }
 
             yield return new WaitForSeconds(1);
@@ -223,7 +224,6 @@ public class GameEventManager : MonoBehaviour
         eventData.oranization = DefaultOraganization;
         eventData.profile = DefaultAnonProfileName;
 #endif
-        
         RecordEvent(EventRecorderId.UserId, eventData);
     }
 
@@ -279,6 +279,11 @@ public class GameEventManager : MonoBehaviour
         }
             
         Instance.StartCoroutine(EventPoster.PostAllBacklogsRoutine(callback));
+    }
+
+    public static void ForcePostBacklogsSafe()
+    {
+        LastPost = new DateTime(0);
     }
     
     //WTP NOTE: Not called by anything other than dev tooling.

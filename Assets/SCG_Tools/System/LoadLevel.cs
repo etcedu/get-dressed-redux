@@ -11,9 +11,9 @@ public class LoadLevel : MonoBehaviour
 	}
 
 	public void ResetLevel()
-	{
-		EventRecorder.RecordLevelRestarted();
-		Load();
+    {
+        //EventRecorder.RecordLevelRestartedEvent();
+        Load();
 	}
 }
 

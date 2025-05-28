@@ -22,15 +22,11 @@ public class HintFingerManager : MonoBehaviour
 
     public void ShowHintFinger(string fingerId)
     {
-        Debug.Log($"show {fingerId}");
-
         hintFingers.Find(x => x.id == fingerId)?.Show();
     }
 
     public void HideHintFinger(string fingerId)
     {
-        Debug.Log($"hide {fingerId}");
-
         hintFingers.Find(x => x.id == fingerId)?.Hide();
         CancelHintTimer(fingerId);
     }
@@ -39,7 +35,6 @@ public class HintFingerManager : MonoBehaviour
     {
         FindHintFingers();
 
-        Debug.Log($"hide all {hintFingers.Count}");
         for (int i = 0; i < hintFingers.Count; i++)
         {
             hintFingers[i].Hide();

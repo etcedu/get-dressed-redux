@@ -315,3 +315,27 @@ UI Scaling at 4:3
 
 
 
+# vv3.6.3-LoginEnterpriseOffline - 2/24/2025 3:31 PM
+#### Packaged By: Garrett Kimball
+## Added
+Fully automated auth callback urls upon validating event ID. WebView settings are changed and saved and the auth url applied to the game object in runtime.
+
+
+
+# v3.6.4-LoginEnterpriseOffline - 2/24/2025 3:35 PM
+#### Packaged By: Garrett Kimball
+## Added
+Fully automated auth callback urls upon validating event ID.
+WebView settings are changed and saved and the auth url applied to the game object in runtime.
+## Fixed
+settings are now properly saved when using the build mode toggle between consumer and enterprise
+
+
+
+# v3.6.4a-LoginEnterpriseOffline - 2/26/2025 9:51 AM
+#### Packaged By: Garrett Kimball
+## Fixed
+Profile creation UI fixed at 21:9 or wider aspect ratios
+
+
+

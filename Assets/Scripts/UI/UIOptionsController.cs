@@ -7,23 +7,15 @@ using UnityEngine.UI;
 public class UIOptionsController : MonoBehaviour
 {
     [SerializeField] GameObject optionsPopup;
-    [SerializeField] Toggle musicToggle;
     [SerializeField] UICreditsPanel creditsPanel;
-    //[SerializeField] Toggle soundsToggle;
 
     int unlockTaps = 0;
     [SerializeField] GameObject unlockPopup;
 
     void OnEnable()
     {
-        musicToggle.isOn = !MusicManager.MusicIsOn;
-        // soundsToggle.isOn = !SFXManager.SFXIsOn;
+       
     }
-
-    // void Start()
-    // {
-    //     CloseOptions();
-    // }
 
     public void OpenOptions()
     {
@@ -69,30 +61,5 @@ public class UIOptionsController : MonoBehaviour
     public void Credits()
     {
         creditsPanel.Button_Open();
-    }
-
-    public void MusicToggled(bool isMuted)
-    {
-        if (isMuted)
-        {
-            MusicManager.ToggleMusicOff();
-        }
-        else
-        {
-            MusicManager.ToggleMusicOn();
-        }
-    }
-
-    public void SFXToggled(bool isMuted)
-    {
-        if (isMuted)
-        {
-            SFXManager.ToggleSFXOff();
-        }
-        else
-        {
-            SFXManager.ToggleSFXOn();
-        }
-        
     }
 }
