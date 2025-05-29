@@ -12,304 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddcf955f0d4eb34ea931c54f6a4f71c, type: 3}
   m_Name: CharacterRoster
   m_EditorClassIdentifier: 
-  charactersDataFile: {fileID: 1905001501106251880, guid: d4382a4b43bd68f48b12b4a607b1d774,
+  charactersDataFile: {fileID: -747748091656361393, guid: 87d3334478f6e164193add204be603d1,
     type: 3}
   characters:
-  - characterTag: John
-    characterName: John
-    gender: 1
-    jobTitle: ...
-    description: ...
-    jobAttireDescription: ...
-    imageAssetPath: Icon_Dressed
-    skinColor: {r: 0.92156863, g: 0.7882353, b: 0.6509804, a: 1}
-    winFeedback: Great outfit, John
-    loseFeedback: Nope
-    headPieces:
-    - Tag: John_CombedHair
-      DisplayName: Combed
-      GenderRole: 1
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: d4e8e8d5b3eb4d24abf4bedd5372c748, type: 2}
-      FeedbackName: Well Groomed
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_BedHair
-      DisplayName: Ungroomed
-      GenderRole: 1
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 5bb5385ab5d2a5a40a1fd0d4c7f59e91, type: 2}
-      FeedbackName: Bed Head
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 2
-    topPieces:
-    - Tag: John_Buttonup
-      DisplayName: Buttonup
-      GenderRole: 1
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 32eef665607471a4aa54114cca8b12f1, type: 2}
-      FeedbackName: Buttonup
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_WrinkledButtonup
-      DisplayName: Buttonup
-      GenderRole: 1
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 3561e65bf80e7cb4b88a730024a26f69, type: 2}
-      FeedbackName: Wrinkled Buttonup
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 1
-    - Tag: John_SweatButtonup
-      DisplayName: Buttonup
-      GenderRole: 1
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 584f38c026266724bae246ed2f89a234, type: 2}
-      FeedbackName: Sweaty Buttonup
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 2
-    bottomPieces:
-    - Tag: John_Pants
-      DisplayName: Pants
-      GenderRole: 1
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: c75e258bf5bfbe5429d8076620a5f43f, type: 2}
-      FeedbackName: Pants
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_CatHairPants
-      DisplayName: Pants
-      GenderRole: 1
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: c52d6ec69130e7f4eb244f110de3c09d, type: 2}
-      FeedbackName: Cat hair covered pants
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 1
-    - Tag: John_DrinkStainPants
-      DisplayName: Pants
-      GenderRole: 1
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 8b24231fc5e3c90468a644f6adfe7dd4, type: 2}
-      FeedbackName: Stained pants
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 2
-    feetPieces:
-    - Tag: John_ChelseaBoots
-      DisplayName: Chealsea Boots
-      GenderRole: 1
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: f42c17498d0488d4f9bff833820aae72, type: 2}
-      FeedbackName: Chealsea Boots
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: John_ScuffedDerby
-      DisplayName: Derby Shoes
-      GenderRole: 1
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 775396e3633e02f46b4aa0bd3ea37edf, type: 2}
-      FeedbackName: Scuffed Derbys
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 1
-    - Tag: John_DirtyOxfords
-      DisplayName: Oxfords
-      GenderRole: 1
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: ce9685e10e224be4199624ff80727546, type: 2}
-      FeedbackName: Dirty Oxfords
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 2
-    otherPieces:
-    - Tag: John_Face
-      DisplayName: none
-      GenderRole: 1
-      Category: 4
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 747531d79427273498598f16935565b9, type: 2}
-      FeedbackName: none
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
-  - characterTag: Kris
-    characterName: Kris
-    gender: 2
-    jobTitle: Robotics Apprenticeship
-    description: Kris is competing for a spot in the registered robotics program.
-      Help her make a good impression by creating a professional outfit!
-    jobAttireDescription: Business Casual
-    imageAssetPath: Icon_Dressed
-    skinColor: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
-    winFeedback: Great outfit, Jenny
-    loseFeedback: Nope
-    headPieces:
-    - Tag: Kris_Ponytail
-      DisplayName: High Ponytail
-      GenderRole: 2
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 573ead63543320a4fa4595978ac8ce76, type: 2}
-      FeedbackName: High Ponytail
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Beanie
-      DisplayName: Beanie
-      GenderRole: 2
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 1d6c2f082c252214d9a39c5d32084639, type: 2}
-      FeedbackName: Beanie
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 2
-    topPieces:
-    - Tag: Kris_Blazer
-      DisplayName: Blazer and Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: bef598781300f8541899a5c0f3205eb6, type: 2}
-      FeedbackName: Blazer and Button Up Shirt
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Tshirt
-      DisplayName: Short Sleeve Button Up
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 6fea9d15a004da547a7af0778224d465, type: 2}
-      FeedbackName: Short Sleeve Button Up
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 1
-    - Tag: Kris_Spaghetti
-      DisplayName: Spaghetti String Tank Top
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 39c74295895a91a45a63e9ceb0477328, type: 2}
-      FeedbackName: Spaghetti String Tank Top
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 2
-    bottomPieces:
-    - Tag: Kris_StraightPants
-      DisplayName: 'Straight Leg Dress Pants '
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 27fdda0a6d3bf3a45beaba34d319b28d, type: 2}
-      FeedbackName: 'Straight Leg Dress Pants '
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Jeans
-      DisplayName: Blue Jeans
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: e4d95f6de83b3274c92a06de9fa99d25, type: 2}
-      FeedbackName: Blue Jeans
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 1
-    - Tag: Kris_Leggings
-      DisplayName: Leggings
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 7cd57a4e4e844874f994f85917651047, type: 2}
-      FeedbackName: Leggings
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 2
-    feetPieces:
-    - Tag: Kris_Flats
-      DisplayName: Flats
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 1129844f9aa089047ac3bf4b0fb3d9b5, type: 2}
-      FeedbackName: Flats
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Wedge
-      DisplayName: 'Open Toe Wedge '
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 9352947f4b7bf0643911612d0887e0a7, type: 2}
-      FeedbackName: 'Open Toe Wedge '
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 1
-    - Tag: Kris_Flipflops
-      DisplayName: Flip Flops
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: f2afabf89a516c04489727b23fb0b413, type: 2}
-      FeedbackName: Flip Flops
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 2
-    otherPieces:
-    - Tag: Kris_Face
-      DisplayName: none
-      GenderRole: 2
-      Category: 4
-      Tiers: 
-      Connection: {fileID: 11400000, guid: c5155751f1bf8534a8907ffea4210e34, type: 2}
-      FeedbackName: none
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
   - characterTag: TutorialStanley
     characterName: Stanley (Tutorial)
     gender: 1
@@ -322,67 +27,66 @@ MonoBehaviour:
       some buttons to learn why
     loseFeedback: 
     headPieces:
-    - Tag: Stanley_Hair_Good
-      DisplayName: Clean Shave
+    - Tag: Stanley_BaseballCap
+      DisplayName: Baseball Cap
       GenderRole: 1
       Category: 0
       Tiers: 010000000200000003000000
-      Connection: {fileID: 11400000, guid: 49e87b10653298d4a959249b13841e86, type: 2}
-      FeedbackName: Clean Shave
-      GoodFeedback: Groomed<br>A clean shave is always a safe bet if you aren't sure
-        what to do about your facial hair.
+      Connection: {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
+      FeedbackName: Baseball Cap
+      GoodFeedback: Ultra Casual<br>Great for keeping the sun out of your eyes or
+        hiding a bad hair day.
       OKFeedback: OK
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Hair_Bad
-      DisplayName: Scruffy Stubble
+    - Tag: Stanley_Hair_Stubble
+      DisplayName: Bed Head
       GenderRole: 1
       Category: 0
       Tiers: 010000000200000003000000
       Connection: {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
-      FeedbackName: Scruffy Stubble
+      FeedbackName: Bed Head
       GoodFeedback: Good
       OKFeedback: OK
-      BadFeedback: Sloppy<br>Stubble, especially if it's creeping down your neck,
-        might show that you didn't take the time to prepare.
+      BadFeedback: Bad
       scoreForCurrentCharacter: 0
     topPieces:
-    - Tag: Stanley_Shirt_05
-      DisplayName: Black Graphic T-Shirt
+    - Tag: Stanley_Tshirt
+      DisplayName: T-Shirt
       GenderRole: 1
       Category: 1
       Tiers: 00000000
       Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
-      FeedbackName: Black Graphic T-Shirt
-      GoodFeedback: Good
+      FeedbackName: T-Shirt
+      GoodFeedback: Ultra Casual<br>A versatile shirt that's perfect for everyday
+        wear.
       OKFeedback: OK
-      BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
-        interviews like this!
+      BadFeedback: Bad
       scoreForCurrentCharacter: 0
     bottomPieces:
-    - Tag: Stanley_Pants_07
-      DisplayName: Blue Jeans
+    - Tag: Stanley_Jeans
+      DisplayName: Jeans
       GenderRole: 1
       Category: 2
       Tiers: 01000000
       Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
-      FeedbackName: Blue Jeans
-      GoodFeedback: Good
-      OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
-        occasion like this interview.
+      FeedbackName: Jeans
+      GoodFeedback: Casual<br>A common piece of clothing that can be styled in endless
+        ways.
+      OKFeedback: OK
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
     feetPieces:
-    - Tag: Stanley_Shoe_08
+    - Tag: Stanley_HighTops
       DisplayName: High Top Sneakers
       GenderRole: 1
       Category: 3
       Tiers: 00000000
       Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
       FeedbackName: High Top Sneakers
-      GoodFeedback: Good
+      GoodFeedback: 'Ultra Casual<br>A classic sneaker style. Good for relaxed settings. '
       OKFeedback: OK
-      BadFeedback: Ultra Casual<b> Are you going to the mall or to an interview?
+      BadFeedback: Bad
       scoreForCurrentCharacter: 0
     otherPieces:
     - Tag: Stanley_Face
@@ -406,11 +110,11 @@ MonoBehaviour:
     imageAssetPath: stanley
     skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
     winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
-      will help his chances of getting into Stanford!
+      for the interview will help his chances of getting into Stanford!
     loseFeedback: This outfit isn't appropriate for this kind of interview. Help
       Stanley make a more professional outfit for his college interview!
     headPieces:
-    - Tag: Stanley_Hair_Good
+    - Tag: Stanley_Hair_Shaved
       DisplayName: Clean Shave
       GenderRole: 1
       Category: 0
@@ -422,7 +126,7 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Hair_Bad
+    - Tag: Stanley_Hair_Stubble
       DisplayName: Scruffy Stubble
       GenderRole: 1
       Category: 0
@@ -435,7 +139,7 @@ MonoBehaviour:
         might show that you didn't take the time to prepare.
       scoreForCurrentCharacter: 0
     topPieces:
-    - Tag: Stanley_Shirt_02
+    - Tag: Stanley_ButtonUp
       DisplayName: Striped Button Up
       GenderRole: 1
       Category: 1
@@ -447,7 +151,7 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Shirt_03
+    - Tag: Stanley_Polo
       DisplayName: Polo Shirt
       GenderRole: 1
       Category: 1
@@ -459,20 +163,20 @@ MonoBehaviour:
         as too informal for this interview.
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Shirt_05
-      DisplayName: Black Graphic T-Shirt
+    - Tag: Stanley_Tshirt
+      DisplayName: T-Shirt
       GenderRole: 1
       Category: 1
       Tiers: 00000000
       Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
-      FeedbackName: Black Graphic T-Shirt
+      FeedbackName: T-Shirt
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
         interviews like this!
       scoreForCurrentCharacter: 0
     bottomPieces:
-    - Tag: Stanley_Pants_04
+    - Tag: Stanley_Khakis
       DisplayName: Khaki Slacks
       GenderRole: 1
       Category: 2
@@ -484,19 +188,19 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Pants_07
-      DisplayName: Blue Jeans
+    - Tag: Stanley_Jeans
+      DisplayName: Jeans
       GenderRole: 1
       Category: 2
       Tiers: 01000000
       Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
-      FeedbackName: Blue Jeans
+      FeedbackName: Jeans
       GoodFeedback: Good
       OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
         occasion like this interview.
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Pants_11
+    - Tag: Stanley_ChinoShorts
       DisplayName: Chino Shorts
       GenderRole: 1
       Category: 2
@@ -509,7 +213,7 @@ MonoBehaviour:
         interview.
       scoreForCurrentCharacter: 0
     feetPieces:
-    - Tag: Stanley_Shoe_02
+    - Tag: Stanley_DerbyShoes
       DisplayName: Derby Shoes
       GenderRole: 1
       Category: 3
@@ -521,7 +225,7 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Shoe_06
+    - Tag: Stanley_BasketballShoes
       DisplayName: Basketball Shoes
       GenderRole: 1
       Category: 3
@@ -533,12 +237,12 @@ MonoBehaviour:
         understand interview expectations.
       BadFeedback: Bad
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Shoe_08
+    - Tag: Stanley_Hightops
       DisplayName: High Top Sneakers
       GenderRole: 1
       Category: 3
       Tiers: 00000000
-      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+      Connection: {fileID: 0}
       FeedbackName: High Top Sneakers
       GoodFeedback: Good
       OKFeedback: OK
@@ -552,6 +256,649 @@ MonoBehaviour:
       Tiers: 
       Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
       FeedbackName: none
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+  - characterTag: Kris
+    characterName: Kris
+    gender: 2
+    jobTitle: Robotics Apprenticeship
+    description: Kris is competing for a spot in the registered robotics program.
+      Help her make a good impression by creating a professional outfit!
+    jobAttireDescription: Business Casual
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
+    winFeedback: You helped Kris choose the perfect outfit. Dressing like a professional
+      will help her chances of being accepted into the robotics program!
+    loseFeedback: This outfit isn't appropriate for this kind of interview. Help
+      Kris make a more professional outfit for her apprenticeship interview!
+    headPieces:
+    - Tag: Kris_Ponytail
+      DisplayName: High Ponytail
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 573ead63543320a4fa4595978ac8ce76, type: 2}
+      FeedbackName: High Ponytail
+      GoodFeedback: Groomed<br>A neat ponytail can give you a reliable, prepared
+        look.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Beanie
+      DisplayName: Beanie
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 1d6c2f082c252214d9a39c5d32084639, type: 2}
+      FeedbackName: Beanie
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Hats are almost never appropriate for an interview.
+      scoreForCurrentCharacter: 0
+    topPieces:
+    - Tag: Kris_Blazer
+      DisplayName: Blazer and Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: bef598781300f8541899a5c0f3205eb6, type: 2}
+      FeedbackName: Blazer and Button Up Shirt
+      GoodFeedback: Business Casual<br>A blazer and button up is a classic combination
+        that shows the interviewer you're serious.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_ShortSleeveButtonUp
+      DisplayName: Short Sleeve Button Up
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Short Sleeve Button Up
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A comfortable shirt that can be worn in casual work settings,
+        but not formal enough for an interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Spaghetti
+      DisplayName: Spaghetti String Tank Top
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 39c74295895a91a45a63e9ceb0477328, type: 2}
+      FeedbackName: Spaghetti String Tank Top
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
+        interviews!
+      scoreForCurrentCharacter: 0
+    bottomPieces:
+    - Tag: Kris_StraightPants
+      DisplayName: 'Straight Leg Dress Pants '
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 27fdda0a6d3bf3a45beaba34d319b28d, type: 2}
+      FeedbackName: 'Straight Leg Dress Pants '
+      GoodFeedback: Business Casual<br>Signals that you understand the environment
+        by dressing with respect for the occasion.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Jeans
+      DisplayName: Jeans
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: e4d95f6de83b3274c92a06de9fa99d25, type: 2}
+      FeedbackName: Jeans
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
+        occasion like an interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Leggings
+      DisplayName: Leggings
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 7cd57a4e4e844874f994f85917651047, type: 2}
+      FeedbackName: Leggings
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>Never wear leggings as pants to an interview!
+      scoreForCurrentCharacter: 0
+    feetPieces:
+    - Tag: Kris_Flats
+      DisplayName: Flats
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 1129844f9aa089047ac3bf4b0fb3d9b5, type: 2}
+      FeedbackName: Flats
+      GoodFeedback: Business Casual<br>A timeless style that shows  a sense of professionalism
+        and maturity without being overly formal.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Wedge
+      DisplayName: 'Open Toe Wedge '
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 9352947f4b7bf0643911612d0887e0a7, type: 2}
+      FeedbackName: 'Open Toe Wedge '
+      GoodFeedback: Good
+      OKFeedback: Casual<br>Comfy and versatile footwear, but doesn't show that you
+        understand interview expectations.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Flipflops
+      DisplayName: Flip Flops
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: f2afabf89a516c04489727b23fb0b413, type: 2}
+      FeedbackName: Flip Flops
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Ultra Casual<br>Are you going to the mall or to an interview?
+      scoreForCurrentCharacter: 0
+    otherPieces:
+    - Tag: Kris_Face
+      DisplayName: none
+      GenderRole: 2
+      Category: 4
+      Tiers: 
+      Connection: {fileID: 11400000, guid: c5155751f1bf8534a8907ffea4210e34, type: 2}
+      FeedbackName: none
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+  - characterTag: John
+    characterName: John
+    gender: 1
+    jobTitle: Game Development Apprenticeship
+    description: John has a chance to learn all about game making at a real studio.
+      Even though some devs wear shorts to work, John needs to look sharp!
+    jobAttireDescription: Business Casual
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0.92156863, g: 0.7882353, b: 0.6509804, a: 1}
+    winFeedback: You helped John choose the perfect outfit. Dressing like a professional
+      will help him make a good impression at the game dev apprenticeship interview!
+    loseFeedback: John's clothes are too gross and messy for an interview! Help him
+      choose cleaner clothes from his wardrobe!
+    headPieces:
+    - Tag: John_CombedHair
+      DisplayName: Combed
+      GenderRole: 1
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: d4e8e8d5b3eb4d24abf4bedd5372c748, type: 2}
+      FeedbackName: Combed
+      GoodFeedback: Groomed<br>Combing your hair goes a long way toward showing the
+        interviewer that you wanted to look your best.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_BedHair
+      DisplayName: Bed Head
+      GenderRole: 1
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 5bb5385ab5d2a5a40a1fd0d4c7f59e91, type: 2}
+      FeedbackName: Bed Head
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>You look like you just rolled out of bed. Interviewers
+        might think you aren't taking the opportunity seriously.
+      scoreForCurrentCharacter: 0
+    topPieces:
+    - Tag: John_Buttonup
+      DisplayName: Button Up
+      GenderRole: 1
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 32eef665607471a4aa54114cca8b12f1, type: 2}
+      FeedbackName: Button Up
+      GoodFeedback: Business Casual<br>Widely considered to be professional attire,
+        shows employers you understand the basics.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_WrinkledButtonup
+      DisplayName: Button Up
+      GenderRole: 1
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 3561e65bf80e7cb4b88a730024a26f69, type: 2}
+      FeedbackName: Wrinkled Button Up
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>Wrinkled clothing signals carelessness and a lack of
+        attention to detail. Iron your shirts or get them dry-cleaned!
+      scoreForCurrentCharacter: 0
+    - Tag: John_SweatButtonup
+      DisplayName: Button Up
+      GenderRole: 1
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 584f38c026266724bae246ed2f89a234, type: 2}
+      FeedbackName: Sweat-Stained Button Up
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>Look at those sweat stains. Dirty clothing might show
+        that you didn't take the time to present yourself thoughtfully.
+      scoreForCurrentCharacter: 0
+    bottomPieces:
+    - Tag: John_Pants
+      DisplayName: Pleated Slacks
+      GenderRole: 1
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: c75e258bf5bfbe5429d8076620a5f43f, type: 2}
+      FeedbackName: Pleated Slacks
+      GoodFeedback: Business Casual<br>Signals that you understand the environment
+        by dressing with respect for the occasion.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_CatHairPants
+      DisplayName: Pleated Slacks
+      GenderRole: 1
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: c52d6ec69130e7f4eb244f110de3c09d, type: 2}
+      FeedbackName: Cat Hair-Covered slacks
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>Is that cat hair? Use a lint roller or choose different
+        pants to make yourself more presentable.
+      scoreForCurrentCharacter: 0
+    - Tag: John_DrinkStainPants
+      DisplayName: Pleated Slacks
+      GenderRole: 1
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 8b24231fc5e3c90468a644f6adfe7dd4, type: 2}
+      FeedbackName: Stained Slacks
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>Look at that stain! Dirty clothing might show that you
+        didn't take the time to present yourself thoughtfully.
+      scoreForCurrentCharacter: 0
+    feetPieces:
+    - Tag: John_ChelseaBoots
+      DisplayName: Chealsea Boots
+      GenderRole: 1
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: f42c17498d0488d4f9bff833820aae72, type: 2}
+      FeedbackName: Chealsea Boots
+      GoodFeedback: Business Casual<br>A sensible shoe that shows  a sense of professionalism
+        and maturity without being overly formal.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: John_ScuffedDerby
+      DisplayName: Derby Shoes
+      GenderRole: 1
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 775396e3633e02f46b4aa0bd3ea37edf, type: 2}
+      FeedbackName: Scuffed Derbys
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>These shoes have seen better days. Well-kept shoes show
+        that you put thought into every part of your outfit.
+      scoreForCurrentCharacter: 0
+    - Tag: John_DirtyOxfords
+      DisplayName: Oxfords
+      GenderRole: 1
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: ce9685e10e224be4199624ff80727546, type: 2}
+      FeedbackName: Dirty Oxfords
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Sloppy<br>Look at that mud. Clean shoes show that you put thought
+        into every part of your outfit.
+      scoreForCurrentCharacter: 0
+    otherPieces:
+    - Tag: John_Face
+      DisplayName: none
+      GenderRole: 1
+      Category: 4
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 747531d79427273498598f16935565b9, type: 2}
+      FeedbackName: none
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+  - characterTag: Ivy
+    characterName: Ivy
+    gender: 2
+    jobTitle: Game Producer Internship
+    description: Ivy is preparing her outfit for a semester-long internship at a
+      game studio. They wear T-Shirts there, but she wants to make an impression!
+    jobAttireDescription: Business Casual
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0, g: 0, b: 0, a: 1}
+    winFeedback: You helped Ivy choose a crisp, clean outfit. Dressing like a professional
+      will help her make a good impression at the game producer interview!
+    loseFeedback: This outfit might work but it's a little sloppy. Ivy can make a
+      more presentable outfit with the clothes she has in her closet.
+    headPieces:
+    - Tag: Ivy_HighBun
+      DisplayName: High Bun
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: High Bun
+      GoodFeedback: Groomed<br>This type of bun never goes out of fashion. Putting
+        your hair up helps keep focus and attention on your face during interviews.
+      OKFeedback: none
+      BadFeedback: Sloppy<br>A loose bun can be stylish in more casual settings,
+        but interviewers might think you didn't take time to prepare.
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_LooseBun
+      DisplayName: Loose Bun
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Loose Bun
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    topPieces:
+    - Tag: Ivy_ButtonUp
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Button Up Shirt
+      GoodFeedback: 'Business Casual<br>Widely considered to be professional attire,
+        shows employers you understand the basics. '
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_ButtonUpMissingButtons
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Damaged Button Up Shirt
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>Small details like missing buttons and loose threads
+        can add up and signal that you might not notice the little things.
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_ButtonUpFlakey
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Flakey Button Up Shirt
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>Ew! Dandruff? Hair product? What is that? Regardless,
+        make sure your shirt is neat and tidy before your interview!
+      scoreForCurrentCharacter: 0
+    bottomPieces:
+    - Tag: Ivy_HighWaistWideLegPants
+      DisplayName: High-waist Wide-Leg Pants
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: High-waist Wide-Leg Pants
+      GoodFeedback: Business Casual<br>These big pants are stylish while still giving
+        off a professional vibe and understanding of the setting.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_WideLegPantsWrinkled
+      DisplayName: High-waist Wide-Leg Pants
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Wrinkled Wide-Leg Pants
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>Wrinkled clothing signals carelessness and a lack of
+        attention to detail. Iron your clothes or get them dry-cleaned!
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_WideLegPantsGrimy
+      DisplayName: High-waist Wide-Leg Pants
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Grimy Wide-Leg Pants
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>The hems on these pants are visibly dirty.
+      scoreForCurrentCharacter: 0
+    feetPieces:
+    - Tag: Ivy_BitLoafers
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Bit Loafers
+      GoodFeedback: Business Casual<br>A sensible shoe that shows  a sense of professionalism
+        and maturity without being overly formal.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_BitLoafersWorn
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Worn Out Bit Loafers
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>These shoes have seen better days. Crisp shoes show
+        that you put thought into every part of your outfit.
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_BitLoafersGrimy
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Dirty Bit Loafers
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>These shoes are visibly dirty. Clean shoes show that
+        you put thought into every part of your outfit.
+      scoreForCurrentCharacter: 0
+    otherPieces:
+    - Tag: Ivy_Face
+      DisplayName: 
+      GenderRole: 2
+      Category: 4
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: 
+      GoodFeedback: 
+      OKFeedback: 
+      BadFeedback: 
+      scoreForCurrentCharacter: 0
+  - characterTag: Sasha
+    characterName: Sasha
+    gender: 0
+    jobTitle: Junior Cyber Security (Remote)
+    description: The interview is remote but that doesn't mean Sasha shouldn't dress
+      to impress. Help them find a professional outfit in their closet.
+    jobAttireDescription: Business Casual
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0, g: 0, b: 0, a: 1}
+    winFeedback: You helped Sasha choose a well-coordinated outfit. Dressing like
+      a professional will help them make a good impression during their cyber-security
+      interview!
+    loseFeedback: This outfit might work but something doesn't really match. Sasha
+      can make a more presentable outfit with the clothes they have in their closet.
+    headPieces:
+    - Tag: Sasha_Buzzcut
+      DisplayName: Buzz Cut
+      GenderRole: 0
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Buzz Cut
+      GoodFeedback: Groomed<br>A common hairstyle that needs little maintenance.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_BaseballCap
+      DisplayName: Baseball Cap
+      GenderRole: 0
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Baseball Cap
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Ultra_Casual<br>Even if you're having a bad hair day, hats and
+        caps are almost never appropriate for an interview.
+      scoreForCurrentCharacter: 0
+    topPieces:
+    - Tag: Sasha_ButtonUpShirtBlue
+      DisplayName: Button Up Shirt
+      GenderRole: 0
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Button Up Shirt
+      GoodFeedback: Business Casual<br>Button-ups are widely considered to be appropriate
+        for interviews. The color of this shirt also goes well with the rest of the
+        outfit.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_ButtonUpShirtNavy
+      DisplayName: Button Up Shirt
+      GenderRole: 0
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Button Up Shirt
+      GoodFeedback: none
+      OKFeedback: Business Casual<br>The style of this shirt is appropriate but the
+        color doesn't go well with the rest of the outfit. Avoid wearing too much
+        of a single color.
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_ResortShirt
+      DisplayName: Button Up Shirt
+      GenderRole: 0
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Button Up Shirt
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Ultra_Casual<br>Avoid flashy or distracting patterns when dressing
+        for an interview.
+      scoreForCurrentCharacter: 0
+    bottomPieces:
+    - Tag: Sasha_PantsAndBelt
+      DisplayName: Slim Fit Dress Pants
+      GenderRole: 0
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Slim Fit Dress Pants
+      GoodFeedback: Business Casual<br>Highly appropriate for an interview and contrasts
+        well with the rest of the outfit.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_PolkaDotPants
+      DisplayName: Slim Fit Dress Pants
+      GenderRole: 0
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Slim Fit Dress Pants
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: "Ultra_Casual<br>Flashy or whimsical clothes can suggest you don\u2019t
+        understand professional norms, which could raise red flags about your judgment
+        or readiness for the role."
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_PantsNoBelt
+      DisplayName: Slim Fit Dress Pants
+      GenderRole: 0
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Slim Fit Dress Pants
+      GoodFeedback: none
+      OKFeedback: Casual<br>It's possible to look good without a belt, but it's safer
+        to wear one when wearing a tucked in button-up.
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    feetPieces:
+    - Tag: Sasha_OxfordsLightBrown
+      DisplayName: Oxfords
+      GenderRole: 0
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Oxfords
+      GoodFeedback: Business Casual<br>A timeless style perfect for an interview.
+        The color and contrast go well with the rest of the outfit.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_OxfordsBlack
+      DisplayName: Oxfords
+      GenderRole: 0
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Oxfords
+      GoodFeedback: none
+      OKFeedback: Business Casual<br>The style of this shoe is appropriate but the
+        color doesn't go well with the rest of the outfit.
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_BrogueBoots
+      DisplayName: Brogue Boots
+      GenderRole: 0
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: Brogue Boots
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Casual<br>These are stylish boots! But, bold patterns can be distracting
+        in an interview.
+      scoreForCurrentCharacter: 0
+    otherPieces:
+    - Tag: Sasha_Face
+      DisplayName: 
+      GenderRole: 0
+      Category: 4
+      Tiers: 
+      Connection: {fileID: 0}
+      FeedbackName: 
       GoodFeedback: none
       OKFeedback: none
       BadFeedback: none
@@ -639,7 +986,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 272acb128c5dd0140b9355de8d37b971, type: 2}
   - {fileID: 11400000, guid: fb129aa761185204b93507ccff375114, type: 2}
   - {fileID: 11400000, guid: ea0192775835a5c4b875746d00afb2c2, type: 2}
-  - {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
   - {fileID: 11400000, guid: 335c8f48f24dc2d4d880708938529ff6, type: 2}
   - {fileID: 11400000, guid: 3ee538fed55c20b4aaab767438844f08, type: 2}
   - {fileID: 11400000, guid: b0123a305021ae048a8280d3d0826d62, type: 2}
@@ -675,16 +1021,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 718f29acec6b7684e8b4f314d93ce886, type: 2}
   - {fileID: 11400000, guid: c3a2343f1686d8d4c9c44074e610c11c, type: 2}
   - {fileID: 11400000, guid: ce95b79e7ec82b148a8cf9bfa3a6ff29, type: 2}
-  - {fileID: 11400000, guid: 7a1d65afb36fdd046a55120cddff9916, type: 2}
-  - {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
-  - {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
-  - {fileID: 11400000, guid: 49e87b10653298d4a959249b13841e86, type: 2}
-  - {fileID: 11400000, guid: 2a90e17455e01b34288f8603b89493af, type: 2}
-  - {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
-  - {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
+  - {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
+  - {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
   - {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
+  - {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
+  - {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
+  - {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
+  - {fileID: 11400000, guid: 49e87b10653298d4a959249b13841e86, type: 2}
+  - {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
+  - {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+  - {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
+  - {fileID: 11400000, guid: 7a1d65afb36fdd046a55120cddff9916, type: 2}
+  - {fileID: 11400000, guid: 2a90e17455e01b34288f8603b89493af, type: 2}
   - {fileID: 11400000, guid: c294f86bdf861e34b842d0a17b0dcbb3, type: 2}
   - {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
-  - {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
-  - {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
-  - {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
