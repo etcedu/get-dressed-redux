@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Kris_Blazer
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 3b6666a4d8d2f624faf61abd033d9ef3, type: 3}
+  icon: {fileID: 21300000, guid: 86e345a2057dd364a98c0444234254bc, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: d322058a85048234da8cb610d7e963a0, type: 2}
   - {fileID: 2100000, guid: a794bb104a38987498cc81e196510f56, type: 2}

@@ -15,6 +15,324 @@ MonoBehaviour:
   charactersDataFile: {fileID: -747748091656361393, guid: 87d3334478f6e164193add204be603d1,
     type: 3}
   characters:
+  - characterTag: Kris
+    characterName: Kris
+    gender: 2
+    jobTitle: Robotics Apprenticeship
+    description: Kris is competing for a spot in the registered robotics program.
+      Help her make a good impression by creating a professional outfit!
+    jobAttireDescription: Business Casual
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
+    winFeedback: You helped Kris choose the perfect outfit. Dressing like a professional
+      will help her chances of being accepted into the robotics program!
+    loseFeedback: This outfit isn't appropriate for this kind of interview. Help
+      Kris make a more professional outfit for her apprenticeship interview!
+    headPieces:
+    - Tag: Kris_Ponytail
+      DisplayName: High Ponytail
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 573ead63543320a4fa4595978ac8ce76, type: 2}
+      FeedbackName: High Ponytail
+      GoodFeedback: Groomed<br>A neat ponytail can give you a reliable, prepared
+        look.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Beanie
+      DisplayName: Beanie
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 1d6c2f082c252214d9a39c5d32084639, type: 2}
+      FeedbackName: Beanie
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Hats are almost never appropriate for an interview.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Kris_Blazer
+      DisplayName: Blazer and Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: bef598781300f8541899a5c0f3205eb6, type: 2}
+      FeedbackName: Blazer and Button Up Shirt
+      GoodFeedback: Business Casual<br>A blazer and button up is a classic combination
+        that shows the interviewer you're serious.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_ShortSleeveButtonUp
+      DisplayName: Short Sleeve Button Up
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 6fea9d15a004da547a7af0778224d465, type: 2}
+      FeedbackName: Short Sleeve Button Up
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A comfortable shirt that can be worn in casual work settings,
+        but not formal enough for an interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Kris_Spaghetti
+      DisplayName: Spaghetti String Tank Top
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 39c74295895a91a45a63e9ceb0477328, type: 2}
+      FeedbackName: Spaghetti String Tank Top
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
+        interviews!
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Kris_StraightPants
+      DisplayName: 'Straight Leg Dress Pants '
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 27fdda0a6d3bf3a45beaba34d319b28d, type: 2}
+      FeedbackName: 'Straight Leg Dress Pants '
+      GoodFeedback: Business Casual<br>Signals that you understand the environment
+        by dressing with respect for the occasion.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Jeans
+      DisplayName: Jeans
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: e4d95f6de83b3274c92a06de9fa99d25, type: 2}
+      FeedbackName: Jeans
+      GoodFeedback: Good
+      OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
+        occasion like an interview.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Kris_Leggings
+      DisplayName: Leggings
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 7cd57a4e4e844874f994f85917651047, type: 2}
+      FeedbackName: Leggings
+      GoodFeedback: Good
+      OKFeedback: OK
+      BadFeedback: Ultra Casual<br>Never wear leggings as pants to an interview!
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Kris_Flats
+      DisplayName: Flats
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 1129844f9aa089047ac3bf4b0fb3d9b5, type: 2}
+      FeedbackName: Flats
+      GoodFeedback: Business Casual<br>A timeless style that shows  a sense of professionalism
+        and maturity without being overly formal.
+      OKFeedback: OK
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Wedge
+      DisplayName: 'Open Toe Wedge '
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 9352947f4b7bf0643911612d0887e0a7, type: 2}
+      FeedbackName: 'Open Toe Wedge '
+      GoodFeedback: Good
+      OKFeedback: Casual<br>Comfy and versatile footwear, but doesn't show that you
+        understand interview expectations.
+      BadFeedback: Bad
+      scoreForCurrentCharacter: 1
+    - Tag: Kris_Flipflops
+      DisplayName: Flip Flops
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: f2afabf89a516c04489727b23fb0b413, type: 2}
+      FeedbackName: Flip Flops
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Ultra Casual<br>Are you going to the mall or to an interview?
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Kris_Face
+      DisplayName: none
+      GenderRole: 2
+      Category: 4
+      Tiers: 
+      Connection: {fileID: 11400000, guid: c5155751f1bf8534a8907ffea4210e34, type: 2}
+      FeedbackName: none
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+  - characterTag: Ivy
+    characterName: Ivy
+    gender: 2
+    jobTitle: Game Producer Internship
+    description: Ivy is preparing her outfit for a semester-long internship at a
+      game studio. They wear T-Shirts there, but she wants to make an impression!
+    jobAttireDescription: Business Casual
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0, g: 0, b: 0, a: 1}
+    winFeedback: You helped Ivy choose a crisp, clean outfit. Dressing like a professional
+      will help her make a good impression at the game producer interview!
+    loseFeedback: This outfit might work but it's a little sloppy. Ivy can make a
+      more presentable outfit with the clothes she has in her closet.
+    headPieces:
+    - Tag: Ivy_HighBun
+      DisplayName: High Bun
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 340ae214e92e18a43a4f0b72987a1ced, type: 2}
+      FeedbackName: High Bun
+      GoodFeedback: Groomed<br>This type of bun never goes out of fashion. Putting
+        your hair up helps keep focus and attention on your face during interviews.
+      OKFeedback: none
+      BadFeedback: Sloppy<br>A loose bun can be stylish in more casual settings,
+        but interviewers might think you didn't take time to prepare.
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_LooseBun
+      DisplayName: Loose Bun
+      GenderRole: 2
+      Category: 0
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 07cdcd4af71bc344289466108d1b62d6, type: 2}
+      FeedbackName: Loose Bun
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Ivy_ButtonUp
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: d1e170f30bdcf564990c4c0428c80094, type: 2}
+      FeedbackName: Button Up Shirt
+      GoodFeedback: 'Business Casual<br>Widely considered to be professional attire,
+        shows employers you understand the basics. '
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_ButtonUpMissingButtons
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 0777c61bad5b8b344968bb5265ea98bb, type: 2}
+      FeedbackName: Damaged Button Up Shirt
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>Small details like missing buttons and loose threads
+        can add up and signal that you might not notice the little things.
+      scoreForCurrentCharacter: 1
+    - Tag: Ivy_ButtonUpFlakey
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 531022c3099155a46b0117768034a54e, type: 2}
+      FeedbackName: Flakey Button Up Shirt
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>Ew! Dandruff? Hair product? What is that? Regardless,
+        make sure your shirt is neat and tidy before your interview!
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Ivy_HighWaistWideLegPants
+      DisplayName: High-waist Wide-Leg Pants
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: b69f59131faf2164c96c899eba544858, type: 2}
+      FeedbackName: High-waist Wide-Leg Pants
+      GoodFeedback: Business Casual<br>These big pants are stylish while still giving
+        off a professional vibe and understanding of the setting.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_WideLegPantsWrinkled
+      DisplayName: High-waist Wide-Leg Pants
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 36d1d5935d4343743bf35e924ee6d6c6, type: 2}
+      FeedbackName: Wrinkled Wide-Leg Pants
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>Wrinkled clothing signals carelessness and a lack of
+        attention to detail. Iron your clothes or get them dry-cleaned!
+      scoreForCurrentCharacter: 1
+    - Tag: Ivy_WideLegPantsGrimy
+      DisplayName: High-waist Wide-Leg Pants
+      GenderRole: 2
+      Category: 2
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 2d18409e291f5724c993316ff395e518, type: 2}
+      FeedbackName: Grimy Wide-Leg Pants
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>The hems on these pants are visibly dirty.
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Ivy_BitLoafers
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 99014877fcd4d2046a148a58cd7085d0, type: 2}
+      FeedbackName: Bit Loafers
+      GoodFeedback: Business Casual<br>A sensible shoe that shows  a sense of professionalism
+        and maturity without being overly formal.
+      OKFeedback: none
+      BadFeedback: none
+      scoreForCurrentCharacter: 0
+    - Tag: Ivy_BitLoafersWorn
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 9df328607b318074f91dba594f1e078a, type: 2}
+      FeedbackName: Worn Out Bit Loafers
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>These shoes have seen better days. Crisp shoes show
+        that you put thought into every part of your outfit.
+      scoreForCurrentCharacter: 1
+    - Tag: Ivy_BitLoafersGrimy
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Tiers: 
+      Connection: {fileID: 11400000, guid: 0001c2331279eb14599352bc285b4cc6, type: 2}
+      FeedbackName: Dirty Bit Loafers
+      GoodFeedback: none
+      OKFeedback: none
+      BadFeedback: Sloppy<br>These shoes are visibly dirty. Clean shoes show that
+        you put thought into every part of your outfit.
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Ivy_Face
+      DisplayName: 
+      GenderRole: 2
+      Category: 4
+      Tiers: 
+      Connection: {fileID: 11400000, guid: d9a01c8bd46365c4b826f566a2b7877d, type: 2}
+      FeedbackName: 
+      GoodFeedback: 
+      OKFeedback: 
+      BadFeedback: 
+      scoreForCurrentCharacter: 0
   - characterTag: TutorialStanley
     characterName: Stanley (Tutorial)
     gender: 1
@@ -82,7 +400,7 @@ MonoBehaviour:
       GenderRole: 1
       Category: 3
       Tiers: 00000000
-      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+      Connection: {fileID: 0}
       FeedbackName: High Top Sneakers
       GoodFeedback: 'Ultra Casual<br>A classic sneaker style. Good for relaxed settings. '
       OKFeedback: OK
@@ -137,7 +455,7 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Sloppy<br>Stubble, especially if it's creeping down your neck,
         might show that you didn't take the time to prepare.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Stanley_ButtonUp
       DisplayName: Striped Button Up
@@ -162,7 +480,7 @@ MonoBehaviour:
       OKFeedback: Casual<br>A sporty shirt that's often worn on the job, but is seen
         as too informal for this interview.
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_Tshirt
       DisplayName: T-Shirt
       GenderRole: 1
@@ -174,7 +492,7 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
         interviews like this!
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: Stanley_Khakis
       DisplayName: Khaki Slacks
@@ -199,7 +517,7 @@ MonoBehaviour:
       OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
         occasion like this interview.
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_ChinoShorts
       DisplayName: Chino Shorts
       GenderRole: 1
@@ -211,7 +529,7 @@ MonoBehaviour:
       OKFeedback: OK
       BadFeedback: Ultra Casual<br>It's generally wise to never wear shorts to an
         interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Stanley_DerbyShoes
       DisplayName: Derby Shoes
@@ -236,18 +554,18 @@ MonoBehaviour:
       OKFeedback: Casual<br>Comfy and versatile footwear, but doesn't show that you
         understand interview expectations.
       BadFeedback: Bad
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_Hightops
       DisplayName: High Top Sneakers
       GenderRole: 1
       Category: 3
       Tiers: 00000000
-      Connection: {fileID: 0}
+      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
       FeedbackName: High Top Sneakers
       GoodFeedback: Good
       OKFeedback: OK
       BadFeedback: Ultra Casual<b> Are you going to the mall or to an interview?
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: Stanley_Face
       DisplayName: none
@@ -255,164 +573,6 @@ MonoBehaviour:
       Category: 4
       Tiers: 
       Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
-      FeedbackName: none
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
-  - characterTag: Kris
-    characterName: Kris
-    gender: 2
-    jobTitle: Robotics Apprenticeship
-    description: Kris is competing for a spot in the registered robotics program.
-      Help her make a good impression by creating a professional outfit!
-    jobAttireDescription: Business Casual
-    imageAssetPath: Icon_Dressed
-    skinColor: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
-    winFeedback: You helped Kris choose the perfect outfit. Dressing like a professional
-      will help her chances of being accepted into the robotics program!
-    loseFeedback: This outfit isn't appropriate for this kind of interview. Help
-      Kris make a more professional outfit for her apprenticeship interview!
-    headPieces:
-    - Tag: Kris_Ponytail
-      DisplayName: High Ponytail
-      GenderRole: 2
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 573ead63543320a4fa4595978ac8ce76, type: 2}
-      FeedbackName: High Ponytail
-      GoodFeedback: Groomed<br>A neat ponytail can give you a reliable, prepared
-        look.
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Beanie
-      DisplayName: Beanie
-      GenderRole: 2
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 1d6c2f082c252214d9a39c5d32084639, type: 2}
-      FeedbackName: Beanie
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Hats are almost never appropriate for an interview.
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: Kris_Blazer
-      DisplayName: Blazer and Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: bef598781300f8541899a5c0f3205eb6, type: 2}
-      FeedbackName: Blazer and Button Up Shirt
-      GoodFeedback: Business Casual<br>A blazer and button up is a classic combination
-        that shows the interviewer you're serious.
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_ShortSleeveButtonUp
-      DisplayName: Short Sleeve Button Up
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Short Sleeve Button Up
-      GoodFeedback: Good
-      OKFeedback: Casual<br>A comfortable shirt that can be worn in casual work settings,
-        but not formal enough for an interview.
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Spaghetti
-      DisplayName: Spaghetti String Tank Top
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 39c74295895a91a45a63e9ceb0477328, type: 2}
-      FeedbackName: Spaghetti String Tank Top
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Ultra Casual<br>Perfect for everyday wear, but inappropriate for
-        interviews!
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: Kris_StraightPants
-      DisplayName: 'Straight Leg Dress Pants '
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 27fdda0a6d3bf3a45beaba34d319b28d, type: 2}
-      FeedbackName: 'Straight Leg Dress Pants '
-      GoodFeedback: Business Casual<br>Signals that you understand the environment
-        by dressing with respect for the occasion.
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Jeans
-      DisplayName: Jeans
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: e4d95f6de83b3274c92a06de9fa99d25, type: 2}
-      FeedbackName: Jeans
-      GoodFeedback: Good
-      OKFeedback: Casual<br>A common piece of clothing, but too informal for a serious
-        occasion like an interview.
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Leggings
-      DisplayName: Leggings
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 7cd57a4e4e844874f994f85917651047, type: 2}
-      FeedbackName: Leggings
-      GoodFeedback: Good
-      OKFeedback: OK
-      BadFeedback: Ultra Casual<br>Never wear leggings as pants to an interview!
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: Kris_Flats
-      DisplayName: Flats
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 1129844f9aa089047ac3bf4b0fb3d9b5, type: 2}
-      FeedbackName: Flats
-      GoodFeedback: Business Casual<br>A timeless style that shows  a sense of professionalism
-        and maturity without being overly formal.
-      OKFeedback: OK
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Wedge
-      DisplayName: 'Open Toe Wedge '
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: 9352947f4b7bf0643911612d0887e0a7, type: 2}
-      FeedbackName: 'Open Toe Wedge '
-      GoodFeedback: Good
-      OKFeedback: Casual<br>Comfy and versatile footwear, but doesn't show that you
-        understand interview expectations.
-      BadFeedback: Bad
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Flipflops
-      DisplayName: Flip Flops
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 11400000, guid: f2afabf89a516c04489727b23fb0b413, type: 2}
-      FeedbackName: Flip Flops
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: Ultra Casual<br>Are you going to the mall or to an interview?
-      scoreForCurrentCharacter: 0
-    otherPieces:
-    - Tag: Kris_Face
-      DisplayName: none
-      GenderRole: 2
-      Category: 4
-      Tiers: 
-      Connection: {fileID: 11400000, guid: c5155751f1bf8534a8907ffea4210e34, type: 2}
       FeedbackName: none
       GoodFeedback: none
       OKFeedback: none
@@ -579,166 +739,6 @@ MonoBehaviour:
       OKFeedback: none
       BadFeedback: none
       scoreForCurrentCharacter: 0
-  - characterTag: Ivy
-    characterName: Ivy
-    gender: 2
-    jobTitle: Game Producer Internship
-    description: Ivy is preparing her outfit for a semester-long internship at a
-      game studio. They wear T-Shirts there, but she wants to make an impression!
-    jobAttireDescription: Business Casual
-    imageAssetPath: Icon_Dressed
-    skinColor: {r: 0, g: 0, b: 0, a: 1}
-    winFeedback: You helped Ivy choose a crisp, clean outfit. Dressing like a professional
-      will help her make a good impression at the game producer interview!
-    loseFeedback: This outfit might work but it's a little sloppy. Ivy can make a
-      more presentable outfit with the clothes she has in her closet.
-    headPieces:
-    - Tag: Ivy_HighBun
-      DisplayName: High Bun
-      GenderRole: 2
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: High Bun
-      GoodFeedback: Groomed<br>This type of bun never goes out of fashion. Putting
-        your hair up helps keep focus and attention on your face during interviews.
-      OKFeedback: none
-      BadFeedback: Sloppy<br>A loose bun can be stylish in more casual settings,
-        but interviewers might think you didn't take time to prepare.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_LooseBun
-      DisplayName: Loose Bun
-      GenderRole: 2
-      Category: 0
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Loose Bun
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: Ivy_ButtonUp
-      DisplayName: Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Button Up Shirt
-      GoodFeedback: 'Business Casual<br>Widely considered to be professional attire,
-        shows employers you understand the basics. '
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_ButtonUpMissingButtons
-      DisplayName: Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Damaged Button Up Shirt
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: Sloppy<br>Small details like missing buttons and loose threads
-        can add up and signal that you might not notice the little things.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_ButtonUpFlakey
-      DisplayName: Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Flakey Button Up Shirt
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: Sloppy<br>Ew! Dandruff? Hair product? What is that? Regardless,
-        make sure your shirt is neat and tidy before your interview!
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: Ivy_HighWaistWideLegPants
-      DisplayName: High-waist Wide-Leg Pants
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: High-waist Wide-Leg Pants
-      GoodFeedback: Business Casual<br>These big pants are stylish while still giving
-        off a professional vibe and understanding of the setting.
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_WideLegPantsWrinkled
-      DisplayName: High-waist Wide-Leg Pants
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Wrinkled Wide-Leg Pants
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: Sloppy<br>Wrinkled clothing signals carelessness and a lack of
-        attention to detail. Iron your clothes or get them dry-cleaned!
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_WideLegPantsGrimy
-      DisplayName: High-waist Wide-Leg Pants
-      GenderRole: 2
-      Category: 2
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Grimy Wide-Leg Pants
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: Sloppy<br>The hems on these pants are visibly dirty.
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: Ivy_BitLoafers
-      DisplayName: Bit Loafers
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Bit Loafers
-      GoodFeedback: Business Casual<br>A sensible shoe that shows  a sense of professionalism
-        and maturity without being overly formal.
-      OKFeedback: none
-      BadFeedback: none
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_BitLoafersWorn
-      DisplayName: Bit Loafers
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Worn Out Bit Loafers
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: Sloppy<br>These shoes have seen better days. Crisp shoes show
-        that you put thought into every part of your outfit.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_BitLoafersGrimy
-      DisplayName: Bit Loafers
-      GenderRole: 2
-      Category: 3
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: Dirty Bit Loafers
-      GoodFeedback: none
-      OKFeedback: none
-      BadFeedback: Sloppy<br>These shoes are visibly dirty. Clean shoes show that
-        you put thought into every part of your outfit.
-      scoreForCurrentCharacter: 0
-    otherPieces:
-    - Tag: Ivy_Face
-      DisplayName: 
-      GenderRole: 2
-      Category: 4
-      Tiers: 
-      Connection: {fileID: 0}
-      FeedbackName: 
-      GoodFeedback: 
-      OKFeedback: 
-      BadFeedback: 
-      scoreForCurrentCharacter: 0
   - characterTag: Sasha
     characterName: Sasha
     gender: 0
@@ -759,7 +759,7 @@ MonoBehaviour:
       GenderRole: 0
       Category: 0
       Tiers: 
-      Connection: {fileID: 0}
+      Connection: {fileID: 11400000, guid: 7bae0771f5d8c7e4cb86e137febf5e40, type: 2}
       FeedbackName: Buzz Cut
       GoodFeedback: Groomed<br>A common hairstyle that needs little maintenance.
       OKFeedback: none
@@ -904,6 +904,18 @@ MonoBehaviour:
       BadFeedback: none
       scoreForCurrentCharacter: 0
   connections:
+  - {fileID: 11400000, guid: 99014877fcd4d2046a148a58cd7085d0, type: 2}
+  - {fileID: 11400000, guid: 0001c2331279eb14599352bc285b4cc6, type: 2}
+  - {fileID: 11400000, guid: 9df328607b318074f91dba594f1e078a, type: 2}
+  - {fileID: 11400000, guid: d1e170f30bdcf564990c4c0428c80094, type: 2}
+  - {fileID: 11400000, guid: 531022c3099155a46b0117768034a54e, type: 2}
+  - {fileID: 11400000, guid: 0777c61bad5b8b344968bb5265ea98bb, type: 2}
+  - {fileID: 11400000, guid: d9a01c8bd46365c4b826f566a2b7877d, type: 2}
+  - {fileID: 11400000, guid: 340ae214e92e18a43a4f0b72987a1ced, type: 2}
+  - {fileID: 11400000, guid: b69f59131faf2164c96c899eba544858, type: 2}
+  - {fileID: 11400000, guid: 07cdcd4af71bc344289466108d1b62d6, type: 2}
+  - {fileID: 11400000, guid: 2d18409e291f5724c993316ff395e518, type: 2}
+  - {fileID: 11400000, guid: 36d1d5935d4343743bf35e924ee6d6c6, type: 2}
   - {fileID: 11400000, guid: 5bb5385ab5d2a5a40a1fd0d4c7f59e91, type: 2}
   - {fileID: 11400000, guid: 32eef665607471a4aa54114cca8b12f1, type: 2}
   - {fileID: 11400000, guid: c52d6ec69130e7f4eb244f110de3c09d, type: 2}
@@ -924,9 +936,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e4d95f6de83b3274c92a06de9fa99d25, type: 2}
   - {fileID: 11400000, guid: 7cd57a4e4e844874f994f85917651047, type: 2}
   - {fileID: 11400000, guid: 573ead63543320a4fa4595978ac8ce76, type: 2}
+  - {fileID: 11400000, guid: 6fea9d15a004da547a7af0778224d465, type: 2}
   - {fileID: 11400000, guid: 39c74295895a91a45a63e9ceb0477328, type: 2}
   - {fileID: 11400000, guid: 27fdda0a6d3bf3a45beaba34d319b28d, type: 2}
-  - {fileID: 11400000, guid: 6fea9d15a004da547a7af0778224d465, type: 2}
   - {fileID: 11400000, guid: 9352947f4b7bf0643911612d0887e0a7, type: 2}
   - {fileID: 11400000, guid: cad7ff403652b364091b0616720e1c96, type: 2}
   - {fileID: 11400000, guid: c03d845ee3d25784f9227d3f540f94c9, type: 2}
@@ -1021,6 +1033,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 718f29acec6b7684e8b4f314d93ce886, type: 2}
   - {fileID: 11400000, guid: c3a2343f1686d8d4c9c44074e610c11c, type: 2}
   - {fileID: 11400000, guid: ce95b79e7ec82b148a8cf9bfa3a6ff29, type: 2}
+  - {fileID: 11400000, guid: 7bae0771f5d8c7e4cb86e137febf5e40, type: 2}
   - {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
   - {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
   - {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
