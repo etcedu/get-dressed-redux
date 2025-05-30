@@ -9,10 +9,10 @@ public class CharacterData
     public Gender gender;
     public string jobTitle;
     public string description;
-    public string jobAttireDescription;
     public string imageAssetPath;
     public Color skinColor;
     public string winFeedback;
+    public string okFeedback;
     public string loseFeedback;
 
     //combined data test

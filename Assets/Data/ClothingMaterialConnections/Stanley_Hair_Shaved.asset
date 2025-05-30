@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Stanley_Hair_Shaved
   m_EditorClassIdentifier: 
-  tag: 
-  icon: {fileID: 21300000, guid: f4a89f0336dd5e444b7a8cc0babea862, type: 3}
+  icon: {fileID: 21300000, guid: a8ff93f528ddb0a43b8f54846cb86b8e, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 77dfa93059ec19048afda6031dc1cdc9, type: 2}
   femaleMaterials:

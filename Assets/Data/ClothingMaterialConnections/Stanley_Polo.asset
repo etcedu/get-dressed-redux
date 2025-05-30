@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Stanley_Polo
   m_EditorClassIdentifier: 
-  tag: 
-  icon: {fileID: 21300000, guid: 346ff2a8d2a2e1442a6e056d24ab5cd6, type: 3}
+  icon: {fileID: 21300000, guid: 9f3f2f7ff7dace840998e58b99c9b361, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: d322058a85048234da8cb610d7e963a0, type: 2}
   - {fileID: 2100000, guid: a794bb104a38987498cc81e196510f56, type: 2}

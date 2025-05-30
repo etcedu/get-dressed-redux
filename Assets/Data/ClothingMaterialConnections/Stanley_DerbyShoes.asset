@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Stanley_DerbyShoes
   m_EditorClassIdentifier: 
-  tag: 
-  icon: {fileID: 21300000, guid: 64886bcc0ec5463409b26f809adaa655, type: 3}
+  icon: {fileID: 21300000, guid: 9556f4e8a6f81b8478fcf1a4625ec19d, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   femaleMaterials:
   - {fileID: 2100000, guid: 1d28c683402d42f498e561ca06239d2e, type: 2}
   textures:
-  - {fileID: 2800000, guid: 4c275d569e7b2de449c1d734557a5d03, type: 3}
+  - {fileID: 2800000, guid: f97ecef4bfb5015458e6e3e74973650f, type: 3}

@@ -53,17 +53,17 @@ public class CharacterRoster : ScriptableObject
 
                 currentCharacterLoading.jobTitle = fields[4];
                 currentCharacterLoading.description = fields[5];
-                currentCharacterLoading.jobAttireDescription = fields[6];
-                currentCharacterLoading.imageAssetPath = fields[7];
+                currentCharacterLoading.imageAssetPath = fields[6];
                 
-                if (ColorExtensions.TryParseHexStringRGBA(fields[8], out Color32 skinColor))
+                if (ColorExtensions.TryParseHexStringRGBA(fields[7], out Color32 skinColor))
                     currentCharacterLoading.skinColor = skinColor;
                 else
                     currentCharacterLoading.skinColor = Color.white;
 
-                currentCharacterLoading.winFeedback = fields[9];
-                currentCharacterLoading.loseFeedback = fields[10];
-                              
+                currentCharacterLoading.winFeedback = fields[8];
+                currentCharacterLoading.loseFeedback = fields[9];
+                currentCharacterLoading.okFeedback = fields[10];
+
 
                 characters.Add(currentCharacterLoading);
             }
@@ -92,20 +92,7 @@ public class CharacterRoster : ScriptableObject
 
                 c.DisplayName = fields[4];
                 c.FeedbackName = fields[5];
-
-                string[] tiers = fields[6].Split(new char[] { ';' }).Trim();
-                c.Tiers = new();
-                foreach (string tier in tiers)
-                {
-                    if (Enum.TryParse(tier.ToUpper().Replace(' ', '_'), out Tier tierParsed))
-                        c.Tiers.Add(tierParsed);
-                    else
-                        Debug.LogWarning($"No tier found for \"{tier}\" on line {i} ");
-                }
-
-                c.GoodFeedback = fields[7];
-                c.OKFeedback = fields[8];
-                c.BadFeedback = fields[9];
+                c.Feedback = fields[6];
 
                 ClothingModelConnection connection = connections.Find(x => x.name == c.Tag);
                 if (connection == null)

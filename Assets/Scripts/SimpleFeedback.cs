@@ -24,10 +24,7 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] Animator charAnimator;
 
     [Header("Intro Panel")]
-    [SerializeField] string fitTitle;
-    [SerializeField][TextArea] string fitText;
-    [SerializeField] string unfitTitle;
-    [SerializeField][TextArea] string unfitText;
+    [SerializeField] string fitTitle, okTitle, unfitTitle;
     [SerializeField] TMP_Text fitOrNotHeader, fitOrNotText;
 
 
@@ -119,11 +116,19 @@ public class SimpleFeedback : MonoBehaviour
 
         starBarFill.fillAmount = 0;
 
-        fitOrNotHeader.text = fit ? fitTitle : unfitTitle;
-        fitOrNotText.text = fit ? GlobalData.currentCharacterSelection.winFeedback : GlobalData.currentCharacterSelection.loseFeedback;
+        fitOrNotHeader.text = scorePercentage >= 0.99f ? fitTitle
+                            : (scorePercentage >= 0.75f ? okTitle 
+                            : unfitTitle);
+
+        fitOrNotText.text = scorePercentage >= 0.99f ? GlobalData.currentCharacterSelection.winFeedback 
+                         : (scorePercentage >= 0.75f ? GlobalData.currentCharacterSelection.okFeedback 
+                         : GlobalData.currentCharacterSelection.loseFeedback);
+
         foreach (Image i in headerImages)
-            i.color = fit ? scoreColors[2] : scoreColors[0];
-                
+            i.color = scorePercentage >= 0.99f ? scoreColors[2]
+                    : (scorePercentage >= 0.75f ? scoreColors[1] 
+                    : scoreColors[0]);
+
         fitOrNotHeader.ForceMeshUpdate();
         fitOrNotText.ForceMeshUpdate();
         
@@ -140,7 +145,7 @@ public class SimpleFeedback : MonoBehaviour
 
             int uiIndex = clothingPiece.Category == Category.HEAD ? 0 : (clothingPiece.Category == Category.TOP || clothingPiece.Category == Category.DRESS ? 1 : (clothingPiece.Category == Category.BOTTOM ? 2 : 3));
             feedbackClothingName[uiIndex].text = clothingPiece.FeedbackName;
-            feedbackTexts[uiIndex].text = clothingPiece.GetFeedback();
+            feedbackTexts[uiIndex].text = clothingPiece.Feedback;
             feedbackButtonTexts[uiIndex].text = feedbackButtonLabelOptions[score - 1];
             feedbackButtonFaces[uiIndex].color = scoreColors[score - 1];
         }
