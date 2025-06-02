@@ -15,71 +15,130 @@ MonoBehaviour:
   charactersDataFile: {fileID: -747748091656361393, guid: 87d3334478f6e164193add204be603d1,
     type: 3}
   characters:
-  - characterTag: TutorialStanley
-    characterName: Stanley (Tutorial)
-    gender: 1
-    jobTitle: Going for burgers
-    description: Stanley is hungry, but no shoes no shirt no service.
-    imageAssetPath: stanley
-    skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
-    winFeedback: This is a totally appropriate outfit for burger eating.<br><br>tap
-      some buttons to learn why
-    okFeedback: "n/a\r"
-    loseFeedback: n/a
+  - characterTag: Ivy
+    characterName: Ivy
+    gender: 2
+    jobTitle: Game Producer Internship
+    description: Ivy is preparing her outfit for a semester-long internship at a
+      game studio. They wear T-Shirts there, but she wants to make an impression!
+    imageAssetPath: Icon_Dressed
+    skinColor: {r: 0.827451, g: 0.61960787, b: 0.56078434, a: 1}
+    winFeedback: You helped Ivy choose a crisp, clean outfit. Dressing like a professional
+      will help her make a good impression at the game producer interview!
+    okFeedback: "This outfit might work but it's a little sloppy. Ivy can make a
+      more presentable outfit with the clothes she has in her closet.\r"
+    loseFeedback: Ivy's clothes are too gross and messy for an interview! Help her
+      choose cleaner clothes from her wardrobe!
     headPieces:
-    - Tag: Stanley_BaseballCap
-      DisplayName: Baseball Cap
-      GenderRole: 1
+    - Tag: Ivy_HighBun
+      DisplayName: High Bun
+      GenderRole: 2
       Category: 0
-      Connection: {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
-      FeedbackName: Baseball Cap
-      Feedback: Ultra Casual<br>Great for keeping the sun out of your eyes or hiding
-        a bad hair day.
+      Connection: {fileID: 11400000, guid: 340ae214e92e18a43a4f0b72987a1ced, type: 2}
+      FeedbackName: High Bun
+      Feedback: Groomed<br>This type of bun never goes out of fashion. Putting your
+        hair up helps keep focus and attention on your face during interviews.
       scoreForCurrentCharacter: 0
-    - Tag: Stanley_Hair_Stubble
-      DisplayName: Bed Head
-      GenderRole: 1
+    - Tag: Ivy_LooseBun
+      DisplayName: Loose Bun
+      GenderRole: 2
       Category: 0
-      Connection: {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
-      FeedbackName: Bed Head
-      Feedback: N/A
-      scoreForCurrentCharacter: 0
+      Connection: {fileID: 11400000, guid: 07cdcd4af71bc344289466108d1b62d6, type: 2}
+      FeedbackName: Loose Bun
+      Feedback: Sloppy<br>A loose bun can be stylish in more casual settings, but
+        interviewers might think you didn't take time to prepare.
+      scoreForCurrentCharacter: 2
     topPieces:
-    - Tag: Stanley_Tshirt
-      DisplayName: T-Shirt
-      GenderRole: 1
+    - Tag: Ivy_ButtonUp
+      DisplayName: Button Up Shirt
+      GenderRole: 2
       Category: 1
-      Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
-      FeedbackName: T-Shirt
-      Feedback: Ultra Casual<br>A versatile shirt that's perfect for everyday wear.
+      Connection: {fileID: 11400000, guid: d1e170f30bdcf564990c4c0428c80094, type: 2}
+      FeedbackName: Button Up Shirt
+      Feedback: 'Business Casual<br>Widely considered to be professional attire,
+        shows employers you understand the basics. '
       scoreForCurrentCharacter: 0
+    - Tag: Ivy_ButtonUpMissingButtons
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Connection: {fileID: 11400000, guid: 0777c61bad5b8b344968bb5265ea98bb, type: 2}
+      FeedbackName: Damaged Button Up Shirt
+      Feedback: Sloppy<br>Small details like missing buttons and loose threads can
+        add up and signal that you might not notice the little things.
+      scoreForCurrentCharacter: 1
+    - Tag: Ivy_ButtonUpFlakey
+      DisplayName: Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Connection: {fileID: 11400000, guid: 531022c3099155a46b0117768034a54e, type: 2}
+      FeedbackName: Flakey Button Up Shirt
+      Feedback: Sloppy<br>Ew! Dandruff? Hair product? What is that? Regardless, make
+        sure your shirt is neat and tidy before your interview!
+      scoreForCurrentCharacter: 2
     bottomPieces:
-    - Tag: Stanley_Jeans
-      DisplayName: Jeans
-      GenderRole: 1
+    - Tag: Ivy_SlimLegChinos
+      DisplayName: Slim Leg Chinos
+      GenderRole: 2
       Category: 2
-      Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
-      FeedbackName: Jeans
-      Feedback: Casual<br>A common piece of clothing that can be styled in endless
-        ways.
+      Connection: {fileID: 11400000, guid: b69f59131faf2164c96c899eba544858, type: 2}
+      FeedbackName: Slim Leg Chinos
+      Feedback: Business Casual<br>These sleek pants are stylish while still giving
+        off a professional vibe and understanding of the setting.
       scoreForCurrentCharacter: 0
+    - Tag: Ivy_SlimLegChinosWrinkled
+      DisplayName: Slim Leg Chinos
+      GenderRole: 2
+      Category: 2
+      Connection: {fileID: 11400000, guid: 36d1d5935d4343743bf35e924ee6d6c6, type: 2}
+      FeedbackName: Wrinkled Chinos
+      Feedback: Sloppy<br>Wrinkled clothing signals carelessness and a lack of attention
+        to detail. Iron your clothes or get them dry-cleaned!
+      scoreForCurrentCharacter: 1
+    - Tag: Ivy_SlimLegChinosGrimy
+      DisplayName: Slim Leg Chinos
+      GenderRole: 2
+      Category: 2
+      Connection: {fileID: 11400000, guid: 2d18409e291f5724c993316ff395e518, type: 2}
+      FeedbackName: Grimy Chinos
+      Feedback: Sloppy<br>The hems on these pants are visibly dirty.
+      scoreForCurrentCharacter: 2
     feetPieces:
-    - Tag: Stanley_HighTops
-      DisplayName: High Top Sneakers
-      GenderRole: 1
+    - Tag: Ivy_BitLoafers
+      DisplayName: Bit Loafers
+      GenderRole: 2
       Category: 3
-      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
-      FeedbackName: High Top Sneakers
-      Feedback: 'Ultra Casual<br>A classic sneaker style. Good for relaxed settings. '
+      Connection: {fileID: 11400000, guid: 99014877fcd4d2046a148a58cd7085d0, type: 2}
+      FeedbackName: Bit Loafers
+      Feedback: Business Casual<br>A sensible shoe that shows  a sense of professionalism
+        and maturity without being overly formal.
       scoreForCurrentCharacter: 0
+    - Tag: Ivy_BitLoafersWorn
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 9df328607b318074f91dba594f1e078a, type: 2}
+      FeedbackName: Worn Out Bit Loafers
+      Feedback: Sloppy<br>These shoes have seen better days. Crisp shoes show that
+        you put thought into every part of your outfit.
+      scoreForCurrentCharacter: 1
+    - Tag: Ivy_BitLoafersGrimy
+      DisplayName: Bit Loafers
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 0001c2331279eb14599352bc285b4cc6, type: 2}
+      FeedbackName: Dirty Bit Loafers
+      Feedback: Sloppy<br>These shoes are visibly dirty. Clean shoes show that you
+        put thought into every part of your outfit.
+      scoreForCurrentCharacter: 2
     otherPieces:
-    - Tag: Stanley_Face
-      DisplayName: none
-      GenderRole: 1
+    - Tag: Ivy_Face
+      DisplayName: 
+      GenderRole: 2
       Category: 4
-      Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
-      FeedbackName: none
-      Feedback: none
+      Connection: {fileID: 11400000, guid: d9a01c8bd46365c4b826f566a2b7877d, type: 2}
+      FeedbackName: 
+      Feedback: 
       scoreForCurrentCharacter: 0
   - characterTag: Stanley
     characterName: Stanley
@@ -196,6 +255,72 @@ MonoBehaviour:
       FeedbackName: High Top Sneakers
       Feedback: Ultra Casual<b> Are you going to the mall or to an interview?
       scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Stanley_Face
+      DisplayName: none
+      GenderRole: 1
+      Category: 4
+      Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
+      FeedbackName: none
+      Feedback: none
+      scoreForCurrentCharacter: 0
+  - characterTag: TutorialStanley
+    characterName: Stanley (Tutorial)
+    gender: 1
+    jobTitle: Going for burgers
+    description: Stanley is hungry, but no shoes no shirt no service.
+    imageAssetPath: stanley
+    skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
+    winFeedback: This is a totally appropriate outfit for burger eating.<br><br>tap
+      some buttons to learn why
+    okFeedback: "n/a\r"
+    loseFeedback: n/a
+    headPieces:
+    - Tag: Stanley_BaseballCap
+      DisplayName: Baseball Cap
+      GenderRole: 1
+      Category: 0
+      Connection: {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
+      FeedbackName: Baseball Cap
+      Feedback: Ultra Casual<br>Great for keeping the sun out of your eyes or hiding
+        a bad hair day.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_Hair_Stubble
+      DisplayName: Bed Head
+      GenderRole: 1
+      Category: 0
+      Connection: {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
+      FeedbackName: Bed Head
+      Feedback: N/A
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Stanley_Tshirt
+      DisplayName: T-Shirt
+      GenderRole: 1
+      Category: 1
+      Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
+      FeedbackName: T-Shirt
+      Feedback: Ultra Casual<br>A versatile shirt that's perfect for everyday wear.
+      scoreForCurrentCharacter: 0
+    bottomPieces:
+    - Tag: Stanley_Jeans
+      DisplayName: Jeans
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
+      FeedbackName: Jeans
+      Feedback: Casual<br>A common piece of clothing that can be styled in endless
+        ways.
+      scoreForCurrentCharacter: 0
+    feetPieces:
+    - Tag: Stanley_HighTops
+      DisplayName: High Top Sneakers
+      GenderRole: 1
+      Category: 3
+      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+      FeedbackName: High Top Sneakers
+      Feedback: 'Ultra Casual<br>A classic sneaker style. Good for relaxed settings. '
+      scoreForCurrentCharacter: 0
     otherPieces:
     - Tag: Stanley_Face
       DisplayName: none
@@ -452,131 +577,6 @@ MonoBehaviour:
       Connection: {fileID: 11400000, guid: 747531d79427273498598f16935565b9, type: 2}
       FeedbackName: none
       Feedback: none
-      scoreForCurrentCharacter: 0
-  - characterTag: Ivy
-    characterName: Ivy
-    gender: 2
-    jobTitle: Game Producer Internship
-    description: Ivy is preparing her outfit for a semester-long internship at a
-      game studio. They wear T-Shirts there, but she wants to make an impression!
-    imageAssetPath: Icon_Dressed
-    skinColor: {r: 0.7607843, g: 0.5686275, b: 0.5137255, a: 1}
-    winFeedback: You helped Ivy choose a crisp, clean outfit. Dressing like a professional
-      will help her make a good impression at the game producer interview!
-    okFeedback: "This outfit might work but it's a little sloppy. Ivy can make a
-      more presentable outfit with the clothes she has in her closet.\r"
-    loseFeedback: Ivy's clothes are too gross and messy for an interview! Help her
-      choose cleaner clothes from her wardrobe!
-    headPieces:
-    - Tag: Ivy_HighBun
-      DisplayName: High Bun
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: 340ae214e92e18a43a4f0b72987a1ced, type: 2}
-      FeedbackName: High Bun
-      Feedback: Groomed<br>This type of bun never goes out of fashion. Putting your
-        hair up helps keep focus and attention on your face during interviews.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_LooseBun
-      DisplayName: Loose Bun
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: 07cdcd4af71bc344289466108d1b62d6, type: 2}
-      FeedbackName: Loose Bun
-      Feedback: Sloppy<br>A loose bun can be stylish in more casual settings, but
-        interviewers might think you didn't take time to prepare.
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: Ivy_ButtonUp
-      DisplayName: Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Connection: {fileID: 11400000, guid: d1e170f30bdcf564990c4c0428c80094, type: 2}
-      FeedbackName: Button Up Shirt
-      Feedback: 'Business Casual<br>Widely considered to be professional attire,
-        shows employers you understand the basics. '
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_ButtonUpMissingButtons
-      DisplayName: Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Connection: {fileID: 11400000, guid: 0777c61bad5b8b344968bb5265ea98bb, type: 2}
-      FeedbackName: Damaged Button Up Shirt
-      Feedback: Sloppy<br>Small details like missing buttons and loose threads can
-        add up and signal that you might not notice the little things.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_ButtonUpFlakey
-      DisplayName: Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Connection: {fileID: 11400000, guid: 531022c3099155a46b0117768034a54e, type: 2}
-      FeedbackName: Flakey Button Up Shirt
-      Feedback: Sloppy<br>Ew! Dandruff? Hair product? What is that? Regardless, make
-        sure your shirt is neat and tidy before your interview!
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: Ivy_SlimLegChinos
-      DisplayName: Slim Leg Chinos
-      GenderRole: 2
-      Category: 2
-      Connection: {fileID: 11400000, guid: b69f59131faf2164c96c899eba544858, type: 2}
-      FeedbackName: Slim Leg Chinos
-      Feedback: Business Casual<br>These sleek pants are stylish while still giving
-        off a professional vibe and understanding of the setting.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_SlimLegChinosWrinkled
-      DisplayName: Slim Leg Chinos
-      GenderRole: 2
-      Category: 2
-      Connection: {fileID: 11400000, guid: 36d1d5935d4343743bf35e924ee6d6c6, type: 2}
-      FeedbackName: Wrinkled Chinos
-      Feedback: Sloppy<br>Wrinkled clothing signals carelessness and a lack of attention
-        to detail. Iron your clothes or get them dry-cleaned!
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_SlimLegChinosGrimy
-      DisplayName: Slim Leg Chinos
-      GenderRole: 2
-      Category: 2
-      Connection: {fileID: 11400000, guid: 2d18409e291f5724c993316ff395e518, type: 2}
-      FeedbackName: Grimy Chinos
-      Feedback: Sloppy<br>The hems on these pants are visibly dirty.
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: Ivy_BitLoafers
-      DisplayName: Bit Loafers
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 99014877fcd4d2046a148a58cd7085d0, type: 2}
-      FeedbackName: Bit Loafers
-      Feedback: Business Casual<br>A sensible shoe that shows  a sense of professionalism
-        and maturity without being overly formal.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_BitLoafersWorn
-      DisplayName: Bit Loafers
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 9df328607b318074f91dba594f1e078a, type: 2}
-      FeedbackName: Worn Out Bit Loafers
-      Feedback: Sloppy<br>These shoes have seen better days. Crisp shoes show that
-        you put thought into every part of your outfit.
-      scoreForCurrentCharacter: 0
-    - Tag: Ivy_BitLoafersGrimy
-      DisplayName: Bit Loafers
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 0001c2331279eb14599352bc285b4cc6, type: 2}
-      FeedbackName: Dirty Bit Loafers
-      Feedback: Sloppy<br>These shoes are visibly dirty. Clean shoes show that you
-        put thought into every part of your outfit.
-      scoreForCurrentCharacter: 0
-    otherPieces:
-    - Tag: Ivy_Face
-      DisplayName: 
-      GenderRole: 2
-      Category: 4
-      Connection: {fileID: 11400000, guid: d9a01c8bd46365c4b826f566a2b7877d, type: 2}
-      FeedbackName: 
-      Feedback: 
       scoreForCurrentCharacter: 0
   connections:
   - {fileID: 11400000, guid: 99014877fcd4d2046a148a58cd7085d0, type: 2}
