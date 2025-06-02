@@ -25,6 +25,7 @@ public class DressingUI : MonoBehaviour
     [SerializeField] ClothingPieceSelectionToggle[] feetToggles;
 
     [SerializeField] Button readyButton;
+    [SerializeField] GameObject readyButtonObj;
 
     bool init;
 
@@ -228,10 +229,10 @@ public class DressingUI : MonoBehaviour
 
     void CheckAndSetReadyButtonState()
     {
-        readyButton.interactable = GlobalData.selectedBottomPiece != null &&
+        readyButtonObj.SetActive(GlobalData.selectedBottomPiece != null &&
             GlobalData.selectedFeetPiece != null &&
             GlobalData.selectedTopPiece != null &&
-            GlobalData.selectedHeadPiece != null;
+            GlobalData.selectedHeadPiece != null);
     }
 
     public void Hide()

@@ -1,6 +1,9 @@
+using FancyScrollView.TheFitCharacterSelect;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CameraFade : MonoBehaviour
@@ -9,10 +12,11 @@ public class CameraFade : MonoBehaviour
     
     TweenAlpha tween;
     Image image;
+    CanvasGroup canvasGroup;
 
     public Action fadeFinishedCallback;
 
-    public void Start()
+    IEnumerator Start()
     {
         if (Instance != null && Instance != this)
         {
@@ -25,6 +29,17 @@ public class CameraFade : MonoBehaviour
 
         tween = GetComponent<TweenAlpha>();
         image = GetComponent<Image>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 1;
+
+        ScrollView scrollView = FindObjectOfType<ScrollView>();
+        if (SceneManager.GetActiveScene().name == "LevelSelection")
+        {
+            Debug.Log("Here");
+            while (!scrollView.init)
+                yield return null;
+        }
+        yield return null;
 
         FadeIn();
     }

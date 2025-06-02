@@ -89,6 +89,8 @@ public class DressingManager : MonoBehaviour
         {
             SetClothing(GlobalData.currentCharacterSelection.otherPieces[i]);
         }
+
+        GlobalData.completedLastCharacter = false;
     }
 
     public void ClearClothingFromCategory(Category clothingCategory)

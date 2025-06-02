@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LoseMusic
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 72fd9eead82ca8d4aaa83d0a8d0d32d5, type: 3}
-  volume: 1
+  volume: 0.43

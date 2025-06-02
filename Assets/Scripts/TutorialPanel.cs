@@ -16,8 +16,11 @@ public class TutorialPanel : MonoBehaviour
     public void Show(string message)
     {
         gameObject.SetActive(true);
-        text.text = message;
-        SimpleRTVoiceExample.Instance.Speak("default", message);
+        if (message != "continued")
+        {
+            text.text = message;
+            SimpleRTVoiceExample.Instance.Speak("default", message);
+        }
         tween?.PlayForward();
     }
 

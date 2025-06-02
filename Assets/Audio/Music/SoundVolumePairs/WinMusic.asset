@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WinMusic
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 0123ded65e0b8e2499b7d38df3de153c, type: 3}
-  volume: 1
+  volume: 0.43

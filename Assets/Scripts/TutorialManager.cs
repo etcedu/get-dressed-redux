@@ -79,8 +79,6 @@ public class TutorialManager : MonoBehaviour
 
     void EndStep()
     {
-        SimpleRTVoiceExample.Instance.StopSpeech();
-
         if (hintFingerManager == null)
             hintFingerManager = FindObjectOfType<HintFingerManager>();
 
@@ -106,11 +104,15 @@ public class TutorialManager : MonoBehaviour
         if (currentStepIndex < steps.Count)
         {
             currentStep = steps[currentStepIndex];
+            if (currentStep.message != "continued")
+                SimpleRTVoiceExample.Instance.StopSpeech();
+            
             StartStep(currentStep);
         }
         else
         {
             currentStep = null;
+            SimpleRTVoiceExample.Instance.StopSpeech();
             EndTutorial();
         }
     }

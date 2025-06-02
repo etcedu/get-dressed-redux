@@ -15,6 +15,8 @@ namespace UnityEditor.UI
         SerializedProperty m_OnValueChangedProperty;
         SerializedProperty m_TransitionProperty;
         SerializedProperty m_GraphicProperty;
+        SerializedProperty m_ReverseGraphicProperty;
+        SerializedProperty m_ReverseGraphicUse;
         SerializedProperty m_GroupProperty;
         SerializedProperty m_IsOnProperty;
 
@@ -24,6 +26,8 @@ namespace UnityEditor.UI
 
             m_TransitionProperty = serializedObject.FindProperty("toggleTransition");
             m_GraphicProperty = serializedObject.FindProperty("graphic");
+            m_ReverseGraphicProperty = serializedObject.FindProperty("reverseGraphic");
+            m_ReverseGraphicUse = serializedObject.FindProperty("reverseGraphicUse");
             m_GroupProperty = serializedObject.FindProperty("m_Group");
             m_IsOnProperty = serializedObject.FindProperty("m_IsOn");
             m_OnValueChangedProperty = serializedObject.FindProperty("onValueChanged");
@@ -58,6 +62,8 @@ namespace UnityEditor.UI
             }
             EditorGUILayout.PropertyField(m_TransitionProperty);
             EditorGUILayout.PropertyField(m_GraphicProperty);
+            EditorGUILayout.PropertyField(m_ReverseGraphicProperty);
+            EditorGUILayout.PropertyField(m_ReverseGraphicUse);
             EditorGUI.BeginChangeCheck();
             EditorGUILayout.PropertyField(m_GroupProperty);
             if (EditorGUI.EndChangeCheck())

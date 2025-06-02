@@ -32,12 +32,15 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] GameObject[] stars;
     [SerializeField] Image starBarFill;
     [SerializeField] List<TMP_Text> feedbackClothingName;
+    [SerializeField] List<TMP_Text> feedbackClothingTier;
     [SerializeField] List<TMP_Text> feedbackTexts;
     [SerializeField] List<Image> feedbackButtonFaces;
     [SerializeField] List<TMP_Text> feedbackButtonTexts;
     [SerializeField] Button bottomButton;
     [SerializeField] string[] feedbackButtonLabelOptions;
     [SerializeField] Image[] headerImages;
+    [SerializeField] ReviewPanel[] reviewPanels;
+    [SerializeField] GameObject[] bodyButtons;
 
     [Header("General")]    
     [SerializeField] List<Color> scoreColors;
@@ -47,8 +50,6 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] SoundVolumePair feedbackDrumroll_Good, feedbackDrumroll_Bad;
     bool fit;
     float gameDuration;
-
-    bool didStarFillAnimation;
 
     private void Start()
     {
@@ -75,6 +76,11 @@ public class SimpleFeedback : MonoBehaviour
         {
             SimpleRTVoiceExample.Instance.Speak("default", $"{fitOrNotHeader.text}, {fitOrNotText.text}");
         }
+
+        for (int i = 0; i < bodyButtons.Length; i++)
+        {
+            bodyButtons[i].SetActive(true);
+        }
     }
 
 
@@ -82,7 +88,6 @@ public class SimpleFeedback : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        didStarFillAnimation = true;
         float percentageScore = GlobalData.GetOverallScore();
         Debug.Log($"Percentage score: {percentageScore}");
 
@@ -145,6 +150,7 @@ public class SimpleFeedback : MonoBehaviour
 
             int uiIndex = clothingPiece.Category == Category.HEAD ? 0 : (clothingPiece.Category == Category.TOP || clothingPiece.Category == Category.DRESS ? 1 : (clothingPiece.Category == Category.BOTTOM ? 2 : 3));
             feedbackClothingName[uiIndex].text = clothingPiece.FeedbackName;
+            feedbackClothingTier[uiIndex].text = clothingPiece.FeedbackTier;
             feedbackTexts[uiIndex].text = clothingPiece.Feedback;
             feedbackButtonTexts[uiIndex].text = feedbackButtonLabelOptions[score - 1];
             feedbackButtonFaces[uiIndex].color = scoreColors[score - 1];
@@ -155,9 +161,21 @@ public class SimpleFeedback : MonoBehaviour
             GlobalData.selectedTopPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedTopPiece),
             GlobalData.selectedBottomPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedBottomPiece),
             GlobalData.selectedFeetPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedFeetPiece));
+
+        GlobalData.completedLastCharacter = fit;
     }
 
+    public void FeedbackButtonOnClick(int index)
+    {
+        for (int i = 0; i < reviewPanels.Length; i++)
+        {
+            if (i == index && !reviewPanels[i].isOpen)
+                reviewPanels[index].Open();
+            else
+                reviewPanels[i].Close();
+        }
 
+    }
 
     public void LoadMainMenu()
     {
@@ -165,11 +183,13 @@ public class SimpleFeedback : MonoBehaviour
         SceneLoader.LoadScene("LevelSelection");
     }
 
-    public void ReadFeedback(TMP_Text textObject)
+    public void ReadFeedback(int index)
     {
-        textObject.ForceMeshUpdate();
-        string message = textObject.GetParsedText();
-        AudioManager.Instance.SpeakWithRTVoice(message, "feedbackVoice");
+        feedbackClothingName[index].ForceMeshUpdate();
+        feedbackClothingTier[index].ForceMeshUpdate();
+        feedbackTexts[index].ForceMeshUpdate();
+        string message = $"{feedbackClothingName[index].GetParsedText()}. {feedbackClothingTier[index].GetParsedText()}, {feedbackTexts[index].GetParsedText()};";
+        SimpleRTVoiceExample.Instance.Speak("default", message);
     }
 
     public void SpeakMainFeedback()

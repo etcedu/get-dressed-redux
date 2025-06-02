@@ -39,6 +39,7 @@ public class GlobalData : MonoBehaviour
 
     public static bool isTutorial;
     public static int lastCharacterIndex;
+    public static bool completedLastCharacter;
 
     [SerializeField] CharacterRoster theCharacterRoster;
 

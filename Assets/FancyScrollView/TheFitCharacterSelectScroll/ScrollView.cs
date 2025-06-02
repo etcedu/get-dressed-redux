@@ -19,10 +19,11 @@ namespace FancyScrollView.TheFitCharacterSelect
         [SerializeField] GameObject cellPrefab = default;
         [SerializeField] SoundVolumePair[] pageChangeSounds;
         [SerializeField] Button continueButton;
+        [SerializeField] CanvasGroup contentGroup;
 
         Action<int> onSelectionChanged;
         public int currentCell;
-        bool init = false;
+        public bool init = false;
 
         protected override GameObject CellPrefab => cellPrefab;
 
@@ -32,7 +33,8 @@ namespace FancyScrollView.TheFitCharacterSelect
                 yield return null;
             yield return new WaitForSeconds(1f);
 
-            SelectCell(GlobalData.GetLastCharacterIndex());
+            int targetCell = Mathf.Clamp(GlobalData.GetLastCharacterIndex() + (GlobalData.completedLastCharacter ? 1 : 0), 0, ItemsSource.Count-1);
+            SelectCell(targetCell);
         }
 
         protected override void Initialize()

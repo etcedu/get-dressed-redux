@@ -13,6 +13,7 @@ public class ClothingPiece
     public ClothingModelConnection Connection;
 
     public string FeedbackName;
+    public string FeedbackTier;
     public string Feedback;
 
     //set by character at runtime

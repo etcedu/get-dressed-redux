@@ -92,7 +92,8 @@ public class CharacterRoster : ScriptableObject
 
                 c.DisplayName = fields[4];
                 c.FeedbackName = fields[5];
-                c.Feedback = fields[6];
+                c.FeedbackTier = fields[6];
+                c.Feedback = fields[7];
 
                 ClothingModelConnection connection = connections.Find(x => x.name == c.Tag);
                 if (connection == null)
