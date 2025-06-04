@@ -82,7 +82,7 @@ public class TrackOnClick : MonoBehaviour
 
     void TargetClicked()
 	{
-		if(offset)
+		if (offset)
 		{
 			if(zoom)
 				CameraTrack2D.SetTarget(zoomTarget.transform, offsetAmount, zoomBorderAmount, zoomMax);

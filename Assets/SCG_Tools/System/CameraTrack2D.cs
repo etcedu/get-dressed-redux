@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using static UnityEngine.GraphicsBuffer;
 
 #pragma warning disable 0649
 [RequireComponent (typeof(Camera))]
@@ -25,6 +26,7 @@ public class CameraTrack2D : MonoBehaviour {
 
 	private Transform _originalParent;
 
+	private Vector3 _offset;
 	private Vector3 _startingPos;
 	private float _startingSize;
 
@@ -72,6 +74,7 @@ public class CameraTrack2D : MonoBehaviour {
 		_target = null;
 		_goalPos = _startingPos;
 		_goalSize = _startingSize;
+		_offset = Vector3.zero;
 
 #if UNITY_EDITOR
 		if(!Application.isPlaying && _camera == null)
@@ -108,6 +111,7 @@ public class CameraTrack2D : MonoBehaviour {
 	/// </summary>
 	public void SetThisTarget(Transform target, Vector3 offset, float zoomBoarderAmount, float colliderMax)
 	{
+		//Debug.Log("set this target");
 		// Ensure target can/should be set
 		if(target == null)
 			return;
@@ -123,6 +127,7 @@ public class CameraTrack2D : MonoBehaviour {
 		_target = target;
 		if(parentOnTrack)
 			transform.SetParent(_target);
+		_offset = offset;
 
 		// Set size and position variables
 		_goalSize = colliderMax * zoomBoarderAmount;
@@ -152,6 +157,7 @@ public class CameraTrack2D : MonoBehaviour {
 			StartCoroutine(_resize);
 		}
 	}
+
 
 	/// <summary>
 	/// Sets the instance's target.
@@ -227,7 +233,25 @@ public class CameraTrack2D : MonoBehaviour {
 		}
 		//Debug.Log("done with reposition");
 		_reposition = null;
-	}
+
+        if (_target != null)
+        {
+            if (!parentOnTrack)
+                _goalPos = new Vector3(holdXPos ? transform.position.x : (_target.position.x + _offset.x),
+                                       holdYPos ? transform.position.y : (_target.position.y + _offset.y),
+                                        holdZPos ? transform.position.z : (_target.position.z + _offset.z));
+            else
+                _goalPos = new Vector3(holdXPos ? transform.localPosition.x : _offset.x,
+                                       holdYPos ? transform.localPosition.y : _offset.y,
+                                       holdZPos ? transform.localPosition.z : _offset.z);
+        }
+        if ((!parentOnTrack && transform.position != _goalPos) || (parentOnTrack && transform.localPosition != _goalPos))
+        {
+            if (_reposition != null) StopCoroutine(_reposition);
+            _reposition = reposition();
+            StartCoroutine(_reposition);
+        }
+    }
 	
 	/// <summary>
 	/// Adjust this camera's orthographic size over time

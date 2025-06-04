@@ -68,10 +68,14 @@ public class SimpleFeedback : MonoBehaviour
     IEnumerator startFeedbackRoutine()
     {
         SFXManager.instance.PlayOneShot(fit ? feedbackDrumroll_Good : feedbackDrumroll_Bad);
-        //animator.Play("MoveToFeedbackPos");
         peopleMoverAnimator.Play("MoveCharToFeedbackSpot");
+        
         yield return new WaitForSeconds(1.8f);
+
         feedbackCanvasObject.SetActive(true);
+        for (int i = 0; i < bodyButtons.Length; i++)
+            bodyButtons[i].SetActive(true);
+
         yield return new WaitForSeconds(1.0f);
         yield return StartCoroutine(starsFillRoutine());
         
@@ -79,16 +83,9 @@ public class SimpleFeedback : MonoBehaviour
         {
             fitOrNotHeader.ForceMeshUpdate();
             fitOrNotText.ForceMeshUpdate();
-            Debug.Log($"{fitOrNotHeader.GetParsedText()}, {fitOrNotText.GetParsedText()}");
             SimpleRTVoiceExample.Instance.Speak("default", $"{fitOrNotHeader.GetParsedText()}, {fitOrNotText.GetParsedText()}");
         }
-
-        for (int i = 0; i < bodyButtons.Length; i++)
-        {
-            bodyButtons[i].SetActive(true);
-        }
     }
-
 
     IEnumerator starsFillRoutine()
     {
@@ -190,9 +187,11 @@ public class SimpleFeedback : MonoBehaviour
        
         GlobalData.setNewHighScore = false;
         if (numStars > GlobalData.GetCharacterStars(GlobalData.currentCharacterSelection.characterTag))
+        {
             GlobalData.setNewHighScore = true;
+            GlobalData.SetCharacterStars(GlobalData.currentCharacterSelection.characterTag, numStars);
+        }
 
-        GlobalData.SetCharacterStars(GlobalData.currentCharacterSelection.characterTag, numStars);
     }
 
     public void FeedbackButtonOnClick(int index)
@@ -229,7 +228,7 @@ public class SimpleFeedback : MonoBehaviour
         feedbackClothingName[index].ForceMeshUpdate();
         feedbackClothingTier[index].ForceMeshUpdate();
         feedbackTexts[index].ForceMeshUpdate();
-        string message = $"{feedbackClothingName[index].GetParsedText()}. {feedbackClothingTier[index].GetParsedText()}, {feedbackTexts[index].GetParsedText()};";
+        string message = $"{feedbackClothingName[index].GetParsedText()}. {feedbackClothingTier[index].GetParsedText()}, {feedbackTexts[index].GetParsedText()}";
         SimpleRTVoiceExample.Instance.Speak("default", message);
     }
 

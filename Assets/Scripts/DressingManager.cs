@@ -244,7 +244,7 @@ public class DressingManager : MonoBehaviour
     public void ReturnToMenu()
     {
         EventRecorder.RecordLevelQuitEvent((float)stopwatch.Elapsed.TotalSeconds, GlobalData.currentCharacterSelection.characterName);
-        SceneLoader.LoadScene("MainMenu");
+        SceneLoader.LoadScene("LevelSelection");
     }
      
 

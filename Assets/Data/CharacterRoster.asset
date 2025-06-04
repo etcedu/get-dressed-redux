@@ -21,7 +21,7 @@ MonoBehaviour:
     jobTitle: Going for burgers
     description: Stanley has a big interview tomorrow, but right now he's hungry
       and wants to grab something to eat.
-    imageAssetPath: Stanley_Portrait
+    imageAssetPath: Stanley_Tutorial_Portrait
     skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
     winFeedback: This is a totally appropriate outfit for burger eating.<br><br>Choose
       a category to learn more about your rating.
@@ -74,7 +74,7 @@ MonoBehaviour:
       Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
       FeedbackName: High Top Sneakers
       FeedbackTier: Ultra Casual
-      Feedback: 'A classic sneaker style. Good for relaxed settings. '
+      Feedback: A classic sneaker style. Good for relaxed settings.
       scoreForCurrentCharacter: 0
     otherPieces:
     - Tag: Stanley_Face
@@ -225,7 +225,7 @@ MonoBehaviour:
     jobTitle: Undergraduate Admission
     description: Stanley has landed an interview at Stanford. They're highly selective,
       so the clothes he wears to class aren't going to cut it.
-    imageAssetPath: Stanley_Tutorial_Portrait
+    imageAssetPath: Stanley_Portrait
     skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
     winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
       for the interview will help his chances of getting into Stanford!
@@ -253,7 +253,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Stubble, especially if it's creeping down your neck, might show that
         you didn't take the time to prepare.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Stanley_ButtonUp
       DisplayName: Striped Button Up
@@ -274,7 +274,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: A sporty shirt that's often worn on the job, but is seen as too informal
         for this interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_Tshirt
       DisplayName: T-Shirt
       GenderRole: 1
@@ -284,7 +284,7 @@ MonoBehaviour:
       FeedbackTier: Ultra Casual
       Feedback: Perfect for everyday wear, but inappropriate for interviews like
         this!
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: Stanley_Khakis
       DisplayName: Khaki Slacks
@@ -305,7 +305,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: A common piece of clothing, but too informal for a serious occasion
         like this interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_ChinoShorts
       DisplayName: Chino Shorts
       GenderRole: 1
@@ -314,7 +314,7 @@ MonoBehaviour:
       FeedbackName: Chino Shorts
       FeedbackTier: Ultra Casual
       Feedback: It's generally wise to never wear shorts to an interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Stanley_DerbyShoes
       DisplayName: Derby Shoes
@@ -335,7 +335,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: Comfy and versatile footwear, but doesn't show that you understand
         interview expectations.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_HighTops
       DisplayName: High Top Sneakers
       GenderRole: 1
@@ -344,7 +344,7 @@ MonoBehaviour:
       FeedbackName: High Top Sneakers
       FeedbackTier: Ultra Casual
       Feedback: Are you going to the mall or to an interview?
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: Stanley_Face
       DisplayName: none
@@ -389,7 +389,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: A loose bun can be stylish in more casual settings, but interviewers
         might think you didn't take time to prepare.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Ivy_ButtonUp
       DisplayName: Button Up Shirt
@@ -410,7 +410,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Small details like missing buttons and loose threads can add up and
         signal that you might not notice the little things.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Ivy_ButtonUpFlakey
       DisplayName: Button Up Shirt
       GenderRole: 2
@@ -420,7 +420,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Ew! Dandruff? Hair product? What is that? Regardless, make sure your
         shirt is neat and tidy before your interview!
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: Ivy_SlimLegChinos
       DisplayName: Slim Leg Chinos
@@ -441,7 +441,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Wrinkled clothing signals carelessness and a lack of attention to
         detail. Iron your clothes or get them dry-cleaned!
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Ivy_SlimLegChinosGrimy
       DisplayName: Slim Leg Chinos
       GenderRole: 2
@@ -450,7 +450,7 @@ MonoBehaviour:
       FeedbackName: Grimy Chinos
       FeedbackTier: Sloppy
       Feedback: The hems on these pants are visibly dirty.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Ivy_BitLoafers
       DisplayName: Bit Loafers
@@ -471,7 +471,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: These shoes have seen better days. Crisp shoes show that you put
         thought into every part of your outfit.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Ivy_BitLoafersGrimy
       DisplayName: Bit Loafers
       GenderRole: 2
@@ -481,7 +481,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: These shoes are visibly dirty. Clean shoes show that you put thought
         into every part of your outfit.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: Ivy_Face
       DisplayName: 

@@ -140,8 +140,6 @@ namespace FancyScrollView.TheFitCharacterSelect
             }
         }
 
-
-
         public override void UpdatePosition(float t)
         {
             const float popAngle = -15;
