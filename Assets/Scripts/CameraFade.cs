@@ -32,10 +32,9 @@ public class CameraFade : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 1;
 
-        ScrollView scrollView = FindObjectOfType<ScrollView>();
+        TheFitScrollView scrollView = FindObjectOfType<TheFitScrollView>();
         if (SceneManager.GetActiveScene().name == "LevelSelection")
         {
-            Debug.Log("Here");
             while (!scrollView.init)
                 yield return null;
         }

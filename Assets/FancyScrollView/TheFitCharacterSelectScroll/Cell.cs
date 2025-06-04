@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using EasingCore;
 using TMPro;
+using System.Collections;
 
 namespace FancyScrollView.TheFitCharacterSelect
 {
@@ -29,8 +30,18 @@ namespace FancyScrollView.TheFitCharacterSelect
         [SerializeField] Image fader;
         [SerializeField] GameObject lockedObject;
         [SerializeField] GameObject completedObject;
+        [SerializeField] UITweener starsTween;
+        [SerializeField] CanvasGroup starsCG;
+        [SerializeField] GameObject[] stars;
+        [SerializeField] SoundVolumePair[] starSounds;
+
 
         CharacterData data;
+
+        public string Test()
+        {
+            return data.characterName;
+        }
 
         public override void UpdateContent(CharacterData charData)
         {
@@ -43,7 +54,15 @@ namespace FancyScrollView.TheFitCharacterSelect
             job.text = charData.jobTitle;
 
             SetLockState(!GlobalData.GetTutorialFinished() && !data.characterTag.ToLower().Contains("tutorial"));
-            completedObject.SetActive(GlobalData.GetCharacterCompleted(data.characterTag));
+            //completedObject.SetActive(GlobalData.GetCharacterCompleted(data.characterTag));
+
+            if (GlobalData.currentCharacterSelection?.characterTag == data.characterTag && GlobalData.setNewHighScore)
+            {
+                ShowStarsFirstTime();
+                GlobalData.setNewHighScore = false;
+            }
+            else
+                ShowStarsNoAnim();
 
             UpdateSibling();
         }
@@ -70,6 +89,58 @@ namespace FancyScrollView.TheFitCharacterSelect
             lockedObject.SetActive(locked);
         }
 
+        public void ShowStarsFirstTime()
+        {
+            StartCoroutine(starsFillRoutine());
+        }
+
+        bool inStarFillRoutine = false;
+        IEnumerator starsFillRoutine()
+        {
+            inStarFillRoutine = true;
+            FindObjectOfType<TheFitScrollView>().HideUI();
+            for (int i = 0; i < stars.Length; i++)
+            {
+                stars[i].transform.localScale = Vector3.zero;
+                stars[i].SetActive(false);
+            }
+
+            TheFitScrollView scrollView = FindObjectOfType<TheFitScrollView>();
+            while (!scrollView.init)
+                yield return null;
+
+            yield return new WaitForSeconds(1.0f);
+
+            int numStars = GlobalData.GetCharacterStars(data.characterTag);
+            for (int i = 0; i < numStars; i++)
+            {
+                stars[i].SetActive(true);
+                SFXManager.instance.PlayOneShot(starSounds[i]);
+                yield return new WaitForSeconds(0.5f);
+            }
+            FindObjectOfType<TheFitScrollView>().ShowUI();
+            inStarFillRoutine = false;
+        }
+
+        public void ShowStarsNoAnim()
+        {
+            if (inStarFillRoutine)
+                return;
+
+            for (int i = 0; i < stars.Length; i++)
+                stars[i].SetActive(false);
+
+            int numStars = GlobalData.GetCharacterStars(data.characterTag);
+
+            for (int i = 0; i < numStars; i++)
+            {
+                stars[i].SetActive(true);
+                stars[i].GetComponent<UITweener>().PlayForward();
+            }
+        }
+
+
+
         public override void UpdatePosition(float t)
         {
             const float popAngle = -15;
@@ -92,6 +163,27 @@ namespace FancyScrollView.TheFitCharacterSelect
             canvasGroup.alpha = alphaEasing(1f - slide);
 
             fader.color = Color.Lerp(fadedColor, normalColor, pop);
+            if (pop > 0.9f)
+            {
+                starsCG.alpha = Mathf.Lerp(0, 1, (pop-0.9f) * 10f);
+            }
+            else
+                starsCG.alpha = 0;
+        }
+
+        public void OnTap()
+        {
+            FindObjectOfType<TheFitScrollView>().TapOnCharacter();
+        }
+
+        public void ShowStars()
+        {
+            starsTween.PlayForward();
+        }
+
+        public void HideStars()
+        {
+            starsTween.PlayReverse();
         }
     }
 }

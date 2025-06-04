@@ -273,16 +273,12 @@ public class ProfessionalDress : MonoBehaviour
 
 		// Set all category grid toggle and track click interactions
 		faceToggle.GetComponent<Button>().onClick.AddListener(FaceToggleClicked);
-		faceTrack.AddToOnClick(()=> TrackClicked(faceTrack, faceToggle.GetComponent<Button>()));
 
         topToggle.GetComponent<Button>().onClick.AddListener(TopToggleClicked);
-        topTrack.AddToOnClick(() => TrackClicked(topTrack, topToggle.GetComponent<Button>()));
 
         bottomToggle.GetComponent<Button>().onClick.AddListener(BottomToggleClicked);
-        bottomTrack.AddToOnClick(() => TrackClicked(bottomTrack, bottomToggle.GetComponent<Button>()));
 
         shoesToggle.GetComponent<Button>().onClick.AddListener(ShoesToggleClicked);
-        shoesTrack.AddToOnClick(() => TrackClicked(shoesTrack, shoesToggle.GetComponent<Button>()));
 
         otherToggle.GetComponent<Button>().onClick.AddListener(OtherToggleClicked);
 

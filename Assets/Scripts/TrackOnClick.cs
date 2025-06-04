@@ -5,28 +5,14 @@ using UnityEngine.EventSystems;
 
 public class TrackOnClick : MonoBehaviour 
 {
-	[SerializeField]
-	private List<Collider2D> clickTargets;
-	[SerializeField]
-	private Collider2D zoomTarget;
-	[SerializeField]
-	private ClickType actOn;
-	[SerializeField]
-	private bool offset = false;
-	[SerializeField]
-	private Vector3 offsetAmount = Vector3.zero;
-	[SerializeField]
-	private bool useZoomTargetOffset = false;
+	[SerializeField]	private List<Collider2D> clickTargets;
+	[SerializeField] 	private Collider2D zoomTarget;
+	[SerializeField]	private bool offset = false;
+	[SerializeField]	private Vector3 offsetAmount = Vector3.zero;
+	[SerializeField]	private bool useZoomTargetOffset = false;
 
-	[SerializeField]
-	private bool zoom = false;
-	[SerializeField]
-	private float zoomBoarderAmount = 1.2f;
-
-	[SerializeField]
-	private bool onClickOverride = false;
-	[SerializeField]
-	private UnityEvent onClick;
+	[SerializeField]	private bool zoom = false;
+	[SerializeField]	private float zoomBorderAmount = 1.2f;
 
 	float zoomMax;
 
@@ -50,11 +36,11 @@ public class TrackOnClick : MonoBehaviour
 				wasMaintaining = true;
 				m_Offset = offsetAmount;
 				m_Pos = transform.position;
-				m_Zoom = zoomBoarderAmount;
+				m_Zoom = zoomBorderAmount;
 				//m_Size = transform.localScale;
 			}
 			offsetAmount = m_Offset;
-			zoomBoarderAmount = m_Zoom;
+			zoomBorderAmount = m_Zoom;
 			if(transform.position != m_Pos)
 			{
 				m_Offset += transform.position - m_Pos;
@@ -64,11 +50,6 @@ public class TrackOnClick : MonoBehaviour
 		} else wasMaintaining = false;
 	}
 #endif
-
-	public void AddToOnClick(UnityAction newEvent)
-	{
-		onClick.AddListener(newEvent);
-	}
 
 	void Awake() 
 	{
@@ -96,15 +77,7 @@ public class TrackOnClick : MonoBehaviour
 
 	public void EventTriggerClick()
 	{
-		TargetClicked(gameObject);
-	}
-
-	void TargetClicked(GameObject target)
-	{
-		if (onClickOverride)
-			onClick.Invoke();
-		else
-			TargetClicked();
+		TargetClicked();
 	}
 
     void TargetClicked()
@@ -112,17 +85,12 @@ public class TrackOnClick : MonoBehaviour
 		if(offset)
 		{
 			if(zoom)
-				CameraTrack2D.SetTarget(zoomTarget.transform, offsetAmount, zoomBoarderAmount, zoomMax);
+				CameraTrack2D.SetTarget(zoomTarget.transform, offsetAmount, zoomBorderAmount, zoomMax);
 			else
 				CameraTrack2D.SetTarget(zoomTarget.transform, offsetAmount, zoomMax);
 		} else if(zoom)
-			CameraTrack2D.SetTarget(zoomTarget.transform, zoomBoarderAmount, zoomMax);
+			CameraTrack2D.SetTarget(zoomTarget.transform, zoomBorderAmount, zoomMax);
 		else
 			CameraTrack2D.SetTarget(zoomTarget.transform, zoomMax);
-	}
-
-    private enum ClickType
-	{
-		CLICK, DOUBLECLICK
 	}
 }

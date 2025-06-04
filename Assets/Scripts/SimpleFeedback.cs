@@ -22,6 +22,7 @@ public class SimpleFeedback : MonoBehaviour
 
     [SerializeField] Animator animator;
     [SerializeField] Animator charAnimator;
+    [SerializeField] Animator peopleMoverAnimator;
 
     [Header("Intro Panel")]
     [SerializeField] string fitTitle, okTitle, unfitTitle;
@@ -61,12 +62,14 @@ public class SimpleFeedback : MonoBehaviour
         gameDuration = (float)duration;
         SetupTotals();
         StartCoroutine(startFeedbackRoutine());
+        CameraTrack2D.ResetTarget();
     }
 
     IEnumerator startFeedbackRoutine()
     {
         SFXManager.instance.PlayOneShot(fit ? feedbackDrumroll_Good : feedbackDrumroll_Bad);
-        animator.Play("MoveToFeedbackPos");
+        //animator.Play("MoveToFeedbackPos");
+        peopleMoverAnimator.Play("MoveCharToFeedbackSpot");
         yield return new WaitForSeconds(1.8f);
         feedbackCanvasObject.SetActive(true);
         yield return new WaitForSeconds(1.0f);
@@ -98,13 +101,21 @@ public class SimpleFeedback : MonoBehaviour
                 starBarFill.fillAmount = percentageScore;
 
             if (starBarFill.fillAmount >= 0.25f)
+            {
                 stars[0].SetActive(true);
+            }
             if (starBarFill.fillAmount >= 0.50f)
+            {
                 stars[1].SetActive(true);
+            }
             if (starBarFill.fillAmount >= 0.75f)
+            {
                 stars[2].SetActive(true);
+            }
             if (starBarFill.fillAmount >= 0.99f)
+            {
                 stars[3].SetActive(true);
+            }
 
             yield return new WaitForSeconds(Time.deltaTime);
         }
@@ -163,6 +174,22 @@ public class SimpleFeedback : MonoBehaviour
             GlobalData.selectedFeetPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedFeetPiece));
 
         GlobalData.completedLastCharacter = fit;
+
+        int numStars = 0;
+        if (scorePercentage >= 0.25f)
+            numStars = 1;
+        if (scorePercentage >= 0.50f)
+            numStars = 2;
+        if (scorePercentage >= 0.75f)
+            numStars = 3;
+        if (scorePercentage >= 0.99f)
+            numStars = 4;
+       
+        GlobalData.setNewHighScore = false;
+        if (numStars > GlobalData.GetCharacterStars(GlobalData.currentCharacterSelection.characterTag))
+            GlobalData.setNewHighScore = true;
+
+        GlobalData.SetCharacterStars(GlobalData.currentCharacterSelection.characterTag, numStars);
     }
 
     public void FeedbackButtonOnClick(int index)
@@ -170,11 +197,22 @@ public class SimpleFeedback : MonoBehaviour
         for (int i = 0; i < reviewPanels.Length; i++)
         {
             if (i == index && !reviewPanels[i].isOpen)
-                reviewPanels[index].Open();
+            {
+                reviewPanels[i].Open();
+                bodyButtons[i].GetComponent<TrackOnClick>().Focus();
+            }
             else
+            {
                 reviewPanels[i].Close();
+            }
         }
 
+        bool anythingOpen = false;
+        for (int i = 0; i < reviewPanels.Length; i++)
+            if (reviewPanels[i].isOpen)
+                anythingOpen = true;
+        if (!anythingOpen)
+            CameraTrack2D.ResetTarget();
     }
 
     public void LoadMainMenu()

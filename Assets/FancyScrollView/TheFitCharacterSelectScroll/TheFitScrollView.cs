@@ -10,16 +10,20 @@ using UnityEngine;
 using EasingCore;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Pool;
 
 namespace FancyScrollView.TheFitCharacterSelect
 {
-    class ScrollView : FancyScrollView<CharacterData>
+    class TheFitScrollView : FancyScrollView<CharacterData>
     {
         [SerializeField] Scroller scroller = default;
         [SerializeField] GameObject cellPrefab = default;
         [SerializeField] SoundVolumePair[] pageChangeSounds;
         [SerializeField] Button continueButton;
         [SerializeField] CanvasGroup contentGroup;
+
+        [SerializeField] GameObject[] hidableUI;
+        [SerializeField] GameObject prevButton, nextButton;
 
         Action<int> onSelectionChanged;
         public int currentCell;
@@ -33,7 +37,7 @@ namespace FancyScrollView.TheFitCharacterSelect
                 yield return null;
             yield return new WaitForSeconds(1f);
 
-            int targetCell = Mathf.Clamp(GlobalData.GetLastCharacterIndex() + (GlobalData.completedLastCharacter ? 1 : 0), 0, ItemsSource.Count-1);
+            int targetCell = Mathf.Clamp(GlobalData.GetLastCharacterIndex(), 0, ItemsSource.Count-1);
             SelectCell(targetCell);
         }
 
@@ -100,6 +104,36 @@ namespace FancyScrollView.TheFitCharacterSelect
         {
             GlobalData.SetLastCharacterIndex(currentCell);
             return ItemsSource[currentCell];
+        }
+
+        private void Update()
+        {
+            prevButton.SetActive(currentCell != 0);
+            nextButton.SetActive(currentCell != ItemsSource.Count-1);
+        }
+
+        public void TapOnCharacter()
+        {
+            if (continueButton.GetComponentInParent<TweenScale>().isActiveAndEnabled)
+                return;
+
+            continueButton.GetComponentInParent<TweenScale>().PlayForward_FromBeginning();
+        }
+
+        public void HideUI()
+        {
+            for (int i = 0; i < hidableUI.Length; i++)
+            {
+                hidableUI[i].SetActive(false);
+            }
+        }
+
+        public void ShowUI()
+        {
+            for (int i = 0; i < hidableUI.Length; i++)
+            {
+                hidableUI[i].SetActive(true);
+            }
         }
     }
 }

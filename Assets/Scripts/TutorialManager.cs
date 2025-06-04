@@ -11,6 +11,7 @@ public class TutorialStep
     public string message;
     public string hintFingerTag; //optional
     public GameObject limitInteractionToThis; //optional
+    public GameObject limitInteractionToThis2; //optional
     public List<Button> lockedButtons; //optional
     public UnityEvent onStepStartEvent;
     public UnityEvent onStepFinishEvent;
@@ -60,6 +61,17 @@ public class TutorialManager : MonoBehaviour
             Debug.Log("ADded listener");
             step.limitInteractionToThis.GetComponentInChildren<Button>()?.onClick.AddListener(EndStep);
             step.limitInteractionToThis.GetComponentInChildren<Toggle>()?.onValueChanged.AddListener(EndStep);
+            step.limitInteractionToThis.GetComponentInChildren<EventTrigger>()?.triggers.Find(x => x.eventID == EventTriggerType.PointerClick).callback.AddListener(EndStep);
+        }
+        if (step.limitInteractionToThis2 != null)
+        {
+            EventSystem.current.limitInputToThisObject2 = step.limitInteractionToThis2;
+            //EventSystem.current.eventOnLimitedInputInteraction += EndStep;
+
+            Debug.Log("ADded listener");
+            step.limitInteractionToThis2.GetComponentInChildren<Button>()?.onClick.AddListener(EndStep);
+            step.limitInteractionToThis2.GetComponentInChildren<Toggle>()?.onValueChanged.AddListener(EndStep);
+            step.limitInteractionToThis2.GetComponentInChildren<EventTrigger>()?.triggers.Find(x => x.eventID == EventTriggerType.PointerClick).callback.AddListener(EndStep);
         }
 
         if (step.lockedButtons != null)
@@ -77,6 +89,11 @@ public class TutorialManager : MonoBehaviour
         EndStep();
     }
 
+    void EndStep(BaseEventData _)
+    {
+        EndStep();
+    }
+
     void EndStep()
     {
         if (hintFingerManager == null)
@@ -89,9 +106,18 @@ public class TutorialManager : MonoBehaviour
         {
             currentStep.limitInteractionToThis.GetComponentInChildren<Button>()?.onClick.RemoveListener(EndStep);
             currentStep.limitInteractionToThis.GetComponentInChildren<Toggle>()?.onValueChanged.RemoveListener(EndStep);
+            currentStep.limitInteractionToThis.GetComponentInChildren<EventTrigger>()?.triggers.Find(x => x.eventID == EventTriggerType.PointerClick).callback.RemoveListener(EndStep);
         }
+        if (currentStep.limitInteractionToThis2 != null)
+        {
+            currentStep.limitInteractionToThis2.GetComponentInChildren<Button>()?.onClick.RemoveListener(EndStep);
+            currentStep.limitInteractionToThis2.GetComponentInChildren<Toggle>()?.onValueChanged.RemoveListener(EndStep);
+            currentStep.limitInteractionToThis2.GetComponentInChildren<EventTrigger>()?.triggers.Find(x => x.eventID == EventTriggerType.PointerClick).callback.RemoveListener(EndStep);
+        }
+    
 
         EventSystem.current.limitInputToThisObject = null;
+        EventSystem.current.limitInputToThisObject2 = null;
         EventSystem.current.eventOnLimitedInputInteraction -= EndStep;
         if (currentStep.lockedButtons != null)
         {

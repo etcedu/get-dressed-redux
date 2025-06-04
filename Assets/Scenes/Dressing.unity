@@ -1728,6 +1728,7 @@ GameObject:
   - component: {fileID: 94961489}
   - component: {fileID: 94961487}
   - component: {fileID: 94961485}
+  - component: {fileID: 94961490}
   m_Layer: 0
   m_Name: Head_Tracker
   m_TagString: Untagged
@@ -1744,7 +1745,7 @@ Transform:
   m_GameObject: {fileID: 94961483}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000014176494, y: -0.000014358697, z: -0.70709705, w: 0.7071166}
-  m_LocalPosition: {x: -0.00005840326, y: 2.8910701, z: 0.15441144}
+  m_LocalPosition: {x: -0.000058027104, y: 2.8910701, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1767,18 +1768,6 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 795226042}
-          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-          m_MethodName: FeedbackButtonOnClick
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 0
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 151855921}
           m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
           m_MethodName: PlayOneShot
@@ -1790,6 +1779,30 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 94961490}
+          m_TargetAssemblyTypeName: TrackOnClick, Assembly-CSharp
+          m_MethodName: EventTriggerClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1265987974}
+          m_TargetAssemblyTypeName: DressingUI, Assembly-CSharp
+          m_MethodName: ClothingCategoryButton_OnClick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: HEAD|body
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &94961487
@@ -1808,7 +1821,7 @@ MonoBehaviour:
   - {fileID: 1756454998}
   x: 1
   y: 1
-  z: 1
+  z: 0
   offset: {x: 0, y: 0, z: 0}
 --- !u!60 &94961489
 PolygonCollider2D:
@@ -1862,6 +1875,26 @@ PolygonCollider2D:
       - {x: -0.4967042, y: -0.0000019452154}
       - {x: -0.4090594, y: 0.181147}
   m_UseDelaunayMesh: 0
+--- !u!114 &94961490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94961483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 94961489}
+  offset: 1
+  offsetAmount: {x: -0.13, y: 0.04, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.41
+  maintain: 0
 --- !u!1 &101497619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,7 +3089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3451,6 +3484,7 @@ GameObject:
   - component: {fileID: 242842616}
   - component: {fileID: 242842613}
   - component: {fileID: 242842611}
+  - component: {fileID: 242842617}
   m_Layer: 0
   m_Name: Bottom_Tracker
   m_TagString: Untagged
@@ -3490,18 +3524,6 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 795226042}
-          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-          m_MethodName: FeedbackButtonOnClick
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 2
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 151855921}
           m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
           m_MethodName: PlayOneShot
@@ -3513,6 +3535,30 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 242842617}
+          m_TargetAssemblyTypeName: TrackOnClick, Assembly-CSharp
+          m_MethodName: EventTriggerClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1265987974}
+          m_TargetAssemblyTypeName: DressingUI, Assembly-CSharp
+          m_MethodName: ClothingCategoryButton_OnClick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: BOTTOM|body
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &242842613
@@ -3584,6 +3630,26 @@ PolygonCollider2D:
       - {x: -0.02069372, y: -0.34702885}
       - {x: -0.020659983, y: 0.3436737}
   m_UseDelaunayMesh: 0
+--- !u!114 &242842617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242842609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 242842616}
+  offset: 1
+  offsetAmount: {x: -0.22, y: 0.38, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.2
+  maintain: 0
 --- !u!114 &243236947 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8611044056899495992, guid: 084c684724749ea4cab70a124efb5665,
@@ -6298,6 +6364,173 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401020279}
   m_CullTransparentMesh: 1
+--- !u!1 &402209948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402209949}
+  - component: {fileID: 402209953}
+  - component: {fileID: 402209952}
+  - component: {fileID: 402209951}
+  - component: {fileID: 402209950}
+  m_Layer: 0
+  m_Name: Head_Tracker_Feedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &402209949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402209948}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000014176494, y: -0.000014358697, z: -0.70709705, w: 0.7071166}
+  m_LocalPosition: {x: -0.000058027104, y: 2.8910701, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 490114224}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402209950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402209948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 402209953}
+  offset: 1
+  offsetAmount: {x: 0.24, y: 0, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.93
+  maintain: 0
+--- !u!114 &402209951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402209948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 795226042}
+          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
+          m_MethodName: FeedbackButtonOnClick
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 0
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 151855921}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 5b3e83623ea35c541b891662e5eba0b6,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SoundVolumePair, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &402209952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402209948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4f44f0f84b4146ad3582fe4b0627c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1756454998}
+  x: 1
+  y: 1
+  z: 0
+  offset: {x: 0, y: 0, z: 0}
+--- !u!60 &402209953
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402209948}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.08457297, y: 0.1799873}
+      - {x: 0.055133685, y: 0.06397148}
+      - {x: 0.05345932, y: -0.067252494}
+      - {x: -0.08834826, y: -0.18364559}
+      - {x: -0.42307445, y: -0.18366869}
+      - {x: -0.4967042, y: -0.0000019452154}
+      - {x: -0.4090594, y: 0.181147}
+  m_UseDelaunayMesh: 0
 --- !u!1 &412606978
 GameObject:
   m_ObjectHideFlags: 0
@@ -7049,9 +7282,13 @@ Transform:
   - {fileID: 799321500}
   - {fileID: 355605683}
   - {fileID: 94961484}
+  - {fileID: 402209949}
   - {fileID: 743591323}
+  - {fileID: 1528033728}
   - {fileID: 242842610}
+  - {fileID: 702253938}
   - {fileID: 1230003456}
+  - {fileID: 1714903149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &490114225
@@ -9298,6 +9535,172 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701348832}
   m_CullTransparentMesh: 1
+--- !u!1 &702253937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702253938}
+  - component: {fileID: 702253942}
+  - component: {fileID: 702253941}
+  - component: {fileID: 702253940}
+  - component: {fileID: 702253939}
+  m_Layer: 0
+  m_Name: Bottom_Tracker_Feedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &702253938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702253937}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000014303783, y: -0.000014325249, z: -0.7070826, w: 0.707131}
+  m_LocalPosition: {x: 0.004502116, y: 0.53595185, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 490114224}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &702253939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702253937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 702253942}
+  offset: 1
+  offsetAmount: {x: 0.43, y: 0.59, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.55
+  maintain: 0
+--- !u!114 &702253940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702253937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 795226042}
+          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
+          m_MethodName: FeedbackButtonOnClick
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 2
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 151855921}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 82b700f37f6ea934fa95f49b6d1989c2,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SoundVolumePair, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &702253941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702253937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4f44f0f84b4146ad3582fe4b0627c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1300173963}
+  - {fileID: 786868639}
+  - {fileID: 1370198550}
+  x: 1
+  y: 1
+  z: 0
+  offset: {x: 0, y: -0.59, z: 0}
+--- !u!60 &702253942
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702253937}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.055, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.4207643, y: 0.30966017}
+      - {x: 1.4207513, y: -0.30623505}
+      - {x: -0.02069372, y: -0.34702885}
+      - {x: -0.020659983, y: 0.3436737}
+  m_UseDelaunayMesh: 0
 --- !u!1 &708792816
 GameObject:
   m_ObjectHideFlags: 0
@@ -9331,6 +9734,7 @@ MonoBehaviour:
   - message: Help Stanley choose an outfit. Press the Head button to start.
     hintFingerTag: headButton
     limitInteractionToThis: {fileID: 6778877}
+    limitInteractionToThis2: {fileID: 94961483}
     lockedButtons:
     - {fileID: 279385864}
     - {fileID: 685010416}
@@ -9345,6 +9749,7 @@ MonoBehaviour:
   - message: continued
     hintFingerTag: changeHair
     limitInteractionToThis: {fileID: 1029671838}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 279385864}
     - {fileID: 685010416}
@@ -9359,6 +9764,7 @@ MonoBehaviour:
   - message: Next, put on a top.
     hintFingerTag: topButton
     limitInteractionToThis: {fileID: 74266835}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1366735977}
     - {fileID: 685010416}
@@ -9373,6 +9779,7 @@ MonoBehaviour:
   - message: continued
     hintFingerTag: shirtButton
     limitInteractionToThis: {fileID: 60032137}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1366735977}
     - {fileID: 685010416}
@@ -9387,6 +9794,7 @@ MonoBehaviour:
   - message: "Great, let\u2019s get some pants on."
     hintFingerTag: bottomButton
     limitInteractionToThis: {fileID: 77213602}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1366735977}
     - {fileID: 279385864}
@@ -9401,6 +9809,7 @@ MonoBehaviour:
   - message: continued
     hintFingerTag: pantsButton
     limitInteractionToThis: {fileID: 974414906}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1366735977}
     - {fileID: 279385864}
@@ -9415,6 +9824,7 @@ MonoBehaviour:
   - message: "Finally, let\u2019s put those dogs away."
     hintFingerTag: feetButton
     limitInteractionToThis: {fileID: 1114265953}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1366735977}
     - {fileID: 279385864}
@@ -9429,6 +9839,7 @@ MonoBehaviour:
   - message: continued
     hintFingerTag: shoeButton
     limitInteractionToThis: {fileID: 495460790}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1366735977}
     - {fileID: 279385864}
@@ -9444,6 +9855,7 @@ MonoBehaviour:
       rated on your fit."
     hintFingerTag: readyButton
     limitInteractionToThis: {fileID: 1669471142}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1366735977}
     - {fileID: 279385864}
@@ -9459,6 +9871,7 @@ MonoBehaviour:
   - message: 
     hintFingerTag: feedbackButton
     limitInteractionToThis: {fileID: 6920189330265393466}
+    limitInteractionToThis2: {fileID: 0}
     lockedButtons:
     - {fileID: 1142511920}
     - {fileID: 2110008644}
@@ -9736,6 +10149,7 @@ GameObject:
   - component: {fileID: 743591329}
   - component: {fileID: 743591326}
   - component: {fileID: 743591324}
+  - component: {fileID: 743591330}
   m_Layer: 0
   m_Name: Top_Tracker
   m_TagString: Untagged
@@ -9775,18 +10189,6 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 795226042}
-          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-          m_MethodName: FeedbackButtonOnClick
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 1
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 151855921}
           m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
           m_MethodName: PlayOneShot
@@ -9798,6 +10200,30 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 743591330}
+          m_TargetAssemblyTypeName: TrackOnClick, Assembly-CSharp
+          m_MethodName: EventTriggerClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1265987974}
+          m_TargetAssemblyTypeName: DressingUI, Assembly-CSharp
+          m_MethodName: ClothingCategoryButton_OnClick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: TOP|body
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &743591326
@@ -9873,6 +10299,26 @@ PolygonCollider2D:
       - {x: -1.0515852, y: -0.11870586}
       - {x: -1.0515852, y: 0.12129413}
   m_UseDelaunayMesh: 0
+--- !u!114 &743591330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743591322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 743591329}
+  offset: 1
+  offsetAmount: {x: -0.22, y: 0, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.2
+  maintain: 0
 --- !u!1 &744264951
 GameObject:
   m_ObjectHideFlags: 0
@@ -11119,6 +11565,7 @@ MonoBehaviour:
   feedbackCanvasObject: {fileID: 5162633671031366833}
   animator: {fileID: 1777954343}
   charAnimator: {fileID: 469393685}
+  peopleMoverAnimator: {fileID: 490114225}
   fitTitle: GREAT OUTFIT!
   okTitle: HM...
   unfitTitle: UH OH
@@ -11169,10 +11616,10 @@ MonoBehaviour:
   - {fileID: 488038437}
   - {fileID: 42721748}
   bodyButtons:
-  - {fileID: 94961483}
-  - {fileID: 743591322}
-  - {fileID: 242842609}
-  - {fileID: 1230003455}
+  - {fileID: 402209948}
+  - {fileID: 1528033727}
+  - {fileID: 702253937}
+  - {fileID: 1714903144}
   scoreColors:
   - {r: 1, g: 0.36862746, b: 0.26666668, a: 1}
   - {r: 0.25490198, g: 0.40784317, b: 0.5764706, a: 1}
@@ -11885,8 +12332,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 4.91
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -11910,12 +12357,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842675300}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1777954342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &842905843
 PrefabInstance:
@@ -14063,7 +14510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14975,7 +15422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15796,6 +16243,7 @@ GameObject:
   - component: {fileID: 1230003461}
   - component: {fileID: 1230003459}
   - component: {fileID: 1230003457}
+  - component: {fileID: 1230003462}
   m_Layer: 0
   m_Name: Shoes_Tracker
   m_TagString: Untagged
@@ -15835,18 +16283,6 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 795226042}
-          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
-          m_MethodName: FeedbackButtonOnClick
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
-            m_FloatArgument: 0
-            m_StringArgument: 3
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 151855921}
           m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
           m_MethodName: PlayOneShot
@@ -15858,6 +16294,30 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1230003462}
+          m_TargetAssemblyTypeName: TrackOnClick, Assembly-CSharp
+          m_MethodName: EventTriggerClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1265987974}
+          m_TargetAssemblyTypeName: DressingUI, Assembly-CSharp
+          m_MethodName: ClothingCategoryButton_OnClick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FEET|body
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1230003459
@@ -15928,6 +16388,26 @@ PolygonCollider2D:
       - {x: 0.2145783, y: -0.579695}
       - {x: -0.13215029, y: -0.32540515}
   m_UseDelaunayMesh: 0
+--- !u!114 &1230003462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230003455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 1230003461}
+  offset: 1
+  offsetAmount: {x: -0.06, y: 0.76, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.2
+  maintain: 0
 --- !u!1 &1245013139
 GameObject:
   m_ObjectHideFlags: 0
@@ -16004,6 +16484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dressingManager: {fileID: 13129402}
   uiAnimator: {fileID: 1823066862}
+  cameraAnimator: {fileID: 1777954343}
   dressingCanvasObject: {fileID: 101497619}
   infoPanel: {fileID: 862287801}
   nameLabel: {fileID: 469203565}
@@ -16026,6 +16507,11 @@ MonoBehaviour:
   - {fileID: 577860678}
   - {fileID: 1548799329}
   - {fileID: 1737356177}
+  bodyButtons:
+  - {fileID: 94961483}
+  - {fileID: 743591322}
+  - {fileID: 242842609}
+  - {fileID: 1230003455}
   readyButton: {fileID: 570574592}
   readyButtonObj: {fileID: 1669471142}
 --- !u!4 &1265987975
@@ -16403,7 +16889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 191.06}
+  m_AnchoredPosition: {x: 0, y: 191.06006}
   m_SizeDelta: {x: 0, y: 382.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349470284
@@ -17835,6 +18321,176 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519645661}
   m_CullTransparentMesh: 1
+--- !u!1 &1528033727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528033728}
+  - component: {fileID: 1528033732}
+  - component: {fileID: 1528033731}
+  - component: {fileID: 1528033730}
+  - component: {fileID: 1528033729}
+  m_Layer: 0
+  m_Name: Top_Tracker_Feedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1528033728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528033727}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000014261485, y: -0.000014336338, z: -0.7070826, w: 0.707131}
+  m_LocalPosition: {x: -0.0040903855, y: 2.0063953, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 490114224}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528033729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528033727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 1528033732}
+  offset: 1
+  offsetAmount: {x: 0.4, y: 0, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.63
+  maintain: 0
+--- !u!114 &1528033730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528033727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 795226042}
+          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
+          m_MethodName: FeedbackButtonOnClick
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 1
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 151855921}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 71190951660e0e844b5d00dfc3634d5c,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SoundVolumePair, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1528033731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528033727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4f44f0f84b4146ad3582fe4b0627c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1929420275}
+  - {fileID: 1909676803}
+  - {fileID: 883005019}
+  x: 1
+  y: 1
+  z: 0
+  offset: {x: 0, y: -0.33, z: 0}
+--- !u!60 &1528033732
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528033727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.227, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.9215852, y: 0.38129413}
+      - {x: -0.3652453, y: 0.5042833}
+      - {x: 0.096521676, y: 0.57733214}
+      - {x: 0.0998109, y: -0.57134306}
+      - {x: -0.36303973, y: -0.50551057}
+      - {x: -0.9215852, y: -0.37870586}
+      - {x: -1.0515852, y: -0.11870586}
+      - {x: -1.0515852, y: 0.12129413}
+  m_UseDelaunayMesh: 0
 --- !u!114 &1530412906 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8611044056899495992, guid: 084c684724749ea4cab70a124efb5665,
@@ -19855,6 +20511,171 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 4
   m_AspectRatio: 1
+--- !u!1 &1714903144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714903149}
+  - component: {fileID: 1714903148}
+  - component: {fileID: 1714903147}
+  - component: {fileID: 1714903146}
+  - component: {fileID: 1714903145}
+  m_Layer: 0
+  m_Name: Shoes_Tracker_Feedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1714903145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714903144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa000622e4e4d734e8ceb35f103205bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickTargets: []
+  zoomTarget: {fileID: 1714903148}
+  offset: 1
+  offsetAmount: {x: 0.17, y: 0.91, z: 0}
+  useZoomTargetOffset: 0
+  zoom: 1
+  zoomBorderAmount: 1.41
+  maintain: 0
+--- !u!114 &1714903146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714903144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 795226042}
+          m_TargetAssemblyTypeName: SimpleFeedback, Assembly-CSharp
+          m_MethodName: FeedbackButtonOnClick
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 3
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 151855921}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 1d6a74001821c2e4e952edce4bc384ce,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SoundVolumePair, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1714903147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714903144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4f44f0f84b4146ad3582fe4b0627c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1439523207}
+  - {fileID: 1392843428}
+  x: 1
+  y: 1
+  z: 0
+  offset: {x: 0, y: -0.13, z: 0}
+--- !u!60 &1714903148
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714903144}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.12995291, y: 0.3079562}
+      - {x: 0.20988895, y: 0.5723578}
+      - {x: 0.2145783, y: -0.579695}
+      - {x: -0.13215029, y: -0.32540515}
+  m_UseDelaunayMesh: 0
+--- !u!4 &1714903149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714903144}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000014303783, y: -0.000014325249, z: -0.7070826, w: 0.707131}
+  m_LocalPosition: {x: 0.0014516244, y: 0.0532552, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 490114224}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716995304
 GameObject:
   m_ObjectHideFlags: 0
@@ -20911,17 +21732,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777954330}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcda0f1f33122ce408847254a1f38cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentOnTrack: 1
+  parentOnTrack: 0
   startingInstance: 1
   holdXPos: 0
   holdYPos: 0
   holdZPos: 1
-  trackingDuration: 1.05
+  trackingDuration: 0.6
 --- !u!81 &1777954339
 AudioListener:
   m_ObjectHideFlags: 0
@@ -20998,10 +21819,11 @@ Transform:
   m_GameObject: {fileID: 1777954330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.18, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 842675303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1777954343
@@ -21012,7 +21834,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777954330}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4648cb3b5a197e44dbdd90d435495065, type: 2}
   m_CullingMode: 0
@@ -23977,6 +24799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limitInputToThisObject: {fileID: 0}
+  limitInputToThisObject2: {fileID: 0}
   limitInputExceptionList:
   - {fileID: 699799360}
   - {fileID: 1685636483}
@@ -27921,9 +28744,9 @@ RectTransform:
   - {fileID: 3267741152394799748}
   m_Father: {fileID: 1656806998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -39.342285, y: 38.351135}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -39.342285, y: -973.6488}
   m_SizeDelta: {x: 416.1859, y: 865.6979}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &3812582253953524115
@@ -31604,7 +32427,6 @@ SceneRoots:
   - {fileID: 2073736285}
   - {fileID: 490114224}
   - {fileID: 1777954342}
-  - {fileID: 842675303}
   - {fileID: 1822333107}
   - {fileID: 151855923}
   - {fileID: 749561984}

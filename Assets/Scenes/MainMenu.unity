@@ -231,16 +231,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickTargets: []
   zoomTarget: {fileID: 0}
-  actOn: 0
   offset: 1
   offsetAmount: {x: 0, y: 0, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
-  zoomBoarderAmount: 1
-  onClickOverride: 1
-  onClick:
-    m_PersistentCalls:
-      m_Calls: []
+  zoomBorderAmount: 1.2
   maintain: 0
 --- !u!60 &37682731
 PolygonCollider2D:
@@ -294,6 +289,74 @@ PolygonCollider2D:
       - {x: -0.4967042, y: -0.0000019452154}
       - {x: -0.4090594, y: 0.181147}
   m_UseDelaunayMesh: 0
+--- !u!1001 &51060145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 731.2249
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 112.09617
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 82.65367
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604651626793830832, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325209537637969918, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb,
+        type: 3}
+      propertyPath: m_Name
+      value: GlobalData
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7198e15b8652bce4eb1fd9b5bb4acbbb, type: 3}
 --- !u!1 &65663989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,6 +2114,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Options
       objectReference: {fileID: 0}
+    - target: {fileID: 1455365405617710227, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_text
+      value: This will clear your stars and you will need to do the tutorial again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455365405617710227, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 39.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455365405617710227, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1889690881918568638, guid: 79273e7771c3ef147bcbc8dbde70cb94,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2145,6 +2223,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689738853512619044, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700420122484669669, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329203833199568770, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -52.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329203833199568770, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.6901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329203833199568770, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329203833199568770, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.618607
       objectReference: {fileID: 0}
     - target: {fileID: 5463805758917773971, guid: 79273e7771c3ef147bcbc8dbde70cb94,
         type: 3}
@@ -2311,6 +2419,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6476760344645012329, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6540785185570084498, guid: 79273e7771c3ef147bcbc8dbde70cb94,
         type: 3}
       propertyPath: m_IsActive
@@ -2326,6 +2439,16 @@ PrefabInstance:
       propertyPath: creditsPanel
       value: 
       objectReference: {fileID: 1575427972}
+    - target: {fileID: 7068574378944216543, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077104874023413022, guid: 79273e7771c3ef147bcbc8dbde70cb94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7598764382278195511, guid: 79273e7771c3ef147bcbc8dbde70cb94,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2768,16 +2891,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickTargets: []
   zoomTarget: {fileID: 0}
-  actOn: 0
   offset: 1
   offsetAmount: {x: 0, y: 0, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
-  zoomBoarderAmount: 0.9
-  onClickOverride: 1
-  onClick:
-    m_PersistentCalls:
-      m_Calls: []
+  zoomBorderAmount: 1.2
   maintain: 0
 --- !u!60 &489067311
 PolygonCollider2D:
@@ -3341,7 +3459,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1001
   m_TargetDisplay: 0
 --- !u!224 &632677079
 RectTransform:
@@ -4114,16 +4232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickTargets: []
   zoomTarget: {fileID: 0}
-  actOn: 0
   offset: 1
   offsetAmount: {x: 0, y: 0, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
-  zoomBoarderAmount: 0.8
-  onClickOverride: 1
-  onClick:
-    m_PersistentCalls:
-      m_Calls: []
+  zoomBorderAmount: 1.2
   maintain: 0
 --- !u!60 &889650750
 PolygonCollider2D:
@@ -4421,16 +4534,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickTargets: []
   zoomTarget: {fileID: 0}
-  actOn: 0
   offset: 1
   offsetAmount: {x: 0, y: 0, z: 0}
   useZoomTargetOffset: 0
   zoom: 1
-  zoomBoarderAmount: 0.8
-  onClickOverride: 1
-  onClick:
-    m_PersistentCalls:
-      m_Calls: []
+  zoomBorderAmount: 1.2
   maintain: 0
 --- !u!1 &1066602273
 GameObject:
@@ -5435,6 +5543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limitInputToThisObject: {fileID: 0}
+  limitInputToThisObject2: {fileID: 0}
   limitInputExceptionList: []
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
@@ -6809,3 +6918,4 @@ SceneRoots:
   - {fileID: 1467077929}
   - {fileID: 620904877}
   - {fileID: 181533404}
+  - {fileID: 51060145}
