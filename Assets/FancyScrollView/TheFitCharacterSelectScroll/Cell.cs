@@ -29,6 +29,7 @@ namespace FancyScrollView.TheFitCharacterSelect
 
         [SerializeField] Image fader;
         [SerializeField] GameObject lockedObject;
+        [SerializeField] GameObject invertedLockedObject;
         [SerializeField] GameObject completedObject;
         [SerializeField] UITweener starsTween;
         [SerializeField] CanvasGroup starsCG;
@@ -54,7 +55,7 @@ namespace FancyScrollView.TheFitCharacterSelect
             job.text = charData.jobTitle;
 
             SetLockState(!GlobalData.GetTutorialFinished() && !data.characterTag.ToLower().Contains("tutorial"));
-            //completedObject.SetActive(GlobalData.GetCharacterCompleted(data.characterTag));
+            completedObject.SetActive(GlobalData.GetCharacterStars(data.characterTag) == 4);
 
             if (GlobalData.currentCharacterSelection?.characterTag == data.characterTag && GlobalData.setNewHighScore)
             {
@@ -87,6 +88,7 @@ namespace FancyScrollView.TheFitCharacterSelect
         public void SetLockState(bool locked)
         {
             lockedObject.SetActive(locked);
+            invertedLockedObject.SetActive(!locked);
         }
 
         public void ShowStarsFirstTime()
