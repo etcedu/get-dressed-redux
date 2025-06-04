@@ -1749,8 +1749,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c25efa6e23756b40b124db939a3f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useAlternateMusic: 0
   musicTrackSoundVolumePairs:
   - {fileID: 11400000, guid: 0b4bb5f8aad6a754997a51e305d4f5d9, type: 2}
+  musicTrackSoundVolumePairsAlternate:
+  - {fileID: 11400000, guid: e6f471797bc33c64eafb12ca71f353ba, type: 2}
 --- !u!82 &1007043082
 AudioSource:
   m_ObjectHideFlags: 0

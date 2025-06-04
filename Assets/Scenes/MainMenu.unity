@@ -1592,7 +1592,7 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 95.804054
+      value: 98.723305
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -1602,12 +1602,12 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 47.902027
+      value: 49.361652
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -21.109367
+      value: -21.334274
       objectReference: {fileID: 0}
     - target: {fileID: 8856447383980017330, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -1932,8 +1932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c25efa6e23756b40b124db939a3f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useAlternateMusic: 0
   musicTrackSoundVolumePairs:
-  - {fileID: 11400000, guid: f76d4107ca0ba3145bd44c56c84f9594, type: 2}
+  - {fileID: 11400000, guid: 0b4bb5f8aad6a754997a51e305d4f5d9, type: 2}
+  musicTrackSoundVolumePairsAlternate:
+  - {fileID: 11400000, guid: e6f471797bc33c64eafb12ca71f353ba, type: 2}
 --- !u!82 &277526825
 AudioSource:
   m_ObjectHideFlags: 0

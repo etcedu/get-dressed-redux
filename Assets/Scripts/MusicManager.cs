@@ -9,7 +9,11 @@ public class MusicManager : MonoBehaviour
 {
     //Note that this is not static. It's possible more than one of these components exsists in the scene.
     AudioSource audioSource;
+
+    [SerializeField] bool useAlternateMusic;
     [SerializeField] SoundVolumePair[] musicTrackSoundVolumePairs;
+    [SerializeField] SoundVolumePair[] musicTrackSoundVolumePairsAlternate;
+
 
     float trackVolume;
 
@@ -19,7 +23,8 @@ public class MusicManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0;
 
-        SoundVolumePair track = musicTrackSoundVolumePairs[UnityEngine.Random.Range(0, musicTrackSoundVolumePairs.Length)];
+        SoundVolumePair track = useAlternateMusic ? musicTrackSoundVolumePairsAlternate[UnityEngine.Random.Range(0, musicTrackSoundVolumePairsAlternate.Length)] 
+                                                  : musicTrackSoundVolumePairs[UnityEngine.Random.Range(0, musicTrackSoundVolumePairs.Length)];
         audioSource.clip = track.clip;
         trackVolume = track.volume;
         audioSource.Play();
