@@ -223,8 +223,6 @@ public class DressingUI : MonoBehaviour
         if (!init || !sender.toggle.isOn)
             return;
 
-        Debug.Log($"Here from {sender.clothingPiece.DisplayName}");
-
         dressingManager.ClearClothingFromCategory(sender.clothingPiece.Category);
 
         if (sender.clothingPiece.Category == Category.DRESS)

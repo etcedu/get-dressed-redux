@@ -115,6 +115,7 @@ namespace FancyScrollView.TheFitCharacterSelect
             for (int i = 0; i < numStars; i++)
             {
                 stars[i].SetActive(true);
+                stars[i].GetComponent<UITweener>().PlayForward_FromBeginning();
                 SFXManager.instance.PlayOneShot(starSounds[i]);
                 yield return new WaitForSeconds(0.5f);
             }

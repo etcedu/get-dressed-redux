@@ -21,7 +21,7 @@ MonoBehaviour:
     jobTitle: Going for burgers
     description: Stanley has a big interview tomorrow, but right now he's hungry
       and wants to grab something to eat.
-    imageAssetPath: Stanley_Tutorial_Portrait
+    imageAssetPath: Stanley_Portrait
     skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
     winFeedback: This is a totally appropriate outfit for burger eating.<br><br>Choose
       a category to learn more about your rating.
@@ -75,6 +75,275 @@ MonoBehaviour:
       FeedbackName: High Top Sneakers
       FeedbackTier: Ultra Casual
       Feedback: 'A classic sneaker style. Good for relaxed settings. '
+      scoreForCurrentCharacter: 0
+    otherPieces:
+    - Tag: Stanley_Face
+      DisplayName: none
+      GenderRole: 1
+      Category: 4
+      Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
+      FeedbackName: none
+      FeedbackTier: none
+      Feedback: 
+      scoreForCurrentCharacter: 0
+  - characterTag: Kris
+    characterName: Kris
+    gender: 2
+    jobTitle: Robotics Apprenticeship
+    description: Kris is competing for a spot in the registered robotics program.
+      Help her make a good impression by creating a professional outfit!
+    imageAssetPath: Kris_Portrait
+    skinColor: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
+    winFeedback: You helped Kris choose the perfect outfit. Dressing like a professional
+      will help her chances of being accepted into the robotics program!
+    okFeedback: "This outfit might work but something isn't quite right. Kris can
+      make an even better outfit with the clothes she has in her closet.\r"
+    loseFeedback: This outfit isn't appropriate for this kind of interview. Help
+      Kris make a more professional outfit for her apprenticeship interview!
+    headPieces:
+    - Tag: Kris_Ponytail
+      DisplayName: High Ponytail
+      GenderRole: 2
+      Category: 0
+      Connection: {fileID: 11400000, guid: 573ead63543320a4fa4595978ac8ce76, type: 2}
+      FeedbackName: High Ponytail
+      FeedbackTier: Groomed
+      Feedback: A neat ponytail can give you a reliable, prepared look.
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Beanie
+      DisplayName: Beanie
+      GenderRole: 2
+      Category: 0
+      Connection: {fileID: 11400000, guid: 1d6c2f082c252214d9a39c5d32084639, type: 2}
+      FeedbackName: Beanie
+      FeedbackTier: Ultra Casual
+      Feedback: Hats are almost never appropriate for an interview.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Kris_Blazer
+      DisplayName: Blazer and Button Up Shirt
+      GenderRole: 2
+      Category: 1
+      Connection: {fileID: 11400000, guid: bef598781300f8541899a5c0f3205eb6, type: 2}
+      FeedbackName: Blazer and Button Up Shirt
+      FeedbackTier: Business Casual
+      Feedback: A blazer and button up is a classic combination that shows the interviewer
+        you're serious.
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_ShortSleeveButtonUp
+      DisplayName: Short Sleeve Button Up
+      GenderRole: 2
+      Category: 1
+      Connection: {fileID: 11400000, guid: 6fea9d15a004da547a7af0778224d465, type: 2}
+      FeedbackName: Short Sleeve Button Up
+      FeedbackTier: Casual
+      Feedback: A comfortable shirt that can be worn in casual work settings, but
+        not formal enough for an interview.
+      scoreForCurrentCharacter: 1
+    - Tag: Kris_Spaghetti
+      DisplayName: Spaghetti String Tank Top
+      GenderRole: 2
+      Category: 1
+      Connection: {fileID: 11400000, guid: 39c74295895a91a45a63e9ceb0477328, type: 2}
+      FeedbackName: Spaghetti String Tank Top
+      FeedbackTier: Ultra Casual
+      Feedback: Perfect for everyday wear, but inappropriate for interviews!
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Kris_StraightPants
+      DisplayName: 'Straight Leg Dress Pants '
+      GenderRole: 2
+      Category: 2
+      Connection: {fileID: 11400000, guid: 27fdda0a6d3bf3a45beaba34d319b28d, type: 2}
+      FeedbackName: 'Straight Leg Dress Pants '
+      FeedbackTier: Business Casual
+      Feedback: Signals that you understand the environment by dressing with respect
+        for the occasion.
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Jeans
+      DisplayName: Jeans
+      GenderRole: 2
+      Category: 2
+      Connection: {fileID: 11400000, guid: e4d95f6de83b3274c92a06de9fa99d25, type: 2}
+      FeedbackName: Jeans
+      FeedbackTier: Casual
+      Feedback: A common piece of clothing, but too informal for a serious occasion
+        like an interview.
+      scoreForCurrentCharacter: 1
+    - Tag: Kris_Leggings
+      DisplayName: Leggings
+      GenderRole: 2
+      Category: 2
+      Connection: {fileID: 11400000, guid: 7cd57a4e4e844874f994f85917651047, type: 2}
+      FeedbackName: Leggings
+      FeedbackTier: Ultra Casual
+      Feedback: Never wear leggings as pants to an interview!
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Kris_Flats
+      DisplayName: Flats
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 1129844f9aa089047ac3bf4b0fb3d9b5, type: 2}
+      FeedbackName: Flats
+      FeedbackTier: Business Casual
+      Feedback: A timeless style that shows  a sense of professionalism and maturity
+        without being overly formal.
+      scoreForCurrentCharacter: 0
+    - Tag: Kris_Wedge
+      DisplayName: 'Open Toe Wedge '
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 9352947f4b7bf0643911612d0887e0a7, type: 2}
+      FeedbackName: 'Open Toe Wedge '
+      FeedbackTier: Casual
+      Feedback: Comfy and versatile footwear, but doesn't show that you understand
+        interview expectations.
+      scoreForCurrentCharacter: 1
+    - Tag: Kris_Flipflops
+      DisplayName: Flip Flops
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: f2afabf89a516c04489727b23fb0b413, type: 2}
+      FeedbackName: Flip Flops
+      FeedbackTier: Ultra Casual
+      Feedback: Are you going to the mall or to an interview?
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Kris_Face
+      DisplayName: none
+      GenderRole: 2
+      Category: 4
+      Connection: {fileID: 11400000, guid: c5155751f1bf8534a8907ffea4210e34, type: 2}
+      FeedbackName: none
+      FeedbackTier: none
+      Feedback: 
+      scoreForCurrentCharacter: 0
+  - characterTag: Stanley
+    characterName: Stanley
+    gender: 1
+    jobTitle: Undergraduate Admission
+    description: Stanley has landed an interview at Stanford. They're highly selective,
+      so the clothes he wears to class aren't going to cut it.
+    imageAssetPath: Stanley_Tutorial_Portrait
+    skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
+    winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
+      for the interview will help his chances of getting into Stanford!
+    okFeedback: "This outfit might work but something isn't quite right. Stanley
+      can make an even better outfit with the clothes he has in his closet.\r"
+    loseFeedback: This outfit isn't appropriate for this kind of interview. Help
+      Stanley make a more professional outfit for his college interview!
+    headPieces:
+    - Tag: Stanley_Hair_Shaved
+      DisplayName: Clean Shave
+      GenderRole: 1
+      Category: 0
+      Connection: {fileID: 11400000, guid: 49e87b10653298d4a959249b13841e86, type: 2}
+      FeedbackName: Clean Shave
+      FeedbackTier: Groomed
+      Feedback: A clean shave is always a safe bet if you aren't sure what to do
+        about your facial hair.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_Hair_Stubble
+      DisplayName: Scruffy Stubble
+      GenderRole: 1
+      Category: 0
+      Connection: {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
+      FeedbackName: Scruffy Stubble
+      FeedbackTier: Sloppy
+      Feedback: Stubble, especially if it's creeping down your neck, might show that
+        you didn't take the time to prepare.
+      scoreForCurrentCharacter: 0
+    topPieces:
+    - Tag: Stanley_ButtonUp
+      DisplayName: Striped Button Up
+      GenderRole: 1
+      Category: 1
+      Connection: {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
+      FeedbackName: Striped Button Up
+      FeedbackTier: Business Casual
+      Feedback: Widely considered to be professional attire, shows employers you
+        understand the basics.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_Polo
+      DisplayName: Polo Shirt
+      GenderRole: 1
+      Category: 1
+      Connection: {fileID: 11400000, guid: c294f86bdf861e34b842d0a17b0dcbb3, type: 2}
+      FeedbackName: Polo Shirt
+      FeedbackTier: Casual
+      Feedback: A sporty shirt that's often worn on the job, but is seen as too informal
+        for this interview.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_Tshirt
+      DisplayName: T-Shirt
+      GenderRole: 1
+      Category: 1
+      Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
+      FeedbackName: T-Shirt
+      FeedbackTier: Ultra Casual
+      Feedback: Perfect for everyday wear, but inappropriate for interviews like
+        this!
+      scoreForCurrentCharacter: 0
+    bottomPieces:
+    - Tag: Stanley_Khakis
+      DisplayName: Khaki Slacks
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: 2a90e17455e01b34288f8603b89493af, type: 2}
+      FeedbackName: Khaki Slacks
+      FeedbackTier: Business Casual
+      Feedback: Signals that you understand the environment by dressing with respect
+        for the occasion.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_Jeans
+      DisplayName: Jeans
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
+      FeedbackName: Jeans
+      FeedbackTier: Casual
+      Feedback: A common piece of clothing, but too informal for a serious occasion
+        like this interview.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_ChinoShorts
+      DisplayName: Chino Shorts
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
+      FeedbackName: Chino Shorts
+      FeedbackTier: Ultra Casual
+      Feedback: It's generally wise to never wear shorts to an interview.
+      scoreForCurrentCharacter: 0
+    feetPieces:
+    - Tag: Stanley_DerbyShoes
+      DisplayName: Derby Shoes
+      GenderRole: 1
+      Category: 3
+      Connection: {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
+      FeedbackName: Derby Shoes
+      FeedbackTier: Business Casual
+      Feedback: A timeless style that shows  a sense of professionalism and maturity
+        without being overly formal.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_BasketballShoes
+      DisplayName: Basketball Shoes
+      GenderRole: 1
+      Category: 3
+      Connection: {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
+      FeedbackName: Basketball Shoes
+      FeedbackTier: Casual
+      Feedback: Comfy and versatile footwear, but doesn't show that you understand
+        interview expectations.
+      scoreForCurrentCharacter: 0
+    - Tag: Stanley_HighTops
+      DisplayName: High Top Sneakers
+      GenderRole: 1
+      Category: 3
+      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
+      FeedbackName: High Top Sneakers
+      FeedbackTier: Ultra Casual
+      Feedback: Are you going to the mall or to an interview?
       scoreForCurrentCharacter: 0
     otherPieces:
     - Tag: Stanley_Face
@@ -223,275 +492,6 @@ MonoBehaviour:
       FeedbackTier: 
       Feedback: 
       scoreForCurrentCharacter: 0
-  - characterTag: Stanley
-    characterName: Stanley
-    gender: 1
-    jobTitle: Undergraduate Admission
-    description: Stanley has landed an interview at Stanford. They're highly selective,
-      so the clothes he wears to class aren't going to cut it.
-    imageAssetPath: Stanley_Portrait
-    skinColor: {r: 0.9607843, g: 0.78431374, b: 0.6313726, a: 1}
-    winFeedback: You helped Stanley choose the perfect outfit. Dressing like a professional
-      for the interview will help his chances of getting into Stanford!
-    okFeedback: "This outfit might work but something isn't quite right. Stanley
-      can make an even better outfit with the clothes he has in his closet.\r"
-    loseFeedback: This outfit isn't appropriate for this kind of interview. Help
-      Stanley make a more professional outfit for his college interview!
-    headPieces:
-    - Tag: Stanley_Hair_Shaved
-      DisplayName: Clean Shave
-      GenderRole: 1
-      Category: 0
-      Connection: {fileID: 11400000, guid: 49e87b10653298d4a959249b13841e86, type: 2}
-      FeedbackName: Clean Shave
-      FeedbackTier: Groomed
-      Feedback: A clean shave is always a safe bet if you aren't sure what to do
-        about your facial hair.
-      scoreForCurrentCharacter: 0
-    - Tag: Stanley_Hair_Stubble
-      DisplayName: Scruffy Stubble
-      GenderRole: 1
-      Category: 0
-      Connection: {fileID: 11400000, guid: 44e82d99ca8902c408b11ee2e1cd164a, type: 2}
-      FeedbackName: Scruffy Stubble
-      FeedbackTier: Sloppy
-      Feedback: Stubble, especially if it's creeping down your neck, might show that
-        you didn't take the time to prepare.
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: Stanley_ButtonUp
-      DisplayName: Striped Button Up
-      GenderRole: 1
-      Category: 1
-      Connection: {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}
-      FeedbackName: Striped Button Up
-      FeedbackTier: Business Casual
-      Feedback: Widely considered to be professional attire, shows employers you
-        understand the basics.
-      scoreForCurrentCharacter: 0
-    - Tag: Stanley_Polo
-      DisplayName: Polo Shirt
-      GenderRole: 1
-      Category: 1
-      Connection: {fileID: 11400000, guid: c294f86bdf861e34b842d0a17b0dcbb3, type: 2}
-      FeedbackName: Polo Shirt
-      FeedbackTier: Casual
-      Feedback: A sporty shirt that's often worn on the job, but is seen as too informal
-        for this interview.
-      scoreForCurrentCharacter: 0
-    - Tag: Stanley_Tshirt
-      DisplayName: T-Shirt
-      GenderRole: 1
-      Category: 1
-      Connection: {fileID: 11400000, guid: affb45c262080af44b0f43ebf95b6e96, type: 2}
-      FeedbackName: T-Shirt
-      FeedbackTier: Ultra Casual
-      Feedback: Perfect for everyday wear, but inappropriate for interviews like
-        this!
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: Stanley_Khakis
-      DisplayName: Khaki Slacks
-      GenderRole: 1
-      Category: 2
-      Connection: {fileID: 11400000, guid: 2a90e17455e01b34288f8603b89493af, type: 2}
-      FeedbackName: Khaki Slacks
-      FeedbackTier: Business Casual
-      Feedback: Signals that you understand the environment by dressing with respect
-        for the occasion.
-      scoreForCurrentCharacter: 0
-    - Tag: Stanley_Jeans
-      DisplayName: Jeans
-      GenderRole: 1
-      Category: 2
-      Connection: {fileID: 11400000, guid: 229ab3169be9e8d40a3ee78a0a6a24c7, type: 2}
-      FeedbackName: Jeans
-      FeedbackTier: Casual
-      Feedback: A common piece of clothing, but too informal for a serious occasion
-        like this interview.
-      scoreForCurrentCharacter: 0
-    - Tag: Stanley_ChinoShorts
-      DisplayName: Chino Shorts
-      GenderRole: 1
-      Category: 2
-      Connection: {fileID: 11400000, guid: 201748313c9479540b8ef51754f93cb4, type: 2}
-      FeedbackName: Chino Shorts
-      FeedbackTier: Ultra Casual
-      Feedback: It's generally wise to never wear shorts to an interview.
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: Stanley_DerbyShoes
-      DisplayName: Derby Shoes
-      GenderRole: 1
-      Category: 3
-      Connection: {fileID: 11400000, guid: 49fa6aacea605a545874f09a1231e1a7, type: 2}
-      FeedbackName: Derby Shoes
-      FeedbackTier: Business Casual
-      Feedback: A timeless style that shows  a sense of professionalism and maturity
-        without being overly formal.
-      scoreForCurrentCharacter: 0
-    - Tag: Stanley_BasketballShoes
-      DisplayName: Basketball Shoes
-      GenderRole: 1
-      Category: 3
-      Connection: {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
-      FeedbackName: Basketball Shoes
-      FeedbackTier: Casual
-      Feedback: Comfy and versatile footwear, but doesn't show that you understand
-        interview expectations.
-      scoreForCurrentCharacter: 0
-    - Tag: Stanley_HighTops
-      DisplayName: High Top Sneakers
-      GenderRole: 1
-      Category: 3
-      Connection: {fileID: 11400000, guid: 82d8418a90251b8428f354b04a17bc0b, type: 2}
-      FeedbackName: High Top Sneakers
-      FeedbackTier: Ultra Casual
-      Feedback: Are you going to the mall or to an interview?
-      scoreForCurrentCharacter: 0
-    otherPieces:
-    - Tag: Stanley_Face
-      DisplayName: none
-      GenderRole: 1
-      Category: 4
-      Connection: {fileID: 11400000, guid: ac93141410a1d0944b75e3f61b029bb1, type: 2}
-      FeedbackName: none
-      FeedbackTier: none
-      Feedback: 
-      scoreForCurrentCharacter: 0
-  - characterTag: Kris
-    characterName: Kris
-    gender: 2
-    jobTitle: Robotics Apprenticeship
-    description: Kris is competing for a spot in the registered robotics program.
-      Help her make a good impression by creating a professional outfit!
-    imageAssetPath: Kris_Portrait
-    skinColor: {r: 0.6392157, g: 0.4392157, b: 0.27058825, a: 1}
-    winFeedback: You helped Kris choose the perfect outfit. Dressing like a professional
-      will help her chances of being accepted into the robotics program!
-    okFeedback: "This outfit might work but something isn't quite right. Kris can
-      make an even better outfit with the clothes she has in her closet.\r"
-    loseFeedback: This outfit isn't appropriate for this kind of interview. Help
-      Kris make a more professional outfit for her apprenticeship interview!
-    headPieces:
-    - Tag: Kris_Ponytail
-      DisplayName: High Ponytail
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: 573ead63543320a4fa4595978ac8ce76, type: 2}
-      FeedbackName: High Ponytail
-      FeedbackTier: Groomed
-      Feedback: A neat ponytail can give you a reliable, prepared look.
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Beanie
-      DisplayName: Beanie
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: 1d6c2f082c252214d9a39c5d32084639, type: 2}
-      FeedbackName: Beanie
-      FeedbackTier: Ultra Casual
-      Feedback: Hats are almost never appropriate for an interview.
-      scoreForCurrentCharacter: 0
-    topPieces:
-    - Tag: Kris_Blazer
-      DisplayName: Blazer and Button Up Shirt
-      GenderRole: 2
-      Category: 1
-      Connection: {fileID: 11400000, guid: bef598781300f8541899a5c0f3205eb6, type: 2}
-      FeedbackName: Blazer and Button Up Shirt
-      FeedbackTier: Business Casual
-      Feedback: A blazer and button up is a classic combination that shows the interviewer
-        you're serious.
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_ShortSleeveButtonUp
-      DisplayName: Short Sleeve Button Up
-      GenderRole: 2
-      Category: 1
-      Connection: {fileID: 11400000, guid: 6fea9d15a004da547a7af0778224d465, type: 2}
-      FeedbackName: Short Sleeve Button Up
-      FeedbackTier: Casual
-      Feedback: A comfortable shirt that can be worn in casual work settings, but
-        not formal enough for an interview.
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Spaghetti
-      DisplayName: Spaghetti String Tank Top
-      GenderRole: 2
-      Category: 1
-      Connection: {fileID: 11400000, guid: 39c74295895a91a45a63e9ceb0477328, type: 2}
-      FeedbackName: Spaghetti String Tank Top
-      FeedbackTier: Ultra Casual
-      Feedback: Perfect for everyday wear, but inappropriate for interviews!
-      scoreForCurrentCharacter: 0
-    bottomPieces:
-    - Tag: Kris_StraightPants
-      DisplayName: 'Straight Leg Dress Pants '
-      GenderRole: 2
-      Category: 2
-      Connection: {fileID: 11400000, guid: 27fdda0a6d3bf3a45beaba34d319b28d, type: 2}
-      FeedbackName: 'Straight Leg Dress Pants '
-      FeedbackTier: Business Casual
-      Feedback: Signals that you understand the environment by dressing with respect
-        for the occasion.
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Jeans
-      DisplayName: Jeans
-      GenderRole: 2
-      Category: 2
-      Connection: {fileID: 11400000, guid: e4d95f6de83b3274c92a06de9fa99d25, type: 2}
-      FeedbackName: Jeans
-      FeedbackTier: Casual
-      Feedback: A common piece of clothing, but too informal for a serious occasion
-        like an interview.
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Leggings
-      DisplayName: Leggings
-      GenderRole: 2
-      Category: 2
-      Connection: {fileID: 11400000, guid: 7cd57a4e4e844874f994f85917651047, type: 2}
-      FeedbackName: Leggings
-      FeedbackTier: Ultra Casual
-      Feedback: Never wear leggings as pants to an interview!
-      scoreForCurrentCharacter: 0
-    feetPieces:
-    - Tag: Kris_Flats
-      DisplayName: Flats
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 1129844f9aa089047ac3bf4b0fb3d9b5, type: 2}
-      FeedbackName: Flats
-      FeedbackTier: Business Casual
-      Feedback: A timeless style that shows  a sense of professionalism and maturity
-        without being overly formal.
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Wedge
-      DisplayName: 'Open Toe Wedge '
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 9352947f4b7bf0643911612d0887e0a7, type: 2}
-      FeedbackName: 'Open Toe Wedge '
-      FeedbackTier: Casual
-      Feedback: Comfy and versatile footwear, but doesn't show that you understand
-        interview expectations.
-      scoreForCurrentCharacter: 0
-    - Tag: Kris_Flipflops
-      DisplayName: Flip Flops
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: f2afabf89a516c04489727b23fb0b413, type: 2}
-      FeedbackName: Flip Flops
-      FeedbackTier: Ultra Casual
-      Feedback: Are you going to the mall or to an interview?
-      scoreForCurrentCharacter: 0
-    otherPieces:
-    - Tag: Kris_Face
-      DisplayName: none
-      GenderRole: 2
-      Category: 4
-      Connection: {fileID: 11400000, guid: c5155751f1bf8534a8907ffea4210e34, type: 2}
-      FeedbackName: none
-      FeedbackTier: none
-      Feedback: 
-      scoreForCurrentCharacter: 0
   - characterTag: John
     characterName: John
     gender: 1
@@ -526,7 +526,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: You look like you just rolled out of bed. Interviewers might think
         you aren't taking the opportunity seriously.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: John_Buttonup
       DisplayName: Button Up
@@ -547,7 +547,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Wrinkled clothing signals carelessness and a lack of attention to
         detail. Iron your shirts or get them dry-cleaned!
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: John_SweatButtonup
       DisplayName: Button Up
       GenderRole: 1
@@ -557,7 +557,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Look at those sweat stains. Dirty clothing might show that you didn't
         take the time to present yourself thoughtfully.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: John_Pants
       DisplayName: Pleated Slacks
@@ -578,7 +578,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Is that cat hair? Use a lint roller or choose different pants to
         make yourself more presentable.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: John_DrinkStainPants
       DisplayName: Pleated Slacks
       GenderRole: 1
@@ -588,7 +588,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Look at that stain! Dirty clothing might show that you didn't take
         the time to present yourself thoughtfully.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: John_ChelseaBoots
       DisplayName: Chelsea Boots
@@ -609,7 +609,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: These shoes have seen better days. Well-kept shoes show that you
         put thought into every part of your outfit.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: John_DirtyOxfords
       DisplayName: Oxfords
       GenderRole: 1
@@ -619,7 +619,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Look at that mud. Clean shoes show that you put thought into every
         part of your outfit.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: John_Face
       DisplayName: none
@@ -627,6 +627,144 @@ MonoBehaviour:
       Category: 4
       Connection: {fileID: 11400000, guid: 747531d79427273498598f16935565b9, type: 2}
       FeedbackName: none
+      FeedbackTier: none
+      Feedback: 
+      scoreForCurrentCharacter: 0
+  - characterTag: Sasha
+    characterName: Sasha
+    gender: 1
+    jobTitle: Junior Cyber Security (Remote)
+    description: The interview is remote but that doesn't mean Sasha shouldn't dress
+      to impress. Help them find a professional outfit in their closet.
+    imageAssetPath: Sasha_Portrait
+    skinColor: {r: 0.67058825, g: 0.47058824, b: 0.3254902, a: 1}
+    winFeedback: You helped Sasha choose a well-coordinated outfit. Dressing like
+      a professional will help them make a good impression during their cyber-security
+      interview!
+    okFeedback: "This outfit might work but something doesn't really match. Sasha
+      can make a more presentable outfit with the clothes they have in their closet.\r"
+    loseFeedback: Sasha's clothes are too mismatched for an interview! Help them
+      choose more coordinated clothes from their wardrobe!
+    headPieces:
+    - Tag: Sasha_Buzzcut
+      DisplayName: Buzz Cut
+      GenderRole: 1
+      Category: 0
+      Connection: {fileID: 11400000, guid: 7bae0771f5d8c7e4cb86e137febf5e40, type: 2}
+      FeedbackName: Buzz Cut
+      FeedbackTier: Groomed
+      Feedback: A common hairstyle that needs little maintenance.
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_BaseballCap
+      DisplayName: Baseball Cap
+      GenderRole: 1
+      Category: 0
+      Connection: {fileID: 11400000, guid: ec886c9af9e484c469b17d1628b76698, type: 2}
+      FeedbackName: Baseball Cap
+      FeedbackTier: Ultra-Casual
+      Feedback: Even if you're having a bad hair day, hats and caps are almost never
+        appropriate for an interview.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Sasha_ButtonUpShirtBlue
+      DisplayName: Button Up Shirt
+      GenderRole: 1
+      Category: 1
+      Connection: {fileID: 11400000, guid: 4c64dce47158dcc40b2bf1baeb210047, type: 2}
+      FeedbackName: Button Up Shirt
+      FeedbackTier: Business Casual
+      Feedback: Button-ups are widely considered to be appropriate for interviews.
+        The color of this shirt also goes well with the rest of the outfit.
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_ButtonUpShirtNavy
+      DisplayName: Button Up Shirt
+      GenderRole: 1
+      Category: 1
+      Connection: {fileID: 11400000, guid: c921ee4f175898c45a2efc69a0594e46, type: 2}
+      FeedbackName: Button Up Shirt
+      FeedbackTier: Business Casual
+      Feedback: The style of this shirt is appropriate but the color doesn't go well
+        with the rest of the outfit. Avoid wearing too much of a single color.
+      scoreForCurrentCharacter: 1
+    - Tag: Sasha_ResortShirt
+      DisplayName: Button Up Shirt
+      GenderRole: 1
+      Category: 1
+      Connection: {fileID: 11400000, guid: 234674806a061af478a5b171d742fda3, type: 2}
+      FeedbackName: Button Up Shirt
+      FeedbackTier: Ultra-Casual
+      Feedback: Avoid flashy or distracting patterns when dressing for an interview.
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Sasha_PantsAndBelt
+      DisplayName: Slim Fit Dress Pants
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: bbbe6479e1c685844ac6ea707b1f3aad, type: 2}
+      FeedbackName: Slim Fit Dress Pants
+      FeedbackTier: Business Casual
+      Feedback: Highly appropriate for an interview and contrasts well with the rest
+        of the outfit.
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_PolkaDotPants
+      DisplayName: Slim Fit Dress Pants
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: b937620fae413ed44b57b39cf58149ea, type: 2}
+      FeedbackName: Slim Fit Dress Pants
+      FeedbackTier: Ultra-Casual
+      Feedback: "Flashy or whimsical clothes can suggest you don\u2019t understand
+        professional norms, which could raise red flags about your judgment or readiness
+        for the role."
+      scoreForCurrentCharacter: 1
+    - Tag: Sasha_PantsNoBelt
+      DisplayName: Slim Fit Dress Pants
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: 1e3fc6fde5b361949853a466f7688ee2, type: 2}
+      FeedbackName: Slim Fit Dress Pants
+      FeedbackTier: Casual
+      Feedback: It's possible to look good without a belt, but it's safer to wear
+        one when wearing a tucked in button-up.
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Sasha_OxfordsLightBrown
+      DisplayName: Oxfords
+      GenderRole: 1
+      Category: 3
+      Connection: {fileID: 11400000, guid: 20d26cf9bf711f648b93882dadfd755f, type: 2}
+      FeedbackName: Oxfords
+      FeedbackTier: Business Casual
+      Feedback: A timeless style perfect for an interview. The color and contrast
+        go well with the rest of the outfit.
+      scoreForCurrentCharacter: 0
+    - Tag: Sasha_OxfordsBlack
+      DisplayName: Oxfords
+      GenderRole: 1
+      Category: 3
+      Connection: {fileID: 11400000, guid: 14faa27d6d2d21a428788224160a66f3, type: 2}
+      FeedbackName: Oxfords
+      FeedbackTier: Business Casual
+      Feedback: The style of this shoe is appropriate but the color doesn't go well
+        with the rest of the outfit.
+      scoreForCurrentCharacter: 1
+    - Tag: Sasha_BrogueBoots
+      DisplayName: Brogue Boots
+      GenderRole: 1
+      Category: 3
+      Connection: {fileID: 11400000, guid: f4dccb2df63fd684abd8f97b87daa59b, type: 2}
+      FeedbackName: Brogue Boots
+      FeedbackTier: Casual
+      Feedback: These are stylish boots! But, bold patterns can be distracting in
+        an interview.
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Sasha_Face
+      DisplayName: 
+      GenderRole: 1
+      Category: 4
+      Connection: {fileID: 11400000, guid: bc08b7f55e419cf4faa2e9f23726702d, type: 2}
+      FeedbackName: 
       FeedbackTier: none
       Feedback: 
       scoreForCurrentCharacter: 0
@@ -760,7 +898,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 718f29acec6b7684e8b4f314d93ce886, type: 2}
   - {fileID: 11400000, guid: c3a2343f1686d8d4c9c44074e610c11c, type: 2}
   - {fileID: 11400000, guid: ce95b79e7ec82b148a8cf9bfa3a6ff29, type: 2}
+  - {fileID: 11400000, guid: ec886c9af9e484c469b17d1628b76698, type: 2}
+  - {fileID: 11400000, guid: f4dccb2df63fd684abd8f97b87daa59b, type: 2}
+  - {fileID: 11400000, guid: 4c64dce47158dcc40b2bf1baeb210047, type: 2}
+  - {fileID: 11400000, guid: c921ee4f175898c45a2efc69a0594e46, type: 2}
   - {fileID: 11400000, guid: 7bae0771f5d8c7e4cb86e137febf5e40, type: 2}
+  - {fileID: 11400000, guid: bc08b7f55e419cf4faa2e9f23726702d, type: 2}
+  - {fileID: 11400000, guid: 14faa27d6d2d21a428788224160a66f3, type: 2}
+  - {fileID: 11400000, guid: 20d26cf9bf711f648b93882dadfd755f, type: 2}
+  - {fileID: 11400000, guid: bbbe6479e1c685844ac6ea707b1f3aad, type: 2}
+  - {fileID: 11400000, guid: 1e3fc6fde5b361949853a466f7688ee2, type: 2}
+  - {fileID: 11400000, guid: b937620fae413ed44b57b39cf58149ea, type: 2}
+  - {fileID: 11400000, guid: 234674806a061af478a5b171d742fda3, type: 2}
   - {fileID: 11400000, guid: 46e3382561bf2644f96e4d09b0e64551, type: 2}
   - {fileID: 11400000, guid: ffc6435e5d6df4946a70c0742a0b40d3, type: 2}
   - {fileID: 11400000, guid: 3d137d4f8c84752439c1019c6cb948aa, type: 2}

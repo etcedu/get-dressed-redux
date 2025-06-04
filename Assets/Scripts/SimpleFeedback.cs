@@ -73,11 +73,14 @@ public class SimpleFeedback : MonoBehaviour
         yield return new WaitForSeconds(1.8f);
         feedbackCanvasObject.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        StartCoroutine(starsFillRoutine());
+        yield return StartCoroutine(starsFillRoutine());
         
         if (GlobalData.isTutorial)
         {
-            SimpleRTVoiceExample.Instance.Speak("default", $"{fitOrNotHeader.text}, {fitOrNotText.text}");
+            fitOrNotHeader.ForceMeshUpdate();
+            fitOrNotText.ForceMeshUpdate();
+            Debug.Log($"{fitOrNotHeader.GetParsedText()}, {fitOrNotText.GetParsedText()}");
+            SimpleRTVoiceExample.Instance.Speak("default", $"{fitOrNotHeader.GetParsedText()}, {fitOrNotText.GetParsedText()}");
         }
 
         for (int i = 0; i < bodyButtons.Length; i++)
@@ -234,7 +237,7 @@ public class SimpleFeedback : MonoBehaviour
     {
         fitOrNotHeader.ForceMeshUpdate();
         fitOrNotText.ForceMeshUpdate();
-        string message = $"{fitOrNotHeader.text}, {fitOrNotText.text}";
+        string message = $"{fitOrNotHeader.GetParsedText()}, {fitOrNotText.GetParsedText()}";
         SimpleRTVoiceExample.Instance.Speak("default", message);
     }
 
