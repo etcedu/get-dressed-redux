@@ -15,273 +15,6 @@ MonoBehaviour:
   charactersDataFile: {fileID: -747748091656361393, guid: 87d3334478f6e164193add204be603d1,
     type: 3}
   characters:
-  - characterTag: Aisha
-    characterName: Aisha
-    gender: 2
-    jobTitle: Associate Data Analyst (Remote)
-    description: Vanessa has a remote interview. It might be OK to wear slippers
-      on the job, but she should find a professional outfit for the interview!
-    imageAssetPath: Aisha_Portrait
-    skinColor: {r: 0.62352943, g: 0.44705883, b: 0.2784314, a: 1}
-    winFeedback: You helped Aisha choose a professional outfit. They're sure to make
-      a good first impression during their data analyst interview!
-    okFeedback: "This outfit might work but something doesn't really match. Aisha
-      can make a more presentable outfit with the clothes she has in her closet.\r"
-    loseFeedback: Aisha's outfit is a little too bold and unconventional for an interview!
-      Help her choose a safer option from her wardrobe!
-    headPieces:
-    - Tag: Aisha_UpdoHeadband
-      DisplayName: Updo with Headband
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: fdf91aab6f8221b45829b46fdf91eda0, type: 2}
-      FeedbackName: Updo with Headband
-      FeedbackTier: Business Casual
-      Feedback: An easy-to-do hairstyle that keeps hair out of your face, accented
-        by a simple headband.
-      scoreForCurrentCharacter: 0
-    - Tag: Aisha_UpdoPolkaDotHeadband
-      DisplayName: Updo with Headband
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: 996a7daa0f3e7f24794a92d7d22f4609, type: 2}
-      FeedbackName: Updo with Polka Dot Headband
-      FeedbackTier: Ultra-Casual
-      Feedback: Bold colors and patterns can give the impression that you don't understand
-        the formality of an interview setting.
-      scoreForCurrentCharacter: 2
-    topPieces:
-    - Tag: Aisha_SheathDress
-      DisplayName: Sheath Dress
-      GenderRole: 2
-      Category: 5
-      Connection: {fileID: 11400000, guid: 10f56c989edc10e43966f9b24aa660a0, type: 2}
-      FeedbackName: Sheath Dress
-      FeedbackTier: Business Casual
-      Feedback: A professional dress with a safe, neutral color and subtle details.
-      scoreForCurrentCharacter: 0
-    - Tag: Aisha_SheathDressRed
-      DisplayName: Sheath Dress
-      GenderRole: 2
-      Category: 5
-      Connection: {fileID: 11400000, guid: 2bcc7a8a23b3dd24f984553f5c02ec2f, type: 2}
-      FeedbackName: Sheath Dress
-      FeedbackTier: Casual
-      Feedback: This style of dress is appropriate for an interview, but the bold
-        color might give a strange first impression. While it might be OK to wear
-        if you get hired, choose neutral colors for the interview!
-      scoreForCurrentCharacter: 1
-    - Tag: Aisha_SheathDressFloral
-      DisplayName: Sheath Dress
-      GenderRole: 2
-      Category: 5
-      Connection: {fileID: 11400000, guid: 89cc7ec92b675234cbecc183f16bf453, type: 2}
-      FeedbackName: Floral Sheath Dress
-      FeedbackTier: Casual
-      Feedback: This dress pattern is too informal for an interview. It's usually
-        best to avoid patterns entirely and opt for solid, neutral colors for interviews.
-      scoreForCurrentCharacter: 2
-    bottomPieces: []
-    feetPieces:
-    - Tag: Aisha_BlockHeelPumps
-      DisplayName: Block Heel Pumps
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 2127a90d5fa855f4a8175d9c42459e1e, type: 2}
-      FeedbackName: Block Heel Pumps
-      FeedbackTier: Business Casual
-      Feedback: The minimalist style and neutral color of these shoes make them appropriate
-        for interview settings.
-      scoreForCurrentCharacter: 0
-    - Tag: Aisha_BlockHeelPumpsEmbellished
-      DisplayName: Block Heel Pumps
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 62b5387acfc28c34493eb0dc44426287, type: 2}
-      FeedbackName: Embellished Block Heel Pumps
-      FeedbackTier: Ultra Casual
-      Feedback: The style of this shoe is appropriate but the flashy embellishments
-        are out of place in an interview setting.
-      scoreForCurrentCharacter: 1
-    - Tag: Aisha_BlockHeelPumpsAnimalPrint
-      DisplayName: Block Heel Pumps
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 25ab64a2d8374aa4981ab1ce4e478453, type: 2}
-      FeedbackName: Animal Print Block Heel Pumps
-      FeedbackTier: Ultra Casual
-      Feedback: These are bold shoes! But, bold patterns can be distracting in an
-        interview.
-      scoreForCurrentCharacter: 2
-    otherPieces:
-    - Tag: Aisha_Face
-      DisplayName: 
-      GenderRole: 2
-      Category: 4
-      Connection: {fileID: 11400000, guid: 20ee21014e8fbe84eb38504c8cdf5072, type: 2}
-      FeedbackName: 
-      FeedbackTier: none
-      Feedback: 
-      scoreForCurrentCharacter: 0
-    - Tag: Standard_Undershirt
-      DisplayName: 
-      GenderRole: 0
-      Category: 4
-      Connection: {fileID: 11400000, guid: 1b5f98170e7dde546871e3d16ede0483, type: 2}
-      FeedbackName: 
-      FeedbackTier: 
-      Feedback: 
-      scoreForCurrentCharacter: 0
-  - characterTag: Astrid
-    characterName: Astrid
-    gender: 0
-    jobTitle: Solar Technician Apprenticeship
-    description: Astrid loves working outdoors, so she wants to make the most of
-      this opportunity! Help her assemble a savvy interview outfit.
-    imageAssetPath: Astrid_Portrait
-    skinColor: {r: 0.81960785, g: 0.5686275, b: 0.43137255, a: 1}
-    winFeedback: 'You helped Astrid choose an appropriate outfit. Dressing like a
-      professional will help her make a good impression during their solar tech interview '
-    okFeedback: "This outfit might work but something is a little too inappropriate
-      for an interview. Astrid can make a more presentable outfit with the clothes
-      she has in her closet.\r"
-    loseFeedback: This outfit might work but something is a little too inappropriate
-      for an interview. Astrid can make a more presentable outfit with the clothes
-      she has in her closet.
-    headPieces:
-    - Tag: Astrid_EarringsOK
-      DisplayName: Earrings
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 11400000, guid: 6804786b807017340b2bcce95af4b524, type: 2}
-      FeedbackName: Earrings
-      FeedbackTier: 
-      Feedback: Less is more when it comes to jewelry. Small, simple pieces aren't
-        distracting and fit the occasion.
-      scoreForCurrentCharacter: 0
-    - Tag: Astrid_EarringsFlashy
-      DisplayName: Earrings
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 11400000, guid: cf1f2edd6babfb842a90af812eab9b4b, type: 2}
-      FeedbackName: Flashy Earrings
-      FeedbackTier: 
-      Feedback: Save your more flashy and fun jewelry for a night out with friends.
-        Loud jewelry can be distracting in an interview.
-      scoreForCurrentCharacter: 2
-    topPieces:
-    - Tag: Astrid_ButtonUpBlouse
-      DisplayName: Button Up Blouse
-      GenderRole: 0
-      Category: 1
-      Connection: {fileID: 11400000, guid: a256bf6aa51f2dc4086d7d6622afd549, type: 2}
-      FeedbackName: Button Up Blouse
-      FeedbackTier: Business Casual<br>
-      Feedback: A button-up blouse that's not too tight and not too big is traditionally
-        associated with professional attire.
-      scoreForCurrentCharacter: 0
-    - Tag: Astrid_CropBlouse
-      DisplayName: Blouse
-      GenderRole: 0
-      Category: 1
-      Connection: {fileID: 11400000, guid: 8af85eed9e8305d4cb45731f2b268994, type: 2}
-      FeedbackName: Crop Blouse
-      FeedbackTier: Ultra Casual<br>
-      Feedback: A loose-fitting blouse like this might have been appropriate, but
-        it being cropped makes it too informal for an interview.
-      scoreForCurrentCharacter: 1
-    - Tag: Astrid_PlungingBlouse
-      DisplayName: Blouse
-      GenderRole: 0
-      Category: 1
-      Connection: {fileID: 11400000, guid: e6ef71cfc785f1043974018e499570cf, type: 2}
-      FeedbackName: Low-Cut Blouse
-      FeedbackTier: Ultra Casual<br>
-      Feedback: "Low-cut shirts are considered revealing and can suggest a lack of
-        awareness or professionalism, even if that\u2019s not your intent."
-      scoreForCurrentCharacter: 2
-    bottomPieces:
-    - Tag: Astrid_PencilSkirt
-      DisplayName: Pencil Skirt
-      GenderRole: 0
-      Category: 2
-      Connection: {fileID: 11400000, guid: 6ed05392771fa2b4689d5b02d6718722, type: 2}
-      FeedbackName: Pencil Skirt
-      FeedbackTier: Business Casual<br>
-      Feedback: "If not too short and not too tight, a pencil skirt doesn\u2019t
-        draw too much attention to itself, keeping the focus on who you are as a
-        candidate."
-      scoreForCurrentCharacter: 0
-    - Tag: Astrid_Capris
-      DisplayName: Capris
-      GenderRole: 0
-      Category: 2
-      Connection: {fileID: 11400000, guid: b2920955dce87054fa5b03b1039d77d2, type: 2}
-      FeedbackName: Capris
-      FeedbackTier: Casual<br>
-      Feedback: Capris are often associated with casual, warm-weather, or leisure
-        wear. There are more professional options for an interview.
-      scoreForCurrentCharacter: 1
-    - Tag: Astrid_ShortSkirt
-      DisplayName: Pencil Skirt
-      GenderRole: 0
-      Category: 2
-      Connection: {fileID: 11400000, guid: 84ed4176807df3b4da2259b258e36dc2, type: 2}
-      FeedbackName: Short Pencil Skirt
-      FeedbackTier: Ultra Casual<br>
-      Feedback: Skirts should ideally fall at or just below the knee. Anything too
-        short can appear unprofessional or inappropriate for a formal setting.
-      scoreForCurrentCharacter: 2
-    feetPieces:
-    - Tag: Astrid_ClosedToePumps
-      DisplayName: Pumps
-      GenderRole: 0
-      Category: 3
-      Connection: {fileID: 11400000, guid: 37376808e1e795548b6cab2ff3f920e1, type: 2}
-      FeedbackName: Closed-Toe Pumps
-      FeedbackTier: Business Casual<br>
-      Feedback: Appropriate for an interview because they align closely with traditional
-        standards of professionalism, modesty, and formality.
-      scoreForCurrentCharacter: 0
-    - Tag: Astrid_BacklessMules
-      DisplayName: Mules
-      GenderRole: 0
-      Category: 3
-      Connection: {fileID: 11400000, guid: 0e50f2522211e0243a05bd9e0ce22794, type: 2}
-      FeedbackName: Backless Mules
-      FeedbackTier: Casual<br>
-      Feedback: Comfy, but more appropriate for a casual setting. Business casual
-        footwear usually covers most of the foot.
-      scoreForCurrentCharacter: 1
-    - Tag: Astrid_OpenToePumps
-      DisplayName: Pumps
-      GenderRole: 0
-      Category: 3
-      Connection: {fileID: 11400000, guid: da6043c942b94d943ba2beca48b2d4ae, type: 2}
-      FeedbackName: Open-Toe Pumps
-      FeedbackTier: Casual<br>
-      Feedback: Exposed toes can be viewed as too revealing, and might give the impression
-        that you're not fully aware of professional expectations.
-      scoreForCurrentCharacter: 2
-    otherPieces:
-    - Tag: Astrid_Face
-      DisplayName: 
-      GenderRole: 0
-      Category: 4
-      Connection: {fileID: 11400000, guid: ced8c5689a34073488cd7ffd82c46a7c, type: 2}
-      FeedbackName: 
-      FeedbackTier: 
-      Feedback: 
-      scoreForCurrentCharacter: 0
-    - Tag: Astrid_Undershirt
-      DisplayName: 
-      GenderRole: 0
-      Category: 4
-      Connection: {fileID: 11400000, guid: bf214ff2abdaff94d8b4284da42b619c, type: 2}
-      FeedbackName: 
-      FeedbackTier: 
-      Feedback: 
-      scoreForCurrentCharacter: 0
   - characterTag: TutorialStanley
     characterName: Stanley (Tutorial)
     gender: 1
@@ -949,7 +682,7 @@ MonoBehaviour:
       FeedbackTier: Ultra-Casual
       Feedback: Even if you're having a bad hair day, hats and caps are almost never
         appropriate for an interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Sasha_ButtonUpShirtBlue
       DisplayName: Button Up Shirt
@@ -970,7 +703,7 @@ MonoBehaviour:
       FeedbackTier: Business Casual
       Feedback: The style of this shirt is appropriate but the color doesn't go well
         with the rest of the outfit. Avoid wearing too much of a single color.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Sasha_ResortShirt
       DisplayName: Button Up Shirt
       GenderRole: 1
@@ -979,7 +712,7 @@ MonoBehaviour:
       FeedbackName: Button Up Shirt
       FeedbackTier: Ultra-Casual
       Feedback: Avoid flashy or distracting patterns when dressing for an interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: Sasha_PantsAndBelt
       DisplayName: Slim Fit Dress Pants
@@ -1001,7 +734,7 @@ MonoBehaviour:
       Feedback: "Flashy or whimsical clothes can suggest you don\u2019t understand
         professional norms, which could raise red flags about your judgment or readiness
         for the role."
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Sasha_PantsNoBelt
       DisplayName: Slim Fit Dress Pants
       GenderRole: 1
@@ -1011,7 +744,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: It's possible to look good without a belt, but it's safer to wear
         one when wearing a tucked in button-up.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Sasha_OxfordsLightBrown
       DisplayName: Oxfords
@@ -1032,7 +765,7 @@ MonoBehaviour:
       FeedbackTier: Business Casual
       Feedback: The style of this shoe is appropriate but the color doesn't go well
         with the rest of the outfit.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Sasha_BrogueBoots
       DisplayName: Brogue Boots
       GenderRole: 1
@@ -1042,7 +775,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: These are stylish boots! But, bold patterns can be distracting in
         an interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: Sasha_Face
       DisplayName: 
@@ -1053,147 +786,273 @@ MonoBehaviour:
       FeedbackTier: none
       Feedback: 
       scoreForCurrentCharacter: 0
-  - characterTag: Bob
-    characterName: Bob
-    gender: 0
-    jobTitle: Horticulture Technology Program
-    description: Bob can't believe he's only an interview away from starting his
-      career in sustainability. Find the right outfit for him!
-    imageAssetPath: Bob_Portrait
-    skinColor: {r: 0, g: 0, b: 0, a: 1}
-    winFeedback: You helped Bob choose a well-fitting outfit. Dressing like a professional
-      will help them make a good impression during their high-tech farming interview!
-    okFeedback: "This outfit might work but something isn't quite right. Bob can
-      make a more presentable outfit with the clothes he has in his closet.\r"
-    loseFeedback: Bob's outfit is too inappropriate for an interview! Help him choose
-      more coordinated items from his wardrobe!
+  - characterTag: Aisha
+    characterName: Aisha
+    gender: 2
+    jobTitle: Associate Data Analyst (Remote)
+    description: Vanessa has a remote interview. It might be OK to wear slippers
+      on the job, but she should find a professional outfit for the interview!
+    imageAssetPath: Aisha_Portrait
+    skinColor: {r: 0.62352943, g: 0.44705883, b: 0.2784314, a: 1}
+    winFeedback: You helped Aisha choose a professional outfit. They're sure to make
+      a good first impression during their data analyst interview!
+    okFeedback: "This outfit might work but something doesn't really match. Aisha
+      can make a more presentable outfit with the clothes she has in her closet.\r"
+    loseFeedback: Aisha's outfit is a little too bold and unconventional for an interview!
+      Help her choose a safer option from her wardrobe!
     headPieces:
-    - Tag: Bob_PiercingsOK
-      DisplayName: Piercings
-      GenderRole: 0
+    - Tag: Aisha_UpdoHeadband
+      DisplayName: Updo with Headband
+      GenderRole: 2
       Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Piercings
-      FeedbackTier: 
-      Feedback: Piercings are more accepted than they once were, especially in creative
-        and tech fields. However, like the rest of your outfit, it's wiser to use
-        subtle pieces for a more professional look.
+      Connection: {fileID: 11400000, guid: fdf91aab6f8221b45829b46fdf91eda0, type: 2}
+      FeedbackName: Updo with Headband
+      FeedbackTier: Business Casual
+      Feedback: An easy-to-do hairstyle that keeps hair out of your face, accented
+        by a simple headband.
       scoreForCurrentCharacter: 0
-    - Tag: Bob_PiercingsFlashy
-      DisplayName: Flashy Piercings
-      GenderRole: 0
+    - Tag: Aisha_UpdoPolkaDotHeadband
+      DisplayName: Updo with Headband
+      GenderRole: 2
       Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Flashy Piercings
-      FeedbackTier: 
-      Feedback: Even though piercings are more accepted than they once were, flashy,
-        attention-grabbing pieces are best left at home during an interview.
+      Connection: {fileID: 11400000, guid: 996a7daa0f3e7f24794a92d7d22f4609, type: 2}
+      FeedbackName: Updo with Polka Dot Headband
+      FeedbackTier: Ultra-Casual
+      Feedback: Bold colors and patterns can give the impression that you don't understand
+        the formality of an interview setting.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Aisha_SheathDress
+      DisplayName: Sheath Dress
+      GenderRole: 2
+      Category: 5
+      Connection: {fileID: 11400000, guid: 10f56c989edc10e43966f9b24aa660a0, type: 2}
+      FeedbackName: Sheath Dress
+      FeedbackTier: Business Casual
+      Feedback: A professional dress with a safe, neutral color and subtle details.
       scoreForCurrentCharacter: 0
-    - Tag: Bob_ButtonUp
-      DisplayName: Button Up Shirt
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Button Up Shirt
-      FeedbackTier: Business Casual<br>
-      Feedback: Button-ups are widely considered to be appropriate for interviews.
-        The color of this shirt also goes well with the rest of the outfit.
+    - Tag: Aisha_SheathDressRed
+      DisplayName: Sheath Dress
+      GenderRole: 2
+      Category: 5
+      Connection: {fileID: 11400000, guid: 2bcc7a8a23b3dd24f984553f5c02ec2f, type: 2}
+      FeedbackName: Sheath Dress
+      FeedbackTier: Casual
+      Feedback: This style of dress is appropriate for an interview, but the bold
+        color might give a strange first impression. While it might be OK to wear
+        if you get hired, choose neutral colors for the interview!
+      scoreForCurrentCharacter: 1
+    - Tag: Aisha_SheathDressFloral
+      DisplayName: Sheath Dress
+      GenderRole: 2
+      Category: 5
+      Connection: {fileID: 11400000, guid: 89cc7ec92b675234cbecc183f16bf453, type: 2}
+      FeedbackName: Floral Sheath Dress
+      FeedbackTier: Casual
+      Feedback: This dress pattern is too informal for an interview. It's usually
+        best to avoid patterns entirely and opt for solid, neutral colors for interviews.
+      scoreForCurrentCharacter: 2
+    bottomPieces: []
+    feetPieces:
+    - Tag: Aisha_BlockHeelPumps
+      DisplayName: Block Heel Pumps
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 2127a90d5fa855f4a8175d9c42459e1e, type: 2}
+      FeedbackName: Block Heel Pumps
+      FeedbackTier: Business Casual
+      Feedback: The minimalist style and neutral color of these shoes make them appropriate
+        for interview settings.
       scoreForCurrentCharacter: 0
-    - Tag: Bob_ButtonUpTooBig
-      DisplayName: Button Up Shirt
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: 'Big Button Up Shirt '
-      FeedbackTier: Sloppy<br>
-      Feedback: The style of this shirt is appropriate but it's way too big! The
-        way your shirt fits is just as important as the type of shirt that you choose.
+    - Tag: Aisha_BlockHeelPumpsEmbellished
+      DisplayName: Block Heel Pumps
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 62b5387acfc28c34493eb0dc44426287, type: 2}
+      FeedbackName: Embellished Block Heel Pumps
+      FeedbackTier: Ultra Casual
+      Feedback: The style of this shoe is appropriate but the flashy embellishments
+        are out of place in an interview setting.
+      scoreForCurrentCharacter: 1
+    - Tag: Aisha_BlockHeelPumpsAnimalPrint
+      DisplayName: Block Heel Pumps
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 25ab64a2d8374aa4981ab1ce4e478453, type: 2}
+      FeedbackName: Animal Print Block Heel Pumps
+      FeedbackTier: Ultra Casual
+      Feedback: These are bold shoes! But, bold patterns can be distracting in an
+        interview.
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Aisha_Face
+      DisplayName: 
+      GenderRole: 2
+      Category: 4
+      Connection: {fileID: 11400000, guid: 20ee21014e8fbe84eb38504c8cdf5072, type: 2}
+      FeedbackName: 
+      FeedbackTier: none
+      Feedback: 
       scoreForCurrentCharacter: 0
-    - Tag: Bob_ButtonUpUntucked
-      DisplayName: Button Up Shirt
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Untucked Button Up Shirt
-      FeedbackTier: Sloppy<br>
-      Feedback: The style of this shirt is appropriate but it's meant to be tucked.
-        An untucked shirt can show that you don't understand interview expectations.
-      scoreForCurrentCharacter: 0
-    - Tag: Bob_WoolDressPants
-      DisplayName: Wool Dress Pants
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Wool Dress Pants
-      FeedbackTier: Business Casual<br>
-      Feedback: Highly appropriate for an interview. These pants fit Bob particularly
-        well!
-      scoreForCurrentCharacter: 0
-    - Tag: Bob_WoolDressPantsTooSmall
-      DisplayName: Wool Dress Pants
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Small Wool Dress Pants
-      FeedbackTier: Sloppy<br>
-      Feedback: This type of pants is appropriate for an interview, but they're way
-        too small! The way your pants fit is just as important as the type of pants
-        that you choose.
-      scoreForCurrentCharacter: 0
-    - Tag: Bob_Bob_WoolDressPantsTooBig
-      DisplayName: Wool Dress Pants
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Big Wool Dress Pants
-      FeedbackTier: Sloppy<br>
-      Feedback: This type of pants is appropriate for an interview, but they're way
-        too big! The way your pants fit is just as important as the type of pants
-        that you choose.
-      scoreForCurrentCharacter: 0
-    - Tag: Bob_LeatherBitLoafers
-      DisplayName: Leather Bit Loafers
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Leather Bit Loafers
-      FeedbackTier: Business Casual<br>
-      Feedback: A sensible shoe that shows a sense of professionalism and maturity
-        without being overly formal.
-      scoreForCurrentCharacter: 0
-    - Tag: Bob_LoaferSneakerHybrids
-      DisplayName: Loafers
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Loafer Sneakers
-      FeedbackTier: Casual<br>
-      Feedback: These may resemble a more formal type of shoe, but these are still
-        sneakers and considered too casual for an interview.
-      scoreForCurrentCharacter: 0
-    - Tag: Bob_BoatShoes
-      DisplayName: Boat Shoes
-      GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
-      FeedbackName: Boat Shoes
-      FeedbackTier: Ultra Casual<br>
-      Feedback: These might look like loafers but are widely considered to be a casual
-        type of shoe for a day out on the lake!
-      scoreForCurrentCharacter: 0
-    - Tag: Bob_Face
+    - Tag: Standard_Undershirt
       DisplayName: 
       GenderRole: 0
-      Category: 0
-      Connection: {fileID: 0}
+      Category: 4
+      Connection: {fileID: 11400000, guid: 1b5f98170e7dde546871e3d16ede0483, type: 2}
       FeedbackName: 
       FeedbackTier: 
       Feedback: 
       scoreForCurrentCharacter: 0
-    topPieces: []
-    bottomPieces: []
-    feetPieces: []
-    otherPieces: []
+  - characterTag: Astrid
+    characterName: Astrid
+    gender: 0
+    jobTitle: Solar Technician Apprenticeship
+    description: Astrid loves working outdoors, so she wants to make the most of
+      this opportunity! Help her assemble a savvy interview outfit.
+    imageAssetPath: Astrid_Portrait
+    skinColor: {r: 0.81960785, g: 0.5686275, b: 0.43137255, a: 1}
+    winFeedback: 'You helped Astrid choose an appropriate outfit. Dressing like a
+      professional will help her make a good impression during their solar tech interview '
+    okFeedback: "This outfit might work but something is a little too inappropriate
+      for an interview. Astrid can make a more presentable outfit with the clothes
+      she has in her closet.\r"
+    loseFeedback: This outfit might work but something is a little too inappropriate
+      for an interview. Astrid can make a more presentable outfit with the clothes
+      she has in her closet.
+    headPieces:
+    - Tag: Astrid_EarringsOK
+      DisplayName: Earrings
+      GenderRole: 0
+      Category: 0
+      Connection: {fileID: 11400000, guid: 6804786b807017340b2bcce95af4b524, type: 2}
+      FeedbackName: Earrings
+      FeedbackTier: 
+      Feedback: Less is more when it comes to jewelry. Small, simple pieces aren't
+        distracting and fit the occasion.
+      scoreForCurrentCharacter: 0
+    - Tag: Astrid_EarringsFlashy
+      DisplayName: Earrings
+      GenderRole: 0
+      Category: 0
+      Connection: {fileID: 11400000, guid: cf1f2edd6babfb842a90af812eab9b4b, type: 2}
+      FeedbackName: Flashy Earrings
+      FeedbackTier: 
+      Feedback: Save your more flashy and fun jewelry for a night out with friends.
+        Loud jewelry can be distracting in an interview.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Astrid_ButtonUpBlouse
+      DisplayName: Button Up Blouse
+      GenderRole: 0
+      Category: 1
+      Connection: {fileID: 11400000, guid: a256bf6aa51f2dc4086d7d6622afd549, type: 2}
+      FeedbackName: Button Up Blouse
+      FeedbackTier: Business Casual<br>
+      Feedback: A button-up blouse that's not too tight and not too big is traditionally
+        associated with professional attire.
+      scoreForCurrentCharacter: 0
+    - Tag: Astrid_CropBlouse
+      DisplayName: Blouse
+      GenderRole: 0
+      Category: 1
+      Connection: {fileID: 11400000, guid: 8af85eed9e8305d4cb45731f2b268994, type: 2}
+      FeedbackName: Crop Blouse
+      FeedbackTier: Ultra Casual<br>
+      Feedback: A loose-fitting blouse like this might have been appropriate, but
+        it being cropped makes it too informal for an interview.
+      scoreForCurrentCharacter: 1
+    - Tag: Astrid_PlungingBlouse
+      DisplayName: Blouse
+      GenderRole: 0
+      Category: 1
+      Connection: {fileID: 11400000, guid: e6ef71cfc785f1043974018e499570cf, type: 2}
+      FeedbackName: Low-Cut Blouse
+      FeedbackTier: Ultra Casual<br>
+      Feedback: "Low-cut shirts are considered revealing and can suggest a lack of
+        awareness or professionalism, even if that\u2019s not your intent."
+      scoreForCurrentCharacter: 2
+    bottomPieces:
+    - Tag: Astrid_PencilSkirt
+      DisplayName: Pencil Skirt
+      GenderRole: 0
+      Category: 2
+      Connection: {fileID: 11400000, guid: 6ed05392771fa2b4689d5b02d6718722, type: 2}
+      FeedbackName: Pencil Skirt
+      FeedbackTier: Business Casual<br>
+      Feedback: "If not too short and not too tight, a pencil skirt doesn\u2019t
+        draw too much attention to itself, keeping the focus on who you are as a
+        candidate."
+      scoreForCurrentCharacter: 0
+    - Tag: Astrid_Capris
+      DisplayName: Capris
+      GenderRole: 0
+      Category: 2
+      Connection: {fileID: 11400000, guid: b2920955dce87054fa5b03b1039d77d2, type: 2}
+      FeedbackName: Capris
+      FeedbackTier: Casual<br>
+      Feedback: Capris are often associated with casual, warm-weather, or leisure
+        wear. There are more professional options for an interview.
+      scoreForCurrentCharacter: 1
+    - Tag: Astrid_ShortSkirt
+      DisplayName: Pencil Skirt
+      GenderRole: 0
+      Category: 2
+      Connection: {fileID: 11400000, guid: 84ed4176807df3b4da2259b258e36dc2, type: 2}
+      FeedbackName: Short Pencil Skirt
+      FeedbackTier: Ultra Casual<br>
+      Feedback: Skirts should ideally fall at or just below the knee. Anything too
+        short can appear unprofessional or inappropriate for a formal setting.
+      scoreForCurrentCharacter: 2
+    feetPieces:
+    - Tag: Astrid_ClosedToePumps
+      DisplayName: Pumps
+      GenderRole: 0
+      Category: 3
+      Connection: {fileID: 11400000, guid: 37376808e1e795548b6cab2ff3f920e1, type: 2}
+      FeedbackName: Closed-Toe Pumps
+      FeedbackTier: Business Casual<br>
+      Feedback: Appropriate for an interview because they align closely with traditional
+        standards of professionalism, modesty, and formality.
+      scoreForCurrentCharacter: 0
+    - Tag: Astrid_BacklessMules
+      DisplayName: Mules
+      GenderRole: 0
+      Category: 3
+      Connection: {fileID: 11400000, guid: 0e50f2522211e0243a05bd9e0ce22794, type: 2}
+      FeedbackName: Backless Mules
+      FeedbackTier: Casual<br>
+      Feedback: Comfy, but more appropriate for a casual setting. Business casual
+        footwear usually covers most of the foot.
+      scoreForCurrentCharacter: 1
+    - Tag: Astrid_OpenToePumps
+      DisplayName: Pumps
+      GenderRole: 0
+      Category: 3
+      Connection: {fileID: 11400000, guid: da6043c942b94d943ba2beca48b2d4ae, type: 2}
+      FeedbackName: Open-Toe Pumps
+      FeedbackTier: Casual<br>
+      Feedback: Exposed toes can be viewed as too revealing, and might give the impression
+        that you're not fully aware of professional expectations.
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Astrid_Face
+      DisplayName: 
+      GenderRole: 0
+      Category: 4
+      Connection: {fileID: 11400000, guid: ced8c5689a34073488cd7ffd82c46a7c, type: 2}
+      FeedbackName: 
+      FeedbackTier: 
+      Feedback: 
+      scoreForCurrentCharacter: 0
+    - Tag: Astrid_Undershirt
+      DisplayName: 
+      GenderRole: 0
+      Category: 4
+      Connection: {fileID: 11400000, guid: bf214ff2abdaff94d8b4284da42b619c, type: 2}
+      FeedbackName: 
+      FeedbackTier: 
+      Feedback: 
+      scoreForCurrentCharacter: 0
   connections:
   - {fileID: 11400000, guid: 2127a90d5fa855f4a8175d9c42459e1e, type: 2}
   - {fileID: 11400000, guid: 25ab64a2d8374aa4981ab1ce4e478453, type: 2}
