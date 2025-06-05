@@ -196,6 +196,9 @@ public class SimpleFeedback : MonoBehaviour
 
     public void FeedbackButtonOnClick(int index)
     {
+        if (DressingUI.allDresses && index == 2)
+            return;
+
         for (int i = 0; i < reviewPanels.Length; i++)
         {
             if (i == index && !reviewPanels[i].isOpen)

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
+  m_Name: Aisha_Face
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 195548df7c84e8c4fba57edc2dcbcabc, type: 3}
+  maleMaterials:
+  - {fileID: 2100000, guid: f43597c5cb1a2664fb18a10f657a553c, type: 2}
+  femaleMaterials:
+  - {fileID: 2100000, guid: 404ca8f9b7b374746ae9ea94e89a87e5, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 195548df7c84e8c4fba57edc2dcbcabc, type: 3}
