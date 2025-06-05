@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
+  m_Name: Astrid_Capris
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: a7d1dad7f67e5a14d98dab9de4904b43, type: 3}
+  maleMaterials: []
+  femaleMaterials:
+  - {fileID: 2100000, guid: 3334caf3e3efbcd4da4ec2ad2130a7b9, type: 2}
+  - {fileID: 2100000, guid: f9f69985b65800b4c931829b83f589e0, type: 2}
+  - {fileID: 2100000, guid: c8bf325ad952c984abd5dd73f6b645bb, type: 2}
+  textures:
+  - {fileID: 2800000, guid: e04c8fce3621e2e4994d78e9e5b14b97, type: 3}
+  - {fileID: 2800000, guid: 840ef9ff6ee854a48a37a93b19bdbea8, type: 3}
+  - {fileID: 2800000, guid: 7edb89b2c48e2094ea292bcf1ca797ed, type: 3}

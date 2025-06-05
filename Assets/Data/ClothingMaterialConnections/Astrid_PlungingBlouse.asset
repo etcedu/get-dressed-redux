@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
+  m_Name: Astrid_PlungingBlouse
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 7a91b088cd536024a9cdca45c597211d, type: 3}
+  maleMaterials: []
+  femaleMaterials:
+  - {fileID: 2100000, guid: 1ff1b68bbb73df145b9cf1e079ac60d6, type: 2}
+  - {fileID: 2100000, guid: 0fe0d9d0baee8734496a64858805d51a, type: 2}
+  - {fileID: 2100000, guid: ea5c0804f9719bb4bb940daa5609779b, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 25147058d1d53e745a4498102eebc644, type: 3}
+  - {fileID: 2800000, guid: c711be5b729c76d4a99ee110c3694336, type: 3}
+  - {fileID: 2800000, guid: 4a6b2d775253fe042a81e012cef29600, type: 3}
