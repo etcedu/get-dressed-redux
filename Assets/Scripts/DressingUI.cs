@@ -177,7 +177,7 @@ public class DressingUI : MonoBehaviour
                 if (!topButtonsOpen)
                 {
                     if (!GlobalData.isTutorial)
-                        SimpleRTVoiceExample.Instance.Speak("default", "Top");
+                        SimpleRTVoiceExample.Instance.Speak("default", allDresses ? "Dress" : "Top");
                     if (isFromButton)
                         bodyButtons[1].GetComponent<TrackOnClick>().Focus();
                 }

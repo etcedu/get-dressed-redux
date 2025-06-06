@@ -652,7 +652,7 @@ MonoBehaviour:
     characterName: Sasha
     gender: 1
     jobTitle: Junior Cyber Security (Remote)
-    description: The interview is remote but that doesn't mean Sasha shouldn't dress
+    description: The interview is remote, but that doesn't mean Sasha shouldn't dress
       to impress. Help them find a professional outfit in their closet.
     imageAssetPath: Sasha_Portrait
     skinColor: {r: 0.67058825, g: 0.47058824, b: 0.3254902, a: 1}
@@ -724,6 +724,16 @@ MonoBehaviour:
       Feedback: Highly appropriate for an interview and contrasts well with the rest
         of the outfit.
       scoreForCurrentCharacter: 0
+    - Tag: Sasha_PantsNoBelt
+      DisplayName: Slim Fit Dress Pants
+      GenderRole: 1
+      Category: 2
+      Connection: {fileID: 11400000, guid: 1e3fc6fde5b361949853a466f7688ee2, type: 2}
+      FeedbackName: Slim Fit Dress Pants
+      FeedbackTier: Casual
+      Feedback: It's possible to look good without a belt, but it's safer to wear
+        one when wearing a tucked in button-up.
+      scoreForCurrentCharacter: 2
     - Tag: Sasha_PolkaDotPants
       DisplayName: Slim Fit Dress Pants
       GenderRole: 1
@@ -735,16 +745,6 @@ MonoBehaviour:
         professional norms, which could raise red flags about your judgment or readiness
         for the role."
       scoreForCurrentCharacter: 1
-    - Tag: Sasha_PantsNoBelt
-      DisplayName: Slim Fit Dress Pants
-      GenderRole: 1
-      Category: 2
-      Connection: {fileID: 11400000, guid: 1e3fc6fde5b361949853a466f7688ee2, type: 2}
-      FeedbackName: Slim Fit Dress Pants
-      FeedbackTier: Casual
-      Feedback: It's possible to look good without a belt, but it's safer to wear
-        one when wearing a tucked in button-up.
-      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Sasha_OxfordsLightBrown
       DisplayName: Oxfords

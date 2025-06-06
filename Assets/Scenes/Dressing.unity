@@ -5630,6 +5630,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f43597c5cb1a2664fb18a10f657a553c, type: 2}
+    - target: {fileID: 13700164, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6737,8 +6741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 204.41, y: -32.949997}
-  m_SizeDelta: {x: 388.02, y: 53.497}
+  m_AnchoredPosition: {x: 134.23, y: -32.949997}
+  m_SizeDelta: {x: 247.65, y: 53.497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &469203565
 MonoBehaviour:
@@ -10726,7 +10730,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -12907,8 +12911,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -197.15002, y: -32.948997}
-  m_SizeDelta: {x: 373.51, y: 53.49701}
+  m_AnchoredPosition: {x: -267.3349, y: -32.948997}
+  m_SizeDelta: {x: 513.8798, y: 53.497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866023939
 MonoBehaviour:
@@ -12961,9 +12965,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
