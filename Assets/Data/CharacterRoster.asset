@@ -905,12 +905,12 @@ MonoBehaviour:
       scoreForCurrentCharacter: 0
   - characterTag: Astrid
     characterName: Astrid
-    gender: 0
+    gender: 2
     jobTitle: Solar Technician Apprenticeship
     description: Astrid loves working outdoors, so she wants to make the most of
       this opportunity! Help her assemble a savvy interview outfit.
     imageAssetPath: Astrid_Portrait
-    skinColor: {r: 0.81960785, g: 0.5686275, b: 0.43137255, a: 1}
+    skinColor: {r: 0.9372549, g: 0.76862746, b: 0.7647059, a: 1}
     winFeedback: 'You helped Astrid choose an appropriate outfit. Dressing like a
       professional will help her make a good impression during their solar tech interview '
     okFeedback: "This outfit might work but something is a little too inappropriate

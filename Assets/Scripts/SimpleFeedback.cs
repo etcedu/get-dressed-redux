@@ -67,10 +67,13 @@ public class SimpleFeedback : MonoBehaviour
 
     IEnumerator startFeedbackRoutine()
     {
+        musicManager.FadeOutMusic();
         SFXManager.instance.PlayOneShot(fit ? feedbackDrumroll_Good : feedbackDrumroll_Bad);
         peopleMoverAnimator.Play("MoveCharToFeedbackSpot");
         
         yield return new WaitForSeconds(1.8f);
+
+        musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
 
         feedbackCanvasObject.SetActive(true);
         for (int i = 0; i < bodyButtons.Length; i++)
@@ -78,7 +81,7 @@ public class SimpleFeedback : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
         yield return StartCoroutine(starsFillRoutine());
-        
+
         if (GlobalData.isTutorial)
         {
             fitOrNotHeader.ForceMeshUpdate();
@@ -148,8 +151,6 @@ public class SimpleFeedback : MonoBehaviour
         fitOrNotHeader.ForceMeshUpdate();
         fitOrNotText.ForceMeshUpdate();
         
-        musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
-
         foreach (ClothingPiece clothingPiece in GlobalData.GetListOfSelectedClothes())
         {
             if (clothingPiece.Category == Category.DRESS)

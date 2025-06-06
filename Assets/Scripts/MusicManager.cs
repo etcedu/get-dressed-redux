@@ -72,6 +72,15 @@ public class MusicManager : MonoBehaviour
         }));
     }
 
+    public void FadeOutMusic()
+    {
+        StartCoroutine(waitForInit(() =>
+        {
+            StopAllCoroutines();
+            StartCoroutine(fadeOutMusic());
+        }));
+    }
+
     IEnumerator waitForInit(Action actionAfterInit)
     {
         while (!init)
@@ -80,7 +89,7 @@ public class MusicManager : MonoBehaviour
         actionAfterInit.Invoke();
     }
 
-    public IEnumerator fadeInMusic()
+    IEnumerator fadeInMusic()
     {
         while (audioSource.volume < trackVolume)
         {
@@ -90,7 +99,16 @@ public class MusicManager : MonoBehaviour
         audioSource.volume = trackVolume;
     }
 
-    public IEnumerator fadeOutMusicAndKill()
+    IEnumerator fadeOutMusic()
+    {
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= Time.deltaTime * 0.75f;
+            yield return null;
+        }
+    }
+
+    IEnumerator fadeOutMusicAndKill()
     {
         while (audioSource.volume > 0)
         {
