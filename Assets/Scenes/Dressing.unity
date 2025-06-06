@@ -5046,6 +5046,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.9967
       objectReference: {fileID: 0}
+    - target: {fileID: 400234, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.626
+      objectReference: {fileID: 0}
+    - target: {fileID: 400234, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.098
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
       propertyPath: m_Controller
       value: 
@@ -5630,6 +5638,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f43597c5cb1a2664fb18a10f657a553c, type: 2}
+    - target: {fileID: 13700106, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.77
+      objectReference: {fileID: 0}
     - target: {fileID: 13700164, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
       propertyPath: m_AABB.m_Center.z
       value: -0.18
