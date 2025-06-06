@@ -118,7 +118,7 @@ MonoBehaviour:
       FeedbackName: Beanie
       FeedbackTier: Ultra Casual
       Feedback: Hats are almost never appropriate for an interview.
-      scoreForCurrentCharacter: 1
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Kris_Blazer
       DisplayName: Blazer and Button Up Shirt
@@ -262,7 +262,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Stubble, especially if it's creeping down your neck, might show that
         you didn't take the time to prepare.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: Stanley_ButtonUp
       DisplayName: Striped Button Up
@@ -283,7 +283,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: A sporty shirt that's often worn on the job, but is seen as too informal
         for this interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_Tshirt
       DisplayName: T-Shirt
       GenderRole: 1
@@ -293,7 +293,7 @@ MonoBehaviour:
       FeedbackTier: Ultra Casual
       Feedback: Perfect for everyday wear, but inappropriate for interviews like
         this!
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: Stanley_Khakis
       DisplayName: Khaki Slacks
@@ -314,7 +314,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: A common piece of clothing, but too informal for a serious occasion
         like this interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_ChinoShorts
       DisplayName: Chino Shorts
       GenderRole: 1
@@ -323,7 +323,7 @@ MonoBehaviour:
       FeedbackName: Chino Shorts
       FeedbackTier: Ultra Casual
       Feedback: It's generally wise to never wear shorts to an interview.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Stanley_DerbyShoes
       DisplayName: Derby Shoes
@@ -344,7 +344,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: Comfy and versatile footwear, but doesn't show that you understand
         interview expectations.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: Stanley_HighTops
       DisplayName: High Top Sneakers
       GenderRole: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
       FeedbackName: High Top Sneakers
       FeedbackTier: Ultra Casual
       Feedback: Are you going to the mall or to an interview?
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: Stanley_Face
       DisplayName: none
@@ -544,7 +544,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: You look like you just rolled out of bed. Interviewers might think
         you aren't taking the opportunity seriously.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     topPieces:
     - Tag: John_Buttonup
       DisplayName: Button Up
@@ -565,7 +565,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Wrinkled clothing signals carelessness and a lack of attention to
         detail. Iron your shirts or get them dry-cleaned!
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: John_SweatButtonup
       DisplayName: Button Up
       GenderRole: 1
@@ -575,7 +575,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Look at those sweat stains. Dirty clothing might show that you didn't
         take the time to present yourself thoughtfully.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     bottomPieces:
     - Tag: John_Pants
       DisplayName: Pleated Slacks
@@ -596,7 +596,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Is that cat hair? Use a lint roller or choose different pants to
         make yourself more presentable.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: John_DrinkStainPants
       DisplayName: Pleated Slacks
       GenderRole: 1
@@ -606,7 +606,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Look at that stain! Dirty clothing might show that you didn't take
         the time to present yourself thoughtfully.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: John_ChelseaBoots
       DisplayName: Chelsea Boots
@@ -627,7 +627,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: These shoes have seen better days. Well-kept shoes show that you
         put thought into every part of your outfit.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 1
     - Tag: John_DirtyOxfords
       DisplayName: Oxfords
       GenderRole: 1
@@ -637,7 +637,7 @@ MonoBehaviour:
       FeedbackTier: Sloppy
       Feedback: Look at that mud. Clean shoes show that you put thought into every
         part of your outfit.
-      scoreForCurrentCharacter: 0
+      scoreForCurrentCharacter: 2
     otherPieces:
     - Tag: John_Face
       DisplayName: none
@@ -790,8 +790,8 @@ MonoBehaviour:
     characterName: Aisha
     gender: 2
     jobTitle: Associate Data Analyst (Remote)
-    description: Vanessa has a remote interview. It might be OK to wear slippers
-      on the job, but she should find a professional outfit for the interview!
+    description: Aisha has a remote interview. It might be OK to wear slippers on
+      the job, but she should find a professional outfit for the interview!
     imageAssetPath: Aisha_Portrait
     skinColor: {r: 0.62352943, g: 0.44705883, b: 0.2784314, a: 1}
     winFeedback: You helped Aisha choose a professional outfit. They're sure to make

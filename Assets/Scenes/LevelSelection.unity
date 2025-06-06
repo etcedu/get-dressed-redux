@@ -1232,6 +1232,7 @@ MonoBehaviour:
   - {fileID: 844186729}
   prevButton: {fileID: 1114701826}
   nextButton: {fileID: 2012690240}
+  lockInteraction: 0
   currentCell: 0
   init: 0
 --- !u!114 &666912579
