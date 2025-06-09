@@ -37,6 +37,8 @@ public class DressingManager : MonoBehaviour
 
     IEnumerator Start()
     {
+        GlobalData.inFeedback = false;
+
         sfxManager = FindObjectOfType<SFXManager>();
 
         ClearClothingFromCategory(Category.HEAD);
@@ -89,6 +91,8 @@ public class DressingManager : MonoBehaviour
         {
             SetClothing(GlobalData.currentCharacterSelection.otherPieces[i]);
         }
+
+        GlobalData.completedLastCharacter = false;
     }
 
     public void ClearClothingFromCategory(Category clothingCategory)
@@ -160,6 +164,7 @@ public class DressingManager : MonoBehaviour
                 PlayHeadAnimation();
                 break;
             case Category.TOP:
+            case Category.DRESS:
                 PlayTopAnimation();
                 break;
             case Category.BOTTOM:
@@ -219,13 +224,15 @@ public class DressingManager : MonoBehaviour
 
     // Evaluate the clothing selection
     public void Evaluate()
-    { 
+    {
+        CameraTrack2D.ResetTarget();
         stopwatch.Stop();
         if (GlobalData.isTutorial)
             EventRecorder.RecordCompletedTutorialEvent((float)stopwatch.Elapsed.TotalSeconds);
 
         dressingUI.Hide();
         feedbackUI.StartFeedback(stopwatch.Elapsed.TotalSeconds);
+        GlobalData.inFeedback = true;
     }
 
     public void Restart()
@@ -238,7 +245,7 @@ public class DressingManager : MonoBehaviour
     public void ReturnToMenu()
     {
         EventRecorder.RecordLevelQuitEvent((float)stopwatch.Elapsed.TotalSeconds, GlobalData.currentCharacterSelection.characterName);
-        SceneLoader.LoadScene("MainMenu");
+        SceneLoader.LoadScene("LevelSelection");
     }
      
 

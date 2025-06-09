@@ -48,6 +48,11 @@ namespace FancyScrollView
 
         readonly IList<FancyCell<TItemData, TContext>> pool = new List<FancyCell<TItemData, TContext>>();
 
+        public FancyCell<TItemData, TContext> GetCell(int index)
+        {
+            return pool[CircularIndex(index, pool.Count)];
+        }
+
         /// <summary>
         /// 初期化済みかどうか.
         /// </summary>

@@ -11,6 +11,7 @@ public class DressingUI : MonoBehaviour
 {
     [SerializeField] DressingManager dressingManager;
     [SerializeField] Animator uiAnimator;
+    [SerializeField] Animator cameraAnimator;
     [SerializeField] GameObject dressingCanvasObject;
 
     [SerializeField] GameObject infoPanel;
@@ -19,12 +20,24 @@ public class DressingUI : MonoBehaviour
     [SerializeField] TMP_Text descriptionLabel;
     [SerializeField] ClothingNameTextObject clothingNameLabel;
 
+    [SerializeField] TMP_Text topButtonLabel;
+    [SerializeField] GameObject bottomButtonObject;
     [SerializeField] List<ClothingPieceSelectionToggle> headToggles;
     [SerializeField] ClothingPieceSelectionToggle[] topToggles;
     [SerializeField] ClothingPieceSelectionToggle[] bottomToggles;
     [SerializeField] ClothingPieceSelectionToggle[] feetToggles;
 
+    [SerializeField] GameObject[] bodyButtons;
+
     [SerializeField] Button readyButton;
+    [SerializeField] GameObject readyButtonObj;
+
+
+    bool headButtonsOpen;
+    bool topButtonsOpen;
+    bool bottomButtonsOpen;
+    bool feetButtonsOpen;
+    public static bool allDresses;
 
     bool init;
 
@@ -51,6 +64,9 @@ public class DressingUI : MonoBehaviour
         //set bad head piece to start with
         headToggles.Find(x => x.clothingPiece == GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count-1]).toggle.SetIsOnWithoutNotify(true);
         SetClothingPieceManual(GlobalData.currentCharacterSelection.headPieces[GlobalData.currentCharacterSelection.headPieces.Count - 1]);
+
+        for (int i = 0; i < bodyButtons.Length; i++)
+            bodyButtons[i].SetActive(true);
     }
 
     public void EnableInfoPanel()
@@ -88,8 +104,12 @@ public class DressingUI : MonoBehaviour
             topToggles[i].InitButton(GlobalData.currentCharacterSelection.topPieces[i]);
 
         }
+
+        //if we don't enable any bottom buttons, they're all dresses
+        allDresses = true;
         for (int i = 0; i < GlobalData.currentCharacterSelection.bottomPieces.Count; i++)
         {
+            allDresses = false;
             bottomToggles[i].gameObject.SetActive(true);
             bottomToggles[i].InitButton(GlobalData.currentCharacterSelection.bottomPieces[i]);
         }
@@ -111,55 +131,101 @@ public class DressingUI : MonoBehaviour
         feetToggles.Shuffle();
         for (int i = 0; i < feetToggles.Length; i++)
             feetToggles[i].transform.SetSiblingIndex(i);
+
+
+        bottomButtonObject.SetActive(!allDresses);
+        topButtonLabel.text = allDresses ? "Dress" : "Top";
     }
 
     public void ClothingCategoryButton_OnClick(string category)
     {
-        Enum.TryParse(category, out Category categoryParsed);
+        if (GlobalData.inFeedback)
+            return;
 
-        bool headButtonsOpen    = uiAnimator.GetBool("HeadButtonsOpen");
-        bool topButtonsOpen     = uiAnimator.GetBool("TopButtonsOpen");
-        bool bottomButtonsOpen  = uiAnimator.GetBool("BottomButtonsOpen");
-        bool feetButtonsOpen    = uiAnimator.GetBool("FeetButtonsOpen");
+        bool isFromButton = category.Split('|').Length > 1 ? category.Split('|')[1] != "body" : true;
+        Enum.TryParse(category.Split('|')[0], out Category categoryParsed);
 
-        if (headButtonsOpen)    { uiAnimator.CrossFade($"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);   headButtonsOpen = false; }
-        if (topButtonsOpen)     { uiAnimator.CrossFade($"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);    topButtonsOpen = false; }
-        if (bottomButtonsOpen)  { uiAnimator.CrossFade($"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f); bottomButtonsOpen = false; }
-        if (feetButtonsOpen)    { uiAnimator.CrossFade($"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);   feetButtonsOpen = false; }
+        if (categoryParsed == Category.BOTTOM && allDresses)
+            return;
+
+        if (categoryParsed != Category.HEAD   && headButtonsOpen)    { uiAnimator.CrossFade($"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);   headButtonsOpen = false; }
+        if (categoryParsed != Category.TOP    && topButtonsOpen)     { uiAnimator.CrossFade($"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);    topButtonsOpen = false; }
+        if (categoryParsed != Category.BOTTOM && bottomButtonsOpen)  { uiAnimator.CrossFade($"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f); bottomButtonsOpen = false; }
+        if (categoryParsed != Category.FEET   && feetButtonsOpen)    { uiAnimator.CrossFade($"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);   feetButtonsOpen = false; }
 
         switch (categoryParsed)
         {
             case Category.HEAD:
-                if (!headButtonsOpen && !GlobalData.isTutorial)
-                    SimpleRTVoiceExample.Instance.Speak("default", "Head");
+                if (!headButtonsOpen)
+                {
+                    if (!GlobalData.isTutorial)
+                        SimpleRTVoiceExample.Instance.Speak("default", "Head");
+                    if (isFromButton)
+                        bodyButtons[0].GetComponent<TrackOnClick>().Focus();
+                }
+                else
+                {
+                    if (isFromButton)
+                        CameraTrack2D.ResetTarget();
+                }
 
-                uiAnimator.CrossFade(headButtonsOpen ? $"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button" 
+                uiAnimator.CrossFade(headButtonsOpen ? $"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button"
                                                      : $"OpenHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);
-                uiAnimator.SetBool("HeadButtonsOpen", !headButtonsOpen);
+                headButtonsOpen = !headButtonsOpen;
                 break;
             case Category.TOP:
-                if (!topButtonsOpen && !GlobalData.isTutorial)
-                    SimpleRTVoiceExample.Instance.Speak("default", "Top");
+                if (!topButtonsOpen)
+                {
+                    if (!GlobalData.isTutorial)
+                        SimpleRTVoiceExample.Instance.Speak("default", allDresses ? "Dress" : "Top");
+                    if (isFromButton)
+                        bodyButtons[1].GetComponent<TrackOnClick>().Focus();
+                }
+                else
+                {
+                    if (isFromButton)
+                        CameraTrack2D.ResetTarget();
+                }
 
                 uiAnimator.CrossFade(topButtonsOpen ? $"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button" 
                                                     : $"OpenTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);
-                uiAnimator.SetBool("TopButtonsOpen", !topButtonsOpen);
+                 topButtonsOpen = !topButtonsOpen;
                 break;
             case Category.BOTTOM:
-                if (!bottomButtonsOpen && !GlobalData.isTutorial)
-                    SimpleRTVoiceExample.Instance.Speak("default", "Bottom");
+                if (!bottomButtonsOpen)
+                {
+                    if (!GlobalData.isTutorial)
+                        SimpleRTVoiceExample.Instance.Speak("default", "Bottom");
+                    if (isFromButton)
+                        bodyButtons[2].GetComponent<TrackOnClick>().Focus();
+                }
+                else
+                {
+                    if (isFromButton)
+                        CameraTrack2D.ResetTarget();
+                }
 
                 uiAnimator.CrossFade(bottomButtonsOpen ? $"CloseBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button" 
                                                        : $"OpenBottomButtons_{GlobalData.currentCharacterSelection.bottomPieces.Count}button", 0.2f);
-                uiAnimator.SetBool("BottomButtonsOpen", !bottomButtonsOpen);
+                bottomButtonsOpen = !bottomButtonsOpen;
                 break;
             case Category.FEET:
-                if (!feetButtonsOpen && !GlobalData.isTutorial)
-                    SimpleRTVoiceExample.Instance.Speak("default", "Feet");
+                if (!feetButtonsOpen)
+                {
+                    if (!GlobalData.isTutorial)
+                        SimpleRTVoiceExample.Instance.Speak("default", "Feet");
+                    if (isFromButton)
+                        bodyButtons[3].GetComponent<TrackOnClick>().Focus();
+                }
+                else
+                {
+                    if (isFromButton)
+                        CameraTrack2D.ResetTarget();
+                }
 
                 uiAnimator.CrossFade(feetButtonsOpen ? $"CloseFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button" 
                                                      : $"OpenFeetButtons_{GlobalData.currentCharacterSelection.feetPieces.Count}button", 0.2f);
-                uiAnimator.SetBool("FeetButtonsOpen", !feetButtonsOpen);
+                feetButtonsOpen = !feetButtonsOpen;
                 break;
             default:
                 break;
@@ -170,8 +236,6 @@ public class DressingUI : MonoBehaviour
     {
         if (!init || !sender.toggle.isOn)
             return;
-
-        Debug.Log($"Here from {sender.clothingPiece.DisplayName}");
 
         dressingManager.ClearClothingFromCategory(sender.clothingPiece.Category);
 
@@ -228,14 +292,22 @@ public class DressingUI : MonoBehaviour
 
     void CheckAndSetReadyButtonState()
     {
-        readyButton.interactable = GlobalData.selectedBottomPiece != null &&
+        readyButtonObj.SetActive(GlobalData.selectedBottomPiece != null &&
             GlobalData.selectedFeetPiece != null &&
             GlobalData.selectedTopPiece != null &&
-            GlobalData.selectedHeadPiece != null;
+            GlobalData.selectedHeadPiece != null);
     }
 
     public void Hide()
     {
+        for (int i = 0; i < bodyButtons.Length; i++)
+            bodyButtons[i].SetActive(false);
+
         dressingCanvasObject.SetActive(false);
+    }
+
+    public void ClickOnBodyPart(string bodyPart)
+    {
+
     }
 }

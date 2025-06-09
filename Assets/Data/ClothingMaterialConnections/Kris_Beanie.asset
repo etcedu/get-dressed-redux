@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Kris_Beanie
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a384e559b9e87aa41a536c91fe4ad71d, type: 3}
+  icon: {fileID: 21300000, guid: 84980e6bbcecc2b40b69a2e5a5a77f24, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 77dfa93059ec19048afda6031dc1cdc9, type: 2}
   femaleMaterials:

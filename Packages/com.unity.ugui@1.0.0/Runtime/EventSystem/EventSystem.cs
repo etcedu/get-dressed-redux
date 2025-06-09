@@ -22,6 +22,7 @@ namespace UnityEngine.EventSystems
     public class EventSystem : UIBehaviour
     {
         public GameObject limitInputToThisObject;
+        public GameObject limitInputToThisObject2;
         public List<GameObject> limitInputExceptionList;
         public UnityAction eventOnLimitedInputInteraction;
 
@@ -593,7 +594,7 @@ namespace UnityEngine.EventSystems
 
             bool canInteract = false;
 
-            if (currentOverGo == limitInputToThisObject)
+            if (currentOverGo == limitInputToThisObject || (limitInputToThisObject2 != null && currentOverGo == limitInputToThisObject2))
                 canInteract = true;
 
             if (checkChildren)
@@ -602,6 +603,14 @@ namespace UnityEngine.EventSystems
                 {
                     if (child.gameObject == currentOverGo)
                         canInteract = true;
+                }
+                if (limitInputToThisObject2 != null)
+                {
+                    foreach (Transform child in limitInputToThisObject2?.transform.GetComponentsInChildren<Transform>())
+                    {
+                        if (child.gameObject == currentOverGo)
+                            canInteract = true;
+                    }
                 }
             }
 

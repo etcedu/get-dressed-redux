@@ -2,6 +2,7 @@ using System;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
+using UnityEngine.UI.CoroutineTween;
 
 namespace UnityEngine.UI
 {
@@ -44,10 +45,15 @@ namespace UnityEngine.UI
         /// </summary>
         public ToggleTransition toggleTransition = ToggleTransition.Fade;
 
+        [SerializeField] bool reverseGraphicUse;
+
         /// <summary>
         /// Graphic the toggle should be working with.
         /// </summary>
         public Graphic graphic;
+        public Graphic reverseGraphic;
+        CanvasGroup graphicCanvasGroup;
+        [SerializeField] CanvasGroup reverseGraphicCanvasGroup;
 
         [SerializeField]
         private ToggleGroup m_Group;
@@ -111,8 +117,13 @@ namespace UnityEngine.UI
         [SerializeField]
         private bool m_IsOn;
 
+        private readonly TweenRunner<FloatTween> m_AlphaTweenRunner;
         protected Toggle()
-        {}
+        {
+            if (m_AlphaTweenRunner == null)
+                m_AlphaTweenRunner = new TweenRunner<FloatTween>();
+            m_AlphaTweenRunner.Init(this);
+        }
 
 #if UNITY_EDITOR
         protected override void OnValidate()
@@ -163,9 +174,44 @@ namespace UnityEngine.UI
         {
             // Check if isOn has been changed by the animation.
             // Unfortunately there is no way to check if we don�t have a graphic.
-            if (graphic != null)
+
+            if (graphicCanvasGroup == null)
+                graphicCanvasGroup = graphic.GetComponent<CanvasGroup>();
+
+            if (reverseGraphicCanvasGroup == null)
+                reverseGraphicCanvasGroup = reverseGraphic.GetComponent<CanvasGroup>();
+
+            if (graphicCanvasGroup != null)
+            {
+                bool oldValue = !Mathf.Approximately(graphicCanvasGroup.alpha, 0);
+                if (m_IsOn != oldValue)
+                {
+                    m_IsOn = oldValue;
+                    Set(!oldValue);
+                }
+            }
+            else if (graphic != null)
             {
                 bool oldValue = !Mathf.Approximately(graphic.canvasRenderer.GetColor().a, 0);
+                if (m_IsOn != oldValue)
+                {
+                    m_IsOn = oldValue;
+                    Set(!oldValue);
+                }
+            }
+
+            if (reverseGraphicCanvasGroup != null)
+            {
+                bool oldValue = !Mathf.Approximately(reverseGraphicCanvasGroup.alpha, 0);
+                if (m_IsOn != oldValue)
+                {
+                    m_IsOn = oldValue;
+                    Set(!oldValue);
+                }
+            }
+            else if (reverseGraphic != null)
+            {
+                bool oldValue = !Mathf.Approximately(reverseGraphic.canvasRenderer.GetColor().a, 0);
                 if (m_IsOn != oldValue)
                 {
                     m_IsOn = oldValue;
@@ -290,15 +336,104 @@ namespace UnityEngine.UI
         /// </summary>
         private void PlayEffect(bool instant)
         {
-            if (graphic == null)
+            if (graphicCanvasGroup == null && graphic != null)
+                graphicCanvasGroup = graphic.GetComponent<CanvasGroup>();
+            if (reverseGraphicCanvasGroup == null && reverseGraphic != null)
+                reverseGraphicCanvasGroup = reverseGraphic.GetComponent<CanvasGroup>();
+
+            if (graphic == null && graphicCanvasGroup == null)
                 return;
 
 #if UNITY_EDITOR
             if (!Application.isPlaying)
-                graphic.canvasRenderer.SetAlpha(m_IsOn ? 1f : 0f);
+            {
+                if (reverseGraphicUse)
+                {
+                    if (graphicCanvasGroup != null)
+                        graphicCanvasGroup.alpha = (m_IsOn ? 0f : 1f);
+                    else
+                        graphic.canvasRenderer.SetAlpha(m_IsOn ? 0f : 1f);
+                }
+                else
+                {
+                    if (graphicCanvasGroup != null)
+                        graphicCanvasGroup.alpha = (m_IsOn ? 1f : 0f);
+                    else
+                        graphic.canvasRenderer.SetAlpha(m_IsOn ? 1f : 0f);
+                }
+
+                if (reverseGraphic != null || reverseGraphicCanvasGroup != null)
+                {
+                    if (reverseGraphicUse)
+                    {
+                        if (reverseGraphicCanvasGroup != null)
+                            reverseGraphicCanvasGroup.alpha = (m_IsOn ? 1f : 0f);
+                        else
+                            reverseGraphic.canvasRenderer.SetAlpha(m_IsOn ? 1f : 0f);
+                    }
+                    else
+                    {
+                        if (reverseGraphicCanvasGroup != null)
+                            reverseGraphicCanvasGroup.alpha = (m_IsOn ? 0f : 1f);
+                        else
+                            reverseGraphic.canvasRenderer.SetAlpha(m_IsOn ? 0f : 1f);
+                    }
+                }
+            }
             else
 #endif
-            graphic.CrossFadeAlpha(m_IsOn ? 1f : 0f, instant ? 0f : 0.1f, true);
+            { 
+                if (reverseGraphicUse)
+                {
+                    if (graphicCanvasGroup != null)
+                        CrossFadeCanvasGroupAlpha(graphicCanvasGroup, m_IsOn ? 0f : 1f, instant ? 0f : 0.1f, true);
+                    else
+                        graphic.CrossFadeAlpha(m_IsOn ? 0f : 1f, instant ? 0f : 0.1f, true);
+                }
+                else
+                {
+                    if (graphicCanvasGroup != null)
+                        CrossFadeCanvasGroupAlpha(graphicCanvasGroup, m_IsOn ? 1f : 0f, instant ? 0f : 0.1f, true);
+                    else
+                        graphic.CrossFadeAlpha(m_IsOn ? 1f : 0f, instant ? 0f : 0.1f, true);
+                }
+
+                if (reverseGraphic != null || reverseGraphicCanvasGroup != null)
+                {
+                    if (reverseGraphicUse)
+                    {
+                        if (reverseGraphicCanvasGroup != null)
+                            CrossFadeCanvasGroupAlpha(reverseGraphicCanvasGroup, m_IsOn ? 1f : 0f, instant ? 0f : 0.1f, true);
+                        else
+                            reverseGraphic.CrossFadeAlpha(m_IsOn ? 1f : 0f, instant ? 0f : 0.1f, true);
+                    }
+                    else
+                    {
+                        if (reverseGraphicCanvasGroup != null)
+                            CrossFadeCanvasGroupAlpha(reverseGraphicCanvasGroup, m_IsOn ? 0f : 1f, instant ? 0f : 0.1f, true);
+                        else
+                            reverseGraphic.CrossFadeAlpha(m_IsOn ? 0f : 1f, instant ? 0f : 0.1f, true);
+                    }
+                }
+            }
+        }
+
+        public void CrossFadeCanvasGroupAlpha(CanvasGroup target, float targetAlpha, float duration, bool ignoreTimeScale)
+        {
+            if (target == null)
+                return;
+
+            float currentAlpha = target.alpha;
+            if (currentAlpha.Equals(targetAlpha))
+            {
+                m_AlphaTweenRunner.StopTween();
+                return;
+            }
+
+            var colorTween = new FloatTween { duration = duration, startValue = currentAlpha, targetValue = targetAlpha };
+            colorTween.AddOnChangedCallback((x)=>target.alpha = x);
+            colorTween.ignoreTimeScale = ignoreTimeScale;
+            m_AlphaTweenRunner.StartTween(colorTween);
         }
 
         /// <summary>

@@ -250,9 +250,10 @@ public class UniWebViewAuthenticationFlowCustomize : UniWebViewAuthenticationCom
     public void SetAuthCallback(string newCallback)
     {
         mobileRedirectUri = newCallback;
-
+#if UNITY_EDITOR
         EditorUtility.SetDirty(this);
         AssetDatabase.SaveAssetIfDirty(this);
+#endif
     }
   
 }

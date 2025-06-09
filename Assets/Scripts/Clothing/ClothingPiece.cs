@@ -10,24 +10,12 @@ public class ClothingPiece
     public string DisplayName;
     public Gender GenderRole;
     public Category Category;
-    public List<Tier> Tiers;
     public ClothingModelConnection Connection;
 
-
     public string FeedbackName;
-    public string GoodFeedback;
-    public string OKFeedback;
-    public string BadFeedback;
+    public string FeedbackTier;
+    public string Feedback;
 
     //set by character at runtime
     public Score scoreForCurrentCharacter;
-
-    public string GetFeedback()
-    {
-        if (scoreForCurrentCharacter == Score.GOOD) return GoodFeedback;
-        if (scoreForCurrentCharacter == Score.OK) return OKFeedback;
-        if (scoreForCurrentCharacter == Score.BAD) return BadFeedback;
-        else return "NoScore";
-    }
-
 }

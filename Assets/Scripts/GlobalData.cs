@@ -39,6 +39,9 @@ public class GlobalData : MonoBehaviour
 
     public static bool isTutorial;
     public static int lastCharacterIndex;
+    public static bool completedLastCharacter;
+    public static bool setNewHighScore;
+    public static bool inFeedback;
 
     [SerializeField] CharacterRoster theCharacterRoster;
 
@@ -185,6 +188,16 @@ public class GlobalData : MonoBehaviour
         PlayerPrefs.SetInt($"Completed_{charTag}", completed ? 1 : 0);
     }
 
+    public static void SetCharacterStars(string charTag, int starCount)
+    {
+        PlayerPrefs.SetInt($"Stars_{charTag}", starCount);
+    }
+
+    public static int GetCharacterStars(string charTag)
+    {
+        return PlayerPrefs.GetInt($"Stars_{charTag}", 0);
+    }
+
     public static int GetLastCharacterIndex()
     {
         Debug.Log($"GetLastCharacterIndex: {PlayerPrefs.GetInt($"lastCharacterIndex", 0)}");
@@ -194,5 +207,16 @@ public class GlobalData : MonoBehaviour
     public static void SetLastCharacterIndex(int index)
     {
         PlayerPrefs.SetInt($"lastCharacterIndex", index);
+    }
+
+    public static void ClearData()
+    {
+        SetTutorialState(false);
+        SetLastCharacterIndex(0);
+        foreach (CharacterData character in Instance.theCharacterRoster.characters)
+        {
+            SetCharacterStars(character.characterTag, 0);
+            PlayerPrefs.SetInt($"Completed_{character.characterTag}", 0);
+        }
     }
 }

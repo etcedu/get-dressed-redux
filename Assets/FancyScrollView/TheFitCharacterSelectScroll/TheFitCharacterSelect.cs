@@ -12,7 +12,7 @@ namespace FancyScrollView.TheFitCharacterSelect
 {
     class TheFitCharacterSelect : MonoBehaviour
     {
-        [SerializeField] ScrollView scrollView = default;
+        [SerializeField] TheFitScrollView scrollView = default;
         [SerializeField] Button prevCellButton = default;
         [SerializeField] Button nextCellButton = default;
 

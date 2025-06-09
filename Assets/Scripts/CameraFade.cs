@@ -1,6 +1,9 @@
+using FancyScrollView.TheFitCharacterSelect;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CameraFade : MonoBehaviour
@@ -9,10 +12,11 @@ public class CameraFade : MonoBehaviour
     
     TweenAlpha tween;
     Image image;
+    CanvasGroup canvasGroup;
 
     public Action fadeFinishedCallback;
 
-    public void Start()
+    IEnumerator Start()
     {
         if (Instance != null && Instance != this)
         {
@@ -25,6 +29,16 @@ public class CameraFade : MonoBehaviour
 
         tween = GetComponent<TweenAlpha>();
         image = GetComponent<Image>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 1;
+
+        TheFitScrollView scrollView = FindObjectOfType<TheFitScrollView>();
+        if (SceneManager.GetActiveScene().name == "LevelSelection")
+        {
+            while (!scrollView.init)
+                yield return null;
+        }
+        yield return null;
 
         FadeIn();
     }
@@ -32,7 +46,7 @@ public class CameraFade : MonoBehaviour
     [ContextMenu("Fade In")]
     public void FadeIn(Action finishedCallback = null)
     {
-        image.raycastTarget = false;
+        //image.raycastTarget = false;
 
         fadeFinishedCallback = finishedCallback;
         Invoke("DoCallback", tween.duration + 0.25f);
@@ -46,7 +60,7 @@ public class CameraFade : MonoBehaviour
     [ContextMenu("Fade Out")]
     public void FadeOut(Action finishedCallback = null)
     {
-        image.raycastTarget = true;
+        //image.raycastTarget = true;
 
         fadeFinishedCallback = finishedCallback;
         Invoke("DoCallback", tween.duration + 0.25f);
@@ -60,7 +74,7 @@ public class CameraFade : MonoBehaviour
     public void DoCallback()
     {
         fadeFinishedCallback?.Invoke();
-        image.raycastTarget = false;
+        //image.raycastTarget = false;
     }
     
     

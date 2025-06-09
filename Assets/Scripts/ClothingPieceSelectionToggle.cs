@@ -16,4 +16,10 @@ public class ClothingPieceSelectionToggle : MonoBehaviour
         icon.sprite = clothingPiece.Connection.icon;
         shadowIcon.sprite = clothingPiece.Connection.icon;
     }
+
+    public void SpeakName()
+    {
+        SimpleRTVoiceExample.Instance.Speak("default", clothingPiece.DisplayName);
+        FindObjectOfType<ClothingNameTextObject>().Show(clothingPiece.DisplayName, gameObject);
+    }
 }

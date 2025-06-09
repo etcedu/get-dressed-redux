@@ -42,7 +42,7 @@ public class UIOptionsController : MonoBehaviour
 
     public void ClearData()
     {
-        ApplicationManager.ResetData();
+        GlobalData.ClearData();
     }
 
     public void UnlockGame()

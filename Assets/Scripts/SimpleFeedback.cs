@@ -22,12 +22,10 @@ public class SimpleFeedback : MonoBehaviour
 
     [SerializeField] Animator animator;
     [SerializeField] Animator charAnimator;
+    [SerializeField] Animator peopleMoverAnimator;
 
     [Header("Intro Panel")]
-    [SerializeField] string fitTitle;
-    [SerializeField][TextArea] string fitText;
-    [SerializeField] string unfitTitle;
-    [SerializeField][TextArea] string unfitText;
+    [SerializeField] string fitTitle, okTitle, unfitTitle;
     [SerializeField] TMP_Text fitOrNotHeader, fitOrNotText;
 
 
@@ -35,12 +33,15 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] GameObject[] stars;
     [SerializeField] Image starBarFill;
     [SerializeField] List<TMP_Text> feedbackClothingName;
+    [SerializeField] List<TMP_Text> feedbackClothingTier;
     [SerializeField] List<TMP_Text> feedbackTexts;
     [SerializeField] List<Image> feedbackButtonFaces;
     [SerializeField] List<TMP_Text> feedbackButtonTexts;
     [SerializeField] Button bottomButton;
     [SerializeField] string[] feedbackButtonLabelOptions;
     [SerializeField] Image[] headerImages;
+    [SerializeField] ReviewPanel[] reviewPanels;
+    [SerializeField] GameObject[] bodyButtons;
 
     [Header("General")]    
     [SerializeField] List<Color> scoreColors;
@@ -50,8 +51,6 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] SoundVolumePair feedbackDrumroll_Good, feedbackDrumroll_Bad;
     bool fit;
     float gameDuration;
-
-    bool didStarFillAnimation;
 
     private void Start()
     {
@@ -63,29 +62,38 @@ public class SimpleFeedback : MonoBehaviour
         gameDuration = (float)duration;
         SetupTotals();
         StartCoroutine(startFeedbackRoutine());
+        CameraTrack2D.ResetTarget();
     }
 
     IEnumerator startFeedbackRoutine()
     {
+        musicManager.FadeOutMusic();
         SFXManager.instance.PlayOneShot(fit ? feedbackDrumroll_Good : feedbackDrumroll_Bad);
-        animator.Play("MoveToFeedbackPos");
-        yield return new WaitForSeconds(1.8f);
-        feedbackCanvasObject.SetActive(true);
-        yield return new WaitForSeconds(1.0f);
-        StartCoroutine(starsFillRoutine());
+        peopleMoverAnimator.Play("MoveCharToFeedbackSpot");
         
+        yield return new WaitForSeconds(1.8f);
+
+        musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
+
+        feedbackCanvasObject.SetActive(true);
+        for (int i = 0; i < bodyButtons.Length; i++)
+            bodyButtons[i].SetActive(true);
+
+        yield return new WaitForSeconds(1.0f);
+        yield return StartCoroutine(starsFillRoutine());
+
         if (GlobalData.isTutorial)
         {
-            SimpleRTVoiceExample.Instance.Speak("default", $"{fitOrNotHeader.text}, {fitOrNotText.text}");
+            fitOrNotHeader.ForceMeshUpdate();
+            fitOrNotText.ForceMeshUpdate();
+            SimpleRTVoiceExample.Instance.Speak("default", $"{fitOrNotHeader.GetParsedText()}, {fitOrNotText.GetParsedText()}");
         }
     }
-
 
     IEnumerator starsFillRoutine()
     {
         yield return new WaitForSeconds(0.5f);
 
-        didStarFillAnimation = true;
         float percentageScore = GlobalData.GetOverallScore();
         Debug.Log($"Percentage score: {percentageScore}");
 
@@ -96,13 +104,21 @@ public class SimpleFeedback : MonoBehaviour
                 starBarFill.fillAmount = percentageScore;
 
             if (starBarFill.fillAmount >= 0.25f)
+            {
                 stars[0].SetActive(true);
+            }
             if (starBarFill.fillAmount >= 0.50f)
+            {
                 stars[1].SetActive(true);
+            }
             if (starBarFill.fillAmount >= 0.75f)
+            {
                 stars[2].SetActive(true);
+            }
             if (starBarFill.fillAmount >= 0.99f)
+            {
                 stars[3].SetActive(true);
+            }
 
             yield return new WaitForSeconds(Time.deltaTime);
         }
@@ -119,16 +135,22 @@ public class SimpleFeedback : MonoBehaviour
 
         starBarFill.fillAmount = 0;
 
-        fitOrNotHeader.text = fit ? fitTitle : unfitTitle;
-        fitOrNotText.text = fit ? GlobalData.currentCharacterSelection.winFeedback : GlobalData.currentCharacterSelection.loseFeedback;
+        fitOrNotHeader.text = scorePercentage >= 0.99f ? fitTitle
+                            : (scorePercentage >= 0.75f ? okTitle 
+                            : unfitTitle);
+
+        fitOrNotText.text = scorePercentage >= 0.99f ? GlobalData.currentCharacterSelection.winFeedback 
+                         : (scorePercentage >= 0.75f ? GlobalData.currentCharacterSelection.okFeedback 
+                         : GlobalData.currentCharacterSelection.loseFeedback);
+
         foreach (Image i in headerImages)
-            i.color = fit ? scoreColors[2] : scoreColors[0];
-                
+            i.color = scorePercentage >= 0.99f ? scoreColors[2]
+                    : (scorePercentage >= 0.75f ? scoreColors[1] 
+                    : scoreColors[0]);
+
         fitOrNotHeader.ForceMeshUpdate();
         fitOrNotText.ForceMeshUpdate();
         
-        musicManager.ChangeMusic(fit ? fitMusic : unfitMusic);
-
         foreach (ClothingPiece clothingPiece in GlobalData.GetListOfSelectedClothes())
         {
             if (clothingPiece.Category == Category.DRESS)
@@ -140,7 +162,8 @@ public class SimpleFeedback : MonoBehaviour
 
             int uiIndex = clothingPiece.Category == Category.HEAD ? 0 : (clothingPiece.Category == Category.TOP || clothingPiece.Category == Category.DRESS ? 1 : (clothingPiece.Category == Category.BOTTOM ? 2 : 3));
             feedbackClothingName[uiIndex].text = clothingPiece.FeedbackName;
-            feedbackTexts[uiIndex].text = clothingPiece.GetFeedback();
+            feedbackClothingTier[uiIndex].text = clothingPiece.FeedbackTier;
+            feedbackTexts[uiIndex].text = clothingPiece.Feedback;
             feedbackButtonTexts[uiIndex].text = feedbackButtonLabelOptions[score - 1];
             feedbackButtonFaces[uiIndex].color = scoreColors[score - 1];
         }
@@ -150,9 +173,53 @@ public class SimpleFeedback : MonoBehaviour
             GlobalData.selectedTopPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedTopPiece),
             GlobalData.selectedBottomPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedBottomPiece),
             GlobalData.selectedFeetPiece.DisplayName, GlobalData.GetScoreForPiece(GlobalData.selectedFeetPiece));
+
+        GlobalData.completedLastCharacter = fit;
+
+        int numStars = 0;
+        if (scorePercentage >= 0.25f)
+            numStars = 1;
+        if (scorePercentage >= 0.50f)
+            numStars = 2;
+        if (scorePercentage >= 0.75f)
+            numStars = 3;
+        if (scorePercentage >= 0.99f)
+            numStars = 4;
+       
+        GlobalData.setNewHighScore = false;
+        if (numStars > GlobalData.GetCharacterStars(GlobalData.currentCharacterSelection.characterTag))
+        {
+            GlobalData.setNewHighScore = true;
+            GlobalData.SetCharacterStars(GlobalData.currentCharacterSelection.characterTag, numStars);
+        }
+
     }
 
+    public void FeedbackButtonOnClick(int index)
+    {
+        if (DressingUI.allDresses && index == 2)
+            return;
 
+        for (int i = 0; i < reviewPanels.Length; i++)
+        {
+            if (i == index && !reviewPanels[i].isOpen)
+            {
+                reviewPanels[i].Open();
+                bodyButtons[i].GetComponent<TrackOnClick>().Focus();
+            }
+            else
+            {
+                reviewPanels[i].Close();
+            }
+        }
+
+        bool anythingOpen = false;
+        for (int i = 0; i < reviewPanels.Length; i++)
+            if (reviewPanels[i].isOpen)
+                anythingOpen = true;
+        if (!anythingOpen)
+            CameraTrack2D.ResetTarget();
+    }
 
     public void LoadMainMenu()
     {
@@ -160,18 +227,20 @@ public class SimpleFeedback : MonoBehaviour
         SceneLoader.LoadScene("LevelSelection");
     }
 
-    public void ReadFeedback(TMP_Text textObject)
+    public void ReadFeedback(int index)
     {
-        textObject.ForceMeshUpdate();
-        string message = textObject.GetParsedText();
-        AudioManager.Instance.SpeakWithRTVoice(message, "feedbackVoice");
+        feedbackClothingName[index].ForceMeshUpdate();
+        feedbackClothingTier[index].ForceMeshUpdate();
+        feedbackTexts[index].ForceMeshUpdate();
+        string message = $"{feedbackClothingName[index].GetParsedText()}. {feedbackClothingTier[index].GetParsedText()}, {feedbackTexts[index].GetParsedText()}";
+        SimpleRTVoiceExample.Instance.Speak("default", message);
     }
 
     public void SpeakMainFeedback()
     {
         fitOrNotHeader.ForceMeshUpdate();
         fitOrNotText.ForceMeshUpdate();
-        string message = $"{fitOrNotHeader.text}, {fitOrNotText.text}";
+        string message = $"{fitOrNotHeader.GetParsedText()}, {fitOrNotText.GetParsedText()}";
         SimpleRTVoiceExample.Instance.Speak("default", message);
     }
 
