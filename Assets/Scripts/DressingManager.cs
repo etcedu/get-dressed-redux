@@ -164,9 +164,9 @@ public class DressingManager : MonoBehaviour
                 PlayHeadAnimation();
                 break;
             case Category.TOP:
-            case Category.DRESS:
                 PlayTopAnimation();
                 break;
+            case Category.DRESS:
             case Category.BOTTOM:
                 PlayBottomAnimation();
                 break;
@@ -194,7 +194,8 @@ public class DressingManager : MonoBehaviour
     public void PlayBottomAnimation()
     {
         if (GlobalData.currentCharacterSelection.gender == Gender.FEMALE)
-            characterAnimator.SetBool("Skirt", GlobalData.selectedBottomPiece != null && GlobalData.selectedBottomPiece.Tag.Contains("Skirt"));
+            characterAnimator.SetBool("Skirt", GlobalData.selectedTopPiece != null && (GlobalData.selectedTopPiece.Tag.Contains("Skirt")
+                                                                                    || GlobalData.selectedTopPiece.Tag.Contains("Dress")));
         PlayAnimation("Pants Changed");
     }
 
