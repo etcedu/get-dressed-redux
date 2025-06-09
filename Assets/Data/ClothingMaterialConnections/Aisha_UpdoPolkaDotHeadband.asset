@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Aisha_UpdoPolkaDotHeadband
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a57b7adb74735614bbb22f5f7ecb358f, type: 3}
+  icon: {fileID: 21300000, guid: 8a19b0803ac978a439e5c940b584b919, type: 3}
   maleMaterials: []
   femaleMaterials:
   - {fileID: 2100000, guid: 7cb27802f1af95f418dc26986aa49d8b, type: 2}

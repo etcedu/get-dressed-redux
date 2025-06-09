@@ -16,6 +16,9 @@ namespace FancyScrollView.Example02
         [SerializeField] Scroller scroller = default;
         [SerializeField] GameObject cellPrefab = default;
 
+        [SerializeField] float scrollDuration = 0.5f;
+        [SerializeField] Ease ease = Ease.InOutBounce;
+
         Action<int> onSelectionChanged;
 
         protected override GameObject CellPrefab => cellPrefab;
@@ -72,7 +75,7 @@ namespace FancyScrollView.Example02
             }
 
             UpdateSelection(index);
-            scroller.ScrollTo(index, 0.35f, Ease.OutCubic);
+            scroller.ScrollTo(index, scrollDuration, ease);
         }
     }
 }

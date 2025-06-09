@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Sasha_OxfordsLightBrown
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 355a973585b0db4419040d2b660cf55a, type: 3}
+  icon: {fileID: 21300000, guid: 3c059263ea2c5ba42ae164b87fa972c1, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   femaleMaterials:

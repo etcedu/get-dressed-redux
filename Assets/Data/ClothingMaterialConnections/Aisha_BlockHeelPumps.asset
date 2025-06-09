@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Aisha_BlockHeelPumps
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 46ad271f397d48e4bbff7188182b13b7, type: 3}
+  icon: {fileID: 21300000, guid: 3dd3eacba0e5de747b250902557d0edb, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   femaleMaterials:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Sasha_BaseballCap
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 08312c48e619a374fbbfbc2cd2f3662d, type: 3}
+  icon: {fileID: 21300000, guid: fb9b4a728891d3247ab45ea3fd27b4e7, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 77dfa93059ec19048afda6031dc1cdc9, type: 2}
   femaleMaterials:

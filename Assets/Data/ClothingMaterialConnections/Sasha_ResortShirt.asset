@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Sasha_ResortShirt
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 40d60708d9d865748a3ed108d8f8e469, type: 3}
+  icon: {fileID: 21300000, guid: 414db154c13a8a04c8eaf6cb8e1e43ab, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: d322058a85048234da8cb610d7e963a0, type: 2}
   - {fileID: 2100000, guid: a794bb104a38987498cc81e196510f56, type: 2}

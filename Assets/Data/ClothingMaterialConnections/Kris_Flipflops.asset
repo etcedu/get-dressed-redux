@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Kris_Flipflops
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 8b21d4a10435fea40a2317fd26124eff, type: 3}
+  icon: {fileID: 21300000, guid: df86010e85ee2a14ab41c1a918ad6ae6, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   femaleMaterials:

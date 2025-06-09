@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/setchi/FancyScrollView/blob/master/LICENSE)
  */
 
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,27 +15,35 @@ namespace FancyScrollView.Example02
     class Example02 : MonoBehaviour
     {
         [SerializeField] ScrollView scrollView = default;
-        [SerializeField] Button prevCellButton = default;
-        [SerializeField] Button nextCellButton = default;
-        [SerializeField] Text selectedItemInfo = default;
+        [SerializeField] List<Sprite> sprites;
+        [SerializeField] float scrollDelay = 2.0f;
 
         void Start()
         {
-            prevCellButton.onClick.AddListener(scrollView.SelectPrevCell);
-            nextCellButton.onClick.AddListener(scrollView.SelectNextCell);
             scrollView.OnSelectionChanged(OnSelectionChanged);
 
-            var items = Enumerable.Range(0, 20)
-                .Select(i => new ItemData($"Cell {i}"))
+            sprites.Shuffle();
+            var items = Enumerable.Range(0, sprites.Count)
+                .Select(i => new ItemData(sprites[i]))
                 .ToArray();
 
             scrollView.UpdateData(items);
             scrollView.SelectCell(0);
+
+            StartCoroutine(ScrollForever());
+        }
+
+        IEnumerator ScrollForever()
+        {
+            while (true)
+            {
+                scrollView.SelectNextCell();
+                yield return new WaitForSeconds(scrollDelay);
+            }
         }
 
         void OnSelectionChanged(int index)
         {
-            selectedItemInfo.text = $"Selected item info: index {index}";
         }
     }
 }

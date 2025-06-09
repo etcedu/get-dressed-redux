@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: John_CombedHair
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 6c4a188bded09554c892b230dfd2f5e3, type: 3}
+  icon: {fileID: 21300000, guid: 42549141dff6ffa4293250624e60e712, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 77dfa93059ec19048afda6031dc1cdc9, type: 2}
   femaleMaterials:
