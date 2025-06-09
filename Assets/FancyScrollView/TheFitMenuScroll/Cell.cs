@@ -12,9 +12,7 @@ namespace FancyScrollView.Example02
     class Cell : FancyCell<ItemData, Context>
     {
         [SerializeField] Animator animator = default;
-        [SerializeField] Text message = default;
         [SerializeField] Image image = default;
-        [SerializeField] Button button = default;
 
         static class AnimatorHash
         {
@@ -23,17 +21,11 @@ namespace FancyScrollView.Example02
 
         public override void Initialize()
         {
-            button.onClick.AddListener(() => Context.OnCellClicked?.Invoke(Index));
         }
 
         public override void UpdateContent(ItemData itemData)
         {
-            message.text = itemData.Message;
-
-            var selected = Context.SelectedIndex == Index;
-            image.color = selected
-                ? new Color32(0, 255, 255, 100)
-                : new Color32(255, 255, 255, 77);
+            image.sprite = itemData.sprite;
         }
 
         public override void UpdatePosition(float position)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: John_ScuffedDerby
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 02c76bc9b3afb05499d92b6134d9945b, type: 3}
+  icon: {fileID: 21300000, guid: 478ab97033ba5e347a7ca25e2b0caf2c, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 6564f42a201c81b4cb2a4bc0ba35f443, type: 2}
   femaleMaterials:

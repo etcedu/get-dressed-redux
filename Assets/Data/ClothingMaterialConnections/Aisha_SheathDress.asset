@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Aisha_SheathDress
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 0589164c8bf930e4a995275f27863af3, type: 3}
+  icon: {fileID: 21300000, guid: 758877ef05df16b4c844b55509f3c45c, type: 3}
   maleMaterials: []
   femaleMaterials:
   - {fileID: 2100000, guid: 1ff1b68bbb73df145b9cf1e079ac60d6, type: 2}

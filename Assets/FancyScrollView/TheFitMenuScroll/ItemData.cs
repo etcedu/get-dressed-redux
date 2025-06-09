@@ -4,15 +4,17 @@
  * Licensed under MIT (https://github.com/setchi/FancyScrollView/blob/master/LICENSE)
  */
 
+using UnityEngine;
+
 namespace FancyScrollView.Example02
 {
     class ItemData
     {
-        public string Message { get; }
+        public Sprite sprite;
 
-        public ItemData(string message)
+        public ItemData(Sprite _sprite)
         {
-            Message = message;
+            sprite = _sprite;
         }
     }
 }

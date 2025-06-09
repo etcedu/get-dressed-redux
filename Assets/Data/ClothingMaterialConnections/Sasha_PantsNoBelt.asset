@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Sasha_PantsNoBelt
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a3f03d277c52b8a419effc104b0dfed6, type: 3}
+  icon: {fileID: 21300000, guid: f3e71ceaa0fd21a4eae06e7b4c48d767, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 97e0aa4f25bc3f8439c1ed7f4448e6e4, type: 2}
   - {fileID: 2100000, guid: 88f675d4f008e8b468bf75dec3a69a28, type: 2}

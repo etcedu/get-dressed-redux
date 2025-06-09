@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27b0867592a02148818f65b3832fe93, type: 3}
   m_Name: Sasha_Buzzcut
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 1fdd1c505aefd664b8f54e688561de09, type: 3}
+  icon: {fileID: 21300000, guid: ab21cf5dcbdb8154989d0d29b36705ac, type: 3}
   maleMaterials:
   - {fileID: 2100000, guid: 77dfa93059ec19048afda6031dc1cdc9, type: 2}
   femaleMaterials: []
