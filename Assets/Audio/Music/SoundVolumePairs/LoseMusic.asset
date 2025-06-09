@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0df18248684ef478d793d40fd481ff, type: 3}
   m_Name: LoseMusic
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 72fd9eead82ca8d4aaa83d0a8d0d32d5, type: 3}
+  clip: {fileID: 8300000, guid: 3fe7e91ca60a1ac4bb658a5106522b38, type: 3}
   volume: 0.43

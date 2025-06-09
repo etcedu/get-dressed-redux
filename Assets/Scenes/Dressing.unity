@@ -3973,6 +3973,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &280422551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1029624074807086884, guid: 8a61a817c858a3241b6e0e93dc50b91c,
+    type: 3}
+  m_PrefabInstance: {fileID: 279385862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &289067353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5034,6 +5046,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.9967
       objectReference: {fileID: 0}
+    - target: {fileID: 400234, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.626
+      objectReference: {fileID: 0}
+    - target: {fileID: 400234, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.098
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
       propertyPath: m_Controller
       value: 
@@ -5618,6 +5638,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f43597c5cb1a2664fb18a10f657a553c, type: 2}
+    - target: {fileID: 13700106, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700164, guid: ba966f17e262f5b40946cf59fead73f9, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6725,8 +6753,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 204.41, y: -32.949997}
-  m_SizeDelta: {x: 388.02, y: 53.497}
+  m_AnchoredPosition: {x: 134.23, y: -32.949997}
+  m_SizeDelta: {x: 247.65, y: 53.497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &469203565
 MonoBehaviour:
@@ -10694,15 +10722,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c25efa6e23756b40b124db939a3f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useAlternateMusic: 1
+  useAlternateMusic: 0
   musicTrackSoundVolumePairs:
-  - {fileID: 11400000, guid: 5041aa8921d1b7c4c8de8ea4191d4f28, type: 2}
+  - {fileID: 11400000, guid: 0b4bb5f8aad6a754997a51e305d4f5d9, type: 2}
   - {fileID: 11400000, guid: 7eaa3743eb65e7d4d9fcb29bbe26495c, type: 2}
-  - {fileID: 11400000, guid: f76d4107ca0ba3145bd44c56c84f9594, type: 2}
-  musicTrackSoundVolumePairsAlternate:
-  - {fileID: 11400000, guid: 4f3258468be10a648b63960e92184a00, type: 2}
-  - {fileID: 11400000, guid: 31d842a763271ed41b417d5543c454fa, type: 2}
-  - {fileID: 11400000, guid: e3caaeb88f5329e4bb0356c9f7d34e01, type: 2}
+  musicTrackSoundVolumePairsAlternate: []
 --- !u!82 &749561983
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10718,7 +10742,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -12899,8 +12923,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -197.15002, y: -32.948997}
-  m_SizeDelta: {x: 373.51, y: 53.49701}
+  m_AnchoredPosition: {x: -267.3349, y: -32.948997}
+  m_SizeDelta: {x: 513.8798, y: 53.497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866023939
 MonoBehaviour:
@@ -12953,9 +12977,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
@@ -16710,6 +16734,8 @@ MonoBehaviour:
   positionLabel: {fileID: 866023939}
   descriptionLabel: {fileID: 2140857354}
   clothingNameLabel: {fileID: 1858269211}
+  topButtonLabel: {fileID: 280422551}
+  bottomButtonObject: {fileID: 77213602}
   headToggles:
   - {fileID: 2020782069}
   - {fileID: 1201139946}

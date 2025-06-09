@@ -20,6 +20,8 @@ public class DressingUI : MonoBehaviour
     [SerializeField] TMP_Text descriptionLabel;
     [SerializeField] ClothingNameTextObject clothingNameLabel;
 
+    [SerializeField] TMP_Text topButtonLabel;
+    [SerializeField] GameObject bottomButtonObject;
     [SerializeField] List<ClothingPieceSelectionToggle> headToggles;
     [SerializeField] ClothingPieceSelectionToggle[] topToggles;
     [SerializeField] ClothingPieceSelectionToggle[] bottomToggles;
@@ -35,6 +37,7 @@ public class DressingUI : MonoBehaviour
     bool topButtonsOpen;
     bool bottomButtonsOpen;
     bool feetButtonsOpen;
+    public static bool allDresses;
 
     bool init;
 
@@ -101,8 +104,12 @@ public class DressingUI : MonoBehaviour
             topToggles[i].InitButton(GlobalData.currentCharacterSelection.topPieces[i]);
 
         }
+
+        //if we don't enable any bottom buttons, they're all dresses
+        allDresses = true;
         for (int i = 0; i < GlobalData.currentCharacterSelection.bottomPieces.Count; i++)
         {
+            allDresses = false;
             bottomToggles[i].gameObject.SetActive(true);
             bottomToggles[i].InitButton(GlobalData.currentCharacterSelection.bottomPieces[i]);
         }
@@ -124,6 +131,10 @@ public class DressingUI : MonoBehaviour
         feetToggles.Shuffle();
         for (int i = 0; i < feetToggles.Length; i++)
             feetToggles[i].transform.SetSiblingIndex(i);
+
+
+        bottomButtonObject.SetActive(!allDresses);
+        topButtonLabel.text = allDresses ? "Dress" : "Top";
     }
 
     public void ClothingCategoryButton_OnClick(string category)
@@ -133,6 +144,9 @@ public class DressingUI : MonoBehaviour
 
         bool isFromButton = category.Split('|').Length > 1 ? category.Split('|')[1] != "body" : true;
         Enum.TryParse(category.Split('|')[0], out Category categoryParsed);
+
+        if (categoryParsed == Category.BOTTOM && allDresses)
+            return;
 
         if (categoryParsed != Category.HEAD   && headButtonsOpen)    { uiAnimator.CrossFade($"CloseHeadButtons_{GlobalData.currentCharacterSelection.headPieces.Count}button", 0.2f);   headButtonsOpen = false; }
         if (categoryParsed != Category.TOP    && topButtonsOpen)     { uiAnimator.CrossFade($"CloseTopButtons_{GlobalData.currentCharacterSelection.topPieces.Count}button", 0.2f);    topButtonsOpen = false; }
@@ -163,7 +177,7 @@ public class DressingUI : MonoBehaviour
                 if (!topButtonsOpen)
                 {
                     if (!GlobalData.isTutorial)
-                        SimpleRTVoiceExample.Instance.Speak("default", "Top");
+                        SimpleRTVoiceExample.Instance.Speak("default", allDresses ? "Dress" : "Top");
                     if (isFromButton)
                         bodyButtons[1].GetComponent<TrackOnClick>().Focus();
                 }

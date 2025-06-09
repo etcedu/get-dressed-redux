@@ -164,6 +164,7 @@ public class DressingManager : MonoBehaviour
                 PlayHeadAnimation();
                 break;
             case Category.TOP:
+            case Category.DRESS:
                 PlayTopAnimation();
                 break;
             case Category.BOTTOM:

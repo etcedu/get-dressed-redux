@@ -11,6 +11,7 @@ using EasingCore;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Pool;
+using UnityEngine.Experimental.XR.Interaction;
 
 namespace FancyScrollView.TheFitCharacterSelect
 {
@@ -25,6 +26,7 @@ namespace FancyScrollView.TheFitCharacterSelect
         [SerializeField] GameObject[] hidableUI;
         [SerializeField] GameObject prevButton, nextButton;
 
+        public bool lockInteraction;
         Action<int> onSelectionChanged;
         public int currentCell;
         public bool init = false;
@@ -122,6 +124,8 @@ namespace FancyScrollView.TheFitCharacterSelect
 
         public void HideUI()
         {
+            GetComponent<Scroller>().Draggable = false;
+            lockInteraction = true;
             for (int i = 0; i < hidableUI.Length; i++)
             {
                 hidableUI[i].SetActive(false);
@@ -130,6 +134,8 @@ namespace FancyScrollView.TheFitCharacterSelect
 
         public void ShowUI()
         {
+            GetComponent<Scroller>().Draggable = true;
+            lockInteraction = false;
             for (int i = 0; i < hidableUI.Length; i++)
             {
                 hidableUI[i].SetActive(true);

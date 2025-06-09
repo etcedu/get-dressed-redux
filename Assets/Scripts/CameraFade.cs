@@ -46,7 +46,7 @@ public class CameraFade : MonoBehaviour
     [ContextMenu("Fade In")]
     public void FadeIn(Action finishedCallback = null)
     {
-        image.raycastTarget = false;
+        //image.raycastTarget = false;
 
         fadeFinishedCallback = finishedCallback;
         Invoke("DoCallback", tween.duration + 0.25f);
@@ -60,7 +60,7 @@ public class CameraFade : MonoBehaviour
     [ContextMenu("Fade Out")]
     public void FadeOut(Action finishedCallback = null)
     {
-        image.raycastTarget = true;
+        //image.raycastTarget = true;
 
         fadeFinishedCallback = finishedCallback;
         Invoke("DoCallback", tween.duration + 0.25f);
@@ -74,7 +74,7 @@ public class CameraFade : MonoBehaviour
     public void DoCallback()
     {
         fadeFinishedCallback?.Invoke();
-        image.raycastTarget = false;
+        //image.raycastTarget = false;
     }
     
     

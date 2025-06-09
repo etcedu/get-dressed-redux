@@ -1,5 +1,5 @@
 	Tag/ID	Name/Category	Gender	Job Title/Human Name	Description/Feedback Name (probably don't need)	Image Asset Path/Tier	Skin Color (hex)/Feedback	Win Feedback	Lose Feedback (less than 3 stars)	Almost Feedback (3 stars)
-Character	TutorialStanley	Stanley (Tutorial)	MALE	Going for burgers	Stanley has a big interview tomorrow, but right now he's hungry and wants to grab something to eat.	Stanley_Portrait	f5c8a1FF	This is a totally appropriate outfit for burger eating.<br><br>Choose a category to learn more about your rating.	n/a	n/a
+Character	TutorialStanley	Stanley (Tutorial)	MALE	Going for burgers	Stanley has a big interview tomorrow, but right now he's hungry and wants to grab something to eat.	Stanley_Tutorial_Portrait	f5c8a1FF	This is a totally appropriate outfit for burger eating.<br><br>Choose a category to learn more about your rating.	n/a	n/a
 	Stanley_BaseballCap	Head	Male	Baseball Cap	Baseball Cap	Ultra Casual	Great for keeping the sun out of your eyes or hiding a bad hair day.			
 	Stanley_Hair_Bedhead	Head	Male	Bed Head	Bed Head	N/A				
 	Stanley_Tshirt	Top	Male	T-Shirt	T-Shirt	Ultra Casual	A versatile shirt that's perfect for everyday wear.			
@@ -19,7 +19,8 @@ Character	Kris	Kris	Female	Robotics Apprenticeship	Kris is competing for a spot 
 	Kris_Wedge	Feet	Female	Open Toe Wedge 	Open Toe Wedge 	Casual	Comfy and versatile footwear, but doesn't show that you understand interview expectations.			
 	Kris_Flipflops	Feet	Female	Flip Flops	Flip Flops	Ultra Casual	Are you going to the mall or to an interview?			
 	Kris_Face	Other	Female	none	none	none				
-Character	Stanley	Stanley	MALE	Undergraduate Admission	Stanley has landed an interview at Stanford. They're highly selective, so the clothes he wears to class aren't going to cut it.	Stanley_Tutorial_Portrait	f5c8a1FF	You helped Stanley choose the perfect outfit. Dressing like a professional for the interview will help his chances of getting into Stanford!	This outfit isn't appropriate for this kind of interview. Help Stanley make a more professional outfit for his college interview!	This outfit might work but something isn't quite right. Stanley can make an even better outfit with the clothes he has in his closet.
+	Standard_Undershirt									
+Character	Stanley	Stanley	MALE	Undergraduate Admission	Stanley has landed an interview at Stanford. They're highly selective, so the clothes he wears to class aren't going to cut it.	Stanley_Portrait	f5c8a1FF	You helped Stanley choose the perfect outfit. Dressing like a professional for the interview will help his chances of getting into Stanford!	This outfit isn't appropriate for this kind of interview. Help Stanley make a more professional outfit for his college interview!	This outfit might work but something isn't quite right. Stanley can make an even better outfit with the clothes he has in his closet.
 	Stanley_Hair_Shaved	Head	Male	Clean Shave	Clean Shave	Groomed	A clean shave is always a safe bet if you aren't sure what to do about your facial hair.			
 	Stanley_Hair_Stubble	Head	Male	Scruffy Stubble	Scruffy Stubble	Sloppy	Stubble, especially if it's creeping down your neck, might show that you didn't take the time to prepare.			
 	Stanley_ButtonUp	Top	Male	Striped Button Up	Striped Button Up	Business Casual	Widely considered to be professional attire, shows employers you understand the basics.			
@@ -45,6 +46,7 @@ Character	Ivy	Ivy	Female	Game Producer Internship	Ivy is preparing her outfit fo
 	Ivy_BitLoafersWorn	Feet	Female	Bit Loafers	Worn Out Bit Loafers	Sloppy	These shoes have seen better days. Crisp shoes show that you put thought into every part of your outfit.			
 	Ivy_BitLoafersGrimy	Feet	Female	Bit Loafers	Dirty Bit Loafers	Sloppy	These shoes are visibly dirty. Clean shoes show that you put thought into every part of your outfit.			
 	Ivy_Face	Other	Female							
+	Standard_Undershirt									
 Character	John	John	Male	Game Development Apprenticeship	John has a chance to learn all about game making at a real studio. Even though some devs wear shorts to work, John needs to look sharp!	John_Portrait	EBC9A6FF	You helped John choose the perfect outfit. Dressing like a professional will help him make a good impression at the game dev apprenticeship interview!	John's clothes are too gross and messy for an interview! Help him choose cleaner clothes from his wardrobe!	This outfit might work but it's a little sloppy. John can make a more presentable outfit with the clothes he has in his closet.
 	John_CombedHair	Head	Male	Combed	Combed	Groomed	Combing your hair goes a long way toward showing the interviewer that you wanted to look your best.			
 	John_BedHair	Head	Male	Bed Head	Bed Head	Sloppy	You look like you just rolled out of bed. Interviewers might think you aren't taking the opportunity seriously.			
@@ -71,3 +73,41 @@ Character	Sasha	Sasha	Male	Junior Cyber Security (Remote)	The interview is remot
 	Sasha_OxfordsBlack	Feet	Male	Oxfords	Oxfords	Business Casual	The style of this shoe is appropriate but the color doesn't go well with the rest of the outfit.			
 	Sasha_BrogueBoots	Feet	Male	Brogue Boots	Brogue Boots	Casual	These are stylish boots! But, bold patterns can be distracting in an interview.			
 	Sasha_Face	Other	Male			none				
+Character	Aisha	Aisha	Female	Associate Data Analyst (Remote)	Vanessa has a remote interview. It might be OK to wear slippers on the job, but she should find a professional outfit for the interview!	Aisha_Portrait	9F7247FF	You helped Aisha choose a professional outfit. They're sure to make a good first impression during their data analyst interview!	Aisha's outfit is a little too bold and unconventional for an interview! Help her choose a safer option from her wardrobe!	This outfit might work but something doesn't really match. Aisha can make a more presentable outfit with the clothes she has in her closet.
+	Aisha_UpdoHeadband	Head	Female	Updo with Headband	Updo with Headband	Business Casual	An easy-to-do hairstyle that keeps hair out of your face, accented by a simple headband.			
+	Aisha_UpdoPolkaDotHeadband	Head	Female	Updo with Headband	Updo with Polka Dot Headband	Ultra-Casual	Bold colors and patterns can give the impression that you don't understand the formality of an interview setting.			
+	Aisha_SheathDress	Dress	Female	Sheath Dress	Sheath Dress	Business Casual	A professional dress with a safe, neutral color and subtle details.			
+	Aisha_SheathDressRed	Dress	Female	Sheath Dress	Sheath Dress	Casual	This style of dress is appropriate for an interview, but the bold color might give a strange first impression. While it might be OK to wear if you get hired, choose neutral colors for the interview!			
+	Aisha_SheathDressFloral	Dress	Female	Sheath Dress	Floral Sheath Dress	Casual	This dress pattern is too informal for an interview. It's usually best to avoid patterns entirely and opt for solid, neutral colors for interviews.			
+	Aisha_BlockHeelPumps	Feet	Female	Block Heel Pumps	Block Heel Pumps	Business Casual	The minimalist style and neutral color of these shoes make them appropriate for interview settings.			
+	Aisha_BlockHeelPumpsEmbellished	Feet	Female	Block Heel Pumps	Embellished Block Heel Pumps	Ultra Casual	The style of this shoe is appropriate but the flashy embellishments are out of place in an interview setting.			
+	Aisha_BlockHeelPumpsAnimalPrint	Feet	Female	Block Heel Pumps	Animal Print Block Heel Pumps	Ultra Casual	These are bold shoes! But, bold patterns can be distracting in an interview.			
+	Aisha_Face	Other	Female			none				
+	Standard_Undershirt	Other								
+Character	Bob	Bob		Horticulture Technology Program	Bob can't believe he's only an interview away from starting his career in sustainability. Find the right outfit for him!	Bob_Portrait	000000ff	You helped Bob choose a well-fitting outfit. Dressing like a professional will help them make a good impression during their high-tech farming interview!	Bob's outfit is too inappropriate for an interview! Help him choose more coordinated items from his wardrobe!	This outfit might work but something isn't quite right. Bob can make a more presentable outfit with the clothes he has in his closet.
+	Bob_PiercingsOK			Piercings	Piercings		Piercings are more accepted than they once were, especially in creative and tech fields. However, like the rest of your outfit, it's wiser to use subtle pieces for a more professional look.			
+	Bob_PiercingsFlashy			Flashy Piercings	Flashy Piercings		Even though piercings are more accepted than they once were, flashy, attention-grabbing pieces are best left at home during an interview.			
+	Bob_ButtonUp			Button Up Shirt	Button Up Shirt	Business Casual<br>	Button-ups are widely considered to be appropriate for interviews. The color of this shirt also goes well with the rest of the outfit.			
+	Bob_ButtonUpTooBig			Button Up Shirt	Big Button Up Shirt 	Sloppy<br>	The style of this shirt is appropriate but it's way too big! The way your shirt fits is just as important as the type of shirt that you choose.			
+	Bob_ButtonUpUntucked			Button Up Shirt	Untucked Button Up Shirt	Sloppy<br>	The style of this shirt is appropriate but it's meant to be tucked. An untucked shirt can show that you don't understand interview expectations.			
+	Bob_WoolDressPants			Wool Dress Pants	Wool Dress Pants	Business Casual<br>	Highly appropriate for an interview. These pants fit Bob particularly well!			
+	Bob_WoolDressPantsTooSmall			Wool Dress Pants	Small Wool Dress Pants	Sloppy<br>	This type of pants is appropriate for an interview, but they're way too small! The way your pants fit is just as important as the type of pants that you choose.			
+	Bob_Bob_WoolDressPantsTooBig			Wool Dress Pants	Big Wool Dress Pants	Sloppy<br>	This type of pants is appropriate for an interview, but they're way too big! The way your pants fit is just as important as the type of pants that you choose.			
+	Bob_LeatherBitLoafers			Leather Bit Loafers	Leather Bit Loafers	Business Casual<br>	A sensible shoe that shows a sense of professionalism and maturity without being overly formal.			
+	Bob_LoaferSneakerHybrids			Loafers	Loafer Sneakers	Casual<br>	These may resemble a more formal type of shoe, but these are still sneakers and considered too casual for an interview.			
+	Bob_BoatShoes			Boat Shoes	Boat Shoes	Ultra Casual<br>	These might look like loafers but are widely considered to be a casual type of shoe for a day out on the lake!			
+	Bob_Face									
+Character	Astrid	Astrid		Solar Technician Apprenticeship	Astrid loves working outdoors, so she wants to make the most of this opportunity! Help her assemble a savvy interview outfit.	Astrid_Portrait	D1916Eff	You helped Astrid choose an appropriate outfit. Dressing like a professional will help her make a good impression during their solar tech interview 	This outfit might work but something is a little too inappropriate for an interview. Astrid can make a more presentable outfit with the clothes she has in her closet.	This outfit might work but something is a little too inappropriate for an interview. Astrid can make a more presentable outfit with the clothes she has in her closet.
+	Astrid_EarringsOK	Head		Earrings	Earrings		Less is more when it comes to jewelry. Small, simple pieces aren't distracting and fit the occasion.			
+	Astrid_EarringsFlashy	Head		Earrings	Flashy Earrings		Save your more flashy and fun jewelry for a night out with friends. Loud jewelry can be distracting in an interview.			
+	Astrid_ButtonUpBlouse	Top		Button Up Blouse	Button Up Blouse	Business Casual<br>	A button-up blouse that's not too tight and not too big is traditionally associated with professional attire.			
+	Astrid_CropBlouse	Top		Blouse	Crop Blouse	Ultra Casual<br>	A loose-fitting blouse like this might have been appropriate, but it being cropped makes it too informal for an interview.			
+	Astrid_PlungingBlouse	Top		Blouse	Low-Cut Blouse	Ultra Casual<br>	Low-cut shirts are considered revealing and can suggest a lack of awareness or professionalism, even if that’s not your intent.			
+	Astrid_PencilSkirt	Bottom		Pencil Skirt	Pencil Skirt	Business Casual<br>	If not too short and not too tight, a pencil skirt doesn’t draw too much attention to itself, keeping the focus on who you are as a candidate.			
+	Astrid_Capris	Bottom		Capris	Capris	Casual<br>	Capris are often associated with casual, warm-weather, or leisure wear. There are more professional options for an interview.			
+	Astrid_ShortSkirt	Bottom		Pencil Skirt	Short Pencil Skirt	Ultra Casual<br>	Skirts should ideally fall at or just below the knee. Anything too short can appear unprofessional or inappropriate for a formal setting.			
+	Astrid_ClosedToePumps	Feet		Pumps	Closed-Toe Pumps	Business Casual<br>	Appropriate for an interview because they align closely with traditional standards of professionalism, modesty, and formality.			
+	Astrid_BacklessMules	Feet		Mules	Backless Mules	Casual<br>	Comfy, but more appropriate for a casual setting. Business casual footwear usually covers most of the foot.			
+	Astrid_OpenToePumps	Feet		Pumps	Open-Toe Pumps	Casual<br>	Exposed toes can be viewed as too revealing, and might give the impression that you're not fully aware of professional expectations.			
+	Astrid_Face	Other								
+	Astrid_Undershirt	Other								

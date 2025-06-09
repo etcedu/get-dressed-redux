@@ -1740,7 +1740,7 @@ SpriteRenderer:
   m_Size: {x: 3.5, y: 3.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &265106683
@@ -1934,7 +1934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useAlternateMusic: 0
   musicTrackSoundVolumePairs:
-  - {fileID: 11400000, guid: 0b4bb5f8aad6a754997a51e305d4f5d9, type: 2}
+  - {fileID: 11400000, guid: 5041aa8921d1b7c4c8de8ea4191d4f28, type: 2}
   musicTrackSoundVolumePairsAlternate:
   - {fileID: 11400000, guid: e6f471797bc33c64eafb12ca71f353ba, type: 2}
 --- !u!82 &277526825
@@ -1952,7 +1952,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6236,7 +6236,7 @@ SpriteRenderer:
   m_Size: {x: 3.5, y: 3.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2025851904
