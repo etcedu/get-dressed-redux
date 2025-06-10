@@ -27,8 +27,6 @@ namespace FancyScrollView.Example02
         {
             base.Initialize();
 
-            Context.OnCellClicked = SelectCell;
-
             scroller.OnValueChanged(UpdatePosition);
             scroller.OnSelectionChanged(UpdateSelection);
         }
@@ -69,10 +67,13 @@ namespace FancyScrollView.Example02
 
         public void SelectCell(int index)
         {
+            index = CircularIndex(index, ItemsSource.Count);
+
             if (index < 0 || index >= ItemsSource.Count || index == Context.SelectedIndex)
             {
                 return;
             }
+
 
             UpdateSelection(index);
             scroller.ScrollTo(index, scrollDuration, ease);

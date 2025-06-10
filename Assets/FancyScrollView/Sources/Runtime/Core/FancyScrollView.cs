@@ -188,7 +188,7 @@ namespace FancyScrollView
             }
         }
 
-        int CircularIndex(int i, int size) => size < 1 ? 0 : i < 0 ? size - 1 + (i + 1) % size : i % size;
+        public int CircularIndex(int i, int size) => size < 1 ? 0 : i < 0 ? size - 1 + (i + 1) % size : i % size;
 
 #if UNITY_EDITOR
         bool cachedLoop;
