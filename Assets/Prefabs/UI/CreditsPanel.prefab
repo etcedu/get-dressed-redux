@@ -120,8 +120,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 429666699902072590}
   m_HandleRect: {fileID: 429666699902072577}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.5232033
+  m_Value: 1
+  m_Size: 0.4887675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e350e075cb00ef844bf7c21844b271f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b27a580952d26794fa0370c67a90653d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1999,8 +1999,10 @@ MonoBehaviour:
 
     Lawrence Plofker
 
-    Dr.
-    Justin Page
+    Julie
+    Linnelli
+
+    Dr. Justin Page
 
     Brian Kaleida'
   m_isRightToLeft: 0

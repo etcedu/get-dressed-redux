@@ -29,11 +29,13 @@ namespace FancyScrollView.Example02
             if (itemData.sprite.name.Contains("Shoe"))
             {
                 image.color = Color.clear;
+                smallImage.color = Color.white;
                 smallImage.sprite = itemData.sprite;
             }
             else
             {
                 smallImage.color = Color.clear;
+                image.color = Color.white;
                 image.sprite = itemData.sprite;
             }
         }
