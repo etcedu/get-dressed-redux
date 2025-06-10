@@ -1612,7 +1612,7 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 98.723305
+      value: 96.59814
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -1622,12 +1622,12 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 49.361652
+      value: 48.29907
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -21.334274
+      value: -21.01904
       objectReference: {fileID: 0}
     - target: {fileID: 8856447383980017330, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -1897,7 +1897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
+  m_Color: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 0.2}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5222,7 +5222,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9f3f2f7ff7dace840998e58b99c9b361, type: 3}
   - {fileID: 21300000, guid: 267645849e9b00843b29e47ac87924b7, type: 3}
   - {fileID: 21300000, guid: 9d58f79c2b98bd649b0533d609cf0f7b, type: 3}
-  scrollDelay: 1.2765
+  scrollDelay: 1.5
 --- !u!1001 &1575427970
 PrefabInstance:
   m_ObjectHideFlags: 0
