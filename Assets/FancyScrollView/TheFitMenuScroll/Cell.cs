@@ -13,6 +13,7 @@ namespace FancyScrollView.Example02
     {
         [SerializeField] Animator animator = default;
         [SerializeField] Image image = default;
+        [SerializeField] Image smallImage = default;
 
         static class AnimatorHash
         {
@@ -25,7 +26,16 @@ namespace FancyScrollView.Example02
 
         public override void UpdateContent(ItemData itemData)
         {
-            image.sprite = itemData.sprite;
+            if (itemData.sprite.name.Contains("Shoe"))
+            {
+                image.color = Color.clear;
+                smallImage.sprite = itemData.sprite;
+            }
+            else
+            {
+                smallImage.color = Color.clear;
+                image.sprite = itemData.sprite;
+            }
         }
 
         public override void UpdatePosition(float position)
