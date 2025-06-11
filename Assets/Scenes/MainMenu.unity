@@ -482,7 +482,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65663989}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ada6cd71a04c93549a93697d5a24c071, type: 3}
   m_Name: 
@@ -1612,7 +1612,7 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 99.744446
+      value: 98.723305
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -1622,12 +1622,12 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 49.872223
+      value: 49.361652
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.599396
+      value: -21.334274
       objectReference: {fileID: 0}
     - target: {fileID: 8856447383980017330, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -4039,6 +4039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786047423}
   - component: {fileID: 786047424}
+  - component: {fileID: 786047425}
   m_Layer: 5
   m_Name: SafeArea
   m_TagString: Untagged
@@ -4077,6 +4078,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786047422}
   m_CullTransparentMesh: 1
+--- !u!114 &786047425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786047422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b343d6846b40184686d9174a950a7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConformX: 1
+  ConformY: 1
+  Logging: 0
 --- !u!224 &887749850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4321967159913224270, guid: b97907c0ff80c9b438ccfc068b3a724b,
