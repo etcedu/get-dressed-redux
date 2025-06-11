@@ -41,6 +41,7 @@ public class SimpleFeedback : MonoBehaviour
     [SerializeField] string[] feedbackButtonLabelOptions;
     [SerializeField] Image[] headerImages;
     [SerializeField] ReviewPanel[] reviewPanels;
+    [SerializeField] TMP_Text topPanelLabel;
     [SerializeField] GameObject[] bodyButtons;
 
     [Header("General")]    
@@ -154,7 +155,10 @@ public class SimpleFeedback : MonoBehaviour
         foreach (ClothingPiece clothingPiece in GlobalData.GetListOfSelectedClothes())
         {
             if (clothingPiece.Category == Category.DRESS)
+            {
                 bottomButton.interactable = false;
+                feedbackButtonTexts[2].text = "N/A";
+            }
 
             int score = GlobalData.GetScoreForPiece(clothingPiece);
 
@@ -193,12 +197,14 @@ public class SimpleFeedback : MonoBehaviour
             GlobalData.SetCharacterStars(GlobalData.currentCharacterSelection.characterTag, numStars);
         }
 
+        topPanelLabel.text = DressingUI.allDresses ? "Dress" : "Top";
     }
 
     public void FeedbackButtonOnClick(int index)
     {
         if (DressingUI.allDresses && index == 2)
-            return;
+            index = 3;
+            //return;
 
         for (int i = 0; i < reviewPanels.Length; i++)
         {

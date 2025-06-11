@@ -733,7 +733,7 @@ MonoBehaviour:
       FeedbackTier: Casual
       Feedback: It's possible to look good without a belt, but it's safer to wear
         one when wearing a tucked in button-up.
-      scoreForCurrentCharacter: 2
+      scoreForCurrentCharacter: 1
     - Tag: Sasha_PolkaDotPants
       DisplayName: Slim Fit Dress Pants
       GenderRole: 1
@@ -744,7 +744,7 @@ MonoBehaviour:
       Feedback: "Flashy or whimsical clothes can suggest you don\u2019t understand
         professional norms, which could raise red flags about your judgment or readiness
         for the role."
-      scoreForCurrentCharacter: 1
+      scoreForCurrentCharacter: 2
     feetPieces:
     - Tag: Sasha_OxfordsLightBrown
       DisplayName: Oxfords
