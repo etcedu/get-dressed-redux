@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-
-
 
 [ExecuteInEditMode]
 public class MeshModifier : MonoBehaviour
@@ -38,7 +33,7 @@ public class MeshModifier : MonoBehaviour
             handle.transform.parent = transform;
             handle.tag = TAG_HANDLE;
             handle.name = $"Handle{i}";
-            handle.AddComponent<EditMeshGizmo>()._parent = this;
+            //handle.AddComponent<EditMeshGizmo>()._parent = this;
             handles[i] = handle;
         }
     }

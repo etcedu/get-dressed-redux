@@ -1325,6 +1325,7 @@ MonoBehaviour:
   hidableUI:
   - {fileID: 925249555}
   - {fileID: 844186729}
+  - {fileID: 449006496}
   prevButton: {fileID: 1114701826}
   nextButton: {fileID: 2012690240}
   lockInteraction: 0

@@ -15,123 +15,6 @@ MonoBehaviour:
   charactersDataFile: {fileID: -747748091656361393, guid: 87d3334478f6e164193add204be603d1,
     type: 3}
   characters:
-  - characterTag: Aisha
-    characterName: Aisha
-    gender: 2
-    jobTitle: Associate Data Analyst (Remote)
-    description: Aisha has a remote interview. It might be OK to wear slippers on
-      the job, but she should find a professional outfit for the interview!
-    imageAssetPath: Aisha_Portrait
-    skinColor: {r: 0.62352943, g: 0.44705883, b: 0.2784314, a: 1}
-    winFeedback: You helped Aisha choose a professional outfit. They're sure to make
-      a good first impression during their data analyst interview!
-    okFeedback: "This outfit might work but something doesn't really match. Aisha
-      can make a more presentable outfit with the clothes she has in her closet.\r"
-    loseFeedback: Aisha's outfit is a little too bold and unconventional for an interview!
-      Help her choose a safer option from her wardrobe!
-    headPieces:
-    - Tag: Aisha_UpdoHeadband
-      DisplayName: Updo with Headband
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: fdf91aab6f8221b45829b46fdf91eda0, type: 2}
-      FeedbackName: Updo with Headband
-      FeedbackTier: Business Casual
-      Feedback: An easy-to-do hairstyle that keeps hair out of your face, accented
-        by a simple headband.
-      scoreForCurrentCharacter: 0
-    - Tag: Aisha_UpdoPolkaDotHeadband
-      DisplayName: Updo with Headband
-      GenderRole: 2
-      Category: 0
-      Connection: {fileID: 11400000, guid: 996a7daa0f3e7f24794a92d7d22f4609, type: 2}
-      FeedbackName: Updo with Polka Dot Headband
-      FeedbackTier: Ultra-Casual
-      Feedback: Bold colors and patterns can give the impression that you don't understand
-        the formality of an interview setting.
-      scoreForCurrentCharacter: 2
-    topPieces:
-    - Tag: Aisha_SheathDress
-      DisplayName: Sheath Dress
-      GenderRole: 2
-      Category: 5
-      Connection: {fileID: 11400000, guid: 10f56c989edc10e43966f9b24aa660a0, type: 2}
-      FeedbackName: Sheath Dress
-      FeedbackTier: Business Casual
-      Feedback: A professional dress with a safe, neutral color and subtle details.
-      scoreForCurrentCharacter: 0
-    - Tag: Aisha_SheathDressRed
-      DisplayName: Sheath Dress
-      GenderRole: 2
-      Category: 5
-      Connection: {fileID: 11400000, guid: 2bcc7a8a23b3dd24f984553f5c02ec2f, type: 2}
-      FeedbackName: Sheath Dress
-      FeedbackTier: Casual
-      Feedback: This style of dress is appropriate for an interview, but the bold
-        color might give a strange first impression. While it might be OK to wear
-        if you get hired, choose neutral colors for the interview!
-      scoreForCurrentCharacter: 1
-    - Tag: Aisha_SheathDressFloral
-      DisplayName: Sheath Dress
-      GenderRole: 2
-      Category: 5
-      Connection: {fileID: 11400000, guid: 89cc7ec92b675234cbecc183f16bf453, type: 2}
-      FeedbackName: Floral Sheath Dress
-      FeedbackTier: Casual
-      Feedback: This dress pattern is too informal for an interview. It's usually
-        best to avoid patterns entirely and opt for solid, neutral colors for interviews.
-      scoreForCurrentCharacter: 2
-    bottomPieces: []
-    feetPieces:
-    - Tag: Aisha_BlockHeelPumps
-      DisplayName: Block Heel Pumps
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 2127a90d5fa855f4a8175d9c42459e1e, type: 2}
-      FeedbackName: Block Heel Pumps
-      FeedbackTier: Business Casual
-      Feedback: The minimalist style and neutral color of these shoes make them appropriate
-        for interview settings.
-      scoreForCurrentCharacter: 0
-    - Tag: Aisha_BlockHeelPumpsEmbellished
-      DisplayName: Block Heel Pumps
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 62b5387acfc28c34493eb0dc44426287, type: 2}
-      FeedbackName: Embellished Block Heel Pumps
-      FeedbackTier: Ultra Casual
-      Feedback: The style of this shoe is appropriate but the flashy embellishments
-        are out of place in an interview setting.
-      scoreForCurrentCharacter: 1
-    - Tag: Aisha_BlockHeelPumpsAnimalPrint
-      DisplayName: Block Heel Pumps
-      GenderRole: 2
-      Category: 3
-      Connection: {fileID: 11400000, guid: 25ab64a2d8374aa4981ab1ce4e478453, type: 2}
-      FeedbackName: Animal Print Block Heel Pumps
-      FeedbackTier: Ultra Casual
-      Feedback: These are bold shoes! But, bold patterns can be distracting in an
-        interview.
-      scoreForCurrentCharacter: 2
-    otherPieces:
-    - Tag: Aisha_Face
-      DisplayName: 
-      GenderRole: 2
-      Category: 4
-      Connection: {fileID: 11400000, guid: 20ee21014e8fbe84eb38504c8cdf5072, type: 2}
-      FeedbackName: 
-      FeedbackTier: none
-      Feedback: 
-      scoreForCurrentCharacter: 0
-    - Tag: Standard_Undershirt
-      DisplayName: 
-      GenderRole: 0
-      Category: 4
-      Connection: {fileID: 11400000, guid: 1b5f98170e7dde546871e3d16ede0483, type: 2}
-      FeedbackName: 
-      FeedbackTier: 
-      Feedback: 
-      scoreForCurrentCharacter: 0
   - characterTag: TutorialStanley
     characterName: Stanley (Tutorial)
     gender: 1
@@ -901,6 +784,123 @@ MonoBehaviour:
       Connection: {fileID: 11400000, guid: bc08b7f55e419cf4faa2e9f23726702d, type: 2}
       FeedbackName: 
       FeedbackTier: none
+      Feedback: 
+      scoreForCurrentCharacter: 0
+  - characterTag: Aisha
+    characterName: Aisha
+    gender: 2
+    jobTitle: Associate Data Analyst (Remote)
+    description: Aisha has a remote interview. It might be OK to wear slippers on
+      the job, but she should find a professional outfit for the interview!
+    imageAssetPath: Aisha_Portrait
+    skinColor: {r: 0.62352943, g: 0.44705883, b: 0.2784314, a: 1}
+    winFeedback: You helped Aisha choose a professional outfit. They're sure to make
+      a good first impression during their data analyst interview!
+    okFeedback: "This outfit might work but something doesn't really match. Aisha
+      can make a more presentable outfit with the clothes she has in her closet.\r"
+    loseFeedback: Aisha's outfit is a little too bold and unconventional for an interview!
+      Help her choose a safer option from her wardrobe!
+    headPieces:
+    - Tag: Aisha_UpdoHeadband
+      DisplayName: Updo with Headband
+      GenderRole: 2
+      Category: 0
+      Connection: {fileID: 11400000, guid: fdf91aab6f8221b45829b46fdf91eda0, type: 2}
+      FeedbackName: Updo with Headband
+      FeedbackTier: Business Casual
+      Feedback: An easy-to-do hairstyle that keeps hair out of your face, accented
+        by a simple headband.
+      scoreForCurrentCharacter: 0
+    - Tag: Aisha_UpdoPolkaDotHeadband
+      DisplayName: Updo with Headband
+      GenderRole: 2
+      Category: 0
+      Connection: {fileID: 11400000, guid: 996a7daa0f3e7f24794a92d7d22f4609, type: 2}
+      FeedbackName: Updo with Polka Dot Headband
+      FeedbackTier: Ultra-Casual
+      Feedback: Bold colors and patterns can give the impression that you don't understand
+        the formality of an interview setting.
+      scoreForCurrentCharacter: 2
+    topPieces:
+    - Tag: Aisha_SheathDress
+      DisplayName: Sheath Dress
+      GenderRole: 2
+      Category: 5
+      Connection: {fileID: 11400000, guid: 10f56c989edc10e43966f9b24aa660a0, type: 2}
+      FeedbackName: Sheath Dress
+      FeedbackTier: Business Casual
+      Feedback: A professional dress with a safe, neutral color and subtle details.
+      scoreForCurrentCharacter: 0
+    - Tag: Aisha_SheathDressRed
+      DisplayName: Sheath Dress
+      GenderRole: 2
+      Category: 5
+      Connection: {fileID: 11400000, guid: 2bcc7a8a23b3dd24f984553f5c02ec2f, type: 2}
+      FeedbackName: Sheath Dress
+      FeedbackTier: Casual
+      Feedback: This style of dress is appropriate for an interview, but the bold
+        color might give a strange first impression. While it might be OK to wear
+        if you get hired, choose neutral colors for the interview!
+      scoreForCurrentCharacter: 1
+    - Tag: Aisha_SheathDressFloral
+      DisplayName: Sheath Dress
+      GenderRole: 2
+      Category: 5
+      Connection: {fileID: 11400000, guid: 89cc7ec92b675234cbecc183f16bf453, type: 2}
+      FeedbackName: Floral Sheath Dress
+      FeedbackTier: Casual
+      Feedback: This dress pattern is too informal for an interview. It's usually
+        best to avoid patterns entirely and opt for solid, neutral colors for interviews.
+      scoreForCurrentCharacter: 2
+    bottomPieces: []
+    feetPieces:
+    - Tag: Aisha_BlockHeelPumps
+      DisplayName: Block Heel Pumps
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 2127a90d5fa855f4a8175d9c42459e1e, type: 2}
+      FeedbackName: Block Heel Pumps
+      FeedbackTier: Business Casual
+      Feedback: The minimalist style and neutral color of these shoes make them appropriate
+        for interview settings.
+      scoreForCurrentCharacter: 0
+    - Tag: Aisha_BlockHeelPumpsEmbellished
+      DisplayName: Block Heel Pumps
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 62b5387acfc28c34493eb0dc44426287, type: 2}
+      FeedbackName: Embellished Block Heel Pumps
+      FeedbackTier: Ultra Casual
+      Feedback: The style of this shoe is appropriate but the flashy embellishments
+        are out of place in an interview setting.
+      scoreForCurrentCharacter: 1
+    - Tag: Aisha_BlockHeelPumpsAnimalPrint
+      DisplayName: Block Heel Pumps
+      GenderRole: 2
+      Category: 3
+      Connection: {fileID: 11400000, guid: 25ab64a2d8374aa4981ab1ce4e478453, type: 2}
+      FeedbackName: Animal Print Block Heel Pumps
+      FeedbackTier: Ultra Casual
+      Feedback: These are bold shoes! But, bold patterns can be distracting in an
+        interview.
+      scoreForCurrentCharacter: 2
+    otherPieces:
+    - Tag: Aisha_Face
+      DisplayName: 
+      GenderRole: 2
+      Category: 4
+      Connection: {fileID: 11400000, guid: 20ee21014e8fbe84eb38504c8cdf5072, type: 2}
+      FeedbackName: 
+      FeedbackTier: none
+      Feedback: 
+      scoreForCurrentCharacter: 0
+    - Tag: Standard_Undershirt
+      DisplayName: 
+      GenderRole: 0
+      Category: 4
+      Connection: {fileID: 11400000, guid: 1b5f98170e7dde546871e3d16ede0483, type: 2}
+      FeedbackName: 
+      FeedbackTier: 
       Feedback: 
       scoreForCurrentCharacter: 0
   connections:

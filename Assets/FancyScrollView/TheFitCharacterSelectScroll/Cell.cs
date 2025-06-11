@@ -35,6 +35,7 @@ namespace FancyScrollView.TheFitCharacterSelect
         [SerializeField] CanvasGroup starsCG;
         [SerializeField] GameObject[] stars;
         [SerializeField] SoundVolumePair[] starSounds;
+        [SerializeField] SoundVolumePair badgeSound;
 
 
         CharacterData data;
@@ -55,7 +56,7 @@ namespace FancyScrollView.TheFitCharacterSelect
             job.text = charData.jobTitle;
 
             SetLockState(!GlobalData.GetTutorialFinished() && !data.characterTag.ToLower().Contains("tutorial"));
-            completedObject.SetActive(GlobalData.GetCharacterStars(data.characterTag) == 4);
+            completedObject.SetActive(false);
 
             if (GlobalData.currentCharacterSelection?.characterTag == data.characterTag && GlobalData.setNewHighScore)
             {
@@ -122,6 +123,13 @@ namespace FancyScrollView.TheFitCharacterSelect
                 yield return new WaitForSeconds(0.5f);
             }
             FindObjectOfType<TheFitScrollView>().ShowUI();
+
+            if (numStars == 4)
+            {
+                completedObject.SetActive(true);
+                completedObject.GetComponent<UITweener>().PlayForward_FromBeginning();
+                SFXManager.instance.PlayOneShot(badgeSound);
+            }
             inStarFillRoutine = false;
         }
 
@@ -140,6 +148,8 @@ namespace FancyScrollView.TheFitCharacterSelect
                 stars[i].SetActive(true);
                 stars[i].GetComponent<UITweener>().PlayForward();
             }
+            completedObject.SetActive(numStars == 4);
+            completedObject.GetComponent<UITweener>().PlayForward();
         }
 
         public override void UpdatePosition(float t)
