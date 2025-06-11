@@ -40,19 +40,12 @@ namespace FancyScrollView.Example02
 
             Context.SelectedIndex = index;
             Refresh();
-
-            onSelectionChanged?.Invoke(index);
         }
 
         public void UpdateData(IList<ItemData> items)
         {
             UpdateContents(items);
             scroller.SetTotalCount(items.Count);
-        }
-
-        public void OnSelectionChanged(Action<int> callback)
-        {
-            onSelectionChanged = callback;
         }
 
         public void SelectNextCell()
@@ -68,15 +61,13 @@ namespace FancyScrollView.Example02
         public void SelectCell(int index)
         {
             index = CircularIndex(index, ItemsSource.Count);
-
             if (index < 0 || index >= ItemsSource.Count || index == Context.SelectedIndex)
             {
                 return;
             }
 
-
             UpdateSelection(index);
-            scroller.ScrollTo(index, scrollDuration, ease);
+            scroller.ScrollTo(index, 0.35f, Ease.OutCubic);
         }
     }
 }

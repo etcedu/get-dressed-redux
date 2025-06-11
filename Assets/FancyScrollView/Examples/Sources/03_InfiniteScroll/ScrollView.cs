@@ -46,6 +46,7 @@ namespace FancyScrollView.Example03
 
         public void SelectCell(int index)
         {
+            index = CircularIndex(index, ItemsSource.Count);
             if (index < 0 || index >= ItemsSource.Count || index == Context.SelectedIndex)
             {
                 return;
@@ -53,6 +54,16 @@ namespace FancyScrollView.Example03
 
             UpdateSelection(index);
             scroller.ScrollTo(index, 0.35f, Ease.OutCubic);
+        }
+
+        public void SelectNextCell()
+        {
+            SelectCell(Context.SelectedIndex + 1);
+        }
+
+        public void SelectPrevCell()
+        {
+            SelectCell(Context.SelectedIndex - 1);
         }
     }
 }

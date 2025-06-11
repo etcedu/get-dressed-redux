@@ -20,8 +20,6 @@ namespace FancyScrollView.Example02
 
         void Start()
         {
-            scrollView.OnSelectionChanged(OnSelectionChanged);
-
             sprites.Shuffle();
             var items = Enumerable.Range(0, sprites.Count)
                 .Select(i => new ItemData(sprites[i]))
@@ -35,15 +33,12 @@ namespace FancyScrollView.Example02
 
         IEnumerator ScrollForever()
         {
+            yield return new WaitForSeconds(0.1f);
             while (true)
             {
                 scrollView.SelectNextCell();
                 yield return new WaitForSeconds(scrollDelay);
             }
-        }
-
-        void OnSelectionChanged(int index)
-        {
         }
     }
 }

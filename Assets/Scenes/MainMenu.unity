@@ -1612,7 +1612,7 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 98.723305
+      value: 99.744446
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -1622,12 +1622,12 @@ PrefabInstance:
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 49.361652
+      value: 49.872223
       objectReference: {fileID: 0}
     - target: {fileID: 8652194573145847831, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -21.334274
+      value: -20.599396
       objectReference: {fileID: 0}
     - target: {fileID: 8856447383980017330, guid: 00a5e284d44515b4dae3d4256105da23,
         type: 3}
@@ -5120,7 +5120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewport: {fileID: 1503529826}
   scrollDirection: 1
-  movementType: 1
+  movementType: 0
   elasticity: 0.1
   scrollSensitivity: 6.6666665
   inertia: 1
@@ -5254,7 +5254,7 @@ PrefabInstance:
     - target: {fileID: 429666699002765503, guid: 00e133b57b2d95e41933ff0b57d3d025,
         type: 3}
       propertyPath: m_Size
-      value: 0.4923958
+      value: 0.4512767
       objectReference: {fileID: 0}
     - target: {fileID: 429666699002765503, guid: 00e133b57b2d95e41933ff0b57d3d025,
         type: 3}
