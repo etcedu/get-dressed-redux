@@ -120,8 +120,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 429666699902072590}
   m_HandleRect: {fileID: 429666699902072577}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.5784967
+  m_Value: 0.9999998
+  m_Size: 0.6196039
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1978,6 +1978,8 @@ MonoBehaviour:
     <color=#E75826>ART</color>
 
     Matt Denton
+
+    Anlan Yang
 
 
     <color=#E75826>PRODUCTION</color>
